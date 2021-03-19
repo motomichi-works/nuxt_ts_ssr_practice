@@ -1,0 +1,22 @@
+.mod-example-0001 {
+  padding: 12px 24px;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  &.mod-example-0001--danger {
+    background: #ffeeee;
+    border: 1px solid #cc3333;
+  }
+  .mod-example-0001__first-element {
+    padding: 6px;
+  }
+  .mod-example-0001__list-group {
+    list-style: disc;
+  }
+  .mod-example-0001__list-item {
+    color: #222222;
+    &.mod-example-0001__list-item--danger {
+      color: #cc3333;
+    }
+  }
+}
