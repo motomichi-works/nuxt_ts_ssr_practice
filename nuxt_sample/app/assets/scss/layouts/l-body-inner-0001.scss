@@ -1,0 +1,20 @@
+.l-body-inner-0001 {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 41px;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  @media #{$g__is-md} {
+    min-height: 0;
+  }
+  .l-body-inner-0001__header-wrapper {
+  }
+  .l-body-inner-0001__contents-wrapper {
+  }
+  .l-body-inner-0001__footer-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
