@@ -1,0 +1,2 @@
+# nuxt_ts_ssr_practice
+NuxtのSSRモードでTypeScriptの練習をするリポジトリです。
