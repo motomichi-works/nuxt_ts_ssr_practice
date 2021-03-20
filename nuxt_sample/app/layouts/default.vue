@@ -25,8 +25,11 @@
 </template>
 
 <style lang="scss" scoped>
+// base
 @import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
+// layouts
 @import '~/assets/scss/layouts/l-body-inner-0001.scss';
+// modules
 @import '~/assets/scss/modules/mod-header-0001.scss';
 @import '~/assets/scss/modules/mod-footer-0001.scss';
 </style>

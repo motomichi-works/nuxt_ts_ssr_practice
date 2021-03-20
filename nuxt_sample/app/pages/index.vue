@@ -16,6 +16,9 @@ export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
+// base
 @import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
+// layouts
 @import '~/assets/scss/layouts/l-contents-type-0001';
+// modules
 </style>
