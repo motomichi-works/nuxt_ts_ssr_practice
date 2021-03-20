@@ -1,14 +1,10 @@
 <template>
-  <div class="mod-example-0001 mod-example-0001--danger">
-    <div class="mod-example-0001__first-element">
-      <ul class="mod-example-0001__list-group">
-        <li
-          class="mod-example-0001__list-item mod-example-0001__list-item--danger"
-        >
-          サンプル
-        </li>
-        <li class="mod-example-0001__list-item">サンプル</li>
-      </ul>
+  <div class="l-contents-type-0001">
+    <div class="l-contents-type-0001__heading-wrapper">
+      ここにheadingモジュールが入ります。
+    </div>
+    <div class="l-contents-type-0001__body">
+      ここにcontainerモジュールが入ります。
     </div>
   </div>
 </template>
@@ -20,5 +16,6 @@ export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/modules/mod-example-0001';
+@import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
+@import '~/assets/scss/layouts/l-contents-type-0001';
 </style>

@@ -1,0 +1,32 @@
+.l-contents-type-0001 {
+  padding: 1px 8px;
+  // .l-contents-type-0001のpadding-topを補完する初期値
+  > :first-child {
+    margin-top: 39px;
+  }
+  // .l-contents-type-0001のpadding-bottomを補完する初期値
+  > :last-child {
+    margin-bottom: 79px;
+  }
+  .l-contents-type-0001__heading-wrapper {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 8px;
+    box-sizing: border-box;
+    @media #{$g__is-lg} {
+      width: 100%;
+    }
+  }
+  .l-contents-type-0001__body {
+    width: 1200px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 8px;
+    box-sizing: border-box;
+    @media #{$g__is-lg} {
+      width: 100%;
+    }
+  }
+}
