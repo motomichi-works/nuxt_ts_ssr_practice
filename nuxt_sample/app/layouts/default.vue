@@ -12,7 +12,15 @@
     <div class="l-body-inner-0001__contents-wrapper">
       <Nuxt />
     </div>
-    <div class="l-body-inner-0001__footer-wrapper">フッターが入るところ</div>
+    <div class="l-body-inner-0001__footer-wrapper">
+      <footer class="mod-footer-0001">
+        <div class="mod-footer-0001__copy-area">
+          <NuxtLink to="/" class="mod-footer-0001__copy">
+            &copy;MotomichiWorks
+          </NuxtLink>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -20,4 +28,5 @@
 @import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
 @import '~/assets/scss/layouts/l-body-inner-0001.scss';
 @import '~/assets/scss/modules/mod-header-0001.scss';
+@import '~/assets/scss/modules/mod-footer-0001.scss';
 </style>
