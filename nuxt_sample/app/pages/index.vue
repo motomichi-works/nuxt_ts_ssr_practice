@@ -10,6 +10,9 @@
         </div>
         <div class="mod-container-0001__body">
           ここにコンテンツのモジュールが入ります。
+          <div>
+            qiitaから取得したitem情報のサンプル: {{ items[0].created_at }}
+          </div>
         </div>
       </section>
     </div>
@@ -17,9 +20,20 @@
 </template>
 
 <script lang="ts">
+import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  async asyncData(context: Context): Promise<any> {
+    const { app } = context
+    const items = await app.$axios.$get(
+      'https://qiita.com/api/v2/items?query=tag:nuxt.js'
+    )
+    return {
+      items,
+    }
+  },
+})
 </script>
 
 <style lang="scss" scoped>
