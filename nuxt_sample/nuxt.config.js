@@ -5,7 +5,7 @@ export default {
   head: {
     title: 'nuxt_sample (nuxt_TypeScriptサンプル)',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
