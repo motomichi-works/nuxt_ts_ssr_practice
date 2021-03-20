@@ -1,7 +1,7 @@
 <template>
   <div class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
-      ここにheadingモジュールが入ります。
+      <h1 class="mod-heading-0001 mod-heading-0001--lv-1">pages/index.vue</h1>
     </div>
     <div class="l-contents-type-0001__body">
       ここにcontainerモジュールが入ります。
@@ -21,4 +21,5 @@ export default Vue.extend({})
 // layouts
 @import '~/assets/scss/layouts/l-contents-type-0001';
 // modules
+@import '~/assets/scss/modules/mod-heading-0001';
 </style>

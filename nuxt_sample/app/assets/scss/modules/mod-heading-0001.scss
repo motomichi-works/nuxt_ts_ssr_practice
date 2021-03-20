@@ -1,0 +1,24 @@
+.mod-heading-0001 {
+  font-weight: bold;
+  font-size: 28px;
+  color: #222222;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.1em 0;
+  line-height: 1.4;
+  &.mod-heading-0001--lv-1 {
+    font-size: 32px;
+    border-bottom: 0;
+  }
+  &.mod-heading-0001--lv-3 {
+    font-size: 24px;
+  }
+  &.mod-heading-0001--lv-4 {
+    font-size: 21px;
+  }
+  &.mod-heading-0001--lv-5 {
+    font-size: 18px;
+  }
+  &.mod-heading-0001--lv-6 {
+    font-size: 16px;
+  }
+}
