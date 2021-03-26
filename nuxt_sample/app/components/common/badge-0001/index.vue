@@ -1,0 +1,28 @@
+<template>
+  <span class="badge-0001" :class="modifierClasses">{{ text }}</span>
+</template>
+
+<script lang="ts">
+import Vue, { PropType } from 'vue'
+
+export default Vue.extend({
+  name: 'Badge0001',
+  props: {
+    text: {
+      type: String as PropType<string>,
+      required: true,
+    },
+    modifierClasses: {
+      type: Array as PropType<string[]>,
+      default: () => ['badge-0001--bg-color-red'],
+    },
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+// base
+@import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
+// modules
+@import '~/assets/scss/modules/badge-0001';
+</style>
