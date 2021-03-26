@@ -33,6 +33,15 @@
           <FieldHeading0001 text="h2見出し" :is-required="false" level="h3" />
         </div>
       </section>
+      <section class="mod-container-0001">
+        <div class="mod-container-0001__heading-wrapper">
+          <h2 class="mod-heading-0001">fontawesome5</h2>
+        </div>
+        <div class="mod-container-0001__body">
+          <fa :icon="faSearch" />
+          <fa :icon="faSearchPlus" />
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -40,12 +49,23 @@
 <script lang="ts">
 import Vue from 'vue'
 
+import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
+
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
+
 export default Vue.extend({
   components: {
     Badge0001,
     FieldHeading0001,
+  },
+  computed: {
+    faSearch() {
+      return faSearch
+    },
+    faSearchPlus() {
+      return faSearchPlus
+    },
   },
 })
 </script>
