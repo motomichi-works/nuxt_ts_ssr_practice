@@ -22,6 +22,17 @@
           </div>
         </div>
       </section>
+      <section class="mod-container-0001">
+        <div class="mod-container-0001__heading-wrapper">
+          <h2 class="mod-heading-0001">field-heading-0001</h2>
+        </div>
+        <div class="mod-container-0001__body">
+          <FieldHeading0001 text="h2見出し" />
+          <FieldHeading0001 text="h3見出し" level="h3" />
+          <FieldHeading0001 text="h2見出し" :is-required="false" />
+          <FieldHeading0001 text="h2見出し" :is-required="false" level="h3" />
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -30,9 +41,11 @@
 import Vue from 'vue'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
+import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 export default Vue.extend({
   components: {
     Badge0001,
+    FieldHeading0001,
   },
 })
 </script>
