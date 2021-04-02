@@ -70,6 +70,19 @@
           />
         </div>
       </section>
+      <section class="mod-container-0001">
+        <div class="mod-container-0001__heading-wrapper">
+          <h2 class="mod-heading-0001">BasicFieldUnit0001</h2>
+        </div>
+        <div class="mod-container-0001__body">
+          <BasicFieldUnit0001
+            :module-names="[...moduleNames, 'basicFieldUnit000101']"
+          />
+          <BasicFieldUnit0001
+            :module-names="[...moduleNames, 'basicFieldUnit000102']"
+          />
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -81,6 +94,7 @@ import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
+import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
@@ -88,6 +102,7 @@ export default Vue.extend({
   components: {
     Badge0001,
     BasicField0001,
+    BasicFieldUnit0001,
     FieldErrorMessages0001,
     FieldHeading0001,
   },

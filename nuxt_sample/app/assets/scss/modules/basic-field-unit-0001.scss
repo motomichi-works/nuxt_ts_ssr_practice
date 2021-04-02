@@ -1,0 +1,25 @@
+.basic-field-unit-0001 {
+  &:not(:first-child) {
+    margin-top: 48px;
+  }
+  .basic-field-unit-0001__heading-wrapper {}
+  .basic-field-unit-0001__body {
+    margin-top: 8px;
+    padding: 8px 8px 4px;
+    background-color: #dddddd;
+    border-radius: 4px;
+  }
+  .basic-field-unit-0001__field-wrapper {
+  }
+  .basic-field-unit-0001__hint-group {
+    margin-top: 4px;
+    padding: 0 4px;
+  }
+  .basic-field-unit-0001__hint-item {
+    color: #555555;
+    font-size: 14px;
+  }
+  .basic-field-unit-0001__error-messages-wrapper {
+    margin-top: 8px;
+  }
+}
