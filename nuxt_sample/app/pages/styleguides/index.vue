@@ -42,6 +42,21 @@
           <fa :icon="faSearchPlus" />
         </div>
       </section>
+      <section class="mod-container-0001">
+        <div class="mod-container-0001__heading-wrapper">
+          <h2 class="mod-heading-0001">BasicField0001</h2>
+        </div>
+        <div class="mod-container-0001__body">
+          <BasicField0001
+            :module-names="[...moduleNames, 'basicField000101']"
+            :name-property="'hoge'"
+            :is-disabled="false"
+            :is-readonly="false"
+            :placeholder="'プレースホルダー'"
+            :maxlength="'10'"
+          />
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -52,14 +67,19 @@ import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
+import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
 export default Vue.extend({
   components: {
     Badge0001,
+    BasicField0001,
     FieldHeading0001,
   },
   computed: {
+    moduleNames() {
+      return ['styleguides']
+    },
     faSearch() {
       return faSearch
     },

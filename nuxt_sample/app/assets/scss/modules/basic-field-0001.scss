@@ -1,0 +1,161 @@
+.basic-field-0001 {
+  position: relative;
+  .basic-field-0001__field {
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #aaaaaa;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #222222;
+    border-radius: 4px;
+    &::placeholder{
+      color: #cccccc;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 6px 0 #0000ff inset;
+    }
+    &[readonly] {
+      border-color: transparent;
+      background: none;
+      color: #222222;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    &[disabled] {
+      // NOTE: !importantは原則として使用禁止です。ボタンとフィールドのdisabledにだけ使用しています。
+      background: #eeeeee !important;
+      border-color: #cccccc !important;
+      color: #cccccc;
+      cursor: default;
+    }
+  }
+
+  &.basic-field-0001--disabled {
+    i.fa {
+      color: #cccccc;
+    }
+  }
+
+  &.basic-field-0001--invalid {
+    .basic-field-0001__field {
+      border-color: #ff0000;
+      background: #ffeeee;
+    }
+  }
+
+  &.basic-field-0001--size-xl {
+    font-size: 24px;
+    .basic-field-0001__field {
+      height: 80px;
+      font-size: 24px;
+    }
+    &.mod-btn-0001--icon-absolute-left {
+      .basic-field-0001__field {
+        padding-left: 52px;
+      }
+    }
+    &.mod-btn-0001--icon-absolute-right {
+      .basic-field-0001__field {
+        padding-right: 52px;
+      }
+    }
+  }
+  &.basic-field-0001--size-l {
+    font-size: 20px;
+    .basic-field-0001__field {
+      height: 58px;
+      font-size: 20px;
+    }
+    &.mod-btn-0001--icon-absolute-left {
+      .basic-field-0001__field {
+        padding-left: 46px;
+      }
+    }
+    &.mod-btn-0001--icon-absolute-right {
+      .basic-field-0001__field {
+        padding-right: 46px;
+      }
+    }
+  }
+  &.basic-field-0001--size-m {
+    font-size: 16px;
+    .basic-field-0001__field {
+      height: 44px;
+      font-size: 16px;
+    }
+    &.mod-btn-0001--icon-absolute-left {
+      .basic-field-0001__field {
+        padding-left: 40px;
+      }
+    }
+    &.mod-btn-0001--icon-absolute-right {
+      .basic-field-0001__field {
+        padding-right: 40px;
+      }
+    }
+  }
+  &.basic-field-0001--size-s {
+    font-size: 13px;
+    .basic-field-0001__field {
+      height: 30px;
+      font-size: 13px;
+    }
+    &.mod-btn-0001--icon-absolute-left {
+      .basic-field-0001__field {
+        padding-left: 36px;
+      }
+    }
+    &.mod-btn-0001--icon-absolute-right {
+      .basic-field-0001__field {
+        padding-right: 36px;
+      }
+    }
+  }
+  &.basic-field-0001--size-xs {
+    font-size: 10px;
+    .basic-field-0001__field {
+      height: 20px;
+      font-size: 10px;
+    }
+    &.mod-btn-0001--icon-absolute-left {
+      .basic-field-0001__field {
+        padding-left: 32px;
+      }
+    }
+    &.mod-btn-0001--icon-absolute-right {
+      .basic-field-0001__field {
+        padding-right: 32px;
+      }
+    }
+  }
+
+  // iconをabsoluteで左に配置するクラス
+  &.mod-btn-0001--icon-absolute-left {
+    i.fa:first-child {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      margin-top: -0.5em;
+    }
+  }
+
+  // iconをabsoluteで右に配置するクラス
+  &.mod-btn-0001--icon-absolute-right {
+    i.fa:last-child {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -0.5em;
+    }
+  }
+
+  i.fa {
+    position: absolute;
+    color: #222222;
+  }
+}
