@@ -6,7 +6,8 @@
     <div class="basic-field-unit-0001__body">
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
-          :module-names="[...moduleNames, 'basicField000101']"
+          :module-name="moduleName"
+          :field-id="fieldId"
           :name-property="'hoge'"
           :is-disabled="false"
           :is-readonly="false"
@@ -45,9 +46,13 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    moduleNames: {
-      type: Array as PropType<string[]>,
-      default: () => [],
+    moduleName: {
+      type: String as PropType<string>,
+      default: '',
+    },
+    fieldId: {
+      type: String as PropType<string>,
+      required: true,
     },
   },
 })

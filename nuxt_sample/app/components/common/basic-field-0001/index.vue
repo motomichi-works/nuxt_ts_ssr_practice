@@ -20,9 +20,13 @@ import Vue, { PropType } from 'vue'
 export default Vue.extend({
   name: 'BasicField0001',
   props: {
-    moduleNames: {
-      type: Array as PropType<string[]>,
-      default: () => [],
+    moduleName: {
+      type: String as PropType<string>,
+      required: true,
+    },
+    fieldId: {
+      type: String as PropType<string>,
+      required: true,
     },
     nameProperty: {
       type: String as PropType<string>,
@@ -53,21 +57,26 @@ export default Vue.extend({
     },
   },
   computed: {
-    modulePath(): string {
-      return this.moduleNames.join('/')
+    fields(): any {
+      return this.$store.getters[`${this.moduleName}/fields`]
     },
     fieldValue: {
       get(): string {
-        return this.$store.getters[`${this.modulePath}/fieldValue`]
+        return this.fields.values[this.fieldId]
       },
       set(value: string): void {
-        this.changeFieldValue(value)
+        this.changeValue(value)
       },
     },
   },
   methods: {
-    changeFieldValue(value: string): void {
-      this.$store.commit(`${this.modulePath}/changeFieldValue`, value)
+    changeValue(value: string): void {
+      const payload: any = {
+        key: this.fieldId,
+        value,
+      }
+
+      this.$store.commit(`${this.moduleName}/changeValue`, payload)
     },
   },
 })
