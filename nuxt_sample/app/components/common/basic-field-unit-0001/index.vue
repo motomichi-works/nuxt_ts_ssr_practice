@@ -24,8 +24,8 @@
     <div class="basic-field-unit-0001__error-messages-wrapper">
       <FieldErrorMessages0001
         :error-messages="[
-          'エラーメッセージサンプル',
-          'エラーメッセージサンプル',
+          'エラーメッセージサンプル1',
+          'エラーメッセージサンプル2',
         ]"
       />
     </div>

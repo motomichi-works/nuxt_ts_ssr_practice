@@ -66,8 +66,8 @@
         <div class="mod-container-0001__body">
           <FieldErrorMessages0001
             :error-messages="[
-              'エラーメッセージサンプル',
-              'エラーメッセージサンプル',
+              'エラーメッセージサンプル1',
+              'エラーメッセージサンプル2',
             ]"
           />
         </div>
