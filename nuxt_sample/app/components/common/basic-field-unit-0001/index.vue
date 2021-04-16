@@ -8,6 +8,7 @@
         <BasicField0001
           :module-name="moduleName"
           :field-id="fieldId"
+          :value="value"
           :name-property="'hoge'"
           :is-disabled="false"
           :is-readonly="false"
@@ -51,6 +52,10 @@ export default Vue.extend({
       default: '',
     },
     fieldId: {
+      type: String as PropType<string>,
+      required: true,
+    },
+    value: {
       type: String as PropType<string>,
       required: true,
     },

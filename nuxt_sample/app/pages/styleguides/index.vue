@@ -50,6 +50,7 @@
           <BasicField0001
             :module-name="moduleName"
             field-id="styleguides[basic_field0001_01]"
+            :value="fields.values['styleguides[basic_field0001_01]'] || ''"
             :name-property="'hoge'"
             :is-disabled="false"
             :is-readonly="false"
@@ -79,10 +80,12 @@
           <BasicFieldUnit0001
             :module-name="moduleName"
             field-id="styleguides[basic_field_unit0001_01]"
+            :value="fields.values['styleguides[basic_field_unit0001_01]'] || ''"
           />
           <BasicFieldUnit0001
             :module-name="moduleName"
             field-id="styleguides[basic_field_unit0001_02]"
+            :value="fields.values['styleguides[basic_field_unit0001_02]'] || ''"
           />
         </div>
       </section>
@@ -110,8 +113,11 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
-    moduleName() {
+    moduleName(): string {
       return 'styleguides'
+    },
+    fields() {
+      return this.$store.getters[`${(this as any).moduleName}/fields`]
     },
     faSearch() {
       return faSearch

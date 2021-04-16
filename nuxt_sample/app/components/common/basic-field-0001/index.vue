@@ -1,7 +1,7 @@
 <template>
   <div class="basic-field-0001 basic-field-0001--size-m">
     <input
-      v-model="fieldValue"
+      v-model="bindingValue"
       type="text"
       :disabled="isDisabled"
       :readonly="isReadonly"
@@ -25,6 +25,10 @@ export default Vue.extend({
       required: true,
     },
     fieldId: {
+      type: String as PropType<string>,
+      required: true,
+    },
+    value: {
       type: String as PropType<string>,
       required: true,
     },
@@ -57,12 +61,9 @@ export default Vue.extend({
     },
   },
   computed: {
-    fields(): any {
-      return this.$store.getters[`${this.moduleName}/fields`]
-    },
-    fieldValue: {
+    bindingValue: {
       get(): string {
-        return this.fields.values[this.fieldId]
+        return this.value
       },
       set(value: string): void {
         this.changeValue(value)
