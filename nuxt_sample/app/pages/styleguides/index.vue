@@ -79,13 +79,16 @@
         <div class="mod-container-0001__body">
           <BasicFieldUnit0001
             :module-name="moduleName"
-            field-id="styleguides[basic_field_unit0001_01]"
-            :value="fields.values['styleguides[basic_field_unit0001_01]'] || ''"
+            field-id="styleguides[email]"
+            :value="fields.values['styleguides[email]'] || ''"
+            heading-text="メールアドレス"
+            :realtime-errors="realtimeErrors['styleguides[email]'] || []"
           />
           <BasicFieldUnit0001
             :module-name="moduleName"
-            field-id="styleguides[basic_field_unit0001_02]"
-            :value="fields.values['styleguides[basic_field_unit0001_02]'] || ''"
+            field-id="styleguides[name_kana]"
+            :value="fields.values['styleguides[name_kana]'] || ''"
+            heading-text="お名前（カナ）"
           />
         </div>
       </section>
@@ -94,15 +97,21 @@
 </template>
 
 <script lang="ts">
+import validate from 'validate.js'
 import Vue from 'vue'
+import { mapGetters, mapMutations } from 'vuex'
 
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
+import constraints from '~/utils/validator/pages/styleguides/index/constraints'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
+
+// mapGetters、mapMutations、mapActionsの第一引数として使用します。
+const MODULE_NAME = 'styleguides'
 
 export default Vue.extend({
   components: {
@@ -113,17 +122,30 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
+    ...mapGetters(MODULE_NAME, ['fields', 'realtimeErrors']),
     moduleName(): string {
-      return 'styleguides'
+      return MODULE_NAME
     },
-    fields() {
-      return this.$store.getters[`${(this as any).moduleName}/fields`]
+    fieldValues(): string {
+      return (this as any).fields.values
     },
     faSearch() {
       return faSearch
     },
     faSearchPlus() {
       return faSearchPlus
+    },
+  },
+  watch: {
+    fieldValues(fieldValues): void {
+      const realtimeErrors = this.validateAll(fieldValues)
+      this.changeRealtimeErrors(realtimeErrors)
+    },
+  },
+  methods: {
+    ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
+    validateAll(fieldValues: any) {
+      return validate(fieldValues, constraints) ?? {}
     },
   },
 })

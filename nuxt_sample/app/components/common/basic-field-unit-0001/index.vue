@@ -1,7 +1,10 @@
 <template>
   <div class="basic-field-unit-0001">
-    <div class="basic-field-unit-0001__heading-wrapper">
-      <FieldHeading0001 text="h2見出し" />
+    <div
+      v-if="headingText.length > 0"
+      class="basic-field-unit-0001__heading-wrapper"
+    >
+      <FieldHeading0001 :text="headingText" :is-required="isRequired" />
     </div>
     <div class="basic-field-unit-0001__body">
       <div class="basic-field-unit-0001__field-wrapper">
@@ -13,7 +16,8 @@
           :is-disabled="false"
           :is-readonly="false"
           :placeholder="'プレースホルダー'"
-          :maxlength="'10'"
+          :maxlength="maxlength"
+          :has-realtime-errors="realtimeErrors.length > 0"
         />
       </div>
       <ul class="basic-field-unit-0001__hint-group">
@@ -21,13 +25,11 @@
         <li class="basic-field-unit-0001__hint-item">ふがふがふが</li>
       </ul>
     </div>
-    <div class="basic-field-unit-0001__error-messages-wrapper">
-      <FieldErrorMessages0001
-        :error-messages="[
-          'エラーメッセージサンプル1',
-          'エラーメッセージサンプル2',
-        ]"
-      />
+    <div
+      v-if="realtimeErrors.length > 0"
+      class="basic-field-unit-0001__error-messages-wrapper"
+    >
+      <FieldErrorMessages0001 :error-messages="realtimeErrors" />
     </div>
   </div>
 </template>
@@ -49,6 +51,7 @@ export default Vue.extend({
   props: {
     moduleName: {
       type: String as PropType<string>,
+      required: false,
       default: '',
     },
     fieldId: {
@@ -58,6 +61,26 @@ export default Vue.extend({
     value: {
       type: String as PropType<string>,
       required: true,
+    },
+    headingText: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
+    isRequired: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+      default: true,
+    },
+    realtimeErrors: {
+      type: Array as any,
+      required: false,
+      default: () => [],
+    },
+    maxlength: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
     },
   },
 })

@@ -1,5 +1,8 @@
 <template>
-  <div class="basic-field-0001 basic-field-0001--size-m">
+  <div
+    class="basic-field-0001 basic-field-0001--size-m"
+    :class="{ 'basic-field-0001--invalid': hasRealtimeErrors }"
+  >
     <input
       v-model="bindingValue"
       type="text"
@@ -51,6 +54,11 @@ export default Vue.extend({
     maxlength: {
       type: String as PropType<string>,
       default: '',
+    },
+    hasRealtimeErrors: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+      default: false,
     },
     onBlur: {
       type: Function,
