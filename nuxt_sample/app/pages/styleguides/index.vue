@@ -49,8 +49,8 @@
         <div class="mod-container-0001__body">
           <BasicField0001
             :module-name="moduleName"
-            field-id="styleguides[basic_field0001_01]"
-            :value="fields.values['styleguides[basic_field0001_01]'] || ''"
+            component-id="styleguides[basic_field0001_01]"
+            :value="''"
             :name-property="'hoge'"
             :is-disabled="false"
             :is-readonly="false"
@@ -79,16 +79,20 @@
         <div class="mod-container-0001__body">
           <BasicFieldUnit0001
             :module-name="moduleName"
-            field-id="styleguides[email]"
+            component-id="styleguides[email]"
             :value="fields.values['styleguides[email]'] || ''"
             heading-text="メールアドレス"
             :realtime-errors="realtimeErrors['styleguides[email]'] || []"
+            @on-blur-field="onBlurField"
+            @on-input-field="onInputField"
           />
           <BasicFieldUnit0001
             :module-name="moduleName"
-            field-id="styleguides[name_kana]"
+            component-id="styleguides[name_kana]"
             :value="fields.values['styleguides[name_kana]'] || ''"
             heading-text="お名前（カナ）"
+            @on-blur-field="onBlurField"
+            @on-input-field="onInputField"
           />
         </div>
       </section>
@@ -97,21 +101,19 @@
 </template>
 
 <script lang="ts">
-import validate from 'validate.js'
+// import validate from 'validate.js'
 import Vue from 'vue'
-import { mapGetters, mapMutations } from 'vuex'
 
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
-import constraints from '~/utils/validator/pages/styleguides/index/constraints'
+// import constraints from '~/utils/validator/pages/styleguides/index/constraints'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
-import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
+import BasicFieldUnit0001, {
+  PayloadType,
+} from '~/components/common/basic-field-unit-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
-
-// mapGetters、mapMutations、mapActionsの第一引数として使用します。
-const MODULE_NAME = 'styleguides'
 
 export default Vue.extend({
   components: {
@@ -121,14 +123,21 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
+  data() {
+    return {
+      fields: {
+        values: {
+          'styleguides[email]': '' as string,
+          'styleguides[name_kana]': '' as string,
+        },
+      },
+      realtimeErrors: {
+        'styleguides[email]': [] as string[],
+        'styleguides[name_kana]': [] as string[],
+      },
+    }
+  },
   computed: {
-    ...mapGetters(MODULE_NAME, ['fields', 'realtimeErrors']),
-    moduleName(): string {
-      return MODULE_NAME
-    },
-    fieldValues(): string {
-      return (this as any).fields.values
-    },
     faSearch() {
       return faSearch
     },
@@ -136,17 +145,19 @@ export default Vue.extend({
       return faSearchPlus
     },
   },
-  watch: {
-    fieldValues(fieldValues): void {
-      const realtimeErrors = this.validateAll(fieldValues)
-      this.changeRealtimeErrors(realtimeErrors)
-    },
-  },
   methods: {
-    ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
-    validateAll(fieldValues: any) {
-      return validate(fieldValues, constraints) ?? {}
+    onBlurField(payload: PayloadType) {
+      // eslint-disable-next-line no-console
+      console.log('page onBlurField payload: ', payload)
     },
+    onInputField(payload: PayloadType) {
+      // eslint-disable-next-line no-console
+      console.log('page onInputField payload: ', payload)
+    },
+    // ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
+    // validateAll(fieldValues: any) {
+    //   return validate(fieldValues, constraints) ?? {}
+    // },
   },
 })
 </script>

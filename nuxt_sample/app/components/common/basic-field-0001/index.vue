@@ -27,7 +27,7 @@ export default Vue.extend({
       type: String as PropType<string>,
       required: true,
     },
-    fieldId: {
+    componentId: {
       type: String as PropType<string>,
       required: true,
     },
@@ -62,30 +62,39 @@ export default Vue.extend({
     },
     onBlur: {
       type: Function,
-      default(event: any) {
-        // eslint-disable-next-line no-console
-        console.log('onBlurField: ', event)
+      default({ target }: { target: HTMLInputElement }) {
+        const payload = {
+          key: this.componentId,
+          value: target.value,
+          eventType: target.type,
+        }
+
+        this.$emit('on-blur-field', payload)
       },
     },
   },
   computed: {
+    self() {
+      return this
+    },
     bindingValue: {
       get(): string {
         return this.value
       },
       set(value: string): void {
-        this.changeValue(value)
+        this.onInput(value)
       },
     },
   },
   methods: {
-    changeValue(value: string): void {
-      const payload: any = {
-        key: this.fieldId,
+    onInput(value: string): void {
+      const payload = {
+        key: this.componentId,
         value,
+        eventType: 'input',
       }
 
-      this.$store.commit(`${this.moduleName}/changeValue`, payload)
+      this.$emit('on-input-field', payload)
     },
   },
 })

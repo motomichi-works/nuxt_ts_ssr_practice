@@ -10,7 +10,7 @@
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
           :module-name="moduleName"
-          :field-id="fieldId"
+          :component-id="componentId"
           :value="value"
           :name-property="'hoge'"
           :is-disabled="false"
@@ -18,6 +18,8 @@
           :placeholder="'プレースホルダー'"
           :maxlength="maxlength"
           :has-realtime-errors="realtimeErrors.length > 0"
+          @on-blur-field="onBlurField"
+          @on-input-field="onInputField"
         />
       </div>
       <ul class="basic-field-unit-0001__hint-group">
@@ -41,6 +43,12 @@ import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
+export type PayloadType = {
+  key: string
+  value: string
+  eventType: string
+}
+
 export default Vue.extend({
   name: 'BasicFieldUnit0001',
   components: {
@@ -54,7 +62,7 @@ export default Vue.extend({
       required: false,
       default: '',
     },
-    fieldId: {
+    componentId: {
       type: String as PropType<string>,
       required: true,
     },
@@ -81,6 +89,14 @@ export default Vue.extend({
       type: String as PropType<string>,
       required: false,
       default: '',
+    },
+  },
+  methods: {
+    onBlurField(payload: PayloadType): void {
+      this.$emit('on-blur-field', payload)
+    },
+    onInputField(payload: PayloadType): void {
+      this.$emit('on-input-field', payload)
     },
   },
 })
