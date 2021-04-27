@@ -14,10 +14,10 @@
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
+    "baseUrl": "./app",
     "paths": {
       "~/*": [
-        "./app/*"
+        "./*"
       ],
       "@/*": [
         "./*"
@@ -29,8 +29,6 @@
     ]
   },
   "exclude": [
-    "node_modules",
-    ".nuxt",
-    "dist"
-  ]
+    "node_modules"
+  ],
 }
