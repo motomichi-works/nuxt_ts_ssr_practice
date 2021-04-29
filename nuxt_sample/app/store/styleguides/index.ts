@@ -15,15 +15,15 @@ export const state = () => ({
   exampleString: 'exampleString',
 })
 
-export type TypeOfState = ReturnType<typeof state>
+export type TypeOfVuexState = ReturnType<typeof state>
 
-export const getters: GetterTree<TypeOfState, TypeOfState> = {
+export const getters: GetterTree<TypeOfVuexState, TypeOfVuexState> = {
   exampleString: (state) => state.exampleString,
   fields: (state) => state.fields,
   realtimeErrors: (state) => state.realtimeErrors,
 }
 
-export const mutations: MutationTree<TypeOfState> = {
+export const mutations: MutationTree<TypeOfVuexState> = {
   changeValue: (state, payload) => {
     const obj: any = {}
     obj[payload.key] = payload.value
@@ -37,4 +37,4 @@ export const mutations: MutationTree<TypeOfState> = {
   },
 }
 
-export const actions: ActionTree<TypeOfState, TypeOfState> = {}
+export const actions: ActionTree<TypeOfVuexState, TypeOfVuexState> = {}

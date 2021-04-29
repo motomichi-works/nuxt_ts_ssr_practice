@@ -103,8 +103,9 @@
 <script lang="ts">
 // import validate from 'validate.js'
 import Vue from 'vue'
-
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
+import { TypeOfVuexState } from '~/store/styleguides/index'
+
 // import constraints from '~/utils/validator/pages/styleguides/index/constraints'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
@@ -148,6 +149,12 @@ export default Vue.extend({
     }
   },
   computed: {
+    vuexGetters(): TypeOfVuexState {
+      return this.$store.getters
+    },
+    vuexfields(): object {
+      return (this.vuexGetters as TypeOfVuexState).fields
+    },
     fieldValues(): object {
       return this.state.fieldValues
     },
