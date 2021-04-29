@@ -80,17 +80,18 @@
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'emailFieldUnit']"
             component-id="styleguides[email]"
-            :value="fieldValues['styleguides[email]'] || ''"
+            :value="vuexFieldValues['styleguides[email]']"
             heading-text="メールアドレス"
-            :realtime-errors="realtimeErrors['styleguides[email]'] || []"
+            :realtime-errors="realtimeErrors['styleguides[email]']"
             @on-blur-field="onBlurField"
             @on-input-field="onInputField"
           />
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
             component-id="styleguides[name_kana]"
-            :value="fieldValues['styleguides[name_kana]'] || ''"
+            :value="vuexFieldValues['styleguides[name_kana]']"
             heading-text="お名前（カナ）"
+            :realtime-errors="realtimeErrors['styleguides[name_kana]']"
             @on-blur-field="onBlurField"
             @on-input-field="onInputField"
           />
@@ -104,7 +105,10 @@
 // import validate from 'validate.js'
 import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
-import { TypeOfStyleguidesState } from '~/store/styleguides/index'
+import {
+  TypeOfFieldValues,
+  TypeOfRealtimeErrors,
+} from '~/store/styleguides/index'
 
 // import constraints from '~/utils/validator/pages/styleguides/index/constraints'
 
@@ -116,16 +120,6 @@ import BasicFieldUnit0001, {
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
-type TypeOfState = {
-  fieldValues: {
-    'styleguides[email]': string
-    'styleguides[name_kana]': string
-  }
-  realtimeErrors: {
-    'styleguides[email]': string[]
-    'styleguides[name_kana]': string[]
-  }
-}
 export default Vue.extend({
   components: {
     Badge0001,
@@ -134,32 +128,14 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
-  data() {
-    return {
-      state: {
-        fieldValues: {
-          'styleguides[email]': '' as string,
-          'styleguides[name_kana]': '' as string,
-        },
-        realtimeErrors: {
-          'styleguides[email]': [] as string[],
-          'styleguides[name_kana]': [] as string[],
-        },
-      } as TypeOfState,
-    }
-  },
   computed: {
-    vuexGetters(): TypeOfStyleguidesState {
-      return this.$store.getters
-    },
-    vuexFieldValues(): object {
-      return (this.vuexGetters as TypeOfStyleguidesState).fieldValues
-    },
-    fieldValues(): object {
-      return this.state.fieldValues
+    vuexFieldValues(): TypeOfFieldValues {
+      return this.$store.getters['styleguides/fieldValues'] as TypeOfFieldValues
     },
     realtimeErrors(): object {
-      return this.state.realtimeErrors
+      return this.$store.getters[
+        'styleguides/realtimeErrors'
+      ] as TypeOfRealtimeErrors
     },
     faSearch() {
       return faSearch
@@ -169,13 +145,20 @@ export default Vue.extend({
     },
   },
   methods: {
+    changeFieldValue(payload: PayloadType) {
+      // eslint-disable-next-line no-console
+      console.log('changeFieldValue payload: ', payload)
+      this.$store.commit('styleguides/changeFieldValue', payload)
+    },
     onBlurField(payload: PayloadType) {
       // eslint-disable-next-line no-console
       console.log('page onBlurField payload: ', payload)
+      this.changeFieldValue(payload)
     },
     onInputField(payload: PayloadType) {
       // eslint-disable-next-line no-console
       console.log('page onInputField payload: ', payload)
+      this.changeFieldValue(payload)
     },
     // ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
     // validateAll(fieldValues: any) {

@@ -1,11 +1,11 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import { TypeOfRootState } from '~/store'
 
-export type TypeofFieldValues = {
+export type TypeOfFieldValues = {
   'styleguides[email]': string
   'styleguides[name_kana]': string
 }
-export type realtimeErrors = {
+export type TypeOfRealtimeErrors = {
   'styleguides[email]': string[]
   'styleguides[name_kana]': string[]
 }
@@ -14,11 +14,11 @@ export const state = () => ({
   fieldValues: {
     'styleguides[email]': '',
     'styleguides[name_kana]': '',
-  } as TypeofFieldValues,
+  } as TypeOfFieldValues,
   realtimeErrors: {
     'styleguides[email]': [],
     'styleguides[name_kana]': [],
-  } as realtimeErrors,
+  } as TypeOfRealtimeErrors,
 })
 export type TypeOfStyleguidesState = ReturnType<typeof state>
 
@@ -30,7 +30,7 @@ export const getters: GetterTree<TypeOfStyleguidesState, TypeOfRootState> = {
 export const mutations: MutationTree<TypeOfStyleguidesState> = {
   changeFieldValue(
     state,
-    payload: { key: keyof TypeofFieldValues; value: string }
+    payload: { key: keyof TypeOfFieldValues; value: string }
   ) {
     state.fieldValues[payload.key] = payload.value
   },
