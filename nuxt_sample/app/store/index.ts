@@ -5,16 +5,20 @@ export const state = () => ({
   exampleString: 'exampleString',
 })
 
-export type RootState = ReturnType<typeof state>
+export type TypeOfRootState = ReturnType<typeof state>
 
-export const getters: GetterTree<RootState, RootState> = {
+export const getters: GetterTree<TypeOfRootState, TypeOfRootState> = {
+  exampleArray: (state) => state.exampleArray,
   exampleString: (state) => state.exampleString,
 }
 
-export const mutations: MutationTree<RootState> = {
+export const mutations: MutationTree<TypeOfRootState> = {
+  changeExampleArray: (state, newValue: string[]) => {
+    state.exampleArray = newValue
+  },
   changeExampleString: (state, newValue: string) => {
     state.exampleString = newValue
   },
 }
 
-export const actions: ActionTree<RootState, RootState> = {}
+export const actions: ActionTree<TypeOfRootState, TypeOfRootState> = {}

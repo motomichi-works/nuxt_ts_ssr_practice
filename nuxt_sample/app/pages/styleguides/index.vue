@@ -80,7 +80,7 @@
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'emailFieldUnit']"
             component-id="styleguides[email]"
-            :value="fields.values['styleguides[email]'] || ''"
+            :value="fieldValues['styleguides[email]'] || ''"
             heading-text="メールアドレス"
             :realtime-errors="realtimeErrors['styleguides[email]'] || []"
             @on-blur-field="onBlurField"
@@ -89,7 +89,7 @@
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
             component-id="styleguides[name_kana]"
-            :value="fields.values['styleguides[name_kana]'] || ''"
+            :value="fieldValues['styleguides[name_kana]'] || ''"
             heading-text="お名前（カナ）"
             @on-blur-field="onBlurField"
             @on-input-field="onInputField"
@@ -104,7 +104,7 @@
 // import validate from 'validate.js'
 import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
-import { TypeOfVuexState } from '~/store/styleguides/index'
+import { TypeOfStyleguidesState } from '~/store/styleguides/index'
 
 // import constraints from '~/utils/validator/pages/styleguides/index/constraints'
 
@@ -149,11 +149,11 @@ export default Vue.extend({
     }
   },
   computed: {
-    vuexGetters(): TypeOfVuexState {
+    vuexGetters(): TypeOfStyleguidesState {
       return this.$store.getters
     },
-    vuexfields(): object {
-      return (this.vuexGetters as TypeOfVuexState).fields
+    vuexFieldValues(): object {
+      return (this.vuexGetters as TypeOfStyleguidesState).fieldValues
     },
     fieldValues(): object {
       return this.state.fieldValues

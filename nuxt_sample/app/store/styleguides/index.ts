@@ -1,40 +1,42 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { TypeOfRootState } from '~/store'
+
+export type TypeofFieldValues = {
+  'styleguides[email]': string
+  'styleguides[name_kana]': string
+}
+export type realtimeErrors = {
+  'styleguides[email]': string[]
+  'styleguides[name_kana]': string[]
+}
 
 export const state = () => ({
-  fields: {
-    values: {
-      'styleguides[email]': '' as string,
-      'styleguides[name_kana]': '' as string,
-    },
-  },
+  fieldValues: {
+    'styleguides[email]': '',
+    'styleguides[name_kana]': '',
+  } as TypeofFieldValues,
   realtimeErrors: {
-    'styleguides[email]': [] as string[],
-    'styleguides[name_kana]': [] as string[],
-  },
-  // exampleArray: [] as string[],
-  exampleString: 'exampleString',
+    'styleguides[email]': [],
+    'styleguides[name_kana]': [],
+  } as realtimeErrors,
 })
+export type TypeOfStyleguidesState = ReturnType<typeof state>
 
-export type TypeOfVuexState = ReturnType<typeof state>
-
-export const getters: GetterTree<TypeOfVuexState, TypeOfVuexState> = {
-  exampleString: (state) => state.exampleString,
-  fields: (state) => state.fields,
+export const getters: GetterTree<TypeOfStyleguidesState, TypeOfRootState> = {
+  fieldValues: (state) => state.fieldValues,
   realtimeErrors: (state) => state.realtimeErrors,
 }
 
-export const mutations: MutationTree<TypeOfVuexState> = {
-  changeValue: (state, payload) => {
-    const obj: any = {}
-    obj[payload.key] = payload.value
-    state.fields.values = { ...state.fields.values, ...obj }
+export const mutations: MutationTree<TypeOfStyleguidesState> = {
+  changeFieldValue(
+    state,
+    payload: { key: keyof TypeofFieldValues; value: string }
+  ) {
+    state.fieldValues[payload.key] = payload.value
   },
   changeRealtimeErrors: (state, realtimeErrors) => {
     state.realtimeErrors = realtimeErrors
   },
-  changeExampleString: (state, newValue: string) => {
-    state.exampleString = newValue
-  },
 }
 
-export const actions: ActionTree<TypeOfVuexState, TypeOfVuexState> = {}
+export const actions: ActionTree<TypeOfStyleguidesState, TypeOfRootState> = {}
