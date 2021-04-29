@@ -9,7 +9,7 @@
     <div class="basic-field-unit-0001__body">
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
-          :module-name="moduleName"
+          :module-ids="[...moduleIds, 'field']"
           :component-id="componentId"
           :value="value"
           :name-property="'hoge'"
@@ -57,10 +57,9 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    moduleName: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
+    moduleIds: {
+      type: Array as PropType<string[]>,
+      required: true,
     },
     componentId: {
       type: String as PropType<string>,

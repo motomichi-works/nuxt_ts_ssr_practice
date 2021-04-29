@@ -48,8 +48,8 @@
         </div>
         <div class="mod-container-0001__body">
           <BasicField0001
-            :module-name="moduleName"
-            component-id="styleguides[basic_field0001_01]"
+            :module-ids="['basicField0001Container', 'basicFieldA']"
+            component-id="styleguides[basicFieldA]"
             :value="''"
             :name-property="'hoge'"
             :is-disabled="false"
@@ -78,7 +78,7 @@
         </div>
         <div class="mod-container-0001__body">
           <BasicFieldUnit0001
-            :module-name="moduleName"
+            :module-ids="['basicFieldUnit0001Container', 'emailFieldUnit']"
             component-id="styleguides[email]"
             :value="fields.values['styleguides[email]'] || ''"
             heading-text="メールアドレス"
@@ -87,7 +87,7 @@
             @on-input-field="onInputField"
           />
           <BasicFieldUnit0001
-            :module-name="moduleName"
+            :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
             component-id="styleguides[name_kana]"
             :value="fields.values['styleguides[name_kana]'] || ''"
             heading-text="お名前（カナ）"
