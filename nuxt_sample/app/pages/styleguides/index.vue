@@ -105,10 +105,7 @@
 // import validate from 'validate.js'
 import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
-import {
-  TypeOfFieldValues,
-  TypeOfRealtimeErrors,
-} from '~/store/styleguides/index'
+import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
 // import constraints from '~/utils/validator/pages/styleguides/index/constraints'
 
@@ -129,13 +126,11 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
-    vuexFieldValues(): TypeOfFieldValues {
-      return this.$store.getters['styleguides/fieldValues'] as TypeOfFieldValues
+    vuexFieldValues(): FieldValues {
+      return this.$store.getters['styleguides/fieldValues'] as FieldValues
     },
     realtimeErrors(): object {
-      return this.$store.getters[
-        'styleguides/realtimeErrors'
-      ] as TypeOfRealtimeErrors
+      return this.$store.getters['styleguides/realtimeErrors'] as RealtimeErrors
     },
     faSearch() {
       return faSearch
