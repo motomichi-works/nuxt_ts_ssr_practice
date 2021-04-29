@@ -115,6 +115,16 @@ import BasicFieldUnit0001, {
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
+type TypeOfState = {
+  fieldValues: {
+    'styleguides[email]': string
+    'styleguides[name_kana]': string
+  }
+  realtimeErrors: {
+    'styleguides[email]': string[]
+    'styleguides[name_kana]': string[]
+  }
+}
 export default Vue.extend({
   components: {
     Badge0001,
@@ -125,19 +135,25 @@ export default Vue.extend({
   },
   data() {
     return {
-      fields: {
-        values: {
+      state: {
+        fieldValues: {
           'styleguides[email]': '' as string,
           'styleguides[name_kana]': '' as string,
         },
-      },
-      realtimeErrors: {
-        'styleguides[email]': [] as string[],
-        'styleguides[name_kana]': [] as string[],
-      },
+        realtimeErrors: {
+          'styleguides[email]': [] as string[],
+          'styleguides[name_kana]': [] as string[],
+        },
+      } as TypeOfState,
     }
   },
   computed: {
+    fieldValues(): object {
+      return this.state.fieldValues
+    },
+    realtimeErrors(): object {
+      return this.state.realtimeErrors
+    },
     faSearch() {
       return faSearch
     },
