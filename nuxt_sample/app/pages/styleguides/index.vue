@@ -147,11 +147,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    changeFieldValue(payload: ArgsOfChangeFieldValue): void {
-      // eslint-disable-next-line no-console
-      console.log('changeFieldValue payload: ', payload)
-      this.$store.commit('styleguides/changeFieldValue', payload)
-    },
     onInputField(payload: ArgsOfOnInputField) {
       // eslint-disable-next-line no-console
       console.log('page onInputField payload: ', payload)
@@ -161,6 +156,11 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       console.log('page onBlurField payload: ', payload)
       this.changeFieldValue(payload)
+    },
+    changeFieldValue(payload: ArgsOfChangeFieldValue): void {
+      // eslint-disable-next-line no-console
+      console.log('changeFieldValue payload: ', payload)
+      this.$store.commit('styleguides/changeFieldValue', payload)
     },
     // ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
     // validateAll(fieldValues: any) {
