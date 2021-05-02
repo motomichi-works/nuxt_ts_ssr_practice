@@ -79,19 +79,19 @@ export default Vue.extend({
   methods: {
     onInput(value: string): void {
       const payload = {
-        key: this.componentId,
+        key: this.nameProperty,
         value,
         eventType: 'input',
-      }
+      } as const
 
       this.$emit('on-input-field', payload)
     },
     onBlur({ target }: { target: HTMLInputElement }): void {
       const payload = {
-        key: this.componentId,
+        key: this.nameProperty,
         value: target.value,
-        eventType: target.type,
-      }
+        eventType: 'blur',
+      } as const
 
       this.$emit('on-blur-field', payload)
     },

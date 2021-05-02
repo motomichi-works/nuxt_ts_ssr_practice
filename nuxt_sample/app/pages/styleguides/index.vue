@@ -112,10 +112,17 @@ import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import BasicFieldUnit0001, {
-  PayloadType,
+  ArgsOfOnInputField,
+  ArgsOfOnBlurField,
 } from '~/components/common/basic-field-unit-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
+
+type ArgsOfChangeFieldValue = {
+  key: string
+  value: string
+  eventType: 'input' | 'blur'
+}
 
 export default Vue.extend({
   components: {
@@ -140,19 +147,19 @@ export default Vue.extend({
     },
   },
   methods: {
-    changeFieldValue(payload: PayloadType) {
+    changeFieldValue(payload: ArgsOfChangeFieldValue): void {
       // eslint-disable-next-line no-console
       console.log('changeFieldValue payload: ', payload)
       this.$store.commit('styleguides/changeFieldValue', payload)
     },
-    onBlurField(payload: PayloadType) {
-      // eslint-disable-next-line no-console
-      console.log('page onBlurField payload: ', payload)
-      this.changeFieldValue(payload)
-    },
-    onInputField(payload: PayloadType) {
+    onInputField(payload: ArgsOfOnInputField) {
       // eslint-disable-next-line no-console
       console.log('page onInputField payload: ', payload)
+      this.changeFieldValue(payload)
+    },
+    onBlurField(payload: ArgsOfOnBlurField) {
+      // eslint-disable-next-line no-console
+      console.log('page onBlurField payload: ', payload)
       this.changeFieldValue(payload)
     },
     // ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
