@@ -4,7 +4,7 @@
     :class="{ 'basic-field-0001--invalid': hasRealtimeErrors }"
   >
     <input
-      v-model="bindingValue"
+      v-model="computedValue"
       type="text"
       :disabled="isDisabled"
       :readonly="isReadonly"
@@ -37,22 +37,27 @@ export default Vue.extend({
     },
     nameProperty: {
       type: String as PropType<string>,
+      required: false,
       default: '',
     },
     isDisabled: {
       type: Boolean as PropType<boolean>,
+      required: false,
       default: false,
     },
     isReadonly: {
       type: Boolean as PropType<boolean>,
+      required: false,
       default: false,
     },
     placeholder: {
       type: String as PropType<string>,
+      required: false,
       default: '',
     },
     maxlength: {
       type: String as PropType<string>,
+      required: false,
       default: '',
     },
     hasRealtimeErrors: {
@@ -60,24 +65,9 @@ export default Vue.extend({
       required: false,
       default: false,
     },
-    onBlur: {
-      type: Function,
-      default({ target }: { target: HTMLInputElement }) {
-        const payload = {
-          key: this.componentId,
-          value: target.value,
-          eventType: target.type,
-        }
-
-        this.$emit('on-blur-field', payload)
-      },
-    },
   },
   computed: {
-    self() {
-      return this
-    },
-    bindingValue: {
+    computedValue: {
       get(): string {
         return this.value
       },
@@ -95,6 +85,15 @@ export default Vue.extend({
       }
 
       this.$emit('on-input-field', payload)
+    },
+    onBlur({ target }: { target: HTMLInputElement }): void {
+      const payload = {
+        key: this.componentId,
+        value: target.value,
+        eventType: target.type,
+      }
+
+      this.$emit('on-blur-field', payload)
     },
   },
 })
