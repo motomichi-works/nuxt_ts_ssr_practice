@@ -69,6 +69,31 @@ export default Vue.extend({
       type: String as PropType<string>,
       required: true,
     },
+    nameProperty: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
+    isDisabled: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+      default: false,
+    },
+    isReadonly: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+      default: false,
+    },
+    placeholder: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
+    maxlength: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
     headingText: {
       type: String as PropType<string>,
       required: false,
@@ -80,14 +105,9 @@ export default Vue.extend({
       default: true,
     },
     realtimeErrors: {
-      type: Array as any,
+      type: Array as PropType<string[]>,
       required: false,
       default: () => [],
-    },
-    maxlength: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
     },
   },
   methods: {
