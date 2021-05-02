@@ -5,6 +5,7 @@ export type FieldValues = {
   'styleguides[email]': string
   'styleguides[name_kana]': string
 }
+
 export type RealtimeErrors = {
   'styleguides[email]': string[]
   'styleguides[name_kana]': string[]
@@ -20,6 +21,7 @@ export const state = () => ({
     'styleguides[name_kana]': [],
   } as RealtimeErrors,
 })
+
 export type StyleguidesState = ReturnType<typeof state>
 
 export const getters: GetterTree<StyleguidesState, RootState> = {
