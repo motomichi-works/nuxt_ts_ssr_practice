@@ -1,17 +1,17 @@
 // NOTE: ここに定義する正規表現は空文字列を許容できるように全て「0回以上の繰り返し」にしてください。
-const PATTERNS: any = {
+const patterns = {
   // NOTE: blurイベントのときはドットで終わる文字列をエラーとします。
-  CUSTOM_EMAIL_FOR_BLUR:
+  customEmailForBlur:
     "^([a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*)*$",
   // NOTE: inputイベントのときはドットで終わる文字列を許容します。
-  CUSTOM_EMAIL_FOR_NOT_BLUR:
+  CustomEmailForNotBlur:
     "^([a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@([a-zA-Z0-9-]+)*?(?:[.]?|.[a-zA-Z0-9-]+)*)*$",
-}
+} as const
 
 export default {
   customEmail(value: string, options: any): string[] | undefined {
-    const regExpForBlur = new RegExp(PATTERNS.CUSTOM_EMAIL_FOR_BLUR)
-    const regExpForNotBlur = new RegExp(PATTERNS.CUSTOM_EMAIL_FOR_NOT_BLUR)
+    const regExpForBlur = new RegExp(patterns.customEmailForBlur)
+    const regExpForNotBlur = new RegExp(patterns.CustomEmailForNotBlur)
 
     if (options.isRequired && value === '') {
       return [`^${options.label}を入力してください。`]

@@ -7,11 +7,12 @@ validate.validators = {
 }
 
 export default {
-  customEmail(label: string, isRequired: boolean = true): any {
+  customEmail(label: string, isRequired: boolean = true) {
     return {
       customEmail: {
         label,
         isRequired,
+        eventType: '',
       },
     }
   },
