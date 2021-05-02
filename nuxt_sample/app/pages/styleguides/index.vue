@@ -126,10 +126,10 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
-    fieldValues(): FieldValues {
+    fieldValues() {
       return this.$store.getters['styleguides/fieldValues'] as FieldValues
     },
-    realtimeErrors(): object {
+    realtimeErrors() {
       return this.$store.getters['styleguides/realtimeErrors'] as RealtimeErrors
     },
     faSearch() {
