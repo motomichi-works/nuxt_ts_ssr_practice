@@ -38,8 +38,8 @@
           <h2 class="mod-heading-0001">fontawesome5</h2>
         </div>
         <div class="mod-container-0001__body">
-          <fa :icon="faSearch" />
-          <fa :icon="faSearchPlus" />
+          <fa :icon="fa.search" />
+          <fa :icon="fa.searchPlus" />
         </div>
       </section>
       <section class="mod-container-0001">
@@ -132,11 +132,11 @@ export default Vue.extend({
     realtimeErrors() {
       return this.$store.getters['styleguides/realtimeErrors'] as RealtimeErrors
     },
-    faSearch() {
-      return faSearch
-    },
-    faSearchPlus() {
-      return faSearchPlus
+    fa() {
+      return {
+        search: faSearch,
+        searchPlus: faSearchPlus,
+      }
     },
   },
   methods: {
