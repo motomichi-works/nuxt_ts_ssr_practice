@@ -49,7 +49,7 @@
         <div class="mod-container-0001__body">
           <BasicField0001
             :module-ids="['basicField0001Container', 'basicFieldA']"
-            component-id="styleguides[basicFieldA]"
+            component-id="styleguides[basic_field_a]"
             :value="''"
             :name-property="'hoge'"
             :is-disabled="false"
@@ -80,7 +80,7 @@
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'emailFieldUnit']"
             component-id="styleguides[email]"
-            :value="vuexFieldValues['styleguides[email]']"
+            :value="fieldValues['styleguides[email]']"
             heading-text="メールアドレス"
             :realtime-errors="realtimeErrors['styleguides[email]']"
             @on-blur-field="onBlurField"
@@ -89,7 +89,7 @@
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
             component-id="styleguides[name_kana]"
-            :value="vuexFieldValues['styleguides[name_kana]']"
+            :value="fieldValues['styleguides[name_kana]']"
             heading-text="お名前（カナ）"
             :realtime-errors="realtimeErrors['styleguides[name_kana]']"
             @on-blur-field="onBlurField"
@@ -126,7 +126,7 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
-    vuexFieldValues(): FieldValues {
+    fieldValues(): FieldValues {
       return this.$store.getters['styleguides/fieldValues'] as FieldValues
     },
     realtimeErrors(): object {
