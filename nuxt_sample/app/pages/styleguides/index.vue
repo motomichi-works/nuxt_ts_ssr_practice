@@ -49,6 +49,7 @@
         <div class="mod-container-0001__body">
           <BasicField0001
             :module-ids="['basicField0001Container', 'basicFieldA']"
+            :validator-names="['customEmail']"
             :value="''"
             :name-property="'hoge'"
             :is-disabled="false"
@@ -78,6 +79,7 @@
         <div class="mod-container-0001__body">
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'emailFieldUnit']"
+            :validator-names="['customEmail']"
             :value="fieldValues['styleguides[email]']"
             :name-property="'styleguides[email]'"
             :is-disabled="false"
@@ -92,6 +94,7 @@
           />
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
+            :validator-names="['customEmail']"
             :value="fieldValues['styleguides[name_kana]']"
             :name-property="'styleguides[name_kana]'"
             :is-disabled="false"
@@ -111,12 +114,12 @@
 </template>
 
 <script lang="ts">
-// import validate from 'validate.js'
+import validate from 'validate.js'
 import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
-// import constraints from '~/utils/validator/pages/styleguides/index/constraints'
+import { customEmail } from '~/utils/validator/constraintFunctions'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
@@ -127,10 +130,21 @@ import BasicFieldUnit0001, {
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
+type ArgsOfChangeRealtimeErrors = {
+  key: string
+  value: string[]
+}
+
 type ArgsOfChangeFieldValue = {
   key: string
   value: string
+}
+
+type ArgsOfValidateSingle = {
+  key: string
+  value: string
   eventType: 'input' | 'blur'
+  validatorNames: string[]
 }
 
 export default Vue.extend({
@@ -142,6 +156,14 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
+    constraints() {
+      const fieldValues = this.fieldValues as FieldValues
+
+      return {
+        'styleguides[email]': customEmail('メールアドレス', fieldValues),
+        'styleguides[name_kana]': customEmail('メールアドレス', fieldValues),
+      } as any
+    },
     fieldValues() {
       return this.$store.getters['styleguides/fieldValues'] as FieldValues
     },
@@ -157,24 +179,48 @@ export default Vue.extend({
   },
   methods: {
     onInputField(payload: ArgsOfOnInputField) {
+      const validationResult = this.validateSingle(payload)
       // eslint-disable-next-line no-console
-      console.log('page onInputField payload: ', payload)
+      // console.log('validationResult: ', validationResult)
+
+      this.changeRealtimeErrors({
+        key: payload.key,
+        value: validationResult,
+      })
       this.changeFieldValue(payload)
     },
     onBlurField(payload: ArgsOfOnBlurField) {
+      const validationResult = this.validateSingle(payload)
       // eslint-disable-next-line no-console
-      console.log('page onBlurField payload: ', payload)
+      // console.log('validationResult: ', validationResult)
+
+      this.changeRealtimeErrors({
+        key: payload.key,
+        value: validationResult,
+      })
       this.changeFieldValue(payload)
     },
-    changeFieldValue(payload: ArgsOfChangeFieldValue): void {
-      // eslint-disable-next-line no-console
-      console.log('changeFieldValue payload: ', payload)
-      this.$store.commit('styleguides/changeFieldValue', payload)
+    validateSingle(args: ArgsOfValidateSingle): string[] {
+      const constraintsKey = args.key
+      const constraint = this.constraints[constraintsKey]
+
+      args.validatorNames.forEach((validatorName) => {
+        constraint[validatorName].eventType = args.eventType
+      })
+
+      const result = validate.single(
+        args.value,
+        this.constraints[constraintsKey]
+      )
+
+      return result ?? []
     },
-    // ...mapMutations(MODULE_NAME, ['changeRealtimeErrors']),
-    // validateAll(fieldValues: any) {
-    //   return validate(fieldValues, constraints) ?? {}
-    // },
+    changeRealtimeErrors(args: ArgsOfChangeRealtimeErrors): void {
+      this.$store.commit('styleguides/changeRealtimeErrors', args)
+    },
+    changeFieldValue(args: ArgsOfChangeFieldValue): void {
+      this.$store.commit('styleguides/changeFieldValue', args)
+    },
   },
 })
 </script>

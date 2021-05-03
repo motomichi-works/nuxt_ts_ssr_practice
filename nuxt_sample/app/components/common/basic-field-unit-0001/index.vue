@@ -10,6 +10,7 @@
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
           :module-ids="[...moduleIds, 'field']"
+          :validator-names="validatorNames"
           :value="value"
           :name-property="nameProperty"
           :is-disabled="isDisabled"
@@ -46,12 +47,14 @@ export type ArgsOfOnInputField = {
   key: string
   value: string
   eventType: 'input'
+  validatorNames: string[]
 }
 
 export type ArgsOfOnBlurField = {
   key: string
   value: string
   eventType: 'blur'
+  validatorNames: string[]
 }
 
 export default Vue.extend({
@@ -63,6 +66,10 @@ export default Vue.extend({
   },
   props: {
     moduleIds: {
+      type: Array as PropType<string[]>,
+      required: true,
+    },
+    validatorNames: {
       type: Array as PropType<string[]>,
       required: true,
     },

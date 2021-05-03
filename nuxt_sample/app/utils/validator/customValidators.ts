@@ -17,11 +17,11 @@ export default {
       return [`^${options.label}を入力してください。`]
     }
 
-    if (!regExpForBlur.test(value)) {
+    if (options.eventType === 'blur' && !regExpForBlur.test(value)) {
       return [`^${options.label}が正しく入力されているか確認してください。`]
     }
 
-    if (!regExpForNotBlur.test(value)) {
+    if (options.eventType === 'input' && !regExpForNotBlur.test(value)) {
       return [`^${options.label}が正しく入力されているか確認してください。`]
     }
 

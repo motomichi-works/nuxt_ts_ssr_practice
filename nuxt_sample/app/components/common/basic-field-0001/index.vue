@@ -27,6 +27,10 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: true,
     },
+    validatorNames: {
+      type: Array as PropType<string[]>,
+      required: true,
+    },
     value: {
       type: String as PropType<string>,
       required: true,
@@ -78,6 +82,7 @@ export default Vue.extend({
         key: this.nameProperty,
         value,
         eventType: 'input',
+        validatorNames: this.validatorNames,
       } as const
 
       this.$emit('on-input-field', payload)
@@ -87,6 +92,7 @@ export default Vue.extend({
         key: this.nameProperty,
         value: target.value,
         eventType: 'blur',
+        validatorNames: this.validatorNames,
       } as const
 
       this.$emit('on-blur-field', payload)

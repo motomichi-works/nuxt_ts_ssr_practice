@@ -33,8 +33,18 @@ export const mutations: MutationTree<StyleguidesState> = {
   changeFieldValue(state, payload: { key: keyof FieldValues; value: string }) {
     state.fieldValues[payload.key] = payload.value
   },
-  changeRealtimeErrors: (state, realtimeErrors) => {
-    state.realtimeErrors = realtimeErrors
+  changeRealtimeErrors: (
+    state,
+    payload: { key: keyof RealtimeErrors; value: string[] }
+  ) => {
+    const sharedArray = [
+      'styleguides[email]',
+      'styleguides[name_kana]',
+    ] as const
+    type Key = typeof sharedArray[number]
+    const key: Key = payload.key
+
+    state.realtimeErrors[key] = payload.value
   },
 }
 
