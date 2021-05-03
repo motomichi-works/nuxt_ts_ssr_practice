@@ -10,7 +10,6 @@
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
           :module-ids="[...moduleIds, 'field']"
-          :component-id="componentId"
           :value="value"
           :name-property="'hoge'"
           :is-disabled="false"
@@ -65,10 +64,6 @@ export default Vue.extend({
   props: {
     moduleIds: {
       type: Array as PropType<string[]>,
-      required: true,
-    },
-    componentId: {
-      type: String as PropType<string>,
       required: true,
     },
     value: {

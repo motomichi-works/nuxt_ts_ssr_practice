@@ -27,10 +27,6 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: true,
     },
-    componentId: {
-      type: String as PropType<string>,
-      required: true,
-    },
     value: {
       type: String as PropType<string>,
       required: true,
