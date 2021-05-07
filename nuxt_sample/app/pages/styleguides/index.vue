@@ -9,23 +9,7 @@
       <Badge0001Container :module-ids="['Badge0001Container']" />
       <FieldHeading0001Container :module-ids="['FieldHeading0001Container']" />
       <FontAwesome5Container :module-ids="['FontAwesome5Container']" />
-      <section class="mod-container-0001">
-        <div class="mod-container-0001__heading-wrapper">
-          <h2 class="mod-heading-0001">BasicField0001</h2>
-        </div>
-        <div class="mod-container-0001__body">
-          <BasicField0001
-            :module-ids="['basicField0001Container', 'basicFieldA']"
-            :validator-names="['customEmail']"
-            :value="''"
-            :name-property="'hoge'"
-            :is-disabled="false"
-            :is-readonly="false"
-            :placeholder="'プレースホルダー'"
-            :maxlength="'10'"
-          />
-        </div>
-      </section>
+      <BasicField0001Container :module-ids="['BasicField0001Container']" />
       <section class="mod-container-0001">
         <div class="mod-container-0001__heading-wrapper">
           <h2 class="mod-heading-0001">FieldErrorMessages0001</h2>
@@ -51,7 +35,7 @@ import Vue from 'vue'
 
 import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
 import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
-import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
+import BasicField0001Container from '~/components/pages/styleguides/basic-field-0001-container/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001Container from '~/components/pages/styleguides/field-heading-0001-container/index.vue'
 import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
@@ -60,7 +44,7 @@ export default Vue.extend({
   components: {
     Badge0001Container,
     FontAwesome5Container,
-    BasicField0001,
+    BasicField0001Container,
     FieldErrorMessages0001,
     FieldHeading0001Container,
     BasicFieldUnit0001Container,
