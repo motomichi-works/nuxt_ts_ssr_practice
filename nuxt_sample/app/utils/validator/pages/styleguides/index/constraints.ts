@@ -8,5 +8,5 @@ export type Constraints = {
 
 export default {
   'styleguides[email]': constraintsFunctions.customEmail('メールアドレス'),
-  'styleguides[name_kana]': constraintsFunctions.customEmail('メールアドレス'),
+  'styleguides[name_kana]': constraintsFunctions.katakana('お名前（カナ）'),
 } as Constraints

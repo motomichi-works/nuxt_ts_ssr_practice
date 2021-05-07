@@ -16,4 +16,13 @@ export default {
       } as any,
     }
   },
+  katakana(label: string, isRequired: boolean = true) {
+    return {
+      katakana: {
+        label,
+        isRequired,
+        eventType: '',
+      } as any,
+    }
+  },
 }

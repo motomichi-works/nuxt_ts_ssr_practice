@@ -24,6 +24,7 @@ const patterns = {
   // NOTE: inputイベントのときはドットで終わる文字列を許容します。
   CustomEmailForNotBlur:
     "^([a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@([a-zA-Z0-9-]+)*?([.]{1}|[.]{1}[a-zA-Z0-9-]{1,3}|[.][a-zA-Z0-9-]{2,3}))*$",
+  katakana: '^[ア-ン゛゜ァ-ォャ-ョー「」、 　A-Za-z0-9]*$',
 } as const
 
 export default {
@@ -41,6 +42,19 @@ export default {
 
     if (options.eventType === 'input' && !regExpForNotBlur.test(value)) {
       return [`^${options.label}が正しく入力されているか確認してください。`]
+    }
+
+    return undefined
+  },
+  katakana(value: string, options: any): string[] | undefined {
+    const regExp = new RegExp(patterns.katakana)
+
+    if (options.isRequired && value === '') {
+      return [`^${options.label}を入力してください。`]
+    }
+
+    if (!regExp.test(value)) {
+      return [`^${options.label}に使用できない文字が含まれています。`]
     }
 
     return undefined

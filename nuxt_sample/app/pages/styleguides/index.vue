@@ -94,7 +94,7 @@
           />
           <BasicFieldUnit0001
             :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
-            :validator-names="['customEmail']"
+            :validator-names="['katakana']"
             :value="fieldValues['styleguides[name_kana]']"
             :name-property="'styleguides[name_kana]'"
             :is-disabled="false"
