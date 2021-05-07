@@ -7,17 +7,7 @@
     </div>
     <div class="l-contents-type-0001__body">
       <Badge0001Container :module-ids="['Badge0001Container']" />
-      <section class="mod-container-0001">
-        <div class="mod-container-0001__heading-wrapper">
-          <h2 class="mod-heading-0001">field-heading-0001</h2>
-        </div>
-        <div class="mod-container-0001__body">
-          <FieldHeading0001 text="h2見出し" />
-          <FieldHeading0001 text="h3見出し" level="h3" />
-          <FieldHeading0001 text="h2見出し" :is-required="false" />
-          <FieldHeading0001 text="h2見出し" :is-required="false" level="h3" />
-        </div>
-      </section>
+      <FieldHeading0001Container :module-ids="['FieldHeading0001Container']" />
       <section class="mod-container-0001">
         <div class="mod-container-0001__heading-wrapper">
           <h2 class="mod-heading-0001">fontawesome5</h2>
@@ -71,7 +61,7 @@ import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
-import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
+import FieldHeading0001Container from '~/components/pages/styleguides/field-heading-0001-container/index.vue'
 import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
 
 export default Vue.extend({
@@ -79,7 +69,7 @@ export default Vue.extend({
     Badge0001Container,
     BasicField0001,
     FieldErrorMessages0001,
-    FieldHeading0001,
+    FieldHeading0001Container,
     BasicFieldUnit0001Container,
   },
   computed: {
