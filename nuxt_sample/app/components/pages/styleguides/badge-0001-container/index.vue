@@ -27,7 +27,7 @@ export default Vue.extend({
     Badge0001,
   },
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },

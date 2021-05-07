@@ -5,7 +5,7 @@
     </div>
     <div class="mod-container-0001__body">
       <BasicFieldUnit0001
-        :module-ids="['basicFieldUnit0001Container', 'emailFieldUnit']"
+        :identifiers="['basicFieldUnit0001Container', 'emailFieldUnit']"
         :validator-names="['customEmail']"
         :value="fieldValues['styleguides[email]']"
         :name-property="'styleguides[email]'"
@@ -20,7 +20,7 @@
         @on-input-field="onInputField"
       />
       <BasicFieldUnit0001
-        :module-ids="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
+        :identifiers="['basicFieldUnit0001Container', 'nameKanaFieldUnit']"
         :validator-names="['katakana']"
         :value="fieldValues['styleguides[name_kana]']"
         :name-property="'styleguides[name_kana]'"
@@ -77,7 +77,7 @@ export default Vue.extend({
     BasicFieldUnit0001,
   },
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },

@@ -5,7 +5,7 @@
     </div>
     <div class="mod-container-0001__body">
       <BasicField0001
-        :module-ids="['basicField0001Container', 'basicFieldA']"
+        :identifiers="['basicField0001Container', 'basicFieldA']"
         :validator-names="['customEmail']"
         :value="''"
         :name-property="'hoge'"
@@ -28,7 +28,7 @@ export default Vue.extend({
     BasicField0001,
   },
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },

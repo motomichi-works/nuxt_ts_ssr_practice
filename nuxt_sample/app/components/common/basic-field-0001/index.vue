@@ -23,7 +23,7 @@ import Vue, { PropType } from 'vue'
 export default Vue.extend({
   name: 'BasicField0001',
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },

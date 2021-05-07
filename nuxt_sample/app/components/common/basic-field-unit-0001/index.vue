@@ -9,7 +9,7 @@
     <div class="basic-field-unit-0001__body">
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
-          :module-ids="[...moduleIds, 'field']"
+          :identifiers="[...identifiers, 'field']"
           :validator-names="validatorNames"
           :value="value"
           :name-property="nameProperty"
@@ -65,7 +65,7 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },

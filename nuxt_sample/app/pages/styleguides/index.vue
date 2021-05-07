@@ -10,7 +10,7 @@
         :is="component.name"
         v-for="component in components"
         :key="component.identifiers.join('__')"
-        :module-ids="component.identifiers"
+        :identifiers="component.identifiers"
       >
       </component>
     </div>

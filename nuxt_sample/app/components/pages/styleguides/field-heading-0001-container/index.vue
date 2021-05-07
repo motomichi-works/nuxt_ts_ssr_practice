@@ -22,7 +22,7 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },

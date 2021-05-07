@@ -17,7 +17,7 @@ export default Vue.extend({
   name: 'FontAwesome5Container',
   components: {},
   props: {
-    moduleIds: {
+    identifiers: {
       type: Array as PropType<string[]>,
       required: true,
     },
