@@ -6,16 +6,13 @@
       </h1>
     </div>
     <div class="l-contents-type-0001__body">
-      <Badge0001Container :module-ids="['Badge0001Container']" />
-      <FieldHeading0001Container :module-ids="['FieldHeading0001Container']" />
-      <FontAwesome5Container :module-ids="['FontAwesome5Container']" />
-      <BasicField0001Container :module-ids="['BasicField0001Container']" />
-      <FieldErrorMessages0001Container
-        :module-ids="['FieldErrorMessages0001Container']"
-      />
-      <BasicFieldUnit0001Container
-        :module-ids="['BasicFieldUnit0001Container']"
-      />
+      <component
+        :is="component.name"
+        v-for="component in components"
+        :key="component.identifiers.join('__')"
+        :module-ids="component.identifiers"
+      >
+      </component>
     </div>
   </div>
 </template>
@@ -33,11 +30,29 @@ import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-fi
 export default Vue.extend({
   components: {
     Badge0001Container,
-    FontAwesome5Container,
     BasicField0001Container,
+    BasicFieldUnit0001Container,
     FieldErrorMessages0001Container,
     FieldHeading0001Container,
-    BasicFieldUnit0001Container,
+    FontAwesome5Container,
+  },
+  computed: {
+    components() {
+      const componentNames = [
+        'Badge0001Container',
+        'BasicField0001Container',
+        'BasicFieldUnit0001Container',
+        'FieldErrorMessages0001Container',
+        'FieldHeading0001Container',
+        'FontAwesome5Container',
+      ] as const
+
+      const components = componentNames.map((name) => {
+        return { name, identifiers: [name] }
+      })
+
+      return components
+    },
   },
 })
 </script>
