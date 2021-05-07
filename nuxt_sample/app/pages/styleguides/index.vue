@@ -119,7 +119,9 @@ import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
-import { customEmail } from '~/utils/validator/constraintFunctions'
+import constraintsBase, {
+  Constraints,
+} from '~/utils/validator/pages/styleguides/index/constraints'
 
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
@@ -129,6 +131,8 @@ import BasicFieldUnit0001, {
 } from '~/components/common/basic-field-unit-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
+
+const cloneDeep = require('lodash.clonedeep')
 
 type ArgsOfChangeRealtimeErrors = {
   key: string
@@ -156,13 +160,11 @@ export default Vue.extend({
     FieldHeading0001,
   },
   computed: {
-    constraints() {
-      const fieldValues = this.fieldValues as FieldValues
-
-      return {
-        'styleguides[email]': customEmail('メールアドレス', fieldValues),
-        'styleguides[name_kana]': customEmail('メールアドレス', fieldValues),
-      } as any
+    constraints(): Constraints {
+      const constraintsWithOptions = this.addOptionsToConstraints(
+        constraintsBase
+      )
+      return constraintsWithOptions
     },
     fieldValues() {
       return this.$store.getters['styleguides/fieldValues'] as FieldValues
@@ -178,6 +180,20 @@ export default Vue.extend({
     },
   },
   methods: {
+    addOptionsToConstraints(args: Constraints): Constraints {
+      const constraints: Constraints = cloneDeep(args)
+      const fieldValues = this.fieldValues as FieldValues
+      const constraintsKeys = Object.keys(constraints)
+
+      constraintsKeys.forEach((constraintsKey) => {
+        const validadorNames = Object.keys(constraints[constraintsKey])
+        validadorNames.forEach((validadorName) => {
+          constraints[constraintsKey][validadorName].prevValues = fieldValues
+        })
+      })
+
+      return constraints
+    },
     onInputField(payload: ArgsOfOnInputField) {
       const validationResult = this.validateSingle(payload)
       // eslint-disable-next-line no-console
