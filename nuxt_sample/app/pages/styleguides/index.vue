@@ -6,22 +6,7 @@
       </h1>
     </div>
     <div class="l-contents-type-0001__body">
-      <section class="mod-container-0001">
-        <div class="mod-container-0001__heading-wrapper">
-          <h2 class="mod-heading-0001">badge-0001</h2>
-        </div>
-        <div class="mod-container-0001__body">
-          <div>
-            <Badge0001 text="必須" />
-          </div>
-          <div>
-            <Badge0001
-              text="任意"
-              :modifier-classes="['badge-0001--bg-color-gray']"
-            />
-          </div>
-        </div>
-      </section>
+      <Badge0001Container :module-ids="['Badge0001Container']" />
       <section class="mod-container-0001">
         <div class="mod-container-0001__heading-wrapper">
           <h2 class="mod-heading-0001">field-heading-0001</h2>
@@ -83,7 +68,7 @@
 import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
-import Badge0001 from '~/components/common/badge-0001/index.vue'
+import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
@@ -91,7 +76,7 @@ import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-fi
 
 export default Vue.extend({
   components: {
-    Badge0001,
+    Badge0001Container,
     BasicField0001,
     FieldErrorMessages0001,
     FieldHeading0001,
