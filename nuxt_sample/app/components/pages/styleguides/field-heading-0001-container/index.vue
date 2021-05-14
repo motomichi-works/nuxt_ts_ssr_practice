@@ -11,7 +11,7 @@
       <FieldHeading0001
         :identifiers="[...identifiers, 'FieldHeading0001A']"
         text="h3見出し"
-        level="h3"
+        tag-name="h3"
       />
       <FieldHeading0001
         :identifiers="[...identifiers, 'FieldHeading0001B']"
@@ -22,7 +22,7 @@
         :identifiers="[...identifiers, 'FieldHeading0001C']"
         text="h2見出し"
         :is-required="false"
-        level="h3"
+        tag-name="h3"
       />
     </div>
   </section>

@@ -7,7 +7,7 @@
         :modifier-classes="propsForBadge.modifierClasses"
       />
     </div>
-    <component :is="level" class="field-heading-0001__text">
+    <component :is="tagName" class="field-heading-0001__text">
       {{ text }}
     </component>
   </div>
@@ -35,7 +35,7 @@ export default Vue.extend({
       type: Boolean as PropType<boolean>,
       default: true,
     },
-    level: {
+    tagName: {
       type: String as PropType<string>,
       default: 'h2',
     },

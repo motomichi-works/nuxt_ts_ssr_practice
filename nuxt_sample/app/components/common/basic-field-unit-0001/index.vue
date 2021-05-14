@@ -1,5 +1,5 @@
 <template>
-  <div class="basic-field-unit-0001">
+  <section class="basic-field-unit-0001">
     <div
       v-if="headingText.length > 0"
       class="basic-field-unit-0001__heading-wrapper"
@@ -40,7 +40,7 @@
         :error-messages="realtimeErrors"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
