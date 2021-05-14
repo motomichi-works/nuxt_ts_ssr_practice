@@ -40,6 +40,8 @@
 <script lang="ts">
 import validate from 'validate.js'
 import Vue, { PropType } from 'vue'
+// mixins
+import formBase from '~/mixins/form_base'
 
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
@@ -76,6 +78,7 @@ export default Vue.extend({
   components: {
     BasicFieldUnit0001,
   },
+  mixins: [formBase],
   props: {
     identifiers: {
       type: Array as PropType<string[]>,
