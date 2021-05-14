@@ -1,5 +1,5 @@
 <template>
-  <section class="basic-field-unit-0001">
+  <section :data-selector="identifierStr" class="basic-field-unit-0001">
     <div
       v-if="headingText.length > 0"
       class="basic-field-unit-0001__heading-wrapper"
@@ -123,6 +123,11 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: false,
       default: () => [],
+    },
+  },
+  computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
     },
   },
   methods: {

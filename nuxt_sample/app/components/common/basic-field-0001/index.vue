@@ -1,5 +1,6 @@
 <template>
   <div
+    :data-selector="identifierStr"
     class="basic-field-0001 basic-field-0001--size-m"
     :class="{ 'basic-field-0001--invalid': hasRealtimeErrors }"
   >
@@ -67,6 +68,9 @@ export default Vue.extend({
     },
   },
   computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
+    },
     computedValue: {
       get(): string {
         return this.value

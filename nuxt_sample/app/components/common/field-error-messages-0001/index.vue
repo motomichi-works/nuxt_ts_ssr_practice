@@ -1,5 +1,5 @@
 <template>
-  <div class="field-error-messages-0001">
+  <div :data-selector="identifierStr" class="field-error-messages-0001">
     <ul class="field-error-messages-0001__list-group">
       <li
         v-for="message in errorMessages"
@@ -25,6 +25,11 @@ export default Vue.extend({
     errorMessages: {
       type: Array as PropType<string[]>,
       default: () => [],
+    },
+  },
+  computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
     },
   },
 })

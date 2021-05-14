@@ -1,5 +1,10 @@
 <template>
-  <span class="badge-0001" :class="modifierClasses">{{ text }}</span>
+  <span
+    :data-selector="identifierStr"
+    class="badge-0001"
+    :class="modifierClasses"
+    >{{ text }}</span
+  >
 </template>
 
 <script lang="ts">
@@ -19,6 +24,11 @@ export default Vue.extend({
     modifierClasses: {
       type: Array as PropType<string[]>,
       default: () => ['badge-0001--bg-color-red'],
+    },
+  },
+  computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
     },
   },
 })

@@ -1,5 +1,5 @@
 <template>
-  <div class="field-heading-0001">
+  <div :data-selector="identifierStr" class="field-heading-0001">
     <div class="field-heading-0001__badge-wrapper">
       <Badge0001
         :identifiers="[...identifiers, 'Badge']"
@@ -41,6 +41,9 @@ export default Vue.extend({
     },
   },
   computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
+    },
     propsForBadge() {
       if (!this.isRequired) {
         return {

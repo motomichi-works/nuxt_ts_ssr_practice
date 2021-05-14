@@ -1,5 +1,5 @@
 <template>
-  <section class="mod-container-0001">
+  <section :data-selector="identifierStr" class="mod-container-0001">
     <div class="mod-container-0001__heading-wrapper">
       <h2 class="mod-heading-0001">FieldErrorMessages0001</h2>
     </div>
@@ -28,6 +28,11 @@ export default Vue.extend({
     identifiers: {
       type: Array as PropType<string[]>,
       required: true,
+    },
+  },
+  computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
     },
   },
 })

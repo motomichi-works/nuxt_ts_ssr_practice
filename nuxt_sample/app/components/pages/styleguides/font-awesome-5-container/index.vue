@@ -1,5 +1,5 @@
 <template>
-  <section class="mod-container-0001">
+  <section :data-selector="identifierStr" class="mod-container-0001">
     <div class="mod-container-0001__heading-wrapper">
       <h2 class="mod-heading-0001">fontawesome5</h2>
     </div>
@@ -23,6 +23,9 @@ export default Vue.extend({
     },
   },
   computed: {
+    identifierStr() {
+      return this.identifiers.join('/')
+    },
     fa() {
       return {
         search: faSearch,
