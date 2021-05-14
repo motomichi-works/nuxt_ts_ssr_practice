@@ -5,7 +5,7 @@
     </div>
     <div class="mod-container-0001__body">
       <BasicField0001
-        :identifiers="['basicField0001Container', 'basicFieldA']"
+        :identifiers="[...identifiers, 'basicFieldA']"
         :validator-names="['customEmail']"
         :value="''"
         :name-property="'hoge'"
