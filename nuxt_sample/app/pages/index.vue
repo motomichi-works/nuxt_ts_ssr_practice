@@ -1,5 +1,5 @@
 <template>
-  <div class="l-contents-type-0001">
+  <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
       <h1 class="mod-heading-0001 mod-heading-0001--lv-1">pages/index.vue</h1>
     </div>
@@ -32,6 +32,11 @@ export default Vue.extend({
     return {
       items,
     }
+  },
+  computed: {
+    identifierStr() {
+      return 'Contents'
+    },
   },
 })
 </script>

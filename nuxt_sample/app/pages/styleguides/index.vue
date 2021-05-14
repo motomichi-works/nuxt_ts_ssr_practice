@@ -1,5 +1,5 @@
 <template>
-  <div class="l-contents-type-0001">
+  <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
       <h1 class="mod-heading-0001 mod-heading-0001--lv-1">
         styleguides/index.vue
@@ -37,6 +37,9 @@ export default Vue.extend({
     FontAwesome5Container,
   },
   computed: {
+    identifierStr() {
+      return 'Contents'
+    },
     components() {
       const componentNames = [
         'Badge0001Container',

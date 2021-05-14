@@ -1,5 +1,5 @@
 <template>
-  <div class="l-body-inner-0001">
+  <div :data-selector="identifierStr" class="l-body-inner-0001">
     <div class="l-body-inner-0001__header-wrapper">
       <header class="mod-header-0001">
         <div class="mod-header-0001__inner">
@@ -23,6 +23,16 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  computed: {
+    identifierStr() {
+      return 'BodyInner'
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 // base
