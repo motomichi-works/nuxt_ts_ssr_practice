@@ -9,7 +9,7 @@
       <component
         :is="component.name"
         v-for="component in components"
-        :key="component.identifiers.join('__')"
+        :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
       >
       </component>

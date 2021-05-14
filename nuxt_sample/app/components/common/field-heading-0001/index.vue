@@ -42,7 +42,7 @@ export default Vue.extend({
   },
   computed: {
     identifierStr() {
-      return this.identifiers.join('/')
+      return this.identifiers.join('_')
     },
     propsForBadge() {
       if (!this.isRequired) {
