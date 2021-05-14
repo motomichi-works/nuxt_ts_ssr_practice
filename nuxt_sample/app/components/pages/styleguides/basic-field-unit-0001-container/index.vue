@@ -5,7 +5,7 @@
     </div>
     <div class="mod-container-0001__body">
       <BasicFieldUnit0001
-        :identifiers="[...identifiers, 'emailFieldUnit']"
+        :identifiers="[...identifiers, 'EmailFieldUnit']"
         :validator-names="['customEmail']"
         :value="fieldValues['styleguides[email]']"
         :name-property="'styleguides[email]'"
@@ -20,7 +20,7 @@
         @on-input-field="onInputField"
       />
       <BasicFieldUnit0001
-        :identifiers="[...identifiers, 'nameKanaFieldUnit']"
+        :identifiers="[...identifiers, 'NameKanaFieldUnit']"
         :validator-names="['katakana']"
         :value="fieldValues['styleguides[name_kana]']"
         :name-property="'styleguides[name_kana]'"

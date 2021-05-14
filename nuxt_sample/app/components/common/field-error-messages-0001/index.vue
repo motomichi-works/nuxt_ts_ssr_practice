@@ -18,6 +18,10 @@ import Vue, { PropType } from 'vue'
 export default Vue.extend({
   name: 'FieldErrorMessages0001',
   props: {
+    identifiers: {
+      type: Array as PropType<string[]>,
+      required: true,
+    },
     errorMessages: {
       type: Array as PropType<string[]>,
       default: () => [],

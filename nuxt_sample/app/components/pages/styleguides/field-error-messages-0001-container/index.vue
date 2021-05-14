@@ -5,6 +5,7 @@
     </div>
     <div class="mod-container-0001__body">
       <FieldErrorMessages0001
+        :identifiers="[...identifiers, 'FieldErrorMessages0001']"
         :error-messages="[
           'エラーメッセージサンプル1',
           'エラーメッセージサンプル2',

@@ -8,6 +8,10 @@ import Vue, { PropType } from 'vue'
 export default Vue.extend({
   name: 'Badge0001',
   props: {
+    identifiers: {
+      type: Array as PropType<string[]>,
+      required: true,
+    },
     text: {
       type: String as PropType<string>,
       required: true,

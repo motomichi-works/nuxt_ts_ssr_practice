@@ -4,10 +4,26 @@
       <h2 class="mod-heading-0001">field-heading-0001</h2>
     </div>
     <div class="mod-container-0001__body">
-      <FieldHeading0001 text="h2見出し" />
-      <FieldHeading0001 text="h3見出し" level="h3" />
-      <FieldHeading0001 text="h2見出し" :is-required="false" />
-      <FieldHeading0001 text="h2見出し" :is-required="false" level="h3" />
+      <FieldHeading0001
+        :identifiers="[...identifiers, 'FieldHeading0001']"
+        text="h2見出し"
+      />
+      <FieldHeading0001
+        :identifiers="[...identifiers, 'FieldHeading0001A']"
+        text="h3見出し"
+        level="h3"
+      />
+      <FieldHeading0001
+        :identifiers="[...identifiers, 'FieldHeading0001B']"
+        text="h2見出し"
+        :is-required="false"
+      />
+      <FieldHeading0001
+        :identifiers="[...identifiers, 'FieldHeading0001C']"
+        text="h2見出し"
+        :is-required="false"
+        level="h3"
+      />
     </div>
   </section>
 </template>

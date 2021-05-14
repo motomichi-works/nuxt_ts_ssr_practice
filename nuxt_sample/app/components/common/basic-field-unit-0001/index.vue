@@ -4,12 +4,16 @@
       v-if="headingText.length > 0"
       class="basic-field-unit-0001__heading-wrapper"
     >
-      <FieldHeading0001 :text="headingText" :is-required="isRequired" />
+      <FieldHeading0001
+        :identifiers="[...identifiers, 'Heading']"
+        :text="headingText"
+        :is-required="isRequired"
+      />
     </div>
     <div class="basic-field-unit-0001__body">
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
-          :identifiers="[...identifiers, 'field']"
+          :identifiers="[...identifiers, 'Field']"
           :validator-names="validatorNames"
           :value="value"
           :name-property="nameProperty"
@@ -31,7 +35,10 @@
       v-if="realtimeErrors.length > 0"
       class="basic-field-unit-0001__error-messages-wrapper"
     >
-      <FieldErrorMessages0001 :error-messages="realtimeErrors" />
+      <FieldErrorMessages0001
+        :identifiers="[...identifiers, 'FieldErrorMessages']"
+        :error-messages="realtimeErrors"
+      />
     </div>
   </div>
 </template>

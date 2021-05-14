@@ -2,6 +2,7 @@
   <div class="field-heading-0001">
     <div class="field-heading-0001__badge-wrapper">
       <Badge0001
+        :identifiers="[...identifiers, 'Badge']"
         :text="propsForBadge.text"
         :modifier-classes="propsForBadge.modifierClasses"
       />
@@ -22,6 +23,10 @@ export default Vue.extend({
     Badge0001,
   },
   props: {
+    identifiers: {
+      type: Array as PropType<string[]>,
+      required: true,
+    },
     text: {
       type: String as PropType<string>,
       required: true,

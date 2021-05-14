@@ -4,15 +4,12 @@
       <h2 class="mod-heading-0001">badge-0001</h2>
     </div>
     <div class="mod-container-0001__body">
-      <div>
-        <Badge0001 text="必須" />
-      </div>
-      <div>
-        <Badge0001
-          text="任意"
-          :modifier-classes="['badge-0001--bg-color-gray']"
-        />
-      </div>
+      <Badge0001 :identifiers="[...identifiers, 'Badge0001']" text="必須" />
+      <Badge0001
+        :identifiers="[...identifiers, 'Badge0001A']"
+        text="任意"
+        :modifier-classes="['badge-0001--bg-color-gray']"
+      />
     </div>
   </section>
 </template>
