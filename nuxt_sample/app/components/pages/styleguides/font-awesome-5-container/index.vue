@@ -1,7 +1,7 @@
 <template>
   <section :data-selector="identifierStr" class="mod-container-0001">
     <div class="mod-container-0001__heading-wrapper">
-      <h2 class="mod-heading-0001">fontawesome5</h2>
+      <h2 class="mod-heading-0001">FontAwesome5</h2>
     </div>
     <div class="mod-container-0001__body">
       <fa :icon="fa.search" />

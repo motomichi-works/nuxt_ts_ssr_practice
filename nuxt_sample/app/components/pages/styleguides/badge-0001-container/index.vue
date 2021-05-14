@@ -1,7 +1,7 @@
 <template>
   <section :data-selector="identifierStr" class="mod-container-0001">
     <div class="mod-container-0001__heading-wrapper">
-      <h2 class="mod-heading-0001">badge-0001</h2>
+      <h2 class="mod-heading-0001">Badge0001</h2>
     </div>
     <div class="mod-container-0001__body">
       <Badge0001 :identifiers="[...identifiers, 'Badge0001']" text="必須" />
