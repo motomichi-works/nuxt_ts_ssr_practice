@@ -66,6 +66,5 @@ export default Vue.extend({
 // layouts
 @import '~/assets/scss/layouts/l-contents-type-0001';
 // modules
-@import '~/assets/scss/modules/mod-container-0001';
 @import '~/assets/scss/modules/mod-heading-0001';
 </style>
