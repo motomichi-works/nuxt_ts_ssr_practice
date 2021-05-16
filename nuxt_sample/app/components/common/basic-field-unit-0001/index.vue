@@ -44,12 +44,29 @@
 </template>
 
 <script lang="ts">
+// import node_modules
 import Vue, { PropType } from 'vue'
 
+// components
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
+// define types
+type ArgsOfOnInputField = {
+  key: string
+  value: string
+  eventType: 'input'
+  validatorNames: string[]
+}
+type ArgsOfOnBlurField = {
+  key: string
+  value: string
+  eventType: 'blur'
+  validatorNames: string[]
+}
+
+// Vue.extend
 export default Vue.extend({
   name: 'BasicFieldUnit0001',
   components: {
@@ -117,21 +134,11 @@ export default Vue.extend({
     },
   },
   methods: {
-    onBlurField(payload: {
-      key: string
-      value: string
-      eventType: 'blur'
-      validatorNames: string[]
-    }): void {
-      this.$emit('on-blur-field', payload)
-    },
-    onInputField(payload: {
-      key: string
-      value: string
-      eventType: 'input'
-      validatorNames: string[]
-    }): void {
+    onInputField(payload: ArgsOfOnInputField): void {
       this.$emit('on-input-field', payload)
+    },
+    onBlurField(payload: ArgsOfOnBlurField): void {
+      this.$emit('on-blur-field', payload)
     },
   },
 })
