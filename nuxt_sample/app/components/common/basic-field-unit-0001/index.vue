@@ -50,20 +50,6 @@ import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
-export type ArgsOfOnInputField = {
-  key: string
-  value: string
-  eventType: 'input'
-  validatorNames: string[]
-}
-
-export type ArgsOfOnBlurField = {
-  key: string
-  value: string
-  eventType: 'blur'
-  validatorNames: string[]
-}
-
 export default Vue.extend({
   name: 'BasicFieldUnit0001',
   components: {
@@ -131,10 +117,20 @@ export default Vue.extend({
     },
   },
   methods: {
-    onBlurField(payload: ArgsOfOnBlurField): void {
+    onBlurField(payload: {
+      key: string
+      value: string
+      eventType: 'blur'
+      validatorNames: string[]
+    }): void {
       this.$emit('on-blur-field', payload)
     },
-    onInputField(payload: ArgsOfOnInputField): void {
+    onInputField(payload: {
+      key: string
+      value: string
+      eventType: 'input'
+      validatorNames: string[]
+    }): void {
       this.$emit('on-input-field', payload)
     },
   },

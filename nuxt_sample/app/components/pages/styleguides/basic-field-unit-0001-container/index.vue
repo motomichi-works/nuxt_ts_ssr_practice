@@ -49,10 +49,7 @@ import constraintsBase, {
   Constraints,
 } from '~/utils/validator/pages/styleguides/index/constraints'
 
-import BasicFieldUnit0001, {
-  ArgsOfOnInputField,
-  ArgsOfOnBlurField,
-} from '~/components/common/basic-field-unit-0001/index.vue'
+import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
 
 const cloneDeep = require('lodash.clonedeep')
 
@@ -117,7 +114,12 @@ export default Vue.extend({
 
       return constraints
     },
-    onInputField(payload: ArgsOfOnInputField) {
+    onInputField(payload: {
+      key: string
+      value: string
+      eventType: 'input'
+      validatorNames: string[]
+    }) {
       const validationResult = this.validateSingle(payload)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
@@ -128,7 +130,12 @@ export default Vue.extend({
       })
       this.changeFieldValue(payload)
     },
-    onBlurField(payload: ArgsOfOnBlurField) {
+    onBlurField(payload: {
+      key: string
+      value: string
+      eventType: 'blur'
+      validatorNames: string[]
+    }) {
       const validationResult = this.validateSingle(payload)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
