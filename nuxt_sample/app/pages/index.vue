@@ -1,12 +1,20 @@
 <template>
   <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
-      <h1 class="heading-0001 heading-0001--lv-1">pages/index.vue</h1>
+      <Heading0001
+        :identifiers="[identifierStr, 'Lv1Heading']"
+        text="pages/index.vue"
+        :modifier-classes="['heading-0001--lv-1']"
+        :tag-name="'h1'"
+      />
     </div>
     <div class="l-contents-type-0001__body">
       <section class="container-0001">
         <div class="container-0001__heading-wrapper">
-          <h2 class="heading-0001">見出し lv2</h2>
+          <Heading0001
+            :identifiers="[identifierStr, 'Lv2HeadingA']"
+            text="Lv2の見出し"
+          />
         </div>
         <div class="container-0001__body">
           ここにコンテンツのモジュールが入ります。
@@ -24,8 +32,14 @@
 import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
+// import components/common
+import Heading0001 from '~/components/common/heading-0001/index.vue'
+
 // Vue.extend
 export default Vue.extend({
+  components: {
+    Heading0001,
+  },
   async asyncData(context: Context): Promise<any> {
     const { app } = context
     const items = await app.$axios.$get(
