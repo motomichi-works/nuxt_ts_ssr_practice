@@ -37,8 +37,6 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss" scoped>
-// base
-@import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
 // modules
 @import '~/assets/scss/modules/mod-container-0001';
 @import '~/assets/scss/modules/mod-heading-0001';

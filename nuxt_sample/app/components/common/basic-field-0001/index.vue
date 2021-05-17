@@ -106,8 +106,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// base
-@import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
 // modules
 @import '~/assets/scss/modules/basic-field-0001';
 </style>

@@ -29,6 +29,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     ['@nuxtjs/eslint-module', { fix: true }],
+    '@nuxtjs/style-resources',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -61,5 +62,12 @@ export default {
         files: './**/*.{ts,js,vue}',
       },
     },
+  },
+
+  styleResources: {
+    scss: [
+      // use underscore "_" & also file extension ".scss"
+      './assets/scss/base/global-variables/media-queries/_media-queries.scss',
+    ],
   },
 }

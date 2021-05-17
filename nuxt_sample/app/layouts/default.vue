@@ -35,8 +35,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// base
-@import '~/assets/scss/base/global-variables/media-queries/media-queries.scss';
 // layouts
 @import '~/assets/scss/layouts/l-body-inner-0001.scss';
 // modules
