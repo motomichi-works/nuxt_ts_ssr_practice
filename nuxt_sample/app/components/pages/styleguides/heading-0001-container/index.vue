@@ -4,11 +4,41 @@
       <h2 class="mod-heading-0001">Heading0001</h2>
     </div>
     <div class="mod-container-0001__body">
-      <Badge0001 :identifiers="[...identifiers, 'Badge0001']" text="必須" />
-      <Badge0001
-        :identifiers="[...identifiers, 'Badge0001A']"
-        text="任意"
-        :modifier-classes="['badge-0001--bg-color-gray']"
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Lv1の見出し"
+        :modifier-classes="['mod-heading-0001--lv-1']"
+        :tag-name="'h2'"
+      />
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Lv2の見出し"
+        :modifier-classes="['mod-heading-0001--lv-2']"
+        :tag-name="'h2'"
+      />
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Lv3の見出し"
+        :modifier-classes="['mod-heading-0001--lv-3']"
+        :tag-name="'h2'"
+      />
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Lv4の見出し"
+        :modifier-classes="['mod-heading-0001--lv-4']"
+        :tag-name="'h2'"
+      />
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Lv5の見出し"
+        :modifier-classes="['mod-heading-0001--lv-5']"
+        :tag-name="'h2'"
+      />
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Lv6の見出し"
+        :modifier-classes="['mod-heading-0001--lv-6']"
+        :tag-name="'h2'"
       />
     </div>
   </section>
@@ -21,13 +51,13 @@ import Vue from 'vue'
 import base from '~/mixins/base'
 
 // components
-import Badge0001 from '~/components/common/badge-0001/index.vue'
+import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({
   name: 'Heading0001Container',
   components: {
-    Badge0001,
+    Heading0001,
   },
   mixins: [base],
 })
