@@ -26,9 +26,16 @@
           @on-input-field="onInputField"
         />
       </div>
-      <ul class="basic-field-unit-0001__hint-group">
-        <li class="basic-field-unit-0001__hint-item">ほげほげほげ</li>
-        <li class="basic-field-unit-0001__hint-item">ふがふがふが</li>
+      <ul
+        v-if="descriptions.length > 0"
+        class="basic-field-unit-0001__desc-group"
+      >
+        <li
+          v-for="desc in descriptions"
+          :key="desc"
+          class="basic-field-unit-0001__desc-item"
+          v-text="desc"
+        />
       </ul>
     </div>
     <div
@@ -111,6 +118,11 @@ export default Vue.extend({
       type: String as PropType<string>,
       required: false,
       default: '',
+    },
+    descriptions: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: () => [],
     },
     headingText: {
       type: String as PropType<string>,
