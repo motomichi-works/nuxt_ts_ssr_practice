@@ -13,9 +13,9 @@
       <Nuxt />
     </div>
     <div class="l-body-inner-0001__footer-wrapper">
-      <footer class="mod-footer-0001">
-        <div class="mod-footer-0001__copy-area">
-          <NuxtLink to="/" class="mod-footer-0001__copy">
+      <footer class="footer-0001">
+        <div class="footer-0001__copy-area">
+          <NuxtLink to="/" class="footer-0001__copy">
             &copy;MotomichiWorks
           </NuxtLink>
         </div>
@@ -39,5 +39,5 @@ export default {
 @import '~/assets/scss/layouts/l-body-inner-0001.scss';
 // modules
 @import '~/assets/scss/modules/mod-header-0001.scss';
-@import '~/assets/scss/modules/mod-footer-0001.scss';
+@import '~/assets/scss/modules/footer-0001.scss';
 </style>
