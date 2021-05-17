@@ -1,22 +1,22 @@
-.mod-container-0001 {
+.container-0001 {
   padding: 1px 16px;
   background-color: #ffffff;
-  // .mod-container-0001のpadding-topを補完する初期値
+  // .container-0001のpadding-topを補完する初期値
   > :first-child {
     margin-top: 15px;
   }
-  // .mod-container-0001のpadding-bottomを補完する初期値
+  // .container-0001のpadding-bottomを補完する初期値
   > :last-child {
     margin-bottom: 39px;
   }
-  .mod-container-0001__heading-wrapper {
+  .container-0001__heading-wrapper {
   }
-  .mod-container-0001__body {
+  .container-0001__body {
     margin-top: 24px;
   }
 
   // 隣接兄弟要素セレクタによるマージン
-  .mod-container-0001 + & {
+  .container-0001 + & {
     margin-top: 48px;
   }
 }
