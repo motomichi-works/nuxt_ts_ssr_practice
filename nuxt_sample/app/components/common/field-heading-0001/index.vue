@@ -15,6 +15,10 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+
+// mixins
+import base from '~/mixins/base'
+
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 
 export default Vue.extend({
@@ -22,11 +26,8 @@ export default Vue.extend({
   components: {
     Badge0001,
   },
+  mixins: [base],
   props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
     text: {
       type: String as PropType<string>,
       required: true,
@@ -41,9 +42,6 @@ export default Vue.extend({
     },
   },
   computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
-    },
     propsForBadge() {
       if (!this.isRequired) {
         return {

@@ -15,7 +15,10 @@
   </section>
 </template>
 <script lang="ts">
-import Vue, { PropType } from 'vue'
+import Vue from 'vue'
+
+// mixins
+import base from '~/mixins/base'
 
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 
@@ -24,17 +27,7 @@ export default Vue.extend({
   components: {
     FieldErrorMessages0001,
   },
-  props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-  },
-  computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
-    },
-  },
+  mixins: [base],
 })
 </script>
 <style lang="scss" scoped>

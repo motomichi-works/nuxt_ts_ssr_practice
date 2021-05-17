@@ -10,22 +10,16 @@
   </section>
 </template>
 <script lang="ts">
-import Vue, { PropType } from 'vue'
+import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
+
+// mixins
+import base from '~/mixins/base'
 
 export default Vue.extend({
   name: 'FontAwesome5Container',
-  components: {},
-  props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-  },
+  mixins: [base],
   computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
-    },
     fa() {
       return {
         search: faSearch,

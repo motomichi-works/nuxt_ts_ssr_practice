@@ -10,13 +10,13 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 
+// mixins
+import base from '~/mixins/base'
+
 export default Vue.extend({
   name: 'Badge0001',
+  mixins: [base],
   props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
     text: {
       type: String as PropType<string>,
       required: true,
@@ -24,11 +24,6 @@ export default Vue.extend({
     modifierClasses: {
       type: Array as PropType<string[]>,
       default: () => ['badge-0001--bg-color-red'],
-    },
-  },
-  computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
     },
   },
 })

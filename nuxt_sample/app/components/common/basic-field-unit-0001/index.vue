@@ -47,6 +47,9 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
+// mixins
+import base from '~/mixins/base'
+
 // components
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
@@ -74,11 +77,8 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
+  mixins: [base],
   props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
     validatorNames: {
       type: Array as PropType<string[]>,
       required: true,
@@ -126,11 +126,6 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: false,
       default: () => [],
-    },
-  },
-  computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
     },
   },
   methods: {

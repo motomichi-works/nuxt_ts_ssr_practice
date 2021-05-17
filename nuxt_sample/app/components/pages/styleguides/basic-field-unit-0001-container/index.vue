@@ -39,9 +39,10 @@
 </template>
 <script lang="ts">
 // import node_modules
-import Vue, { PropType } from 'vue'
+import Vue from 'vue'
 
 // mixins
+import base from '~/mixins/base'
 import formBase from '~/mixins/form_base'
 
 // components
@@ -53,18 +54,7 @@ export default Vue.extend({
   components: {
     BasicFieldUnit0001,
   },
-  mixins: [formBase],
-  props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-  },
-  computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
-    },
-  },
+  mixins: [base, formBase],
 })
 </script>
 <style lang="scss" scoped>

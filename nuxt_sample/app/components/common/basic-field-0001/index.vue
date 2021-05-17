@@ -21,13 +21,13 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 
+// mixins
+import base from '~/mixins/base'
+
 export default Vue.extend({
   name: 'BasicField0001',
+  mixins: [base],
   props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
     validatorNames: {
       type: Array as PropType<string[]>,
       required: true,
@@ -68,9 +68,6 @@ export default Vue.extend({
     },
   },
   computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
-    },
     computedValue: {
       get(): string {
         return this.value

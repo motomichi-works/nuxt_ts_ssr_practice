@@ -15,21 +15,16 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 
+// mixins
+import base from '~/mixins/base'
+
 export default Vue.extend({
   name: 'FieldErrorMessages0001',
+  mixins: [base],
   props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
     errorMessages: {
       type: Array as PropType<string[]>,
       default: () => [],
-    },
-  },
-  computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
     },
   },
 })

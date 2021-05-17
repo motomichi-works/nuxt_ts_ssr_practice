@@ -18,7 +18,10 @@
   </section>
 </template>
 <script lang="ts">
-import Vue, { PropType } from 'vue'
+import Vue from 'vue'
+
+// mixins
+import base from '~/mixins/base'
 
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 
@@ -27,17 +30,7 @@ export default Vue.extend({
   components: {
     BasicField0001,
   },
-  props: {
-    identifiers: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-  },
-  computed: {
-    identifierStr() {
-      return this.identifiers.join('_')
-    },
-  },
+  mixins: [base],
 })
 </script>
 <style lang="scss" scoped>
