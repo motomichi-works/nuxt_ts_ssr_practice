@@ -1,9 +1,12 @@
 <template>
   <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
-      <h1 class="mod-heading-0001 mod-heading-0001--lv-1">
-        styleguides/index.vue
-      </h1>
+      <Heading0001
+        :identifiers="[identifierStr, 'Heading0001']"
+        text="styleguides/index.vue"
+        :modifier-classes="['mod-heading-0001--lv-1']"
+        :tag-name="'h1'"
+      />
     </div>
     <div class="l-contents-type-0001__body">
       <component
@@ -22,6 +25,7 @@
 import Vue from 'vue'
 
 // components
+import Heading0001 from '~/components/common/heading-0001/index.vue'
 import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
 import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
 import BasicField0001Container from '~/components/pages/styleguides/basic-field-0001-container/index.vue'
@@ -33,6 +37,7 @@ import Heading0001Container from '~/components/pages/styleguides/heading-0001-co
 // Vue.extend
 export default Vue.extend({
   components: {
+    Heading0001,
     Badge0001Container,
     BasicField0001Container,
     BasicFieldUnit0001Container,
@@ -69,6 +74,4 @@ export default Vue.extend({
 <style lang="scss" scoped>
 // layouts
 @import '~/assets/scss/layouts/l-contents-type-0001';
-// modules
-@import '~/assets/scss/modules/mod-heading-0001';
 </style>

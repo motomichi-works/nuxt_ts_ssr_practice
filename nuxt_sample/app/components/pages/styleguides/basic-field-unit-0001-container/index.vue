@@ -1,7 +1,10 @@
 <template>
   <section :data-selector="identifierStr" class="mod-container-0001">
     <div class="mod-container-0001__heading-wrapper">
-      <h2 class="mod-heading-0001">BasicFieldUnit0001</h2>
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="BasicFieldUnit0001"
+      />
     </div>
     <div class="mod-container-0001__body">
       <BasicFieldUnit0001
@@ -47,12 +50,14 @@ import formBase from '~/mixins/form_base'
 
 // components
 import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
+import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicFieldUnit0001Container',
   components: {
     BasicFieldUnit0001,
+    Heading0001,
   },
   mixins: [base, formBase],
 })
@@ -60,5 +65,4 @@ export default Vue.extend({
 <style lang="scss" scoped>
 // modules
 @import '~/assets/scss/modules/mod-container-0001';
-@import '~/assets/scss/modules/mod-heading-0001';
 </style>

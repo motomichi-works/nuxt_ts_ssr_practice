@@ -1,7 +1,10 @@
 <template>
   <section :data-selector="identifierStr" class="mod-container-0001">
     <div class="mod-container-0001__heading-wrapper">
-      <h2 class="mod-heading-0001">Badge0001</h2>
+      <Heading0001
+        :identifiers="[...identifiers, 'Heading0001']"
+        text="Badge0001"
+      />
     </div>
     <div class="mod-container-0001__body">
       <Badge0001 :identifiers="[...identifiers, 'Badge0001']" text="必須" />
@@ -22,12 +25,14 @@ import base from '~/mixins/base'
 
 // components
 import Badge0001 from '~/components/common/badge-0001/index.vue'
+import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({
   name: 'Badge0001Container',
   components: {
     Badge0001,
+    Heading0001,
   },
   mixins: [base],
 })
@@ -35,5 +40,4 @@ export default Vue.extend({
 <style lang="scss" scoped>
 // modules
 @import '~/assets/scss/modules/mod-container-0001';
-@import '~/assets/scss/modules/mod-heading-0001';
 </style>
