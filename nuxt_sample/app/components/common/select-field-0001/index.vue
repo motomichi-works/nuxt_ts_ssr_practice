@@ -75,20 +75,20 @@ export default Vue.extend({
         return this.value
       },
       set(value: string): void {
-        this.onInput(value)
+        this.onChange(value)
       },
     },
   },
   methods: {
-    onInput(value: string): void {
+    onChange(value: string): void {
       const payload = {
         key: this.nameProperty,
         value,
-        eventType: 'input',
+        eventType: 'change',
         validatorNames: this.validatorNames,
       } as const
 
-      this.$emit('on-input-field', payload)
+      this.$emit('on-change-field', payload)
     },
     onBlur({ target }: { target: HTMLInputElement }): void {
       const payload = {

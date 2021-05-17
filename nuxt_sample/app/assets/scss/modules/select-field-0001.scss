@@ -54,12 +54,12 @@
       height: 80px;
       font-size: 24px;
     }
-    &.mod-btn-0001--icon-absolute-left {
+    &.basic-field-0001--icon-absolute-left {
       .select-field-0001__field {
         padding-left: 52px;
       }
     }
-    &.mod-btn-0001--icon-absolute-right {
+    &.basic-field-0001--icon-absolute-right {
       .select-field-0001__field {
         padding-right: 52px;
       }
@@ -71,12 +71,12 @@
       height: 58px;
       font-size: 20px;
     }
-    &.mod-btn-0001--icon-absolute-left {
+    &.basic-field-0001--icon-absolute-left {
       .select-field-0001__field {
         padding-left: 46px;
       }
     }
-    &.mod-btn-0001--icon-absolute-right {
+    &.basic-field-0001--icon-absolute-right {
       .select-field-0001__field {
         padding-right: 46px;
       }
@@ -88,12 +88,12 @@
       height: 44px;
       font-size: 16px;
     }
-    &.mod-btn-0001--icon-absolute-left {
+    &.basic-field-0001--icon-absolute-left {
       .select-field-0001__field {
         padding-left: 40px;
       }
     }
-    &.mod-btn-0001--icon-absolute-right {
+    &.basic-field-0001--icon-absolute-right {
       .select-field-0001__field {
         padding-right: 40px;
       }
@@ -105,12 +105,12 @@
       height: 30px;
       font-size: 13px;
     }
-    &.mod-btn-0001--icon-absolute-left {
+    &.basic-field-0001--icon-absolute-left {
       .select-field-0001__field {
         padding-left: 36px;
       }
     }
-    &.mod-btn-0001--icon-absolute-right {
+    &.basic-field-0001--icon-absolute-right {
       .select-field-0001__field {
         padding-right: 36px;
       }
@@ -122,12 +122,12 @@
       height: 20px;
       font-size: 10px;
     }
-    &.mod-btn-0001--icon-absolute-left {
+    &.basic-field-0001--icon-absolute-left {
       .select-field-0001__field {
         padding-left: 32px;
       }
     }
-    &.mod-btn-0001--icon-absolute-right {
+    &.basic-field-0001--icon-absolute-right {
       .select-field-0001__field {
         padding-right: 32px;
       }
@@ -135,7 +135,7 @@
   }
 
   // iconをabsoluteで左に配置するクラス
-  &.mod-btn-0001--icon-absolute-left {
+  &.basic-field-0001--icon-absolute-left {
     i.fa:first-child {
       position: absolute;
       top: 50%;
@@ -145,7 +145,7 @@
   }
 
   // iconをabsoluteで右に配置するクラス
-  &.mod-btn-0001--icon-absolute-right {
+  &.basic-field-0001--icon-absolute-right {
     i.fa:last-child {
       position: absolute;
       top: 50%;
