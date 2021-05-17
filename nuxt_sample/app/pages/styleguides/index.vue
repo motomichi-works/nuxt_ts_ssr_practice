@@ -28,6 +28,7 @@ import BasicField0001Container from '~/components/pages/styleguides/basic-field-
 import FieldErrorMessages0001Container from '~/components/pages/styleguides/field-error-messages-0001-container/index.vue'
 import FieldHeading0001Container from '~/components/pages/styleguides/field-heading-0001-container/index.vue'
 import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
+import Heading0001Container from '~/components/pages/styleguides/heading-0001-container/index.vue'
 
 // Vue.extend
 export default Vue.extend({
@@ -38,6 +39,7 @@ export default Vue.extend({
     FieldErrorMessages0001Container,
     FieldHeading0001Container,
     FontAwesome5Container,
+    Heading0001Container,
   },
   computed: {
     identifierStr() {
@@ -51,6 +53,7 @@ export default Vue.extend({
         'FieldErrorMessages0001Container',
         'FieldHeading0001Container',
         'FontAwesome5Container',
+        'Heading0001Container',
       ] as const
 
       const components = componentNames.map((name) => {
