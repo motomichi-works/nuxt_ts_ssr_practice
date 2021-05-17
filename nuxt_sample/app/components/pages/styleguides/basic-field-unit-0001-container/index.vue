@@ -44,7 +44,7 @@
 // import node_modules
 import Vue from 'vue'
 
-// components
+// import components/common
 import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
 import Heading0001 from '~/components/common/heading-0001/index.vue'
 

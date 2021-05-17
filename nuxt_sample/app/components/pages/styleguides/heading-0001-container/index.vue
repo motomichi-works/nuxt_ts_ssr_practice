@@ -50,7 +50,7 @@
 // import node_modules
 import Vue from 'vue'
 
-// components
+// import components/common
 import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // mixins

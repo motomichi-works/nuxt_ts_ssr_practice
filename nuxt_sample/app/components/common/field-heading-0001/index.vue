@@ -17,7 +17,7 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// components
+// import components/common
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 
 // mixins

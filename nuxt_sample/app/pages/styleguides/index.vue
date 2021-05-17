@@ -24,14 +24,16 @@
 // import node_modules
 import Vue from 'vue'
 
-// components
+// import components/common
 import Heading0001 from '~/components/common/heading-0001/index.vue'
+
+// import components/pages
 import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
-import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
 import BasicField0001Container from '~/components/pages/styleguides/basic-field-0001-container/index.vue'
+import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
 import FieldErrorMessages0001Container from '~/components/pages/styleguides/field-error-messages-0001-container/index.vue'
 import FieldHeading0001Container from '~/components/pages/styleguides/field-heading-0001-container/index.vue'
-import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
+import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
 import Heading0001Container from '~/components/pages/styleguides/heading-0001-container/index.vue'
 
 // Vue.extend

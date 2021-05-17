@@ -34,7 +34,7 @@
 // import node_modules
 import Vue from 'vue'
 
-// components
+// import components/common
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 import Heading0001 from '~/components/common/heading-0001/index.vue'
 
