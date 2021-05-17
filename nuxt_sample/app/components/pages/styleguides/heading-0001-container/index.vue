@@ -50,11 +50,11 @@
 // import node_modules
 import Vue from 'vue'
 
-// mixins
-import base from '~/mixins/base'
-
 // components
 import Heading0001 from '~/components/common/heading-0001/index.vue'
+
+// mixins
+import base from '~/mixins/base'
 
 // Vue.extend
 export default Vue.extend({

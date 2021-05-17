@@ -44,13 +44,13 @@
 // import node_modules
 import Vue from 'vue'
 
-// mixins
-import base from '~/mixins/base'
-import formBase from '~/mixins/form_base'
-
 // components
 import BasicFieldUnit0001 from '~/components/common/basic-field-unit-0001/index.vue'
 import Heading0001 from '~/components/common/heading-0001/index.vue'
+
+// mixins
+import base from '~/mixins/base'
+import formBase from '~/mixins/form_base'
 
 // Vue.extend
 export default Vue.extend({

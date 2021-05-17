@@ -17,11 +17,11 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// mixins
-import base from '~/mixins/base'
-
 // components
 import Badge0001 from '~/components/common/badge-0001/index.vue'
+
+// mixins
+import base from '~/mixins/base'
 
 // Vue.extend
 export default Vue.extend({

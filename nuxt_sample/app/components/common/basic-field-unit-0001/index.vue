@@ -47,13 +47,13 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// mixins
-import base from '~/mixins/base'
-
 // components
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
+
+// mixins
+import base from '~/mixins/base'
 
 // define types
 type ArgsOfOnInputField = {
