@@ -18,13 +18,16 @@
   </section>
 </template>
 <script lang="ts">
+// import node_modules
 import Vue from 'vue'
 
 // mixins
 import base from '~/mixins/base'
 
+// components
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
 
+// Vue.extend
 export default Vue.extend({
   name: 'BasicField0001Container',
   components: {

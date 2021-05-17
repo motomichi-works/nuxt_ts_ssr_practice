@@ -20,9 +20,11 @@
 </template>
 
 <script lang="ts">
+// import node_modules
 import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
+// Vue.extend
 export default Vue.extend({
   async asyncData(context: Context): Promise<any> {
     const { app } = context

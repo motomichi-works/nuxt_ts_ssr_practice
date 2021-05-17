@@ -28,13 +28,16 @@
   </section>
 </template>
 <script lang="ts">
+// import node_modules
 import Vue from 'vue'
 
 // mixins
 import base from '~/mixins/base'
 
+// components
 import FieldHeading0001 from '~/components/common/field-heading-0001/index.vue'
 
+// Vue.extend
 export default Vue.extend({
   name: 'FieldHeading0001Container',
   components: {

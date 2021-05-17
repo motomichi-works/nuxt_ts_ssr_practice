@@ -18,8 +18,10 @@
 </template>
 
 <script lang="ts">
+// import node_modules
 import Vue from 'vue'
 
+// components
 import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
 import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
 import BasicField0001Container from '~/components/pages/styleguides/basic-field-0001-container/index.vue'
@@ -27,6 +29,7 @@ import FieldErrorMessages0001Container from '~/components/pages/styleguides/fiel
 import FieldHeading0001Container from '~/components/pages/styleguides/field-heading-0001-container/index.vue'
 import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
 
+// Vue.extend
 export default Vue.extend({
   components: {
     Badge0001Container,

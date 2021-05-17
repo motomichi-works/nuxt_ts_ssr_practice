@@ -14,13 +14,16 @@
   </section>
 </template>
 <script lang="ts">
+// import node_modules
 import Vue from 'vue'
 
 // mixins
 import base from '~/mixins/base'
 
+// components
 import Badge0001 from '~/components/common/badge-0001/index.vue'
 
+// Vue.extend
 export default Vue.extend({
   name: 'Badge0001Container',
   components: {

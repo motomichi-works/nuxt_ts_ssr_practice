@@ -2,7 +2,7 @@
 import validate from 'validate.js'
 import Vue from 'vue'
 
-// store
+// store, store types
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
 // utils

@@ -10,12 +10,14 @@
   </section>
 </template>
 <script lang="ts">
+// import node_modules
 import Vue from 'vue'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 // mixins
 import base from '~/mixins/base'
 
+// Vue.extend
 export default Vue.extend({
   name: 'FontAwesome5Container',
   mixins: [base],

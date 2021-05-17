@@ -13,11 +13,13 @@
 </template>
 
 <script lang="ts">
+// import node_modules
 import Vue, { PropType } from 'vue'
 
 // mixins
 import base from '~/mixins/base'
 
+// Vue.extend
 export default Vue.extend({
   name: 'FieldErrorMessages0001',
   mixins: [base],

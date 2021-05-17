@@ -15,13 +15,16 @@
   </section>
 </template>
 <script lang="ts">
+// import node_modules
 import Vue from 'vue'
 
 // mixins
 import base from '~/mixins/base'
 
+// components
 import FieldErrorMessages0001 from '~/components/common/field-error-messages-0001/index.vue'
 
+// Vue.extend
 export default Vue.extend({
   name: 'FieldErrorMessages0001Container',
   components: {
