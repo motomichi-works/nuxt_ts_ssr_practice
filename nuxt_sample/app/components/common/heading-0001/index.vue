@@ -2,7 +2,7 @@
   <component
     :is="tagName"
     :data-selector="identifierStr"
-    class="mod-heading-0001"
+    class="heading-0001"
     :class="modifierClasses"
     >{{ text }}</component
   >
@@ -38,5 +38,5 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 // modules
-@import '~/assets/scss/modules/mod-heading-0001';
+@import '~/assets/scss/modules/heading-0001';
 </style>

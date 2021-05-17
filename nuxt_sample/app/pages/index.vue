@@ -1,12 +1,12 @@
 <template>
   <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
-      <h1 class="mod-heading-0001 mod-heading-0001--lv-1">pages/index.vue</h1>
+      <h1 class="heading-0001 heading-0001--lv-1">pages/index.vue</h1>
     </div>
     <div class="l-contents-type-0001__body">
       <section class="mod-container-0001">
         <div class="mod-container-0001__heading-wrapper">
-          <h2 class="mod-heading-0001">見出し lv2</h2>
+          <h2 class="heading-0001">見出し lv2</h2>
         </div>
         <div class="mod-container-0001__body">
           ここにコンテンツのモジュールが入ります。

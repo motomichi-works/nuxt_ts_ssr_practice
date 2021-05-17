@@ -10,37 +10,37 @@
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="Lv1の見出し"
-        :modifier-classes="['mod-heading-0001--lv-1']"
+        :modifier-classes="['heading-0001--lv-1']"
         :tag-name="'h2'"
       />
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="Lv2の見出し"
-        :modifier-classes="['mod-heading-0001--lv-2']"
+        :modifier-classes="['heading-0001--lv-2']"
         :tag-name="'h2'"
       />
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="Lv3の見出し"
-        :modifier-classes="['mod-heading-0001--lv-3']"
+        :modifier-classes="['heading-0001--lv-3']"
         :tag-name="'h2'"
       />
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="Lv4の見出し"
-        :modifier-classes="['mod-heading-0001--lv-4']"
+        :modifier-classes="['heading-0001--lv-4']"
         :tag-name="'h2'"
       />
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="Lv5の見出し"
-        :modifier-classes="['mod-heading-0001--lv-5']"
+        :modifier-classes="['heading-0001--lv-5']"
         :tag-name="'h2'"
       />
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="Lv6の見出し"
-        :modifier-classes="['mod-heading-0001--lv-6']"
+        :modifier-classes="['heading-0001--lv-6']"
         :tag-name="'h2'"
       />
     </div>
