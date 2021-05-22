@@ -21,6 +21,8 @@
           :is-readonly="isReadonly"
           :placeholder="placeholder"
           :maxlength="maxlength"
+          :left-icon="leftIcon"
+          :right-icon="rightIcon"
           :has-realtime-errors="realtimeErrors.length > 0"
           @on-blur-field="onBlurField"
           @on-input-field="onInputField"
@@ -53,6 +55,7 @@
 <script lang="ts">
 // import node_modules
 import Vue, { PropType } from 'vue'
+import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // import components/common
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
@@ -118,6 +121,16 @@ export default Vue.extend({
       type: String as PropType<string>,
       required: false,
       default: '',
+    },
+    leftIcon: {
+      type: Object as PropType<IconDefinition>,
+      required: false,
+      default: () => null,
+    },
+    rightIcon: {
+      type: Object as PropType<IconDefinition>,
+      required: false,
+      default: () => null,
     },
     descriptions: {
       type: Array as PropType<string[]>,

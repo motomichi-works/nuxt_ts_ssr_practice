@@ -23,6 +23,7 @@
 <script lang="ts">
 // import node_modules
 import Vue, { PropType } from 'vue'
+import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // mixins
 import base from '~/mixins/base'
@@ -71,16 +72,14 @@ export default Vue.extend({
       default: '',
     },
     leftIcon: {
+      type: Object as PropType<IconDefinition>,
       required: false,
-      default: () => {
-        return null
-      },
+      default: () => null,
     },
     rightIcon: {
+      type: Object as PropType<IconDefinition>,
       required: false,
-      default: () => {
-        return null
-      },
+      default: () => null,
     },
     hasRealtimeErrors: {
       type: Boolean as PropType<boolean>,
