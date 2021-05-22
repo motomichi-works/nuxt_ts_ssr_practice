@@ -17,6 +17,8 @@
         :is-readonly="false"
         :placeholder="'プレースホルダー'"
         :maxlength="'100'"
+        :left-icon="fa.search"
+        :right-icon="fa.search"
       />
     </div>
   </section>
@@ -24,6 +26,7 @@
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 // import components/common
 import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
@@ -40,6 +43,13 @@ export default Vue.extend({
     Heading0001,
   },
   mixins: [base],
+  computed: {
+    fa() {
+      return {
+        search: faSearch,
+      }
+    },
+  },
 })
 </script>
 <style lang="scss" scoped>

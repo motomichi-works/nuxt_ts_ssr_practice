@@ -1,5 +1,16 @@
 .basic-field-0001 {
   position: relative;
+  .basic-field-0001__icon-wrapper {
+    &:last-child,
+    &:first-child {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      color: #222222;
+    }
+  }
   .basic-field-0001__field {
     display: block;
     width: 100%;
@@ -84,6 +95,14 @@
   }
   &.basic-field-0001--size-md {
     font-size: 16px;
+    .basic-field-0001__icon-wrapper {
+      &:first-child {
+        left: 16px;
+      }
+      &:last-child {
+        right: 16px;
+      }
+    }
     .basic-field-0001__field {
       height: 44px;
       font-size: 16px;
