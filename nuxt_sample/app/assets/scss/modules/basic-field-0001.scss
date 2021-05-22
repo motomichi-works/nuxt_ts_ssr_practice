@@ -5,14 +5,14 @@
     width: 100%;
     border-style: solid;
     border-width: 2px;
-    border-color: #aaaaaa;
+    border-color: #444444;
     padding: 0 20px;
     box-sizing: border-box;
     background: #ffffff;
     color: #222222;
     border-radius: 4px;
     &::placeholder{
-      color: #cccccc;
+      color: #aaaaaa;
     }
     &:focus {
       outline: none;
@@ -65,7 +65,7 @@
       }
     }
   }
-  &.basic-field-0001--size-l {
+  &.basic-field-0001--size-lg {
     font-size: 20px;
     .basic-field-0001__field {
       height: 58px;
@@ -82,7 +82,7 @@
       }
     }
   }
-  &.basic-field-0001--size-m {
+  &.basic-field-0001--size-md {
     font-size: 16px;
     .basic-field-0001__field {
       height: 44px;
@@ -99,7 +99,7 @@
       }
     }
   }
-  &.basic-field-0001--size-s {
+  &.basic-field-0001--size-sm {
     font-size: 13px;
     .basic-field-0001__field {
       height: 30px;
