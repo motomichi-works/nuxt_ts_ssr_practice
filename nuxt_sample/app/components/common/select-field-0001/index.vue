@@ -1,20 +1,21 @@
 <template>
-  <div
-    :data-selector="identifierStr"
-    class="select-field-0001 select-field-0001--size-m"
-    :class="{ 'select-field-0001--invalid': hasRealtimeErrors }"
-  >
-    <input
+  <div :data-selector="identifierStr" :class="classes">
+    <i class="select-field-0001__icon-wrapper">
+      <div class="select-field-0001__icon"></div>
+    </i>
+    <select
       v-model="computedValue"
       type="text"
       :disabled="isDisabled"
       :readonly="isReadonly"
       :name="nameProperty"
-      :placeholder="placeholder"
-      :maxlength="maxlength"
       class="select-field-0001__field"
       @blur="onBlur($event)"
-    />
+    >
+      <option value="">選択してください</option>
+      <option value="option1">選択肢1</option>
+      <option value="option2">選択肢2</option>
+    </select>
   </div>
 </template>
 
@@ -30,6 +31,11 @@ export default Vue.extend({
   name: 'SelectField0001',
   mixins: [base],
   props: {
+    modifiers: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: () => ['select-field-0001--size-md'],
+    },
     validatorNames: {
       type: Array as PropType<string[]>,
       required: true,
@@ -53,16 +59,6 @@ export default Vue.extend({
       required: false,
       default: false,
     },
-    placeholder: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    maxlength: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
     hasRealtimeErrors: {
       type: Boolean as PropType<boolean>,
       required: false,
@@ -70,6 +66,12 @@ export default Vue.extend({
     },
   },
   computed: {
+    classes() {
+      const classes = ['select-field-0001', ...this.modifiers]
+
+      if (this.hasRealtimeErrors) classes.push('select-field-0001--invalid')
+      return classes
+    },
     computedValue: {
       get(): string {
         return this.value

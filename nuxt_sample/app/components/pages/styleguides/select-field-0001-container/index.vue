@@ -7,15 +7,14 @@
       />
     </div>
     <div class="container-0001__body">
-      <BasicField0001
-        :identifiers="[...identifiers, 'basicFieldA']"
+      <SelectField0001
+        :identifiers="[...identifiers, 'selectFieldA']"
+        :modifiers="['select-field-0001--size-md']"
         :validator-names="['customEmail']"
         :value="''"
-        :name-property="'hoge'"
+        :name-property="'select_field_name'"
         :is-disabled="false"
         :is-readonly="false"
-        :placeholder="'プレースホルダー'"
-        :maxlength="'10'"
       />
     </div>
   </section>
@@ -25,7 +24,7 @@
 import Vue from 'vue'
 
 // import components/common
-import BasicField0001 from '~/components/common/basic-field-0001/index.vue'
+import SelectField0001 from '~/components/common/select-field-0001/index.vue'
 import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // mixins
@@ -35,7 +34,7 @@ import base from '~/mixins/base'
 export default Vue.extend({
   name: 'SelectField0001Container',
   components: {
-    BasicField0001,
+    SelectField0001,
     Heading0001,
   },
   mixins: [base],
