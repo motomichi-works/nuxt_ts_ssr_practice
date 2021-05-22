@@ -9,13 +9,14 @@
     <div class="container-0001__body">
       <BasicField0001
         :identifiers="[...identifiers, 'basicFieldA']"
+        :modifiers="['basic-field-0001--size-md']"
         :validator-names="['customEmail']"
         :value="''"
-        :name-property="'hoge'"
+        :name-property="'basic_field_name'"
         :is-disabled="false"
         :is-readonly="false"
         :placeholder="'プレースホルダー'"
-        :maxlength="'10'"
+        :maxlength="'100'"
       />
     </div>
   </section>

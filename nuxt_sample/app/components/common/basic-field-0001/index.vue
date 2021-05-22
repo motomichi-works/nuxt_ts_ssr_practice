@@ -1,9 +1,5 @@
 <template>
-  <div
-    :data-selector="identifierStr"
-    class="basic-field-0001 basic-field-0001--size-m"
-    :class="{ 'basic-field-0001--invalid': hasRealtimeErrors }"
-  >
+  <div :data-selector="identifierStr" :class="classes">
     <input
       v-model="computedValue"
       type="text"
@@ -30,6 +26,11 @@ export default Vue.extend({
   name: 'BasicField0001',
   mixins: [base],
   props: {
+    modifiers: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: () => ['basic-field-0001--size-md'],
+    },
     validatorNames: {
       type: Array as PropType<string[]>,
       required: true,
@@ -70,6 +71,12 @@ export default Vue.extend({
     },
   },
   computed: {
+    classes() {
+      const classes = ['basic-field-0001', ...this.modifiers]
+
+      if (this.hasRealtimeErrors) classes.push('basic-field-0001--invalid')
+      return classes
+    },
     computedValue: {
       get(): string {
         return this.value
