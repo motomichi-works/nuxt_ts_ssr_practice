@@ -61,35 +61,51 @@
 
   &.basic-field-0001--size-xl {
     font-size: 24px;
+    .basic-field-0001__icon-wrapper {
+      &:first-child {
+        left: 26px;
+      }
+      &:last-child {
+        right: 26px;
+      }
+    }
     .basic-field-0001__field {
       height: 80px;
       font-size: 24px;
     }
     &.basic-field-0001--icon-absolute-left {
       .basic-field-0001__field {
-        padding-left: 52px;
+        padding-left: 72px;
       }
     }
     &.basic-field-0001--icon-absolute-right {
       .basic-field-0001__field {
-        padding-right: 52px;
+        padding-right: 72px;
       }
     }
   }
   &.basic-field-0001--size-lg {
     font-size: 20px;
+    .basic-field-0001__icon-wrapper {
+      &:first-child {
+        left: 22px;
+      }
+      &:last-child {
+        right: 22px;
+      }
+    }
     .basic-field-0001__field {
       height: 58px;
       font-size: 20px;
     }
     &.basic-field-0001--icon-absolute-left {
       .basic-field-0001__field {
-        padding-left: 46px;
+        padding-left: 60px;
       }
     }
     &.basic-field-0001--icon-absolute-right {
       .basic-field-0001__field {
-        padding-right: 46px;
+        padding-right: 60px;
       }
     }
   }
@@ -109,46 +125,62 @@
     }
     &.basic-field-0001--icon-absolute-left {
       .basic-field-0001__field {
-        padding-left: 40px;
+        padding-left: 44px;
       }
     }
     &.basic-field-0001--icon-absolute-right {
       .basic-field-0001__field {
-        padding-right: 40px;
+        padding-right: 44px;
       }
     }
   }
   &.basic-field-0001--size-sm {
     font-size: 13px;
+    .basic-field-0001__icon-wrapper {
+      &:first-child {
+        left: 13px;
+      }
+      &:last-child {
+        right: 13px;
+      }
+    }
     .basic-field-0001__field {
       height: 30px;
       font-size: 13px;
     }
     &.basic-field-0001--icon-absolute-left {
       .basic-field-0001__field {
-        padding-left: 36px;
+        padding-left: 34px;
       }
     }
     &.basic-field-0001--icon-absolute-right {
       .basic-field-0001__field {
-        padding-right: 36px;
+        padding-right: 34px;
       }
     }
   }
   &.basic-field-0001--size-xs {
     font-size: 10px;
+    .basic-field-0001__icon-wrapper {
+      &:first-child {
+        left: 10px;
+      }
+      &:last-child {
+        right: 10px;
+      }
+    }
     .basic-field-0001__field {
       height: 20px;
       font-size: 10px;
     }
     &.basic-field-0001--icon-absolute-left {
       .basic-field-0001__field {
-        padding-left: 32px;
+        padding-left: 26px;
       }
     }
     &.basic-field-0001--icon-absolute-right {
       .basic-field-0001__field {
-        padding-right: 32px;
+        padding-right: 26px;
       }
     }
   }
