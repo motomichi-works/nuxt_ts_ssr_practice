@@ -1,11 +1,26 @@
 .select-field-0001 {
   position: relative;
+  .select-field-0001__icon-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    color: #222222;
+  }
+  .select-field-0001__icon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #444444 transparent transparent transparent;
+  }
   .select-field-0001__field {
+    appearance: none;
     display: block;
     width: 100%;
     border-style: solid;
     border-width: 2px;
-    border-color: #aaaaaa;
+    border-color: #444444;
     padding: 0 20px;
     box-sizing: border-box;
     background: #ffffff;
@@ -50,112 +65,72 @@
 
   &.select-field-0001--size-xl {
     font-size: 24px;
+    .select-field-0001__icon-wrapper {
+      left: 26px;
+    }
+    .select-field-0001__icon {
+      border-width: 14.4px 12px 0 12px;
+    }
     .select-field-0001__field {
       height: 80px;
+      padding-left: 72px;
       font-size: 24px;
     }
-    &.basic-field-0001--icon-absolute-left {
-      .select-field-0001__field {
-        padding-left: 52px;
-      }
-    }
-    &.basic-field-0001--icon-absolute-right {
-      .select-field-0001__field {
-        padding-right: 52px;
-      }
-    }
   }
-  &.select-field-0001--size-l {
+  &.select-field-0001--size-lg {
     font-size: 20px;
+    .select-field-0001__icon-wrapper {
+      left: 22px;
+    }
+    .select-field-0001__icon {
+      border-width: 12px 10px 0 10px;
+    }
     .select-field-0001__field {
       height: 58px;
+      padding-left: 60px;
       font-size: 20px;
     }
-    &.basic-field-0001--icon-absolute-left {
-      .select-field-0001__field {
-        padding-left: 46px;
-      }
-    }
-    &.basic-field-0001--icon-absolute-right {
-      .select-field-0001__field {
-        padding-right: 46px;
-      }
-    }
   }
-  &.select-field-0001--size-m {
+  &.select-field-0001--size-md {
     font-size: 16px;
+    .select-field-0001__icon-wrapper {
+      left: 16px;
+    }
+    .select-field-0001__icon {
+      border-width: 9.6px 8px 0 8px;
+    }
     .select-field-0001__field {
       height: 44px;
+      padding-left: 44px;
       font-size: 16px;
     }
-    &.basic-field-0001--icon-absolute-left {
-      .select-field-0001__field {
-        padding-left: 40px;
-      }
-    }
-    &.basic-field-0001--icon-absolute-right {
-      .select-field-0001__field {
-        padding-right: 40px;
-      }
-    }
   }
-  &.select-field-0001--size-s {
+  &.select-field-0001--size-sm {
     font-size: 13px;
+    .select-field-0001__icon-wrapper {
+      left: 13px;
+    }
+    .select-field-0001__icon {
+      border-width: 7.2px 6px 0 6px;
+    }
     .select-field-0001__field {
       height: 30px;
+      padding-left: 34px;
       font-size: 13px;
-    }
-    &.basic-field-0001--icon-absolute-left {
-      .select-field-0001__field {
-        padding-left: 36px;
-      }
-    }
-    &.basic-field-0001--icon-absolute-right {
-      .select-field-0001__field {
-        padding-right: 36px;
-      }
     }
   }
   &.select-field-0001--size-xs {
     font-size: 10px;
+    .select-field-0001__icon-wrapper {
+      left: 10px;
+    }
+    .select-field-0001__icon {
+      border-width: 6px 5px 0 5px;
+    }
     .select-field-0001__field {
       height: 20px;
+      padding-left: 26px;
       font-size: 10px;
     }
-    &.basic-field-0001--icon-absolute-left {
-      .select-field-0001__field {
-        padding-left: 32px;
-      }
-    }
-    &.basic-field-0001--icon-absolute-right {
-      .select-field-0001__field {
-        padding-right: 32px;
-      }
-    }
-  }
-
-  // iconをabsoluteで左に配置するクラス
-  &.basic-field-0001--icon-absolute-left {
-    i.fa:first-child {
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      margin-top: -0.5em;
-    }
-  }
-
-  // iconをabsoluteで右に配置するクラス
-  &.basic-field-0001--icon-absolute-right {
-    i.fa:last-child {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      margin-top: -0.5em;
-    }
-  }
-
-  i.fa {
-    position: absolute;
-    color: #222222;
   }
 }
