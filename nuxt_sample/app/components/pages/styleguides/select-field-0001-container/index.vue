@@ -8,11 +8,11 @@
     </div>
     <div class="container-0001__body">
       <SelectField0001
-        :identifiers="[...identifiers, 'selectFieldA']"
+        :identifiers="[...identifiers, 'selectField0001A']"
         :modifiers="['select-field-0001--size-md']"
-        :validator-names="['customEmail']"
-        :value="''"
-        :name-property="'select_field_name'"
+        :validator-names="['presence']"
+        :value="fieldValues['styleguides[select_field_0001_a]']"
+        :name-property="'styleguides[select_field_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"
         :options="[
@@ -20,19 +20,9 @@
           { label: '選択肢1', value: 'value1' },
           { label: '選択肢2', value: 'value2' },
         ]"
-      />
-      <SelectField0001
-        :identifiers="[...identifiers, 'selectFieldA']"
-        :modifiers="['select-field-0001--size-md']"
-        :validator-names="['customEmail']"
-        :value="'readonly'"
-        :name-property="'select_field_name'"
-        :is-disabled="false"
-        :is-readonly="true"
-        :options="[
-          { label: '選択してください', value: '' },
-          { label: '読み取り専用', value: 'readonly' },
-        ]"
+        :has-realtime-errors="realtimeErrors.length > 0"
+        @on-blur-field="onBlurField"
+        @on-change-field="onChangeField"
       />
     </div>
   </section>
@@ -47,6 +37,7 @@ import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // mixins
 import base from '~/mixins/base'
+import formBase from '~/mixins/form_base'
 
 // Vue.extend
 export default Vue.extend({
@@ -55,7 +46,7 @@ export default Vue.extend({
     SelectField0001,
     Heading0001,
   },
-  mixins: [base],
+  mixins: [base, formBase],
 })
 </script>
 <style lang="scss" scoped>
