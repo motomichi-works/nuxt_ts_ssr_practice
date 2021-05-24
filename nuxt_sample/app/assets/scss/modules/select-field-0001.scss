@@ -33,21 +33,26 @@
       outline: none;
       box-shadow: 0 0 6px 0 #0000ff inset;
     }
-    &[readonly] {
-      border-color: transparent;
-      background: none;
-      color: #222222;
-      &:focus {
-        box-shadow: none;
-      }
-    }
     &[disabled] {
-      // NOTE: !importantは原則として使用禁止です。ボタンとフィールドのdisabledにだけ使用しています。
+      // NOTE: !importantは原則として使用禁止です。ボタンとフィールドのdisabled、readonlyにだけ使用しています。
       background: #eeeeee !important;
       border-color: #cccccc !important;
       color: #cccccc;
       cursor: default;
     }
+    &.select-field-0001__field--readonly {
+      border-color: transparent;
+      background: none;
+      color: #222222;
+      padding-left: 20px !important;
+    }
+  }
+
+  .select-field-0001__readonly-label {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: text;
   }
 
   &.select-field-0001--disabled {

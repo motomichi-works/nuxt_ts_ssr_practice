@@ -1,13 +1,13 @@
 <template>
   <div :data-selector="identifierStr" :class="classes">
-    <i class="select-field-0001__icon-wrapper">
+    <i v-if="!isReadonly" class="select-field-0001__icon-wrapper">
       <div class="select-field-0001__icon"></div>
     </i>
     <select
+      v-if="!isReadonly"
       v-model="computedValue"
       type="text"
       :disabled="isDisabled"
-      :readonly="isReadonly"
       :name="nameProperty"
       class="select-field-0001__field"
       @blur="onBlur($event)"
@@ -19,6 +19,13 @@
         v-text="item.label"
       />
     </select>
+    <div
+      v-if="isReadonly"
+      class="select-field-0001__field select-field-0001__field--readonly"
+    >
+      <span class="select-field-0001__readonly-label" v-text="selectedLabel" />
+      <input type="hidden" :value="computedValue" />
+    </div>
   </div>
 </template>
 
@@ -97,6 +104,13 @@ export default Vue.extend({
       set(value: string): void {
         this.onChange(value)
       },
+    },
+    selectedLabel() {
+      const selectedOption = this.options.find((option) => {
+        return option.value === this.value
+      })
+
+      return selectedOption ? selectedOption.label : ''
     },
   },
   watch: {

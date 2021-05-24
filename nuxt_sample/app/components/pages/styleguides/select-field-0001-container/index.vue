@@ -11,6 +11,19 @@
         :identifiers="[...identifiers, 'selectFieldA']"
         :modifiers="['select-field-0001--size-md']"
         :validator-names="['customEmail']"
+        :value="'readonly'"
+        :name-property="'select_field_name'"
+        :is-disabled="false"
+        :is-readonly="true"
+        :options="[
+          { label: '選択してください', value: '' },
+          { label: '読み取り専用', value: 'readonly' },
+        ]"
+      />
+      <SelectField0001
+        :identifiers="[...identifiers, 'selectFieldA']"
+        :modifiers="['select-field-0001--size-md']"
+        :validator-names="['customEmail']"
         :value="''"
         :name-property="'select_field_name'"
         :is-disabled="false"
