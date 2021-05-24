@@ -20,6 +20,12 @@ type ArgsOfOnInputField = {
   eventType: 'input'
   validatorNames: string[]
 }
+type ArgsOfOnChangeField = {
+  key: string
+  value: string
+  eventType: 'change'
+  validatorNames: string[]
+}
 type ArgsOfOnBlurField = {
   key: string
   value: string
@@ -37,7 +43,7 @@ type ArgsOfChangeFieldValue = {
 type ArgsOfValidateSingle = {
   key: string
   value: string
-  eventType: 'input' | 'blur'
+  eventType: 'input' | 'blur' | 'change'
   validatorNames: string[]
 }
 
@@ -73,6 +79,17 @@ export default Vue.extend({
       return constraints
     },
     onInputField(payload: ArgsOfOnInputField) {
+      const validationResult = this.validateSingle(payload)
+      // eslint-disable-next-line no-console
+      // console.log('validationResult: ', validationResult)
+
+      this.changeRealtimeErrors({
+        key: payload.key,
+        value: validationResult,
+      })
+      this.changeFieldValue(payload)
+    },
+    onChangeField(payload: ArgsOfOnChangeField) {
       const validationResult = this.validateSingle(payload)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)

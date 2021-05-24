@@ -8,11 +8,11 @@
     </div>
     <div class="container-0001__body">
       <SelectFieldUnit0001
-        :identifiers="[...identifiers, 'EmailFieldUnit']"
+        :identifiers="[...identifiers, 'SelectFieldUnit0001A']"
         :field-modifiers="['select-field-0001--size-md']"
-        :validator-names="['customEmail']"
-        :value="fieldValues['styleguides[email]']"
-        :name-property="'styleguides[email]'"
+        :validator-names="['presence']"
+        :value="fieldValues['styleguides[select_field_unit_0001_a]']"
+        :name-property="'styleguides[select_field_unit_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"
         :options="[
@@ -23,9 +23,11 @@
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニットA'"
         :is-required="true"
-        :realtime-errors="realtimeErrors['styleguides[email]']"
+        :realtime-errors="
+          realtimeErrors['styleguides[select_field_unit_0001_a]']
+        "
         @on-blur-field="onBlurField"
-        @on-input-field="onInputField"
+        @on-change-field="onChangeField"
       />
     </div>
   </section>

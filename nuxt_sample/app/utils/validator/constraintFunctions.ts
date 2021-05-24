@@ -7,6 +7,14 @@ validate.validators = {
 }
 
 export default {
+  selectFieldRequired(label: string) {
+    return {
+      presence: {
+        allowEmpty: false,
+        message: `^${label}を選択してください。`,
+      },
+    }
+  },
   customEmail(label: string, isRequired: boolean = true) {
     return {
       customEmail: {
