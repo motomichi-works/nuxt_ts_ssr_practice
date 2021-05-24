@@ -2,12 +2,14 @@ import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import { RootState } from '~/store'
 
 export type FieldValues = {
+  'styleguides[basic_field_0001_a]': string
   'styleguides[email]': string
   'styleguides[name_kana]': string
   'styleguides[select_field_unit_0001_a]': string
 }
 
 export type RealtimeErrors = {
+  'styleguides[basic_field_0001_a]': string[]
   'styleguides[email]': string[]
   'styleguides[name_kana]': string[]
   'styleguides[select_field_unit_0001_a]': string[]
@@ -15,11 +17,13 @@ export type RealtimeErrors = {
 
 export const state = () => ({
   fieldValues: {
+    'styleguides[basic_field_0001_a]': '',
     'styleguides[email]': '',
     'styleguides[name_kana]': '',
     'styleguides[select_field_unit_0001_a]': '',
   } as FieldValues,
   realtimeErrors: {
+    'styleguides[basic_field_0001_a]': [],
     'styleguides[email]': [],
     'styleguides[name_kana]': [],
     'styleguides[select_field_unit_0001_a]': [],
@@ -42,6 +46,7 @@ export const mutations: MutationTree<StyleguidesState> = {
     payload: { key: keyof RealtimeErrors; value: string[] }
   ) => {
     const sharedArray = [
+      'styleguides[basic_field_0001_a]',
       'styleguides[email]',
       'styleguides[name_kana]',
       'styleguides[select_field_unit_0001_a]',

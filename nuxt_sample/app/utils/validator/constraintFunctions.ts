@@ -7,7 +7,15 @@ validate.validators = {
 }
 
 export default {
-  selectFieldRequired(label: string) {
+  requiredBasicField(label: string) {
+    return {
+      presence: {
+        allowEmpty: false,
+        message: `^${label}を入力してください。`,
+      },
+    }
+  },
+  requiredSelectField(label: string) {
     return {
       presence: {
         allowEmpty: false,

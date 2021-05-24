@@ -8,17 +8,20 @@
     </div>
     <div class="container-0001__body">
       <BasicField0001
-        :identifiers="[...identifiers, 'basicFieldA']"
+        :identifiers="[...identifiers, 'basicField0001A']"
         :modifiers="['basic-field-0001--size-md']"
-        :validator-names="['customEmail']"
-        :value="''"
-        :name-property="'basic_field_name'"
+        :validator-names="['presence']"
+        :value="fieldValues['styleguides[basic_field_0001_a]']"
+        :name-property="'styleguides[basic_field_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"
         :placeholder="'プレースホルダー'"
         :maxlength="'100'"
         :left-icon="fa.search"
         :right-icon="fa.search"
+        :has-realtime-errors="realtimeErrors.length > 0"
+        @on-blur-field="onBlurField"
+        @on-input-field="onInputField"
       />
     </div>
   </section>
@@ -34,6 +37,7 @@ import Heading0001 from '~/components/common/heading-0001/index.vue'
 
 // mixins
 import base from '~/mixins/base'
+import formBase from '~/mixins/form_base'
 
 // Vue.extend
 export default Vue.extend({
@@ -42,7 +46,7 @@ export default Vue.extend({
     BasicField0001,
     Heading0001,
   },
-  mixins: [base],
+  mixins: [base, formBase],
   computed: {
     fa() {
       return {
