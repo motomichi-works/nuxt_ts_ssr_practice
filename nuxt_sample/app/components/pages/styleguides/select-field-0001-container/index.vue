@@ -15,6 +15,11 @@
         :name-property="'select_field_name'"
         :is-disabled="false"
         :is-readonly="false"
+        :options="[
+          { label: '選択してください', value: '' },
+          { label: '選択肢1', value: 'value1' },
+          { label: '選択肢2', value: 'value2' },
+        ]"
       />
     </div>
   </section>

@@ -12,9 +12,12 @@
       class="select-field-0001__field"
       @blur="onBlur($event)"
     >
-      <option value="">選択してください</option>
-      <option value="option1">選択肢1</option>
-      <option value="option2">選択肢2</option>
+      <option
+        v-for="item in options"
+        :key="`${item.value}_${item.label}`"
+        :value="item.value"
+        v-text="item.label"
+      />
     </select>
   </div>
 </template>
@@ -25,6 +28,12 @@ import Vue, { PropType } from 'vue'
 
 // mixins
 import base from '~/mixins/base'
+
+// types
+export type Option = {
+  label: string
+  value: string
+}
 
 // Vue.extend
 export default Vue.extend({
@@ -64,6 +73,15 @@ export default Vue.extend({
       required: false,
       default: false,
     },
+    options: {
+      type: Array as PropType<Option[]>,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      refreshKey: 0,
+    }
   },
   computed: {
     classes() {
@@ -79,6 +97,11 @@ export default Vue.extend({
       set(value: string): void {
         this.onChange(value)
       },
+    },
+  },
+  watch: {
+    options() {
+      this.refreshKey++
     },
   },
   methods: {
