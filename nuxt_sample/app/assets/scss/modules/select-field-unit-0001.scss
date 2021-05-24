@@ -1,0 +1,25 @@
+.select-field-unit-0001 {
+  &:not(:first-child) {
+    margin-top: 48px;
+  }
+  .select-field-unit-0001__heading-wrapper {}
+  .select-field-unit-0001__body {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #dddddd;
+    border-radius: 4px;
+  }
+  .select-field-unit-0001__field-wrapper {
+  }
+  .select-field-unit-0001__desc-group {
+    margin-top: 8px;
+    padding: 0 4px;
+  }
+  .select-field-unit-0001__desc-item {
+    color: #555555;
+    font-size: 14px;
+  }
+  .select-field-unit-0001__error-messages-wrapper {
+    margin-top: 8px;
+  }
+}

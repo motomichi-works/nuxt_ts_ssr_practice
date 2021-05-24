@@ -82,7 +82,8 @@ export default Vue.extend({
     },
     options: {
       type: Array as PropType<Option[]>,
-      required: true,
+      required: false,
+      default: () => [{ label: '選択してください', value: '' }],
     },
   },
   data() {

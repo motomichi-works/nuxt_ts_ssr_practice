@@ -36,6 +36,7 @@ import FieldHeading0001Container from '~/components/pages/styleguides/field-head
 import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
 import Heading0001Container from '~/components/pages/styleguides/heading-0001-container/index.vue'
 import SelectField0001Container from '~/components/pages/styleguides/select-field-0001-container/index.vue'
+import SelectFieldUnit0001Container from '~/components/pages/styleguides/select-field-unit-0001-container/index.vue'
 
 // Vue.extend
 export default Vue.extend({
@@ -49,6 +50,7 @@ export default Vue.extend({
     FontAwesome5Container,
     Heading0001Container,
     SelectField0001Container,
+    SelectFieldUnit0001Container,
   },
   computed: {
     identifierStr() {
@@ -64,6 +66,7 @@ export default Vue.extend({
         'FontAwesome5Container',
         'Heading0001Container',
         'SelectField0001Container',
+        'SelectFieldUnit0001Container',
       ] as const
 
       const components = componentNames.map((name) => {
