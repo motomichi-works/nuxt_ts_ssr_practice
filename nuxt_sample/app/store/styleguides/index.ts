@@ -3,29 +3,29 @@ import { RootState } from '~/store'
 
 export type FieldValues = {
   'styleguides[basic_field_0001_a]': string
-  'styleguides[email]': string
-  'styleguides[name_kana]': string
+  'styleguides[basic_field_unit_0001_email]': string
+  'styleguides[basic_field_unit_0001_name_kana]': string
   'styleguides[select_field_unit_0001_a]': string
 }
 
 export type RealtimeErrors = {
   'styleguides[basic_field_0001_a]': string[]
-  'styleguides[email]': string[]
-  'styleguides[name_kana]': string[]
+  'styleguides[basic_field_unit_0001_email]': string[]
+  'styleguides[basic_field_unit_0001_name_kana]': string[]
   'styleguides[select_field_unit_0001_a]': string[]
 }
 
 export const state = () => ({
   fieldValues: {
     'styleguides[basic_field_0001_a]': '',
-    'styleguides[email]': '',
-    'styleguides[name_kana]': '',
+    'styleguides[basic_field_unit_0001_email]': '',
+    'styleguides[basic_field_unit_0001_name_kana]': '',
     'styleguides[select_field_unit_0001_a]': '',
   } as FieldValues,
   realtimeErrors: {
     'styleguides[basic_field_0001_a]': [],
-    'styleguides[email]': [],
-    'styleguides[name_kana]': [],
+    'styleguides[basic_field_unit_0001_email]': [],
+    'styleguides[basic_field_unit_0001_name_kana]': [],
     'styleguides[select_field_unit_0001_a]': [],
   } as RealtimeErrors,
 })
@@ -47,8 +47,8 @@ export const mutations: MutationTree<StyleguidesState> = {
   ) => {
     const sharedArray = [
       'styleguides[basic_field_0001_a]',
-      'styleguides[email]',
-      'styleguides[name_kana]',
+      'styleguides[basic_field_unit_0001_email]',
+      'styleguides[basic_field_unit_0001_name_kana]',
       'styleguides[select_field_unit_0001_a]',
     ] as const
     type Key = typeof sharedArray[number]
