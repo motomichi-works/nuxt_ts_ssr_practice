@@ -1,7 +1,6 @@
 // NOTE: このmixinはformタグを設置したコンポーネントに使用してください。
 
 // import node_modules
-import validate from 'validate.js'
 import Vue from 'vue'
 
 // store, store types
@@ -11,6 +10,7 @@ import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 import constraintsBase, {
   Constraints,
 } from '~/utils/validator/pages/styleguides/index/constraints'
+import validateSingle from '~/utils/validate_single'
 
 // require node_modules
 const cloneDeep = require('lodash.clonedeep')
@@ -42,12 +42,6 @@ type ArgsOfChangeFieldValue = {
   key: string
   value: string
 }
-type ArgsOfValidateSingle = {
-  key: string
-  value: string
-  eventType: 'input' | 'blur' | 'change'
-  validatorNames: string[]
-}
 
 // Vue.extend
 export default Vue.extend({
@@ -66,6 +60,7 @@ export default Vue.extend({
     },
   },
   methods: {
+    validateSingle,
     addOptionsToConstraints(args: Constraints): Constraints {
       const constraints: Constraints = cloneDeep(args)
       const fieldValues = this.fieldValues as FieldValues
@@ -81,7 +76,7 @@ export default Vue.extend({
       return constraints
     },
     onInputField(payload: ArgsOfOnInputField) {
-      const validationResult = this.validateSingle(payload)
+      const validationResult = this.validateSingle(payload, this.constraints)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -92,7 +87,7 @@ export default Vue.extend({
       this.changeFieldValue(payload)
     },
     onChangeField(payload: ArgsOfOnChangeField) {
-      const validationResult = this.validateSingle(payload)
+      const validationResult = this.validateSingle(payload, this.constraints)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -103,7 +98,7 @@ export default Vue.extend({
       this.changeFieldValue(payload)
     },
     onBlurField(payload: ArgsOfOnBlurField) {
-      const validationResult = this.validateSingle(payload)
+      const validationResult = this.validateSingle(payload, this.constraints)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -113,21 +108,7 @@ export default Vue.extend({
       })
       this.changeFieldValue(payload)
     },
-    validateSingle(args: ArgsOfValidateSingle): string[] {
-      const constraintsKey = args.key
-      const constraint = this.constraints[constraintsKey]
 
-      args.validatorNames.forEach((validatorName) => {
-        constraint[validatorName].eventType = args.eventType
-      })
-
-      const result = validate.single(
-        args.value,
-        this.constraints[constraintsKey]
-      )
-
-      return result ?? []
-    },
     changeRealtimeErrors(args: ArgsOfChangeRealtimeErrors): void {
       this.$store.commit('styleguides/changeRealtimeErrors', args)
     },
