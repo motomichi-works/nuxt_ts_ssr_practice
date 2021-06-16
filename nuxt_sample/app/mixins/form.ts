@@ -1,3 +1,5 @@
+// NOTE: このmixinはformタグを設置したコンポーネントに使用してください。
+
 // import node_modules
 import validate from 'validate.js'
 import Vue from 'vue'
