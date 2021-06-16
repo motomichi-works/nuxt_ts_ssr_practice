@@ -42,7 +42,7 @@ import SelectFieldUnit0001 from '~/components/common/select_field_unit_0001/inde
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
-import base from '~/mixins/base'
+import base from '~/mixins/every'
 import formBase from '~/mixins/form_base'
 
 // Vue.extend

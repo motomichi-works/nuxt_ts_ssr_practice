@@ -34,7 +34,7 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import base from '~/mixins/base'
+import base from '~/mixins/every'
 
 // types
 export type Option = {

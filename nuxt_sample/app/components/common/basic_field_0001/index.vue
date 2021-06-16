@@ -26,7 +26,7 @@ import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // mixins
-import base from '~/mixins/base'
+import base from '~/mixins/every'
 
 // Vue.extend
 export default Vue.extend({

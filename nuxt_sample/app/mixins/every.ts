@@ -1,4 +1,4 @@
-// Note: このmixinはapp/layoutsとapp/pages以外の全てのコンポーネントで必ず使用してください。
+// NOTE: このmixinはapp/layoutsとapp/pages以外の全てのコンポーネントで必ず使用してください。
 
 // import node_modules
 import Vue, { PropType } from 'vue'

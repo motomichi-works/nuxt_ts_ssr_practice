@@ -63,7 +63,7 @@ import FieldErrorMessages0001 from '~/components/common/field_error_messages_000
 import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
-import base from '~/mixins/base'
+import base from '~/mixins/every'
 
 // define types
 type ArgsOfOnInputField = {
