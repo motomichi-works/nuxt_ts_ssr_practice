@@ -51,10 +51,16 @@ type ArgsOfChangeFieldValue = {
 export default Vue.extend({
   computed: {
     constraints(): ConstraintsBase {
-      const constraintsWithOptions = this.addOptionsToConstraints(
-        constraintsBase
+      const validatorNamesThatDependsOnOptions = ['customEmail'] as const
+
+      // 動的なオプションを含んだconstraintsを取得する
+      const constraintsWithDynamicOptions = this.getConstraintsWithDynamicOptions(
+        constraintsBase,
+        this.fieldValues,
+        validatorNamesThatDependsOnOptions
       )
-      return constraintsWithOptions
+
+      return constraintsWithDynamicOptions
     },
     fieldValues() {
       return this.$store.getters['styleguides/fieldValues'] as FieldValues
@@ -65,14 +71,16 @@ export default Vue.extend({
   },
   methods: {
     validateSingle,
-    addOptionsToConstraints(args: ConstraintsBase): ConstraintsBase {
-      const constraints: ConstraintsBase = cloneDeep(args)
-      const fieldValues = this.fieldValues as FieldValues
+    getConstraintsWithDynamicOptions(
+      constraintsBase: ConstraintsBase,
+      fieldValues: FieldValues,
+      validatorNamesThatDependsOnOptions: readonly string[]
+    ): ConstraintsBase {
+      const constraints: ConstraintsBase = cloneDeep(constraintsBase)
       const constraintsKeys = sharedKeys
 
       constraintsKeys.forEach((constraintsKey) => {
-        const validadorNames = Object.keys(constraints[constraintsKey])
-        validadorNames.forEach((validadorName) => {
+        validatorNamesThatDependsOnOptions.forEach((validadorName) => {
           constraints[constraintsKey][validadorName].prevValues = fieldValues
         })
       })
