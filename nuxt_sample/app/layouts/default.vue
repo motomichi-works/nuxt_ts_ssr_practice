@@ -36,8 +36,8 @@ export default {
 
 <style lang="scss" scoped>
 // layouts
-@import '~/assets/scss/layouts/l-body-inner-0001.scss';
+@import '~/assets/scss/layouts/l_body_inner_0001.scss';
 // modules
-@import '~/assets/scss/modules/header-0001.scss';
-@import '~/assets/scss/modules/footer-0001.scss';
+@import '~/assets/scss/modules/header_0001.scss';
+@import '~/assets/scss/modules/footer_0001.scss';
 </style>

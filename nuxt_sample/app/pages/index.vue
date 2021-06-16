@@ -33,7 +33,7 @@ import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
 // import components/common
-import Heading0001 from '~/components/common/heading-0001/index.vue'
+import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({
@@ -59,7 +59,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 // layouts
-@import '~/assets/scss/layouts/l-contents-type-0001';
+@import '~/assets/scss/layouts/l_contents_type_0001';
 // modules
-@import '~/assets/scss/modules/container-0001';
+@import '~/assets/scss/modules/container_0001';
 </style>

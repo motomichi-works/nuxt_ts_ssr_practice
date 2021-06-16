@@ -25,18 +25,18 @@
 import Vue from 'vue'
 
 // import components/common
-import Heading0001 from '~/components/common/heading-0001/index.vue'
+import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // import components/pages
-import Badge0001Container from '~/components/pages/styleguides/badge-0001-container/index.vue'
-import BasicField0001Container from '~/components/pages/styleguides/basic-field-0001-container/index.vue'
-import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic-field-unit-0001-container/index.vue'
-import FieldErrorMessages0001Container from '~/components/pages/styleguides/field-error-messages-0001-container/index.vue'
-import FieldHeading0001Container from '~/components/pages/styleguides/field-heading-0001-container/index.vue'
-import FontAwesome5Container from '~/components/pages/styleguides/font-awesome-5-container/index.vue'
-import Heading0001Container from '~/components/pages/styleguides/heading-0001-container/index.vue'
-import SelectField0001Container from '~/components/pages/styleguides/select-field-0001-container/index.vue'
-import SelectFieldUnit0001Container from '~/components/pages/styleguides/select-field-unit-0001-container/index.vue'
+import Badge0001Container from '~/components/pages/styleguides/badge_0001_container/index.vue'
+import BasicField0001Container from '~/components/pages/styleguides/basic_field_0001_container/index.vue'
+import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic_field_unit_0001_container/index.vue'
+import FieldErrorMessages0001Container from '~/components/pages/styleguides/field_error_messages_0001_container/index.vue'
+import FieldHeading0001Container from '~/components/pages/styleguides/field_heading_0001_container/index.vue'
+import FontAwesome5Container from '~/components/pages/styleguides/font_awesome_5_container/index.vue'
+import Heading0001Container from '~/components/pages/styleguides/heading_0001_container/index.vue'
+import SelectField0001Container from '~/components/pages/styleguides/select_field_0001_container/index.vue'
+import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
 
 // Vue.extend
 export default Vue.extend({
@@ -81,5 +81,5 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 // layouts
-@import '~/assets/scss/layouts/l-contents-type-0001';
+@import '~/assets/scss/layouts/l_contents_type_0001';
 </style>

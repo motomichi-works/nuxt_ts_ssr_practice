@@ -67,7 +67,7 @@ export default {
   styleResources: {
     scss: [
       // use underscore "_" & also file extension ".scss"
-      './assets/scss/base/global-variables/media-queries/_media-queries.scss',
+      './assets/scss/base/global_variables/media_queries/_media_queries.scss',
     ],
   },
 }
