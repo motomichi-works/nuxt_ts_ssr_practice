@@ -3,12 +3,16 @@
 // import node_modules
 import Vue from 'vue'
 
+// settings
+import { sharedKeys } from '~/settings/pages/styleguides'
+
 // store, store types
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
 // utils
-import constraintsBase, {
-  Constraints,
+import {
+  constraintsBase,
+  ConstraintsBase,
 } from '~/utils/validator/pages/styleguides/index/constraints'
 import validateSingle from '~/utils/validate_single'
 
@@ -46,7 +50,7 @@ type ArgsOfChangeFieldValue = {
 // Vue.extend
 export default Vue.extend({
   computed: {
-    constraints(): Constraints {
+    constraints(): ConstraintsBase {
       const constraintsWithOptions = this.addOptionsToConstraints(
         constraintsBase
       )
@@ -61,10 +65,10 @@ export default Vue.extend({
   },
   methods: {
     validateSingle,
-    addOptionsToConstraints(args: Constraints): Constraints {
-      const constraints: Constraints = cloneDeep(args)
+    addOptionsToConstraints(args: ConstraintsBase): ConstraintsBase {
+      const constraints: ConstraintsBase = cloneDeep(args)
       const fieldValues = this.fieldValues as FieldValues
-      const constraintsKeys = Object.keys(constraints)
+      const constraintsKeys = sharedKeys
 
       constraintsKeys.forEach((constraintsKey) => {
         const validadorNames = Object.keys(constraints[constraintsKey])
