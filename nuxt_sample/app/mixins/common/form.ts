@@ -47,11 +47,11 @@ export default Vue.extend({
     constraints(): ConstraintsBase {
       return constraintsBase
     },
-    fieldValues() {
-      return this.$store.getters['styleguides/fieldValues'] as FieldValues
+    fieldValues(): FieldValues {
+      return this.$store.getters['styleguides/fieldValues']
     },
-    realtimeErrors() {
-      return this.$store.getters['styleguides/realtimeErrors'] as RealtimeErrors
+    realtimeErrors(): RealtimeErrors {
+      return this.$store.getters['styleguides/realtimeErrors']
     },
   },
   methods: {
