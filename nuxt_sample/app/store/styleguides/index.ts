@@ -1,46 +1,33 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import { RootState } from '~/store'
 
-export type FieldValues = {
-  'styleguides[basic_field_0001_a]': string
-  'styleguides[basic_field_unit_0001_email]': string
-  'styleguides[basic_field_unit_0001_name_kana]': string
-  'styleguides[select_field_0001_a]': string
-  'styleguides[select_field_unit_0001_a]': string
-}
+// settings
+import { sharedKeys } from '~/settings/pages/styleguides/index'
 
-export type RealtimeErrors = {
-  'styleguides[basic_field_0001_a]': string[]
-  'styleguides[basic_field_unit_0001_email]': string[]
-  'styleguides[basic_field_unit_0001_name_kana]': string[]
-  'styleguides[select_field_0001_a]': string[]
-  'styleguides[select_field_unit_0001_a]': string[]
-}
+// utils
+import makeObjectFromArray from '~/utils/make_object_from_array'
 
+// state
+const fieldValues = makeObjectFromArray(sharedKeys, '')
+const realtimeErrors = makeObjectFromArray(sharedKeys, [] as string[])
+const isTainted = makeObjectFromArray(sharedKeys, false)
 export const state = () => ({
-  fieldValues: {
-    'styleguides[basic_field_0001_a]': '',
-    'styleguides[basic_field_unit_0001_email]': '',
-    'styleguides[basic_field_unit_0001_name_kana]': '',
-    'styleguides[select_field_0001_a]': '',
-    'styleguides[select_field_unit_0001_a]': '',
-  } as FieldValues,
-  realtimeErrors: {
-    'styleguides[basic_field_0001_a]': [],
-    'styleguides[basic_field_unit_0001_email]': [],
-    'styleguides[basic_field_unit_0001_name_kana]': [],
-    'styleguides[select_field_0001_a]': [],
-    'styleguides[select_field_unit_0001_a]': [],
-  } as RealtimeErrors,
+  fieldValues,
+  realtimeErrors,
+  isTainted,
 })
-
+export type FieldValues = typeof fieldValues
+export type RealtimeErrors = typeof realtimeErrors
+export type IsTainted = typeof isTainted
 export type StyleguidesState = ReturnType<typeof state>
 
+// getters
 export const getters: GetterTree<StyleguidesState, RootState> = {
   fieldValues: (state) => state.fieldValues,
   realtimeErrors: (state) => state.realtimeErrors,
 }
 
+// mutations
 export const mutations: MutationTree<StyleguidesState> = {
   changeFieldValue(state, payload: { key: keyof FieldValues; value: string }) {
     state.fieldValues[payload.key] = payload.value
@@ -49,18 +36,9 @@ export const mutations: MutationTree<StyleguidesState> = {
     state,
     payload: { key: keyof RealtimeErrors; value: string[] }
   ) => {
-    const sharedArray = [
-      'styleguides[basic_field_0001_a]',
-      'styleguides[basic_field_unit_0001_email]',
-      'styleguides[basic_field_unit_0001_name_kana]',
-      'styleguides[select_field_0001_a]',
-      'styleguides[select_field_unit_0001_a]',
-    ] as const
-    type Key = typeof sharedArray[number]
-    const key: Key = payload.key
-
-    state.realtimeErrors[key] = payload.value
+    state.realtimeErrors[payload.key] = payload.value
   },
 }
 
+// actions
 export const actions: ActionTree<StyleguidesState, RootState> = {}
