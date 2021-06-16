@@ -28,7 +28,6 @@ export default {
       customEmail: {
         label,
         isRequired,
-        eventType: '',
       } as any,
     }
   },
@@ -37,7 +36,6 @@ export default {
       katakana: {
         label,
         isRequired,
-        eventType: '',
       } as any,
     }
   },

@@ -8,18 +8,20 @@ type PayloadForValidateSingle = {
   validatorNames: string[]
 }
 
-export default function validateSingle<T extends { [key: string]: any }>(
-  payload: PayloadForValidateSingle,
-  constraints: T
-): string[] {
+export default function validateSingle<
+  C extends { [key: string]: any },
+  F extends { [key: string]: any }
+>(payload: PayloadForValidateSingle, constraints: C, fieldValues: F): string[] {
   const constraintsKey = payload.key
   const constraint = constraints[constraintsKey]
 
+  // 動的なオプションに依存しているvalidatorがある場合はオプションを渡す
   payload.validatorNames.forEach((validatorName) => {
     constraint[validatorName].eventType = payload.eventType
+    constraint[validatorName].prevValues = fieldValues
   })
 
-  const result = validate.single(payload.value, constraints[constraintsKey])
+  const result = validate.single(payload.value, constraint)
 
   return result ?? []
 }

@@ -3,9 +3,6 @@
 // import node_modules
 import Vue from 'vue'
 
-// settings
-import { sharedKeys } from '~/settings/pages/styleguides'
-
 // store, store types
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
@@ -15,9 +12,6 @@ import {
   ConstraintsBase,
 } from '~/utils/validator/pages/styleguides/index/constraints'
 import validateSingle from '~/utils/validate_single'
-
-// require node_modules
-const cloneDeep = require('lodash.clonedeep')
 
 // define types
 type ArgsOfOnInputField = {
@@ -51,16 +45,7 @@ type ArgsOfChangeFieldValue = {
 export default Vue.extend({
   computed: {
     constraints(): ConstraintsBase {
-      const validatorNamesThatDependsOnOptions = ['customEmail'] as const
-
-      // 動的なオプションを含んだconstraintsを取得する
-      const constraintsWithDynamicOptions = this.getConstraintsWithDynamicOptions(
-        constraintsBase,
-        this.fieldValues,
-        validatorNamesThatDependsOnOptions
-      )
-
-      return constraintsWithDynamicOptions
+      return constraintsBase
     },
     fieldValues() {
       return this.$store.getters['styleguides/fieldValues'] as FieldValues
@@ -71,24 +56,12 @@ export default Vue.extend({
   },
   methods: {
     validateSingle,
-    getConstraintsWithDynamicOptions(
-      constraintsBase: ConstraintsBase,
-      fieldValues: FieldValues,
-      validatorNamesThatDependsOnOptions: readonly string[]
-    ): ConstraintsBase {
-      const constraints: ConstraintsBase = cloneDeep(constraintsBase)
-      const constraintsKeys = sharedKeys
-
-      constraintsKeys.forEach((constraintsKey) => {
-        validatorNamesThatDependsOnOptions.forEach((validadorName) => {
-          constraints[constraintsKey][validadorName].prevValues = fieldValues
-        })
-      })
-
-      return constraints
-    },
     onInputField(payload: ArgsOfOnInputField) {
-      const validationResult = this.validateSingle(payload, this.constraints)
+      const validationResult = this.validateSingle(
+        payload,
+        this.constraints,
+        this.fieldValues
+      )
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -99,7 +72,11 @@ export default Vue.extend({
       this.changeFieldValue(payload)
     },
     onChangeField(payload: ArgsOfOnChangeField) {
-      const validationResult = this.validateSingle(payload, this.constraints)
+      const validationResult = this.validateSingle(
+        payload,
+        this.constraints,
+        this.fieldValues
+      )
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -110,7 +87,11 @@ export default Vue.extend({
       this.changeFieldValue(payload)
     },
     onBlurField(payload: ArgsOfOnBlurField) {
-      const validationResult = this.validateSingle(payload, this.constraints)
+      const validationResult = this.validateSingle(
+        payload,
+        this.constraints,
+        this.fieldValues
+      )
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
