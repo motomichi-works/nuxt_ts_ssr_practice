@@ -17,7 +17,7 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import every from '~/mixins/every'
+import every from '~/mixins/common/every'
 
 // Vue.extend
 export default Vue.extend({
