@@ -62,7 +62,7 @@ import FieldErrorMessages0001 from '~/components/common/field_error_messages_000
 import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 
 // define types
 type ArgsOfOnChangeField = {
@@ -86,7 +86,7 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
-  mixins: [base],
+  mixins: [every],
   props: {
     fieldModifiers: {
       type: Array as PropType<string[]>,

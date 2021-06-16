@@ -36,7 +36,7 @@ import BasicField0001 from '~/components/common/basic_field_0001/index.vue'
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 import form from '~/mixins/form'
 
 // Vue.extend
@@ -46,7 +46,7 @@ export default Vue.extend({
     BasicField0001,
     Heading0001,
   },
-  mixins: [base, form],
+  mixins: [every, form],
   computed: {
     fa() {
       return {

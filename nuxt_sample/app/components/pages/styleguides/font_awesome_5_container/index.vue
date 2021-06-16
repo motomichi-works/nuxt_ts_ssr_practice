@@ -21,7 +21,7 @@ import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 
 // Vue.extend
 export default Vue.extend({
@@ -29,7 +29,7 @@ export default Vue.extend({
   components: {
     Heading0001,
   },
-  mixins: [base],
+  mixins: [every],
   computed: {
     fa() {
       return {

@@ -26,12 +26,12 @@ import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicField0001',
-  mixins: [base],
+  mixins: [every],
   props: {
     modifiers: {
       type: Array as PropType<string[]>,

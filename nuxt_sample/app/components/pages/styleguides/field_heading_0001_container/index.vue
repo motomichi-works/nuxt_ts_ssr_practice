@@ -39,7 +39,7 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 
 // Vue.extend
 export default Vue.extend({
@@ -48,7 +48,7 @@ export default Vue.extend({
     FieldHeading0001,
     Heading0001,
   },
-  mixins: [base],
+  mixins: [every],
 })
 </script>
 <style lang="scss" scoped>

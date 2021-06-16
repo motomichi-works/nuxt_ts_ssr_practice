@@ -17,12 +17,12 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 
 // Vue.extend
 export default Vue.extend({
   name: 'FieldErrorMessages0001',
-  mixins: [base],
+  mixins: [every],
   props: {
     errorMessages: {
       type: Array as PropType<string[]>,

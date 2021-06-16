@@ -13,12 +13,12 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import base from '~/mixins/every'
+import every from '~/mixins/every'
 
 // Vue.extend
 export default Vue.extend({
   name: 'Heading0001',
-  mixins: [base],
+  mixins: [every],
   props: {
     text: {
       type: String as PropType<string>,
