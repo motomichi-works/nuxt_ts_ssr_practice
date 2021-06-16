@@ -4,6 +4,6 @@ export const sharedKeys = [
   'styleguides[basic_field_0001_a]',
   'styleguides[basic_field_unit_0001_email]',
   'styleguides[basic_field_unit_0001_name_kana]',
-  'tyleguides[select_field_0001_a]',
+  'styleguides[select_field_0001_a]',
   'styleguides[select_field_unit_0001_a]',
 ] as const
