@@ -14,6 +14,12 @@
         v-for="component in components"
         :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
+        :constraints-base="constraintsBase"
+        :field-values="fieldValues"
+        :realtime-errors="realtimeErrors"
+        @on-input-field="onInputField"
+        @on-change-field="onChangeField"
+        @on-blur-field="onBlurField"
       >
       </component>
     </div>
@@ -97,7 +103,7 @@ export default Vue.extend({
     identifierStr() {
       return 'Contents'
     },
-    constraints(): ConstraintsBase {
+    constraintsBase(): ConstraintsBase {
       return constraintsBase
     },
     fieldValues(): FieldValues {
@@ -130,7 +136,7 @@ export default Vue.extend({
     onInputField(payload: ArgsOfOnInputField) {
       const validationResult = validateSingle(
         payload,
-        this.constraints,
+        this.constraintsBase,
         this.fieldValues
       )
       // eslint-disable-next-line no-console
@@ -145,7 +151,7 @@ export default Vue.extend({
     onChangeField(payload: ArgsOfOnChangeField) {
       const validationResult = validateSingle(
         payload,
-        this.constraints,
+        this.constraintsBase,
         this.fieldValues
       )
       // eslint-disable-next-line no-console
@@ -160,7 +166,7 @@ export default Vue.extend({
     onBlurField(payload: ArgsOfOnBlurField) {
       const validationResult = validateSingle(
         payload,
-        this.constraints,
+        this.constraintsBase,
         this.fieldValues
       )
       // eslint-disable-next-line no-console
