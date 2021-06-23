@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
 // utils
-import { ConstraintsBase } from '~/utils/validator/pages/styleguides/index/constraints_base'
+import { ConstraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // define types
 type ArgsOfOnInputField = {
@@ -30,8 +30,8 @@ type ArgsOfOnBlurField = {
 // Vue.extend
 export default Vue.extend({
   props: {
-    constraintsBase: {
-      type: Object as PropType<ConstraintsBase>,
+    constraintsBaseOfAll: {
+      type: Object as PropType<ConstraintsBaseOfAll>,
       required: true,
     },
     fieldValues: {

@@ -14,7 +14,7 @@
         v-for="component in components"
         :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
-        :constraints-base="constraintsBase"
+        :constraints-base-of-all="constraintsBaseOfAll"
         :field-values="fieldValues"
         :realtime-errors="realtimeErrors"
         @on-input-field="onInputField"
@@ -52,9 +52,9 @@ import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_
 
 // utils
 import {
-  constraintsBase,
-  ConstraintsBase,
-} from '~/utils/validator/pages/styleguides/index/constraints_base'
+  constraintsBaseOfAll,
+  ConstraintsBaseOfAll,
+} from '~/utils/validator/constraints_base_of_all'
 import validateSingle from '~/utils/validate_single'
 
 // define types
@@ -103,8 +103,8 @@ export default Vue.extend({
     identifierStr() {
       return 'Contents'
     },
-    constraintsBase(): ConstraintsBase {
-      return constraintsBase
+    constraintsBaseOfAll(): ConstraintsBaseOfAll {
+      return constraintsBaseOfAll
     },
     fieldValues(): FieldValues {
       return this.$store.getters[`${namespace}/fieldValues`]
@@ -136,7 +136,7 @@ export default Vue.extend({
     onInputField(payload: ArgsOfOnInputField) {
       const validationResult = validateSingle(
         payload,
-        this.constraintsBase,
+        this.constraintsBaseOfAll,
         this.fieldValues
       )
       // eslint-disable-next-line no-console
@@ -151,7 +151,7 @@ export default Vue.extend({
     onChangeField(payload: ArgsOfOnChangeField) {
       const validationResult = validateSingle(
         payload,
-        this.constraintsBase,
+        this.constraintsBaseOfAll,
         this.fieldValues
       )
       // eslint-disable-next-line no-console
@@ -166,7 +166,7 @@ export default Vue.extend({
     onBlurField(payload: ArgsOfOnBlurField) {
       const validationResult = validateSingle(
         payload,
-        this.constraintsBase,
+        this.constraintsBaseOfAll,
         this.fieldValues
       )
       // eslint-disable-next-line no-console
