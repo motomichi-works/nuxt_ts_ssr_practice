@@ -1,3 +1,5 @@
+export const namespace = 'styleguides'
+
 // railsのテーブル名とカラム名からなる、フィールドnameの文字列をイメージしています。
 // 実際の業務では必要に応じて別の文字列に柔軟に変更します。
 export const sharedKeys = [

@@ -24,6 +24,9 @@
 // import node_modules
 import Vue from 'vue'
 
+// settings
+import { namespace } from '~/settings/pages/styleguides/index'
+
 // store, store types
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
@@ -98,10 +101,10 @@ export default Vue.extend({
       return constraintsBase
     },
     fieldValues(): FieldValues {
-      return this.$store.getters['styleguides/fieldValues']
+      return this.$store.getters[`${namespace}/fieldValues`]
     },
     realtimeErrors(): RealtimeErrors {
-      return this.$store.getters['styleguides/realtimeErrors']
+      return this.$store.getters[`${namespace}/realtimeErrors`]
     },
     components() {
       const componentNames = [
@@ -171,10 +174,10 @@ export default Vue.extend({
     },
 
     changeRealtimeErrors(args: ArgsOfChangeRealtimeErrors): void {
-      this.$store.commit('styleguides/changeRealtimeErrors', args)
+      this.$store.commit(`${namespace}/changeRealtimeErrors`, args)
     },
     changeFieldValue(args: ArgsOfChangeFieldValue): void {
-      this.$store.commit('styleguides/changeFieldValue', args)
+      this.$store.commit(`${namespace}/changeFieldValue`, args)
     },
   },
 })
