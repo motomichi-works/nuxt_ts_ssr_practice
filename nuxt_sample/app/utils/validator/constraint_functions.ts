@@ -1,5 +1,5 @@
 import validate from 'validate.js'
-import customValidators from '~/utils/validator/customValidators'
+import customValidators from '~/utils/validator/custom_validators'
 
 validate.validators = {
   ...validate.validators,
