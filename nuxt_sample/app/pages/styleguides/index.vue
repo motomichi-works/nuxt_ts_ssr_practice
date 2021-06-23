@@ -24,6 +24,9 @@
 // import node_modules
 import Vue from 'vue'
 
+// store, store types
+import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
+
 // import components/common
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
@@ -37,6 +40,41 @@ import FontAwesome5Container from '~/components/pages/styleguides/font_awesome_5
 import Heading0001Container from '~/components/pages/styleguides/heading_0001_container/index.vue'
 import SelectField0001Container from '~/components/pages/styleguides/select_field_0001_container/index.vue'
 import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
+
+// utils
+import {
+  constraintsBase,
+  ConstraintsBase,
+} from '~/utils/validator/pages/styleguides/index/constraints'
+import validateSingle from '~/utils/validate_single'
+
+// define types
+type ArgsOfOnInputField = {
+  key: string
+  value: string
+  eventType: 'input'
+  validatorNames: string[]
+}
+type ArgsOfOnChangeField = {
+  key: string
+  value: string
+  eventType: 'change'
+  validatorNames: string[]
+}
+type ArgsOfOnBlurField = {
+  key: string
+  value: string
+  eventType: 'blur'
+  validatorNames: string[]
+}
+type ArgsOfChangeRealtimeErrors = {
+  key: string
+  value: string[]
+}
+type ArgsOfChangeFieldValue = {
+  key: string
+  value: string
+}
 
 // Vue.extend
 export default Vue.extend({
@@ -56,6 +94,15 @@ export default Vue.extend({
     identifierStr() {
       return 'Contents'
     },
+    constraints(): ConstraintsBase {
+      return constraintsBase
+    },
+    fieldValues(): FieldValues {
+      return this.$store.getters['styleguides/fieldValues']
+    },
+    realtimeErrors(): RealtimeErrors {
+      return this.$store.getters['styleguides/realtimeErrors']
+    },
     components() {
       const componentNames = [
         'Badge0001Container',
@@ -74,6 +121,60 @@ export default Vue.extend({
       })
 
       return components
+    },
+  },
+  methods: {
+    onInputField(payload: ArgsOfOnInputField) {
+      const validationResult = validateSingle(
+        payload,
+        this.constraints,
+        this.fieldValues
+      )
+      // eslint-disable-next-line no-console
+      // console.log('validationResult: ', validationResult)
+
+      this.changeRealtimeErrors({
+        key: payload.key,
+        value: validationResult,
+      })
+      this.changeFieldValue(payload)
+    },
+    onChangeField(payload: ArgsOfOnChangeField) {
+      const validationResult = validateSingle(
+        payload,
+        this.constraints,
+        this.fieldValues
+      )
+      // eslint-disable-next-line no-console
+      // console.log('validationResult: ', validationResult)
+
+      this.changeRealtimeErrors({
+        key: payload.key,
+        value: validationResult,
+      })
+      this.changeFieldValue(payload)
+    },
+    onBlurField(payload: ArgsOfOnBlurField) {
+      const validationResult = validateSingle(
+        payload,
+        this.constraints,
+        this.fieldValues
+      )
+      // eslint-disable-next-line no-console
+      // console.log('validationResult: ', validationResult)
+
+      this.changeRealtimeErrors({
+        key: payload.key,
+        value: validationResult,
+      })
+      this.changeFieldValue(payload)
+    },
+
+    changeRealtimeErrors(args: ArgsOfChangeRealtimeErrors): void {
+      this.$store.commit('styleguides/changeRealtimeErrors', args)
+    },
+    changeFieldValue(args: ArgsOfChangeFieldValue): void {
+      this.$store.commit('styleguides/changeFieldValue', args)
     },
   },
 })

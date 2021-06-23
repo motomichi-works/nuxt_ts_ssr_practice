@@ -37,7 +37,6 @@ import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
 import every from '~/mixins/common/every'
-import form from '~/mixins/common/form'
 
 // Vue.extend
 export default Vue.extend({
@@ -46,7 +45,7 @@ export default Vue.extend({
     SelectField0001,
     Heading0001,
   },
-  mixins: [every, form],
+  mixins: [every],
 })
 </script>
 <style lang="scss" scoped>
