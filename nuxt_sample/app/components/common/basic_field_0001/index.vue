@@ -27,39 +27,17 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // mixins
 import every from '~/mixins/common/every'
+import fieldBase from '~/mixins/common/field_base'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicField0001',
-  mixins: [every],
+  mixins: [every, fieldBase],
   props: {
     modifiers: {
       type: Array as PropType<string[]>,
       required: false,
       default: () => ['basic-field-0001--size-md'],
-    },
-    validatorNames: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-    value: {
-      type: String as PropType<string>,
-      required: true,
-    },
-    nameProperty: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    isDisabled: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
-    isReadonly: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
     },
     placeholder: {
       type: String as PropType<string>,
@@ -81,11 +59,6 @@ export default Vue.extend({
       required: false,
       default: () => null,
     },
-    hasRealtimeErrors: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
   },
   computed: {
     classes() {
@@ -97,7 +70,10 @@ export default Vue.extend({
       if (this.rightIcon !== null) {
         classes.push('basic-field-0001--icon-absolute-right')
       }
-      if (this.hasRealtimeErrors) classes.push('basic-field-0001--invalid')
+      if ((this as any).hasRealtimeErrors) {
+        classes.push('basic-field-0001--invalid')
+      }
+
       return classes
     },
     isVisibleLeftIcon() {
@@ -108,33 +84,23 @@ export default Vue.extend({
     },
     bindValue: {
       get(): string {
-        return this.value
+        return (this as any).value
       },
-      set(value: string): void {
+      set(value: string) {
         this.onInput(value)
       },
     },
   },
   methods: {
-    onInput(value: string): void {
+    onInput(value: string) {
       const payload = {
-        key: this.nameProperty,
+        key: (this as any).nameProperty,
         value,
         eventType: 'input',
-        validatorNames: this.validatorNames,
+        validatorNames: (this as any).validatorNames,
       } as const
 
       this.$emit('on-input-field', payload)
-    },
-    onBlur({ target }: { target: HTMLInputElement }): void {
-      const payload = {
-        key: this.nameProperty,
-        value: target.value,
-        eventType: 'blur',
-        validatorNames: this.validatorNames,
-      } as const
-
-      this.$emit('on-blur-field', payload)
     },
   },
 })

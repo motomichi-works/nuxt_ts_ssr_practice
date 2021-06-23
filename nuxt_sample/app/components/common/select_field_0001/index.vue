@@ -35,6 +35,7 @@ import Vue, { PropType } from 'vue'
 
 // mixins
 import every from '~/mixins/common/every'
+import fieldBase from '~/mixins/common/field_base'
 
 // types
 export type Option = {
@@ -45,40 +46,12 @@ export type Option = {
 // Vue.extend
 export default Vue.extend({
   name: 'SelectField0001',
-  mixins: [every],
+  mixins: [every, fieldBase],
   props: {
     modifiers: {
       type: Array as PropType<string[]>,
       required: false,
       default: () => ['select-field-0001--size-md'],
-    },
-    validatorNames: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-    value: {
-      type: String as PropType<string>,
-      required: true,
-    },
-    nameProperty: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    isDisabled: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
-    isReadonly: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
-    hasRealtimeErrors: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
     },
     options: {
       type: Array as PropType<Option[]>,
@@ -95,20 +68,23 @@ export default Vue.extend({
     classes() {
       const classes = ['select-field-0001', ...this.modifiers]
 
-      if (this.hasRealtimeErrors) classes.push('select-field-0001--invalid')
+      if ((this as any).hasRealtimeErrors) {
+        classes.push('select-field-0001--invalid')
+      }
+
       return classes
     },
     bindValue: {
       get(): string {
-        return this.value
+        return (this as any).value
       },
-      set(value: string): void {
+      set(value: string) {
         this.onChange(value)
       },
     },
     selectedLabel() {
       const selectedOption = this.options.find((option) => {
-        return option.value === this.value
+        return option.value === (this as any).value
       })
 
       return selectedOption ? selectedOption.label : ''
@@ -120,25 +96,15 @@ export default Vue.extend({
     },
   },
   methods: {
-    onChange(value: string): void {
+    onChange(value: string) {
       const payload = {
-        key: this.nameProperty,
+        key: (this as any).nameProperty,
         value,
         eventType: 'change',
-        validatorNames: this.validatorNames,
+        validatorNames: (this as any).validatorNames,
       } as const
 
       this.$emit('on-change-field', payload)
-    },
-    onBlur({ target }: { target: HTMLInputElement }): void {
-      const payload = {
-        key: this.nameProperty,
-        value: target.value,
-        eventType: 'blur',
-        validatorNames: this.validatorNames,
-      } as const
-
-      this.$emit('on-blur-field', payload)
     },
   },
 })
