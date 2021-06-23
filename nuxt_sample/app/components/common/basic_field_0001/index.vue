@@ -4,7 +4,7 @@
       <fa :icon="leftIcon" />
     </div>
     <input
-      v-model="computedValue"
+      v-model="bindValue"
       type="text"
       :disabled="isDisabled"
       :readonly="isReadonly"
@@ -106,7 +106,7 @@ export default Vue.extend({
     isVisibleRightIcon() {
       return this.rightIcon !== null
     },
-    computedValue: {
+    bindValue: {
       get(): string {
         return this.value
       },

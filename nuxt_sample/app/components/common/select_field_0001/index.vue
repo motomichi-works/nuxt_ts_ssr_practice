@@ -5,7 +5,7 @@
     </i>
     <select
       v-if="!isReadonly"
-      v-model="computedValue"
+      v-model="bindValue"
       type="text"
       :disabled="isDisabled"
       :name="nameProperty"
@@ -24,7 +24,7 @@
       class="select-field-0001__field select-field-0001__field--readonly"
     >
       <span class="select-field-0001__readonly-label" v-text="selectedLabel" />
-      <input type="hidden" :value="computedValue" />
+      <input type="hidden" :value="bindValue" />
     </div>
   </div>
 </template>
@@ -98,7 +98,7 @@ export default Vue.extend({
       if (this.hasRealtimeErrors) classes.push('select-field-0001--invalid')
       return classes
     },
-    computedValue: {
+    bindValue: {
       get(): string {
         return this.value
       },
