@@ -54,7 +54,7 @@ import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_
 import {
   constraintsBase,
   ConstraintsBase,
-} from '~/utils/validator/pages/styleguides/index/constraints'
+} from '~/utils/validator/pages/styleguides/index/constraints_base'
 import validateSingle from '~/utils/validate_single'
 
 // define types

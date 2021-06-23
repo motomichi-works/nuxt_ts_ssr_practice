@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
 // utils
-import { ConstraintsBase } from '~/utils/validator/pages/styleguides/index/constraints'
+import { ConstraintsBase } from '~/utils/validator/pages/styleguides/index/constraints_base'
 
 // define types
 type ArgsOfOnInputField = {
