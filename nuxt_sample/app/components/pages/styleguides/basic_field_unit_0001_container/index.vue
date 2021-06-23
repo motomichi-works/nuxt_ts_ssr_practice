@@ -61,7 +61,7 @@ import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
 import every from '~/mixins/common/every'
-import containingTheField from '~/mixins/namespaced/styleguides/index/containing_the_field'
+import containingTheField from '~/mixins/depends_on_namespace/styleguides/index/containing_the_field'
 
 // Vue.extend
 export default Vue.extend({
