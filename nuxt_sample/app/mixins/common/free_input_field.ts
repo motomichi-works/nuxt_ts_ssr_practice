@@ -2,14 +2,11 @@
 import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
-// utils
-import {
-  ArgsOfEmitOnInputField,
-  emitOnInputField,
-} from '~/utils/emit_on_input_field'
-
 // mixins
 import fieldBase from '~/mixins/common/field_base'
+
+// define types
+import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -68,18 +65,20 @@ export default Vue.extend({
         return (this as any).value
       },
       set(value: string) {
-        const payload: ArgsOfEmitOnInputField = {
+        const payload: PayloadForOnInputField = {
           key: (this as any).nameProperty,
           value,
           eventType: 'input',
           validatorNames: (this as any).validatorNames,
         }
 
-        this.emitOnInputField(payload, this)
+        this.emitOnInputField(payload)
       },
     },
   },
   methods: {
-    emitOnInputField,
+    emitOnInputField(payload: PayloadForOnInputField) {
+      this.$emit('on-input-field', payload)
+    },
   },
 })
