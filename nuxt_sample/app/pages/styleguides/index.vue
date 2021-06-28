@@ -123,8 +123,7 @@ export default Vue.extend({
     onInputField(payload: PayloadForOnInputField) {
       const validationResult = validateSingle(
         payload,
-        this.constraintsBaseOfAll,
-        this.fieldValues
+        this.constraintsBaseOfAll
       )
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
@@ -139,8 +138,7 @@ export default Vue.extend({
     onChangeField(payload: PayloadForOnChangeField) {
       const validationResult = validateSingle(
         payload,
-        this.constraintsBaseOfAll,
-        this.fieldValues
+        this.constraintsBaseOfAll
       )
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
@@ -155,8 +153,7 @@ export default Vue.extend({
     onBlurField(payload: PayloadForOnBlurField) {
       const validationResult = validateSingle(
         payload,
-        this.constraintsBaseOfAll,
-        this.fieldValues
+        this.constraintsBaseOfAll
       )
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
