@@ -38,6 +38,7 @@ import every from '~/mixins/common/every'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
+import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
 export type Option = {
   label: string
   value: string
@@ -79,7 +80,14 @@ export default Vue.extend({
         return (this as any).value
       },
       set(value: string) {
-        this.onChange(value)
+        const payload: PayloadForOnChangeField = {
+          key: (this as any).nameProperty,
+          value,
+          eventType: 'change',
+          validatorNames: (this as any).validatorNames,
+        }
+
+        this.emitOnChangeField(payload)
       },
     },
     selectedLabel() {
@@ -96,14 +104,7 @@ export default Vue.extend({
     },
   },
   methods: {
-    onChange(value: string) {
-      const payload = {
-        key: (this as any).nameProperty,
-        value,
-        eventType: 'change',
-        validatorNames: (this as any).validatorNames,
-      } as const
-
+    emitOnChangeField(payload: PayloadForOnChangeField) {
       this.$emit('on-change-field', payload)
     },
   },
