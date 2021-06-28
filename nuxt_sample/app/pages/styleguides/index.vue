@@ -16,7 +16,6 @@
         :identifiers="component.identifiers"
         :namespace="namespace"
         :prev-values-for-validator-options="fieldValues"
-        :constraints-base-of-all="constraintsBaseOfAll"
         :field-values="fieldValues"
         :realtime-errors="realtimeErrors"
         @on-input-field="onInputField"
@@ -53,10 +52,7 @@ import SelectField0001Container from '~/components/pages/styleguides/select_fiel
 import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
 
 // utils
-import {
-  constraintsBaseOfAll,
-  ConstraintsBaseOfAll,
-} from '~/utils/validator/constraints_base_of_all'
+import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 import validateSingle from '~/utils/validate_single'
 
 // mixins
@@ -90,9 +86,6 @@ export default Vue.extend({
     identifierStr() {
       return 'Contents'
     },
-    constraintsBaseOfAll(): ConstraintsBaseOfAll {
-      return constraintsBaseOfAll
-    },
     fieldValues(): FieldValues {
       return this.$store.getters[`${namespace}/fieldValues`]
     },
@@ -121,10 +114,7 @@ export default Vue.extend({
   },
   methods: {
     onInputField(payload: PayloadForOnInputField) {
-      const validationResult = validateSingle(
-        payload,
-        this.constraintsBaseOfAll
-      )
+      const validationResult = validateSingle(payload, constraintsBaseOfAll)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -136,10 +126,7 @@ export default Vue.extend({
       ;(this as any).changeFieldValue(payload)
     },
     onChangeField(payload: PayloadForOnChangeField) {
-      const validationResult = validateSingle(
-        payload,
-        this.constraintsBaseOfAll
-      )
+      const validationResult = validateSingle(payload, constraintsBaseOfAll)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
@@ -151,10 +138,7 @@ export default Vue.extend({
       ;(this as any).changeFieldValue(payload)
     },
     onBlurField(payload: PayloadForOnBlurField) {
-      const validationResult = validateSingle(
-        payload,
-        this.constraintsBaseOfAll
-      )
+      const validationResult = validateSingle(payload, constraintsBaseOfAll)
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 

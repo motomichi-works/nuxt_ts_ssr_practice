@@ -5,5 +5,3 @@ import { constraintsBase as styleguides } from '~/utils/validator/pages/stylegui
 export const constraintsBaseOfAll = {
   styleguides,
 }
-
-export type ConstraintsBaseOfAll = typeof constraintsBaseOfAll
