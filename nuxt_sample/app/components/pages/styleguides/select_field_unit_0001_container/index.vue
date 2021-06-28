@@ -27,7 +27,7 @@
           realtimeErrors['styleguides[select_field_unit_0001_a]']
         "
         @on-blur-field="emitOnBlurField"
-        @on-change-field="onChangeField"
+        @on-change-field="emitOnChangeField"
       />
     </div>
   </section>

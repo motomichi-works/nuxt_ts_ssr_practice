@@ -23,7 +23,7 @@
           :options="options"
           :has-realtime-errors="realtimeErrors.length > 0"
           @on-blur-field="emitOnBlurField"
-          @on-change-field="onChangeField"
+          @on-change-field="emitOnChangeField"
         />
       </div>
       <ul
@@ -63,14 +63,6 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import every from '~/mixins/common/every'
-
-// define types
-type ArgsOfOnChangeField = {
-  key: string
-  value: string
-  eventType: 'change'
-  validatorNames: string[]
-}
 
 // Vue.extend
 export default Vue.extend({
@@ -134,11 +126,6 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: false,
       default: () => [],
-    },
-  },
-  methods: {
-    onChangeField(payload: ArgsOfOnChangeField): void {
-      this.$emit('on-change-field', payload)
     },
   },
 })
