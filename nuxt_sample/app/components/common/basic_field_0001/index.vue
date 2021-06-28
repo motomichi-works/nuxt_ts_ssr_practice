@@ -25,13 +25,13 @@
 import Vue from 'vue'
 
 // mixins
-import every from '~/mixins/common/every'
+import everyChild from '~/mixins/common/every_child'
 import freeInputField from '~/mixins/common/free_input_field'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicField0001',
-  mixins: [every, freeInputField],
+  mixins: [everyChild, freeInputField],
 })
 </script>
 

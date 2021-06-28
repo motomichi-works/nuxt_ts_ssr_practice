@@ -34,7 +34,7 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import every from '~/mixins/common/every'
+import everyChild from '~/mixins/common/every_child'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
@@ -47,7 +47,7 @@ export type Option = {
 // Vue.extend
 export default Vue.extend({
   name: 'SelectField0001',
-  mixins: [every, fieldBase],
+  mixins: [everyChild, fieldBase],
   props: {
     modifiers: {
       type: Array as PropType<string[]>,
