@@ -3,8 +3,12 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
+// mixins
+import emitOnInputField from '~/mixins/common/methods/emit_on_input_field'
+
 // Vue.extend
 export default Vue.extend({
+  mixins: [emitOnInputField],
   props: {
     identifiers: {
       type: Array as PropType<string[]>,

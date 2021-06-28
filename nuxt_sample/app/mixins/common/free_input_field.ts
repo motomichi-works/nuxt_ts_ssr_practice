@@ -4,7 +4,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // mixins
 import fieldBase from '~/mixins/common/field_base'
-
 // define types
 import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 
@@ -72,13 +71,8 @@ export default Vue.extend({
           validatorNames: (this as any).validatorNames,
         }
 
-        this.emitOnInputField(payload)
+        ;(this as any).emitOnInputField(payload)
       },
-    },
-  },
-  methods: {
-    emitOnInputField(payload: PayloadForOnInputField) {
-      this.$emit('on-input-field', payload)
     },
   },
 })

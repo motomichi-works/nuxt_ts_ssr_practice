@@ -8,12 +8,6 @@ import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 import { ConstraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // define types
-type ArgsOfOnInputField = {
-  key: string
-  value: string
-  eventType: 'input'
-  validatorNames: string[]
-}
 type ArgsOfOnChangeField = {
   key: string
   value: string
@@ -44,9 +38,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    onInputField(payload: ArgsOfOnInputField) {
-      this.$emit('on-input-field', payload)
-    },
     onChangeField(payload: ArgsOfOnChangeField) {
       this.$emit('on-change-field', payload)
     },

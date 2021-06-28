@@ -25,7 +25,7 @@
           :right-icon="rightIcon"
           :has-realtime-errors="realtimeErrors.length > 0"
           @on-blur-field="onBlurField"
-          @on-input-field="onInputField"
+          @on-input-field="emitOnInputField"
         />
       </div>
       <ul
@@ -64,14 +64,9 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import every from '~/mixins/common/every'
+import emitOnInputField from '~/mixins/common/methods/emit_on_input_field'
 
 // define types
-type ArgsOfOnInputField = {
-  key: string
-  value: string
-  eventType: 'input'
-  validatorNames: string[]
-}
 type ArgsOfOnBlurField = {
   key: string
   value: string
@@ -87,7 +82,7 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
-  mixins: [every],
+  mixins: [every, emitOnInputField],
   props: {
     validatorNames: {
       type: Array as PropType<string[]>,
@@ -154,9 +149,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    onInputField(payload: ArgsOfOnInputField): void {
-      this.$emit('on-input-field', payload)
-    },
     onBlurField(payload: ArgsOfOnBlurField): void {
       this.$emit('on-blur-field', payload)
     },
