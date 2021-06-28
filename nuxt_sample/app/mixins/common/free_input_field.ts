@@ -4,7 +4,8 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // mixins
 import fieldBase from '~/mixins/common/field_base'
-// define types
+
+// types
 import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
