@@ -101,7 +101,7 @@ export default Vue.extend({
   },
   watch: {
     options() {
-      this.refreshKey++
+      ;(this.refreshKey as any)++
     },
   },
 })
