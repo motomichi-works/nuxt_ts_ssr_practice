@@ -15,6 +15,7 @@
         <SelectField0001
           :identifiers="[...identifiers, 'selectFieldA']"
           :namespace="namespace"
+          :prev-values-for-validator-options="prevValuesForValidatorOptions"
           :modifiers="fieldModifiers"
           :validator-names="validatorNames"
           :value="value"

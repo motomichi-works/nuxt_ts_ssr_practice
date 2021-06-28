@@ -10,6 +10,7 @@
       <SelectFieldUnit0001
         :identifiers="[...identifiers, 'SelectFieldUnit0001A']"
         :namespace="namespace"
+        :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :field-modifiers="['select-field-0001--size-md']"
         :validator-names="['presence']"
         :value="fieldValues['styleguides[select_field_unit_0001_a]']"

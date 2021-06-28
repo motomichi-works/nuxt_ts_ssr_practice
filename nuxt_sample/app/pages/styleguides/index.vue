@@ -15,6 +15,7 @@
         :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
         :namespace="namespace"
+        :prev-values-for-validator-options="fieldValues"
         :constraints-base-of-all="constraintsBaseOfAll"
         :field-values="fieldValues"
         :realtime-errors="realtimeErrors"

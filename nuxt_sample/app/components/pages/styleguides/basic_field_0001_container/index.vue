@@ -10,6 +10,7 @@
       <BasicField0001
         :identifiers="[...identifiers, 'basicField0001A']"
         :namespace="namespace"
+        :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :modifiers="['basic-field-0001--size-md']"
         :validator-names="['presence']"
         :value="fieldValues['styleguides[basic_field_0001_a]']"
