@@ -1,11 +1,13 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// utils
-import {
-  ArgsOfEmitOnBlurField,
-  emitOnBlurField,
-} from '~/utils/emit_on_blur_field'
+// define types
+export type ArgsOfEmitOnBlurField = {
+  key: string
+  value: string
+  eventType: 'blur'
+  validatorNames: string[]
+}
 
 // Vue.extend
 export default Vue.extend({
@@ -48,8 +50,10 @@ export default Vue.extend({
         validatorNames: this.validatorNames,
       }
 
-      this.emitOnBlurField(payload, this)
+      this.emitOnBlurField(payload)
     },
-    emitOnBlurField,
+    emitOnBlurField(payload: ArgsOfEmitOnBlurField) {
+      this.$emit('on-blur-field', payload)
+    },
   },
 })
