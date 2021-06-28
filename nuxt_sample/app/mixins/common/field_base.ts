@@ -1,15 +1,11 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// mixins
-import every from '~/mixins/common/every'
-
 // types
 import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
 
 // Vue.extend
 export default Vue.extend({
-  mixins: [every],
   props: {
     validatorNames: {
       type: Array as PropType<string[]>,

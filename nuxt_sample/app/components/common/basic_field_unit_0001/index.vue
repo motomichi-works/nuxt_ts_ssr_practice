@@ -64,7 +64,6 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import every from '~/mixins/common/every'
-import emitOnInputField from '~/mixins/common/methods/emit_on_input_field'
 
 // define types
 type ArgsOfOnBlurField = {
@@ -82,7 +81,7 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
-  mixins: [every, emitOnInputField],
+  mixins: [every],
   props: {
     validatorNames: {
       type: Array as PropType<string[]>,
