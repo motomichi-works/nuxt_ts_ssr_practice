@@ -5,10 +5,11 @@ import Vue, { PropType } from 'vue'
 
 // mixins
 import emitOnInputField from '~/mixins/common/methods/emit_on_input_field'
+import emitOnBlurField from '~/mixins/common/methods/emit_on_blur_field'
 
 // Vue.extend
 export default Vue.extend({
-  mixins: [emitOnInputField],
+  mixins: [emitOnInputField, emitOnBlurField],
   props: {
     identifiers: {
       type: Array as PropType<string[]>,

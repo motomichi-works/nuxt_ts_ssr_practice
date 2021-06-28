@@ -1,16 +1,15 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// define types
-export type ArgsOfEmitOnBlurField = {
-  key: string
-  value: string
-  eventType: 'blur'
-  validatorNames: string[]
-}
+// mixins
+import every from '~/mixins/common/every'
+
+// types
+import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
 
 // Vue.extend
 export default Vue.extend({
+  mixins: [every],
   props: {
     validatorNames: {
       type: Array as PropType<string[]>,
@@ -43,17 +42,14 @@ export default Vue.extend({
   },
   methods: {
     onBlur({ target }: { target: HTMLInputElement }) {
-      const payload: ArgsOfEmitOnBlurField = {
+      const payload: PayloadForOnBlurField = {
         key: this.nameProperty,
         value: target.value,
         eventType: 'blur',
         validatorNames: this.validatorNames,
       }
 
-      this.emitOnBlurField(payload)
-    },
-    emitOnBlurField(payload: ArgsOfEmitOnBlurField) {
-      this.$emit('on-blur-field', payload)
+      ;(this as any).emitOnBlurField(payload)
     },
   },
 })
