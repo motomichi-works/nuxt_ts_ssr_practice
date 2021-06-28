@@ -58,17 +58,13 @@ import {
 import validateSingle from '~/utils/validate_single'
 
 // mixins
+import changeFieldValue from '~/mixins/common/methods/change_field_value'
 import changeRealtimeErrors from '~/mixins/common/methods/change_realtime_errors'
 
 // types
 import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
 import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
-
-type ArgsOfChangeFieldValue = {
-  key: string
-  value: string
-}
 
 // Vue.extend
 export default Vue.extend({
@@ -84,7 +80,7 @@ export default Vue.extend({
     SelectField0001Container,
     SelectFieldUnit0001Container,
   },
-  mixins: [changeRealtimeErrors],
+  mixins: [changeFieldValue, changeRealtimeErrors],
   computed: {
     identifierStr() {
       return 'Contents'
@@ -133,7 +129,7 @@ export default Vue.extend({
         key: payload.key,
         value: validationResult,
       })
-      this.changeFieldValue(payload)
+      ;(this as any).changeFieldValue(namespace, payload)
     },
     onChangeField(payload: PayloadForOnChangeField) {
       const validationResult = validateSingle(
@@ -149,7 +145,7 @@ export default Vue.extend({
         key: payload.key,
         value: validationResult,
       })
-      this.changeFieldValue(payload)
+      ;(this as any).changeFieldValue(payload)
     },
     onBlurField(payload: PayloadForOnBlurField) {
       const validationResult = validateSingle(
@@ -165,11 +161,7 @@ export default Vue.extend({
         key: payload.key,
         value: validationResult,
       })
-      this.changeFieldValue(payload)
-    },
-
-    changeFieldValue(args: ArgsOfChangeFieldValue): void {
-      this.$store.commit(`${namespace}/changeFieldValue`, args)
+      ;(this as any).changeFieldValue(payload)
     },
   },
 })
