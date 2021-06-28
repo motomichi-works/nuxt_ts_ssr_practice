@@ -57,15 +57,14 @@ import {
 } from '~/utils/validator/constraints_base_of_all'
 import validateSingle from '~/utils/validate_single'
 
+// mixins
+import changeRealtimeErrors from '~/mixins/common/methods/change_realtime_errors'
+
 // types
 import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
 import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
 
-type ArgsOfChangeRealtimeErrors = {
-  key: string
-  value: string[]
-}
 type ArgsOfChangeFieldValue = {
   key: string
   value: string
@@ -85,6 +84,7 @@ export default Vue.extend({
     SelectField0001Container,
     SelectFieldUnit0001Container,
   },
+  mixins: [changeRealtimeErrors],
   computed: {
     identifierStr() {
       return 'Contents'
@@ -129,7 +129,7 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
-      this.changeRealtimeErrors({
+      ;(this as any).changeRealtimeErrors(namespace, {
         key: payload.key,
         value: validationResult,
       })
@@ -145,7 +145,7 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
-      this.changeRealtimeErrors({
+      ;(this as any).changeRealtimeErrors(namespace, {
         key: payload.key,
         value: validationResult,
       })
@@ -161,16 +161,13 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
-      this.changeRealtimeErrors({
+      ;(this as any).changeRealtimeErrors(namespace, {
         key: payload.key,
         value: validationResult,
       })
       this.changeFieldValue(payload)
     },
 
-    changeRealtimeErrors(args: ArgsOfChangeRealtimeErrors): void {
-      this.$store.commit(`${namespace}/changeRealtimeErrors`, args)
-    },
     changeFieldValue(args: ArgsOfChangeFieldValue): void {
       this.$store.commit(`${namespace}/changeFieldValue`, args)
     },
