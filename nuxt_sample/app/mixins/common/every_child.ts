@@ -16,6 +16,11 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: true,
     },
+    namespace: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
   },
   computed: {
     identifierStr() {
