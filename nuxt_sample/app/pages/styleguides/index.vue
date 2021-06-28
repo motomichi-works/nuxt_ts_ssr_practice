@@ -57,25 +57,11 @@ import {
 } from '~/utils/validator/constraints_base_of_all'
 import validateSingle from '~/utils/validate_single'
 
-// define types
-type ArgsOfOnInputField = {
-  key: string
-  value: string
-  eventType: 'input'
-  validatorNames: string[]
-}
-type ArgsOfOnChangeField = {
-  key: string
-  value: string
-  eventType: 'change'
-  validatorNames: string[]
-}
-type ArgsOfOnBlurField = {
-  key: string
-  value: string
-  eventType: 'blur'
-  validatorNames: string[]
-}
+// types
+import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
+import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
+import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
+
 type ArgsOfChangeRealtimeErrors = {
   key: string
   value: string[]
@@ -133,7 +119,7 @@ export default Vue.extend({
     },
   },
   methods: {
-    onInputField(payload: ArgsOfOnInputField) {
+    onInputField(payload: PayloadForOnInputField) {
       const validationResult = validateSingle(
         payload,
         namespace,
@@ -149,7 +135,7 @@ export default Vue.extend({
       })
       this.changeFieldValue(payload)
     },
-    onChangeField(payload: ArgsOfOnChangeField) {
+    onChangeField(payload: PayloadForOnChangeField) {
       const validationResult = validateSingle(
         payload,
         namespace,
@@ -165,7 +151,7 @@ export default Vue.extend({
       })
       this.changeFieldValue(payload)
     },
-    onBlurField(payload: ArgsOfOnBlurField) {
+    onBlurField(payload: PayloadForOnBlurField) {
       const validationResult = validateSingle(
         payload,
         namespace,
