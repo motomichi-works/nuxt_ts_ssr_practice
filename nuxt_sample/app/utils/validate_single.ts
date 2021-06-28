@@ -2,6 +2,7 @@
 import validate from 'validate.js'
 
 type PayloadForValidateSingle = {
+  namespace: string
   key: string
   value: string
   eventType: 'input' | 'blur' | 'change'
@@ -9,17 +10,11 @@ type PayloadForValidateSingle = {
 }
 
 export default function validateSingle<
-  N extends string,
   C extends { [key: string]: any },
   F extends { [key: string]: any }
->(
-  payload: PayloadForValidateSingle,
-  namespace: N,
-  constraints: C,
-  fieldValues: F
-): string[] {
+>(payload: PayloadForValidateSingle, constraints: C, fieldValues: F): string[] {
   const constraintsKey = payload.key
-  const constraint = constraints[namespace][constraintsKey]
+  const constraint = constraints[payload.namespace][constraintsKey]
 
   // 動的なオプションに依存しているvalidatorがある場合はオプションを渡す
   payload.validatorNames.forEach((validatorName) => {

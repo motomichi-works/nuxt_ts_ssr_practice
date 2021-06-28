@@ -122,7 +122,6 @@ export default Vue.extend({
     onInputField(payload: PayloadForOnInputField) {
       const validationResult = validateSingle(
         payload,
-        namespace,
         this.constraintsBaseOfAll,
         this.fieldValues
       )
@@ -139,7 +138,6 @@ export default Vue.extend({
     onChangeField(payload: PayloadForOnChangeField) {
       const validationResult = validateSingle(
         payload,
-        namespace,
         this.constraintsBaseOfAll,
         this.fieldValues
       )
@@ -156,7 +154,6 @@ export default Vue.extend({
     onBlurField(payload: PayloadForOnBlurField) {
       const validationResult = validateSingle(
         payload,
-        namespace,
         this.constraintsBaseOfAll,
         this.fieldValues
       )
