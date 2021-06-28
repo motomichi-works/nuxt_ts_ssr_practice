@@ -129,11 +129,12 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
-      ;(this as any).changeRealtimeErrors(namespace, {
+      ;(this as any).changeRealtimeErrors({
+        namespace: payload.namespace,
         key: payload.key,
         value: validationResult,
       })
-      ;(this as any).changeFieldValue(namespace, payload)
+      ;(this as any).changeFieldValue(payload)
     },
     onChangeField(payload: PayloadForOnChangeField) {
       const validationResult = validateSingle(
@@ -145,7 +146,8 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
-      ;(this as any).changeRealtimeErrors(namespace, {
+      ;(this as any).changeRealtimeErrors({
+        namespace: payload.namespace,
         key: payload.key,
         value: validationResult,
       })
@@ -161,7 +163,8 @@ export default Vue.extend({
       // eslint-disable-next-line no-console
       // console.log('validationResult: ', validationResult)
 
-      ;(this as any).changeRealtimeErrors(namespace, {
+      ;(this as any).changeRealtimeErrors({
+        namespace: payload.namespace,
         key: payload.key,
         value: validationResult,
       })

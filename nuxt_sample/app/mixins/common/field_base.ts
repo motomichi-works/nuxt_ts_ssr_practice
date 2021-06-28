@@ -39,6 +39,7 @@ export default Vue.extend({
   methods: {
     onBlur({ target }: { target: HTMLInputElement }) {
       const payload: PayloadForOnBlurField = {
+        namespace: (this as any).namespace,
         key: this.nameProperty,
         value: target.value,
         eventType: 'blur',

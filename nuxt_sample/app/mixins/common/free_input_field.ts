@@ -66,6 +66,7 @@ export default Vue.extend({
       },
       set(value: string) {
         const payload: PayloadForOnInputField = {
+          namespace: (this as any).namespace,
           key: (this as any).nameProperty,
           value,
           eventType: 'input',

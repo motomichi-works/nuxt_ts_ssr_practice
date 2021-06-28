@@ -47,6 +47,7 @@ export default Vue.extend({
       },
       set(value: string) {
         const payload: PayloadForOnChangeField = {
+          namespace: (this as any).namespace,
           key: (this as any).nameProperty,
           value,
           eventType: 'change',
