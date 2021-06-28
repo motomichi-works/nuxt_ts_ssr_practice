@@ -9,6 +9,7 @@
     <div class="container-0001__body">
       <BasicFieldUnit0001
         :identifiers="[...identifiers, 'BasicFieldUnit0001Email']"
+        :namespace="namespace"
         :validator-names="['customEmail']"
         :value="fieldValues['styleguides[basic_field_unit_0001_email]']"
         :name-property="'styleguides[basic_field_unit_0001_email]'"
@@ -29,6 +30,7 @@
       />
       <BasicFieldUnit0001
         :identifiers="[...identifiers, 'BasicFieldUnit0001NameKana']"
+        :namespace="namespace"
         :validator-names="['katakana']"
         :value="fieldValues['styleguides[basic_field_unit_0001_name_kana]']"
         :name-property="'styleguides[basic_field_unit_0001_name_kana]'"

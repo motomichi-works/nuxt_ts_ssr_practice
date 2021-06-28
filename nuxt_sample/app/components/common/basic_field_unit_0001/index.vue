@@ -14,6 +14,7 @@
       <div class="basic-field-unit-0001__field-wrapper">
         <BasicField0001
           :identifiers="[...identifiers, 'Field']"
+          :namespace="namespace"
           :validator-names="validatorNames"
           :value="value"
           :name-property="nameProperty"

@@ -9,6 +9,7 @@
     <div class="container-0001__body">
       <SelectField0001
         :identifiers="[...identifiers, 'selectField0001A']"
+        :namespace="namespace"
         :modifiers="['select-field-0001--size-md']"
         :validator-names="['presence']"
         :value="fieldValues['styleguides[select_field_0001_a]']"

@@ -14,6 +14,7 @@
         v-for="component in components"
         :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
+        :namespace="namespace"
         :constraints-base-of-all="constraintsBaseOfAll"
         :field-values="fieldValues"
         :realtime-errors="realtimeErrors"
@@ -82,6 +83,9 @@ export default Vue.extend({
   },
   mixins: [changeFieldValue, changeRealtimeErrors],
   computed: {
+    namespace() {
+      return namespace
+    },
     identifierStr() {
       return 'Contents'
     },

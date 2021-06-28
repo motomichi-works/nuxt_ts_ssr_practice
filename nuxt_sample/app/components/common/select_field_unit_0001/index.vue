@@ -14,6 +14,7 @@
       <div class="select-field-unit-0001__field-wrapper">
         <SelectField0001
           :identifiers="[...identifiers, 'selectFieldA']"
+          :namespace="namespace"
           :modifiers="fieldModifiers"
           :validator-names="validatorNames"
           :value="value"
