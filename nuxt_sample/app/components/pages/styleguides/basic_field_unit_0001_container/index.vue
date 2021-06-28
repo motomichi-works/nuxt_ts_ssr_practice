@@ -24,7 +24,7 @@
         :realtime-errors="
           realtimeErrors['styleguides[basic_field_unit_0001_email]']
         "
-        @on-blur-field="onBlurField"
+        @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />
       <BasicFieldUnit0001
@@ -44,7 +44,7 @@
         :realtime-errors="
           realtimeErrors['styleguides[basic_field_unit_0001_name_kana]']
         "
-        @on-blur-field="onBlurField"
+        @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />
     </div>

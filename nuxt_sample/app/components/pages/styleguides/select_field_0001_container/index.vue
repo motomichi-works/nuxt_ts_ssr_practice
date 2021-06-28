@@ -21,7 +21,7 @@
           { label: '選択肢2', value: 'value2' },
         ]"
         :has-realtime-errors="realtimeErrors.length > 0"
-        @on-blur-field="onBlurField"
+        @on-blur-field="emitOnBlurField"
         @on-change-field="onChangeField"
       />
     </div>

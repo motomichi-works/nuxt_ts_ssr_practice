@@ -14,12 +14,6 @@ type ArgsOfOnChangeField = {
   eventType: 'change'
   validatorNames: string[]
 }
-type ArgsOfOnBlurField = {
-  key: string
-  value: string
-  eventType: 'blur'
-  validatorNames: string[]
-}
 
 // Vue.extend
 export default Vue.extend({
@@ -40,9 +34,6 @@ export default Vue.extend({
   methods: {
     onChangeField(payload: ArgsOfOnChangeField) {
       this.$emit('on-change-field', payload)
-    },
-    onBlurField(payload: ArgsOfOnBlurField) {
-      this.$emit('on-blur-field', payload)
     },
   },
 })

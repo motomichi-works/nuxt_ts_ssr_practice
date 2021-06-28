@@ -26,7 +26,7 @@
         :realtime-errors="
           realtimeErrors['styleguides[select_field_unit_0001_a]']
         "
-        @on-blur-field="onBlurField"
+        @on-blur-field="emitOnBlurField"
         @on-change-field="onChangeField"
       />
     </div>

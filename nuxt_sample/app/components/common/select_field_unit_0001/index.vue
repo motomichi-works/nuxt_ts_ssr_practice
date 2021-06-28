@@ -22,7 +22,7 @@
           :is-readonly="isReadonly"
           :options="options"
           :has-realtime-errors="realtimeErrors.length > 0"
-          @on-blur-field="onBlurField"
+          @on-blur-field="emitOnBlurField"
           @on-change-field="onChangeField"
         />
       </div>
@@ -69,12 +69,6 @@ type ArgsOfOnChangeField = {
   key: string
   value: string
   eventType: 'change'
-  validatorNames: string[]
-}
-type ArgsOfOnBlurField = {
-  key: string
-  value: string
-  eventType: 'blur'
   validatorNames: string[]
 }
 
@@ -145,9 +139,6 @@ export default Vue.extend({
   methods: {
     onChangeField(payload: ArgsOfOnChangeField): void {
       this.$emit('on-change-field', payload)
-    },
-    onBlurField(payload: ArgsOfOnBlurField): void {
-      this.$emit('on-blur-field', payload)
     },
   },
 })

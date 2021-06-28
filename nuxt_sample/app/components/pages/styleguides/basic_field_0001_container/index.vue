@@ -20,7 +20,7 @@
         :left-icon="fa.search"
         :right-icon="fa.search"
         :has-realtime-errors="realtimeErrors.length > 0"
-        @on-blur-field="onBlurField"
+        @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />
     </div>

@@ -24,7 +24,7 @@
           :left-icon="leftIcon"
           :right-icon="rightIcon"
           :has-realtime-errors="realtimeErrors.length > 0"
-          @on-blur-field="onBlurField"
+          @on-blur-field="emitOnBlurField"
           @on-input-field="emitOnInputField"
         />
       </div>
@@ -64,14 +64,6 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import every from '~/mixins/common/every'
-
-// define types
-type ArgsOfOnBlurField = {
-  key: string
-  value: string
-  eventType: 'blur'
-  validatorNames: string[]
-}
 
 // Vue.extend
 export default Vue.extend({
@@ -145,11 +137,6 @@ export default Vue.extend({
       type: Array as PropType<string[]>,
       required: false,
       default: () => [],
-    },
-  },
-  methods: {
-    onBlurField(payload: ArgsOfOnBlurField): void {
-      this.$emit('on-blur-field', payload)
     },
   },
 })
