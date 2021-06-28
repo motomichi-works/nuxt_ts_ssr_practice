@@ -36,6 +36,7 @@ import Vue, { PropType } from 'vue'
 // mixins
 import every from '~/mixins/common/every'
 import fieldBase from '~/mixins/common/field_base'
+import emitOnChangeField from '~/mixins/common/methods/emit_on_change_field'
 
 // types
 import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
@@ -47,7 +48,7 @@ export type Option = {
 // Vue.extend
 export default Vue.extend({
   name: 'SelectField0001',
-  mixins: [every, fieldBase],
+  mixins: [every, fieldBase, emitOnChangeField],
   props: {
     modifiers: {
       type: Array as PropType<string[]>,
@@ -87,7 +88,7 @@ export default Vue.extend({
           validatorNames: (this as any).validatorNames,
         }
 
-        this.emitOnChangeField(payload)
+        ;(this as any).emitOnChangeField(payload)
       },
     },
     selectedLabel() {
@@ -101,11 +102,6 @@ export default Vue.extend({
   watch: {
     options() {
       this.refreshKey++
-    },
-  },
-  methods: {
-    emitOnChangeField(payload: PayloadForOnChangeField) {
-      this.$emit('on-change-field', payload)
     },
   },
 })
