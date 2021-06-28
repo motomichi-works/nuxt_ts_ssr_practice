@@ -48,6 +48,8 @@ export default Vue.extend({
       set(value: string) {
         const payload: PayloadForOnChangeField = {
           namespace: (this as any).namespace,
+          prevValuesForValidatorOptions: (this as any)
+            .prevValuesForValidatorOptions,
           key: (this as any).nameProperty,
           value,
           eventType: 'change',
