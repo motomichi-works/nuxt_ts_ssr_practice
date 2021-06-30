@@ -51,18 +51,12 @@ import Heading0001Container from '~/components/pages/styleguides/heading_0001_co
 import SelectField0001Container from '~/components/pages/styleguides/select_field_0001_container/index.vue'
 import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
 
-// utils
-import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
-import validateSingle from '~/utils/validate_single'
-
 // mixins
 import changeFieldValue from '~/mixins/common/methods/change_field_value'
 import changeRealtimeErrors from '~/mixins/common/methods/change_realtime_errors'
 import onInputField from '~/mixins/common/methods/on_input_field'
 import onChangeField from '~/mixins/common/methods/on_change_field'
-
-// types
-import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
+import onBlurField from '~/mixins/common/methods/on_blur_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -78,7 +72,13 @@ export default Vue.extend({
     SelectField0001Container,
     SelectFieldUnit0001Container,
   },
-  mixins: [changeFieldValue, changeRealtimeErrors, onInputField, onChangeField],
+  mixins: [
+    changeFieldValue,
+    changeRealtimeErrors,
+    onInputField,
+    onChangeField,
+    onBlurField,
+  ],
   computed: {
     namespace() {
       return namespace
@@ -110,20 +110,6 @@ export default Vue.extend({
       })
 
       return components
-    },
-  },
-  methods: {
-    onBlurField(payload: PayloadForOnBlurField) {
-      const validationResult = validateSingle(payload, constraintsBaseOfAll)
-      // eslint-disable-next-line no-console
-      // console.log('validationResult: ', validationResult)
-
-      ;(this as any).changeRealtimeErrors({
-        namespace: payload.namespace,
-        key: payload.key,
-        value: validationResult,
-      })
-      ;(this as any).changeFieldValue(payload)
     },
   },
 })
