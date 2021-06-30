@@ -1,13 +1,13 @@
 <template>
-  <div :data-selector="joinedIdentifiers" class="field-heading-0001">
-    <div class="field-heading-0001__badge-wrapper">
+  <div :data-selector="joinedIdentifiers" class="fieldHeading0001">
+    <div class="fieldHeading0001__badgeWrapper">
       <Badge0001
         :identifiers="[...identifiers, 'Badge']"
         :text="propsForBadge.text"
         :modifier-classes="propsForBadge.modifierClasses"
       />
     </div>
-    <component :is="tagName" class="field-heading-0001__text">
+    <component :is="tagName" class="fieldHeading0001__text">
       {{ text }}
     </component>
   </div>
@@ -63,6 +63,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/field_heading_0001';
+.fieldHeading0001 {
+  display: flex;
+  .fieldHeading0001__badgeWrapper {
+    & + .fieldHeading0001__text {
+      margin-left: 8px;
+    }
+  }
+  .fieldHeading0001__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 </style>
