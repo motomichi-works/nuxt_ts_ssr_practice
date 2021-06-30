@@ -4,7 +4,7 @@
       <Heading0001
         :identifiers="[...identifiers, 'Heading0001']"
         text="styleguides/index.vue"
-        :modifier-classes="['heading-0001--lv-1']"
+        :modifier-classes="['heading0001--Lv1']"
         :tag-name="'h1'"
       />
     </div>

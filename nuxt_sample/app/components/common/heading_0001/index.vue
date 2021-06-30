@@ -2,7 +2,7 @@
   <component
     :is="tagName"
     :data-selector="joinedIdentifiers"
-    class="heading-0001"
+    class="heading0001"
     :class="modifierClasses"
     >{{ text }}</component
   >
@@ -37,6 +37,29 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/heading_0001';
+.heading0001 {
+  font-weight: bold;
+  font-size: 28px;
+  color: #222222;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.1em 0;
+  line-height: 1.4;
+  word-break: break-all;
+  &.heading0001--Lv1 {
+    font-size: 32px;
+    border-bottom: 0;
+  }
+  &.heading0001--Lv3 {
+    font-size: 24px;
+  }
+  &.heading0001--Lv4 {
+    font-size: 21px;
+  }
+  &.heading0001--Lv5 {
+    font-size: 18px;
+  }
+  &.heading0001--Lv6 {
+    font-size: 16px;
+  }
+}
 </style>
