@@ -2,7 +2,7 @@
   <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[identifierStr, 'Lv1Heading']"
+        :identifiers="[...identifiers, 'Lv1Heading']"
         text="pages/index.vue"
         :modifier-classes="['heading-0001--lv-1']"
         :tag-name="'h1'"
@@ -12,7 +12,7 @@
       <section class="container-0001">
         <div class="container-0001__heading-wrapper">
           <Heading0001
-            :identifiers="[identifierStr, 'Lv2HeadingA']"
+            :identifiers="[...identifiers, 'Lv2HeadingA']"
             text="Lv2の見出し"
           />
         </div>

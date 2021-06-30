@@ -2,7 +2,7 @@
   <div :data-selector="identifierStr" class="l-contents-type-0001">
     <div class="l-contents-type-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[identifierStr, 'Heading0001']"
+        :identifiers="[...identifiers, 'Heading0001']"
         text="styleguides/index.vue"
         :modifier-classes="['heading-0001--lv-1']"
         :tag-name="'h1'"
