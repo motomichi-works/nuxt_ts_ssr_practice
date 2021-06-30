@@ -1,10 +1,10 @@
 <template>
-  <div :data-selector="joinedIdentifiers" class="field-error-messages-0001">
-    <ul class="field-error-messages-0001__list-group">
+  <div :data-selector="joinedIdentifiers" class="fieldErrorMessages0001">
+    <ul class="fieldErrorMessages0001__listGroup">
       <li
         v-for="message in errorMessages"
         :key="message"
-        class="field-error-messages-0001__list-item"
+        class="fieldErrorMessages0001__listItem"
       >
         {{ message }}
       </li>
@@ -33,6 +33,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/field_error_messages_0001';
+.fieldErrorMessages0001 {
+  padding: 12px 24px 12px 48px;
+  background: #e40909;
+  border-radius: 4px;
+  .fieldErrorMessages0001__listGroup {
+    list-style: disc;
+  }
+  .fieldErrorMessages0001__listItem {
+    color: #ffffff;
+    font-size: 16px;
+  }
+}
 </style>
