@@ -23,7 +23,7 @@
           { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },
         ]"
         :descriptions="['説明文1', '説明文2']"
-        :heading-text="'セレクトフィールドユニットA'"
+        :heading-text="'セレクトフィールドユニット0001A'"
         :is-required="true"
         :realtime-errors="
           realtimeErrors['styleguides[select_field_unit_0001_a]']
