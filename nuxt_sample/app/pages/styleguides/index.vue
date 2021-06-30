@@ -37,9 +37,6 @@ import { namespace } from '~/settings/pages/styleguides/index'
 // store, store types
 import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
 
-// import components/common
-import Heading0001 from '~/components/common/heading_0001/index.vue'
-
 // import components/pages
 import Badge0001Container from '~/components/pages/styleguides/badge_0001_container/index.vue'
 import BasicField0001Container from '~/components/pages/styleguides/basic_field_0001_container/index.vue'
@@ -52,6 +49,7 @@ import SelectField0001Container from '~/components/pages/styleguides/select_fiel
 import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
 
 // mixins
+import everyPage from '~/mixins/common/every_page'
 import changeFieldValue from '~/mixins/common/methods/change_field_value'
 import changeRealtimeErrors from '~/mixins/common/methods/change_realtime_errors'
 import onInputField from '~/mixins/common/methods/on_input_field'
@@ -61,7 +59,6 @@ import onBlurField from '~/mixins/common/methods/on_blur_field'
 // Vue.extend
 export default Vue.extend({
   components: {
-    Heading0001,
     Badge0001Container,
     BasicField0001Container,
     BasicFieldUnit0001Container,
@@ -73,6 +70,7 @@ export default Vue.extend({
     SelectFieldUnit0001Container,
   },
   mixins: [
+    everyPage,
     changeFieldValue,
     changeRealtimeErrors,
     onInputField,
@@ -82,9 +80,6 @@ export default Vue.extend({
   computed: {
     namespace() {
       return namespace
-    },
-    identifierStr() {
-      return 'Contents'
     },
     fieldValues(): FieldValues {
       return this.$store.getters[`${this.namespace}/fieldValues`]

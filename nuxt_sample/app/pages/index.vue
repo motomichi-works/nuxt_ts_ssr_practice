@@ -32,14 +32,12 @@
 import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
-// import components/common
-import Heading0001 from '~/components/common/heading_0001/index.vue'
+// mixins
+import everyPage from '~/mixins/common/every_page'
 
 // Vue.extend
 export default Vue.extend({
-  components: {
-    Heading0001,
-  },
+  mixins: [everyPage],
   async asyncData(context: Context): Promise<any> {
     const { app } = context
     const items = await app.$axios.$get(
@@ -48,11 +46,6 @@ export default Vue.extend({
     return {
       items,
     }
-  },
-  computed: {
-    identifierStr() {
-      return 'Contents'
-    },
   },
 })
 </script>
