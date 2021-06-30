@@ -27,8 +27,11 @@
 <script lang="ts">
 export default {
   computed: {
+    identifiers() {
+      return ['BodyInner']
+    },
     identifierStr() {
-      return 'BodyInner'
+      return (this as any).identifiers.join('/')
     },
   },
 }
