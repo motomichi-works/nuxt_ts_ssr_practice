@@ -5,7 +5,7 @@
       class="basicFieldUnit0001__headingWrapper"
     >
       <FieldHeading0001
-        :identifiers="[...identifiers, 'Heading']"
+        :identifiers="[...identifiers, 'heading']"
         :text="headingText"
         :is-required="isRequired"
       />
@@ -13,7 +13,7 @@
     <div class="basicFieldUnit0001__body">
       <div class="basicFieldUnit0001__fieldWrapper">
         <BasicField0001
-          :identifiers="[...identifiers, 'Field']"
+          :identifiers="[...identifiers, 'field']"
           :namespace="namespace"
           :prev-values-for-validator-options="prevValuesForValidatorOptions"
           :validator-names="validatorNames"
@@ -44,7 +44,7 @@
       class="basicFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'FieldErrorMessages']"
+        :identifiers="[...identifiers, 'fieldErrorMessages']"
         :error-messages="realtimeErrors"
       />
     </div>

@@ -2,13 +2,13 @@
   <section :data-selector="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
+        :identifiers="[...identifiers, 'heading']"
         text="BasicField0001"
       />
     </div>
     <div class="container-0001__body">
       <BasicField0001
-        :identifiers="[...identifiers, 'BasicField0001A']"
+        :identifiers="[...identifiers, 'basicFieldA']"
         :namespace="namespace"
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :modifiers="['basicField0001--sizeMd']"

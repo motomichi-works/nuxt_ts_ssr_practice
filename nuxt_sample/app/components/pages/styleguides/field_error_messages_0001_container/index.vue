@@ -2,13 +2,13 @@
   <section :data-selector="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
+        :identifiers="[...identifiers, 'heading']"
         text="FieldErrorMessages0001"
       />
     </div>
     <div class="container-0001__body">
       <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'FieldErrorMessages0001']"
+        :identifiers="[...identifiers, 'fieldErrorMessages']"
         :error-messages="[
           'エラーメッセージサンプル1',
           'エラーメッセージサンプル2',

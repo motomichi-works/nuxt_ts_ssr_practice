@@ -5,7 +5,7 @@
       class="selectFieldUnit0001__headingWrapper"
     >
       <FieldHeading0001
-        :identifiers="[...identifiers, 'Heading']"
+        :identifiers="[...identifiers, 'heading']"
         :text="headingText"
         :is-required="isRequired"
       />
@@ -13,7 +13,7 @@
     <div class="selectFieldUnit0001__body">
       <div class="selectFieldUnit0001__fieldWrapper">
         <SelectField0001
-          :identifiers="[...identifiers, 'SelectFieldA']"
+          :identifiers="[...identifiers, 'selectField']"
           :namespace="namespace"
           :prev-values-for-validator-options="prevValuesForValidatorOptions"
           :modifiers="fieldModifiers"
@@ -42,7 +42,7 @@
       class="selectFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'FieldErrorMessages']"
+        :identifiers="[...identifiers, 'fieldErrorMessages']"
         :error-messages="realtimeErrors"
       />
     </div>

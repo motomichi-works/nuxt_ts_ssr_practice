@@ -2,13 +2,13 @@
   <section :data-selector="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
+        :identifiers="[...identifiers, 'heading']"
         text="BasicFieldUnit0001"
       />
     </div>
     <div class="container-0001__body">
       <BasicFieldUnit0001
-        :identifiers="[...identifiers, 'BasicFieldUnit0001Email']"
+        :identifiers="[...identifiers, 'basicFieldUnitEmail']"
         :namespace="namespace"
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :validator-names="['customEmail']"
@@ -30,7 +30,7 @@
         @on-input-field="emitOnInputField"
       />
       <BasicFieldUnit0001
-        :identifiers="[...identifiers, 'BasicFieldUnit0001NameKana']"
+        :identifiers="[...identifiers, 'basicFieldUnitNameKana']"
         :namespace="namespace"
         :validator-names="['katakana']"
         :value="fieldValues['styleguides[basic_field_unit_0001_name_kana]']"

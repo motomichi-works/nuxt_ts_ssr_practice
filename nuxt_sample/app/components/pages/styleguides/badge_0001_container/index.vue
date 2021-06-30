@@ -2,14 +2,14 @@
   <section :data-selector="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
+        :identifiers="[...identifiers, 'heading']"
         text="Badge0001"
       />
     </div>
     <div class="container-0001__body">
-      <Badge0001 :identifiers="[...identifiers, 'Badge0001']" text="必須" />
+      <Badge0001 :identifiers="[...identifiers, 'badge']" text="必須" />
       <Badge0001
-        :identifiers="[...identifiers, 'Badge0001A']"
+        :identifiers="[...identifiers, 'badgeA']"
         text="任意"
         :modifier-classes="['badge0001--bgColorGray']"
       />

@@ -2,7 +2,7 @@
   <section :data-selector="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
+        :identifiers="[...identifiers, 'heading']"
         text="FontAwesome5"
       />
     </div>

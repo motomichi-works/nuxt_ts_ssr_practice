@@ -2,27 +2,27 @@
   <section :data-selector="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
+        :identifiers="[...identifiers, 'heading']"
         text="FieldHeading0001"
       />
     </div>
     <div class="container-0001__body">
       <FieldHeading0001
-        :identifiers="[...identifiers, 'FieldHeading0001']"
+        :identifiers="[...identifiers, 'fieldHeading']"
         text="h2見出し"
       />
       <FieldHeading0001
-        :identifiers="[...identifiers, 'FieldHeading0001A']"
+        :identifiers="[...identifiers, 'fieldHeadingA']"
         text="h3見出し"
         tag-name="h3"
       />
       <FieldHeading0001
-        :identifiers="[...identifiers, 'FieldHeading0001B']"
+        :identifiers="[...identifiers, 'fieldHeadingB']"
         text="h2見出し"
         :is-required="false"
       />
       <FieldHeading0001
-        :identifiers="[...identifiers, 'FieldHeading0001C']"
+        :identifiers="[...identifiers, 'fieldHeadingC']"
         text="h2見出し"
         :is-required="false"
         tag-name="h3"
