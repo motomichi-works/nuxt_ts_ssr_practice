@@ -58,8 +58,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // import components/common
 import BasicField0001 from '~/components/common/basic_field_0001/index.vue'
-import FieldErrorMessages0001 from '~/components/common/field_error_messages_0001/index.vue'
-import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'
@@ -70,8 +68,6 @@ export default Vue.extend({
   name: 'BasicFieldUnit0001',
   components: {
     BasicField0001,
-    FieldErrorMessages0001,
-    FieldHeading0001,
   },
   mixins: [everyChild, fieldUnitBase],
   props: {
