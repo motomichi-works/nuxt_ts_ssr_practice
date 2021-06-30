@@ -60,6 +60,7 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'
+import fieldUnitBase from '~/mixins/common/field_unit_base'
 
 // types
 import { Option } from '~/mixins/common/select_field_or_radio_field'
@@ -72,7 +73,7 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
-  mixins: [everyChild],
+  mixins: [everyChild, fieldUnitBase],
   props: {
     fieldModifiers: {
       type: Array as PropType<string[]>,

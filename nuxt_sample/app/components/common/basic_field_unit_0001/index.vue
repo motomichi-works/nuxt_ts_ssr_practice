@@ -63,6 +63,7 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'
+import fieldUnitBase from '~/mixins/common/field_unit_base'
 
 // Vue.extend
 export default Vue.extend({
@@ -72,7 +73,7 @@ export default Vue.extend({
     FieldErrorMessages0001,
     FieldHeading0001,
   },
-  mixins: [everyChild],
+  mixins: [everyChild, fieldUnitBase],
   props: {
     validatorNames: {
       type: Array as PropType<string[]>,
