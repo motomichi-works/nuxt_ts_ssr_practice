@@ -25,15 +25,11 @@
 </template>
 
 <script lang="ts">
+// mixins
+import everyLayout from '~/mixins/common/every_layout'
+
 export default {
-  computed: {
-    identifiers() {
-      return ['BodyInner']
-    },
-    identifierStr() {
-      return (this as any).identifiers.join('/')
-    },
-  },
+  mixins: [everyLayout],
 }
 </script>
 
