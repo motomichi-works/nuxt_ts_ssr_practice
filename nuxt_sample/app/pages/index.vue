@@ -1,6 +1,6 @@
 <template>
-  <div :data-selector="joinedIdentifiers" class="l-contents-type-0001">
-    <div class="l-contents-type-0001__heading-wrapper">
+  <div :data-selector="joinedIdentifiers" class="l-contentsType0001">
+    <div class="l-contentsType0001__headingWrapper">
       <Heading0001
         :identifiers="[...identifiers, 'Lv1Heading']"
         text="pages/index.vue"
@@ -8,7 +8,7 @@
         :tag-name="'h1'"
       />
     </div>
-    <div class="l-contents-type-0001__body">
+    <div class="l-contentsType0001__body">
       <section class="container-0001">
         <div class="container-0001__heading-wrapper">
           <Heading0001

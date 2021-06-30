@@ -1,14 +1,14 @@
-.l-contents-type-0001 {
+.l-contentsType0001 {
   padding: 1px 8px;
-  // .l-contents-type-0001のpadding-topを補完する初期値
+  // .l-contentsType0001のpadding-topを補完する初期値
   > :first-child {
     margin-top: 39px;
   }
-  // .l-contents-type-0001のpadding-bottomを補完する初期値
+  // .l-contentsType0001のpadding-bottomを補完する初期値
   > :last-child {
     margin-bottom: 79px;
   }
-  .l-contents-type-0001__heading-wrapper {
+  .l-contentsType0001__headingWrapper {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
@@ -18,7 +18,7 @@
       width: 100%;
     }
   }
-  .l-contents-type-0001__body {
+  .l-contentsType0001__body {
     width: 1200px;
     margin-top: 32px;
     margin-right: auto;
