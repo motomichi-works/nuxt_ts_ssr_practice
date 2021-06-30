@@ -87,10 +87,10 @@ export default Vue.extend({
       return 'Contents'
     },
     fieldValues(): FieldValues {
-      return this.$store.getters[`${namespace}/fieldValues`]
+      return this.$store.getters[`${this.namespace}/fieldValues`]
     },
     realtimeErrors(): RealtimeErrors {
-      return this.$store.getters[`${namespace}/realtimeErrors`]
+      return this.$store.getters[`${this.namespace}/realtimeErrors`]
     },
     components() {
       const componentNames = [
