@@ -3,11 +3,12 @@ import { sharedKeys } from '~/settings/pages/styleguides'
 
 // utils
 import constraintFunctions from '~/utils/validator/constraint_functions'
-import makeObjectFromArray from '~/utils/make_object_from_array'
 
-// 変数tmpObjはConstraintsBase型を作るためだけに作成しています。
-const tmpObj = makeObjectFromArray(sharedKeys, null as any)
-export type ConstraintsBase = typeof tmpObj
+// types
+export type ConstraintsBase = Record<
+  typeof sharedKeys[number],
+  { [key: string]: any }
+>
 
 export const constraintsBase: ConstraintsBase = {
   'styleguides[basic_field_0001_a]': constraintFunctions.requiredBasicField(
