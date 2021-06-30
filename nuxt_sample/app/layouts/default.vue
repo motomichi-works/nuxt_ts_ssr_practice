@@ -24,6 +24,4 @@ export default {
 <style lang="scss" scoped>
 // layouts
 @import '~/assets/scss/layouts/l_body_inner_0001.scss';
-// modules
-@import '~/assets/scss/modules/header_0001.scss';
 </style>

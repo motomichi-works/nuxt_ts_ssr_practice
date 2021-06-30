@@ -1,8 +1,8 @@
 <template>
-  <header :data-selector="joinedIdentifiers" class="header-0001">
-    <div class="header-0001__inner">
-      <div class="header-0001__logo-area">
-        <NuxtLink to="/" class="header-0001__logo">ロゴ</NuxtLink>
+  <header :data-selector="joinedIdentifiers" class="header0001">
+    <div class="header0001__inner">
+      <div class="header0001__logoArea">
+        <NuxtLink to="/" class="header0001__logo">ロゴ</NuxtLink>
       </div>
     </div>
   </header>
@@ -23,6 +23,36 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/header_0001';
+.header0001 {
+  padding: 12px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  .header0001__inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+    box-sizing: border-box;
+    @media #{$g__is-lg} {
+      width: 100%;
+    }
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .header0001__logoArea {
+    float: left;
+  }
+  .header0001__logo {
+    color: #222222;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 4px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
 </style>
