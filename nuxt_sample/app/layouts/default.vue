@@ -7,13 +7,7 @@
       <Nuxt />
     </div>
     <div class="l-body-inner-0001__footer-wrapper">
-      <footer class="footer-0001">
-        <div class="footer-0001__copy-area">
-          <NuxtLink to="/" class="footer-0001__copy">
-            &copy;MotomichiWorks
-          </NuxtLink>
-        </div>
-      </footer>
+      <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
     </div>
   </div>
 </template>

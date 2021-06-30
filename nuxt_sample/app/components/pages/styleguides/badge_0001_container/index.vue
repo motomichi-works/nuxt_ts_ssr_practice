@@ -11,7 +11,7 @@
       <Badge0001
         :identifiers="[...identifiers, 'Badge0001A']"
         text="任意"
-        :modifier-classes="['badge-0001--bg-color-gray']"
+        :modifier-classes="['badge0001--bgColorGray']"
       />
     </div>
   </section>

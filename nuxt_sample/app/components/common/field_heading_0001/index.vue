@@ -49,7 +49,7 @@ export default Vue.extend({
       if (!this.isRequired) {
         return {
           text: '任意',
-          modifierClasses: ['badge-0001--bg-color-gray'],
+          modifierClasses: ['badge0001--bgColorGray'],
         }
       }
 

@@ -1,7 +1,7 @@
 <template>
   <span
     :data-selector="joinedIdentifiers"
-    class="badge-0001"
+    class="badge0001"
     :class="modifierClasses"
     >{{ text }}</span
   >
@@ -25,13 +25,24 @@ export default Vue.extend({
     },
     modifierClasses: {
       type: Array as PropType<string[]>,
-      default: () => ['badge-0001--bg-color-red'],
+      default: () => ['badge0001--bg-color-red'],
     },
   },
 })
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/badge_0001';
+.badge0001 {
+  display: inline-block;
+  line-height: 26px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 12px;
+  color: #ffffff;
+  background: #e40909;
+  &.badge0001--bgColorGray {
+    background: #777777;
+  }
+}
 </style>

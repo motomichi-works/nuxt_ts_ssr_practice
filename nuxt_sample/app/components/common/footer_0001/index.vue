@@ -1,10 +1,11 @@
 <template>
-  <span
-    :data-selector="joinedIdentifiers"
-    class="badge-0001"
-    :class="modifierClasses"
-    >{{ text }}</span
-  >
+  <footer :data-selector="joinedIdentifiers" class="footer-0001">
+    <div class="footer-0001__copy-area">
+      <NuxtLink to="/" class="footer-0001__copy">
+        &copy;MotomichiWorks
+      </NuxtLink>
+    </div>
+  </footer>
 </template>
 
 <script lang="ts">
