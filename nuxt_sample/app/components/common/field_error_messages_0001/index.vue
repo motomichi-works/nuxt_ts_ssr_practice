@@ -1,5 +1,5 @@
 <template>
-  <div :data-selector="identifierStr" class="field-error-messages-0001">
+  <div :data-selector="joinedIdentifiers" class="field-error-messages-0001">
     <ul class="field-error-messages-0001__list-group">
       <li
         v-for="message in errorMessages"

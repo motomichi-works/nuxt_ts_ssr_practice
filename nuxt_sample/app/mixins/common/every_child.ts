@@ -28,7 +28,7 @@ export default Vue.extend({
     },
   },
   computed: {
-    identifierStr() {
+    joinedIdentifiers() {
       return this.identifiers.join('/')
     },
   },

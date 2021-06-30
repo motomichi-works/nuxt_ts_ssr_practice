@@ -1,5 +1,5 @@
 <template>
-  <section :data-selector="identifierStr" class="basic-field-unit-0001">
+  <section :data-selector="joinedIdentifiers" class="basic-field-unit-0001">
     <div
       v-if="headingText.length > 0"
       class="basic-field-unit-0001__heading-wrapper"

@@ -1,5 +1,5 @@
 <template>
-  <div :data-selector="identifierStr" :class="classes">
+  <div :data-selector="joinedIdentifiers" :class="classes">
     <i v-if="!isReadonly" class="select-field-0001__icon-wrapper">
       <div class="select-field-0001__icon"></div>
     </i>

@@ -7,8 +7,8 @@ export default Vue.extend({
     identifiers() {
       return ['BodyInner']
     },
-    identifierStr() {
-      return (this as any).identifiers.join('_')
+    joinedIdentifiers() {
+      return (this as any).identifiers.join('/')
     },
   },
 })

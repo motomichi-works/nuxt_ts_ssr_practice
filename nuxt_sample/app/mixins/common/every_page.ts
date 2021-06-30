@@ -13,7 +13,7 @@ export default Vue.extend({
     identifiers() {
       return ['Page']
     },
-    identifierStr() {
+    joinedIdentifiers() {
       return (this as any).identifiers.join('/')
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <div :data-selector="identifierStr" class="field-heading-0001">
+  <div :data-selector="joinedIdentifiers" class="field-heading-0001">
     <div class="field-heading-0001__badge-wrapper">
       <Badge0001
         :identifiers="[...identifiers, 'Badge']"
