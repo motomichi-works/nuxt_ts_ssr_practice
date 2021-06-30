@@ -75,29 +75,6 @@ export default Vue.extend({
   },
   mixins: [everyChild, fieldUnitBase],
   props: {
-    validatorNames: {
-      type: Array as PropType<string[]>,
-      required: true,
-    },
-    value: {
-      type: String as PropType<string>,
-      required: true,
-    },
-    nameProperty: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    isDisabled: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
-    isReadonly: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
     placeholder: {
       type: String as PropType<string>,
       required: false,
@@ -117,26 +94,6 @@ export default Vue.extend({
       type: Object as PropType<IconDefinition>,
       required: false,
       default: () => null,
-    },
-    descriptions: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
-    },
-    headingText: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    isRequired: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: true,
-    },
-    realtimeErrors: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
     },
   },
 })
