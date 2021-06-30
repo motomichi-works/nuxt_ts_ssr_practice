@@ -59,9 +59,9 @@ import validateSingle from '~/utils/validate_single'
 import changeFieldValue from '~/mixins/common/methods/change_field_value'
 import changeRealtimeErrors from '~/mixins/common/methods/change_realtime_errors'
 import onInputField from '~/mixins/common/methods/on_input_field'
+import onChangeField from '~/mixins/common/methods/on_change_field'
 
 // types
-import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
 import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
 
 // Vue.extend
@@ -78,7 +78,7 @@ export default Vue.extend({
     SelectField0001Container,
     SelectFieldUnit0001Container,
   },
-  mixins: [changeFieldValue, changeRealtimeErrors, onInputField],
+  mixins: [changeFieldValue, changeRealtimeErrors, onInputField, onChangeField],
   computed: {
     namespace() {
       return namespace
@@ -113,18 +113,6 @@ export default Vue.extend({
     },
   },
   methods: {
-    onChangeField(payload: PayloadForOnChangeField) {
-      const validationResult = validateSingle(payload, constraintsBaseOfAll)
-      // eslint-disable-next-line no-console
-      // console.log('validationResult: ', validationResult)
-
-      ;(this as any).changeRealtimeErrors({
-        namespace: payload.namespace,
-        key: payload.key,
-        value: validationResult,
-      })
-      ;(this as any).changeFieldValue(payload)
-    },
     onBlurField(payload: PayloadForOnBlurField) {
       const validationResult = validateSingle(payload, constraintsBaseOfAll)
       // eslint-disable-next-line no-console
