@@ -35,7 +35,11 @@ import Vue from 'vue'
 import { namespace } from '~/settings/pages/styleguides/index'
 
 // store, store types
-import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
+import {
+  FieldValues,
+  RealtimeErrors,
+  IsTainted,
+} from '~/store/styleguides/index'
 
 // import components/pages
 import Badge0001Container from '~/components/pages/styleguides/badge_0001_container/index.vue'
@@ -86,6 +90,9 @@ export default Vue.extend({
     },
     realtimeErrors(): RealtimeErrors {
       return this.$store.getters[`${this.namespace}/realtimeErrors`]
+    },
+    isTainted(): IsTainted {
+      return this.$store.getters[`${this.namespace}/isTainted`]
     },
     components() {
       const componentNames = [

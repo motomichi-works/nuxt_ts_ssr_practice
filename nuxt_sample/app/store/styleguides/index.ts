@@ -25,6 +25,7 @@ export type StyleguidesState = ReturnType<typeof state>
 export const getters: GetterTree<StyleguidesState, RootState> = {
   fieldValues: (state) => state.fieldValues,
   realtimeErrors: (state) => state.realtimeErrors,
+  isTainted: (state) => state.isTainted,
 }
 
 // mutations
