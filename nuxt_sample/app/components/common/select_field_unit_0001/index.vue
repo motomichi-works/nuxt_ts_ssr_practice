@@ -13,7 +13,7 @@
     <div class="select-field-unit-0001__body">
       <div class="select-field-unit-0001__field-wrapper">
         <SelectField0001
-          :identifiers="[...identifiers, 'selectFieldA']"
+          :identifiers="[...identifiers, 'SelectFieldA']"
           :namespace="namespace"
           :prev-values-for-validator-options="prevValuesForValidatorOptions"
           :modifiers="fieldModifiers"

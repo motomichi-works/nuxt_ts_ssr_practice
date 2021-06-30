@@ -8,7 +8,7 @@
     </div>
     <div class="container-0001__body">
       <BasicField0001
-        :identifiers="[...identifiers, 'basicField0001A']"
+        :identifiers="[...identifiers, 'BasicField0001A']"
         :namespace="namespace"
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :modifiers="['basic-field-0001--size-md']"

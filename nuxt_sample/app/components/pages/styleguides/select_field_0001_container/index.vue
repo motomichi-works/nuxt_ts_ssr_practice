@@ -8,7 +8,7 @@
     </div>
     <div class="container-0001__body">
       <SelectField0001
-        :identifiers="[...identifiers, 'selectField0001A']"
+        :identifiers="[...identifiers, 'SelectField0001A']"
         :namespace="namespace"
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :modifiers="['select-field-0001--size-md']"
