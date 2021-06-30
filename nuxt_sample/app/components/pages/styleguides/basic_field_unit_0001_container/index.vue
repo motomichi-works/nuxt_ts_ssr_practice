@@ -22,7 +22,7 @@
         :right-icon="fa.search"
         :descriptions="['例: placeholder@example.com']"
         :heading-text="'メールアドレス'"
-        :is-required="true"
+        :badge-type="'required'"
         :realtime-errors="
           realtimeErrors['styleguides[basic_field_unit_0001_email]']
         "
@@ -43,7 +43,7 @@
         :right-icon="fa.search"
         :descriptions="['例: サンプル タロウ']"
         :heading-text="'お名前（カナ）'"
-        :is-required="true"
+        :badge-type="'required'"
         :realtime-errors="
           realtimeErrors['styleguides[basic_field_unit_0001_name_kana]']
         "

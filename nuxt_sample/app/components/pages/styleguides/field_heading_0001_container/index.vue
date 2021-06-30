@@ -19,12 +19,12 @@
       <FieldHeading0001
         :identifiers="[...identifiers, 'fieldHeadingB']"
         text="h2見出し"
-        :is-required="false"
+        :badge-type="'notRequired'"
       />
       <FieldHeading0001
         :identifiers="[...identifiers, 'fieldHeadingC']"
         text="h2見出し"
-        :is-required="false"
+        :badge-type="'notRequired'"
         tag-name="h3"
       />
     </div>

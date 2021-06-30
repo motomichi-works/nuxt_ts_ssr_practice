@@ -7,7 +7,7 @@
       <FieldHeading0001
         :identifiers="[...identifiers, 'heading']"
         :text="headingText"
-        :is-required="isRequired"
+        :badge-type="badgeType"
       />
     </div>
     <div class="selectFieldUnit0001__body">

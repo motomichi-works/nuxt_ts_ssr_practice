@@ -38,10 +38,10 @@ export default Vue.extend({
       required: false,
       default: '',
     },
-    isRequired: {
-      type: Boolean as PropType<boolean>,
+    badgeType: {
+      type: String as PropType<'required' | 'notRequired'>,
       required: false,
-      default: true,
+      default: 'required',
     },
     realtimeErrors: {
       type: Array as PropType<string[]>,

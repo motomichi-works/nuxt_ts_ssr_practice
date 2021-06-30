@@ -35,9 +35,10 @@ export default Vue.extend({
       type: String as PropType<string>,
       required: true,
     },
-    isRequired: {
-      type: Boolean as PropType<boolean>,
-      default: true,
+    badgeType: {
+      type: String as PropType<'required' | 'notRequired'>,
+      required: false,
+      default: 'required',
     },
     tagName: {
       type: String as PropType<string>,
@@ -46,7 +47,7 @@ export default Vue.extend({
   },
   computed: {
     propsForBadge() {
-      if (!this.isRequired) {
+      if (this.badgeType === 'notRequired') {
         return {
           text: '任意',
           modifierClasses: ['badge0001--bgColorGray'],

@@ -24,7 +24,7 @@
         ]"
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニット0001A'"
-        :is-required="true"
+        :badge-type="'required'"
         :realtime-errors="
           realtimeErrors['styleguides[select_field_unit_0001_a]']
         "
