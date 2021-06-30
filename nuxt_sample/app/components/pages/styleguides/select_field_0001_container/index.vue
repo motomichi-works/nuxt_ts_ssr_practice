@@ -11,7 +11,7 @@
         :identifiers="[...identifiers, 'SelectField0001A']"
         :namespace="namespace"
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
-        :modifiers="['selectField0001--sizeMd']"
+        :modifiers="[]"
         :validator-names="['presence']"
         :value="fieldValues['styleguides[select_field_0001_a]']"
         :name-property="'styleguides[select_field_0001_a]'"

@@ -38,7 +38,26 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .basicField0001 {
   position: relative;
+  font-size: 16px;
+
+  &.basicField0001--iconAbsoluteLeft {
+    .basicField0001__field {
+      padding-left: 44px;
+    }
+  }
+  &.basicField0001--iconAbsoluteRight {
+    .basicField0001__field {
+      padding-right: 44px;
+    }
+  }
+
   .basicField0001__iconWrapper {
+    &:first-child {
+      left: 16px;
+    }
+    &:last-child {
+      right: 16px;
+    }
     &:last-child,
     &:first-child {
       display: flex;
@@ -60,6 +79,8 @@ export default Vue.extend({
     background: #ffffff;
     color: #222222;
     border-radius: 4px;
+    height: 44px;
+    font-size: 16px;
     &::placeholder {
       color: #aaaaaa;
     }
@@ -147,31 +168,31 @@ export default Vue.extend({
       }
     }
   }
-  &.basicField0001--sizeMd {
-    font-size: 16px;
-    .basicField0001__iconWrapper {
-      &:first-child {
-        left: 16px;
-      }
-      &:last-child {
-        right: 16px;
-      }
-    }
-    .basicField0001__field {
-      height: 44px;
-      font-size: 16px;
-    }
-    &.basicField0001--iconAbsoluteLeft {
-      .basicField0001__field {
-        padding-left: 44px;
-      }
-    }
-    &.basicField0001--iconAbsoluteRight {
-      .basicField0001__field {
-        padding-right: 44px;
-      }
-    }
-  }
+  // &.basicField0001--sizeMd {
+  //   font-size: 16px;
+  //   .basicField0001__iconWrapper {
+  //     &:first-child {
+  //       left: 16px;
+  //     }
+  //     &:last-child {
+  //       right: 16px;
+  //     }
+  //   }
+  //   .basicField0001__field {
+  //     height: 44px;
+  //     font-size: 16px;
+  //   }
+  //   &.basicField0001--iconAbsoluteLeft {
+  //     .basicField0001__field {
+  //       padding-left: 44px;
+  //     }
+  //   }
+  //   &.basicField0001--iconAbsoluteRight {
+  //     .basicField0001__field {
+  //       padding-right: 44px;
+  //     }
+  //   }
+  // }
   &.basicField0001--sizeSm {
     font-size: 13px;
     .basicField0001__iconWrapper {

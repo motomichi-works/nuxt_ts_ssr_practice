@@ -15,11 +15,6 @@ export type Option = {
 export default Vue.extend({
   mixins: [fieldBase],
   props: {
-    modifiers: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => ['selectField0001--sizeMd'],
-    },
     options: {
       type: Array as PropType<Option[]>,
       required: false,
@@ -33,7 +28,7 @@ export default Vue.extend({
   },
   computed: {
     classes() {
-      const classes = ['selectField0001', ...this.modifiers]
+      const classes = ['selectField0001', ...(this as any).modifiers]
 
       if ((this as any).hasRealtimeErrors) {
         classes.push('selectField0001--invalid')

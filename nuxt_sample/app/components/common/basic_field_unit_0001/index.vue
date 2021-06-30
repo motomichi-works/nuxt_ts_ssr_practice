@@ -16,6 +16,7 @@
           :identifiers="[...identifiers, 'field']"
           :namespace="namespace"
           :prev-values-for-validator-options="prevValuesForValidatorOptions"
+          :modifiers="fieldModifiers"
           :validator-names="validatorNames"
           :value="value"
           :name-property="nameProperty"
@@ -71,6 +72,11 @@ export default Vue.extend({
   },
   mixins: [everyChild, fieldUnitBase],
   props: {
+    fieldModifiers: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: () => [],
+    },
     placeholder: {
       type: String as PropType<string>,
       required: false,

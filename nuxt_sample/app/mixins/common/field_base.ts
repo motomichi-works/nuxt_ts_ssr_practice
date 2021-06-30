@@ -7,6 +7,11 @@ import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
 // Vue.extend
 export default Vue.extend({
   props: {
+    modifiers: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: () => [],
+    },
     validatorNames: {
       type: Array as PropType<string[]>,
       required: true,

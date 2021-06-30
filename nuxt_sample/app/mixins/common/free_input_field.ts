@@ -12,11 +12,6 @@ import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 export default Vue.extend({
   mixins: [fieldBase],
   props: {
-    modifiers: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => ['basicField0001--sizeMd'],
-    },
     placeholder: {
       type: String as PropType<string>,
       required: false,
@@ -40,7 +35,7 @@ export default Vue.extend({
   },
   computed: {
     classes() {
-      const classes = ['basicField0001', ...this.modifiers]
+      const classes = ['basicField0001', ...(this as any).modifiers]
 
       if (this.leftIcon !== null) {
         classes.push('basicField0001--iconAbsoluteLeft')

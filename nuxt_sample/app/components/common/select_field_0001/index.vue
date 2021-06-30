@@ -47,6 +47,8 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .selectField0001 {
   position: relative;
+  font-size: 16px;
+
   .selectField0001__iconWrapper {
     display: flex;
     align-items: center;
@@ -55,12 +57,14 @@ export default Vue.extend({
     top: 0;
     color: #222222;
     pointer-events: none;
+    left: 16px;
   }
   .selectField0001__icon {
     width: 0;
     height: 0;
     border-style: solid;
     border-color: #444444 transparent transparent transparent;
+    border-width: 9.6px 8px 0 8px;
   }
   .selectField0001__field {
     appearance: none;
@@ -74,6 +78,9 @@ export default Vue.extend({
     background: #ffffff;
     color: #222222;
     border-radius: 4px;
+    height: 44px;
+    padding-left: 44px;
+    font-size: 16px;
     &::placeholder {
       color: #cccccc;
     }
@@ -144,20 +151,20 @@ export default Vue.extend({
       font-size: 20px;
     }
   }
-  &.selectField0001--sizeMd {
-    font-size: 16px;
-    .selectField0001__iconWrapper {
-      left: 16px;
-    }
-    .selectField0001__icon {
-      border-width: 9.6px 8px 0 8px;
-    }
-    .selectField0001__field {
-      height: 44px;
-      padding-left: 44px;
-      font-size: 16px;
-    }
-  }
+  // &.selectField0001--sizeMd {
+  //   font-size: 16px;
+  //   .selectField0001__iconWrapper {
+  //     left: 16px;
+  //   }
+  //   .selectField0001__icon {
+  //     border-width: 9.6px 8px 0 8px;
+  //   }
+  //   .selectField0001__field {
+  //     height: 44px;
+  //     padding-left: 44px;
+  //     font-size: 16px;
+  //   }
+  // }
   &.selectField0001--sizeSm {
     font-size: 13px;
     .selectField0001__iconWrapper {

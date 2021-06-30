@@ -74,7 +74,7 @@ export default Vue.extend({
     fieldModifiers: {
       type: Array as PropType<string[]>,
       required: false,
-      default: () => ['selectField0001--sizeMd'],
+      default: () => [],
     },
     options: {
       type: Array as PropType<Option[]>,
