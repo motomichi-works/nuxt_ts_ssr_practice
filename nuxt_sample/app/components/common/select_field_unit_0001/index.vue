@@ -1,8 +1,8 @@
 <template>
-  <section :data-selector="joinedIdentifiers" class="select-field-unit-0001">
+  <section :data-selector="joinedIdentifiers" class="selectFieldUnit0001">
     <div
       v-if="headingText.length > 0"
-      class="select-field-unit-0001__heading-wrapper"
+      class="selectFieldUnit0001__headingWrapper"
     >
       <FieldHeading0001
         :identifiers="[...identifiers, 'Heading']"
@@ -10,8 +10,8 @@
         :is-required="isRequired"
       />
     </div>
-    <div class="select-field-unit-0001__body">
-      <div class="select-field-unit-0001__field-wrapper">
+    <div class="selectFieldUnit0001__body">
+      <div class="selectFieldUnit0001__fieldWrapper">
         <SelectField0001
           :identifiers="[...identifiers, 'SelectFieldA']"
           :namespace="namespace"
@@ -28,21 +28,18 @@
           @on-change-field="emitOnChangeField"
         />
       </div>
-      <ul
-        v-if="descriptions.length > 0"
-        class="select-field-unit-0001__desc-group"
-      >
+      <ul v-if="descriptions.length > 0" class="selectFieldUnit0001__descGroup">
         <li
           v-for="desc in descriptions"
           :key="desc"
-          class="select-field-unit-0001__desc-item"
+          class="selectFieldUnit0001__descItem"
           v-text="desc"
         />
       </ul>
     </div>
     <div
       v-if="realtimeErrors.length > 0"
-      class="select-field-unit-0001__error-messages-wrapper"
+      class="selectFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
         :identifiers="[...identifiers, 'FieldErrorMessages']"
@@ -135,6 +132,30 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/select_field_unit_0001';
+.selectFieldUnit0001 {
+  &:not(:first-child) {
+    margin-top: 48px;
+  }
+  .selectFieldUnit0001__headingWrapper {
+  }
+  .selectFieldUnit0001__body {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #dddddd;
+    border-radius: 4px;
+  }
+  .selectFieldUnit0001__fieldWrapper {
+  }
+  .selectFieldUnit0001__descGroup {
+    margin-top: 8px;
+    padding: 0 4px;
+  }
+  .selectFieldUnit0001__descItem {
+    color: #555555;
+    font-size: 14px;
+  }
+  .selectFieldUnit0001__errorMessagesWrapper {
+    margin-top: 8px;
+  }
+}
 </style>
