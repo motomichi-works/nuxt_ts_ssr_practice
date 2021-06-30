@@ -1,7 +1,7 @@
 <template>
-  <footer :data-selector="joinedIdentifiers" class="footer-0001">
-    <div class="footer-0001__copy-area">
-      <NuxtLink to="/" class="footer-0001__copy">
+  <footer :data-selector="joinedIdentifiers" class="footer0001">
+    <div class="footer0001__copyArea">
+      <NuxtLink to="/" class="footer0001__copy">
         &copy;MotomichiWorks
       </NuxtLink>
     </div>
@@ -23,6 +23,24 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/header_0001';
+.footer0001 {
+  padding: 8px 0;
+  background-color: #222222;
+  .footer0001__copyArea {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+    @media #{$g__is-lg} {
+      width: 100%;
+    }
+  }
+  .footer0001__copy {
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
 </style>
