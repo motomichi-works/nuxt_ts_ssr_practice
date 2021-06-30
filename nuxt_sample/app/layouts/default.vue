@@ -1,12 +1,12 @@
 <template>
-  <div :data-selector="joinedIdentifiers" class="l-body-inner-0001">
-    <div class="l-body-inner-0001__header-wrapper">
+  <div :data-selector="joinedIdentifiers" class="l-bodyInner0001">
+    <div class="l-bodyInner0001__headerWrapper">
       <Header0001 :identifiers="[...identifiers, 'Header0001']" />
     </div>
-    <div class="l-body-inner-0001__contents-wrapper">
+    <div class="l-bodyInner0001__contentsWrapper">
       <Nuxt />
     </div>
-    <div class="l-body-inner-0001__footer-wrapper">
+    <div class="l-bodyInner0001__footerWrapper">
       <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
     </div>
   </div>
