@@ -18,7 +18,7 @@ export default Vue.extend({
     modifiers: {
       type: Array as PropType<string[]>,
       required: false,
-      default: () => ['select-field-0001--size-md'],
+      default: () => ['selectField0001--sizeMd'],
     },
     options: {
       type: Array as PropType<Option[]>,
@@ -33,10 +33,10 @@ export default Vue.extend({
   },
   computed: {
     classes() {
-      const classes = ['select-field-0001', ...this.modifiers]
+      const classes = ['selectField0001', ...this.modifiers]
 
       if ((this as any).hasRealtimeErrors) {
-        classes.push('select-field-0001--invalid')
+        classes.push('selectField0001--invalid')
       }
 
       return classes

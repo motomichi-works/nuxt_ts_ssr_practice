@@ -80,7 +80,7 @@ export default Vue.extend({
     fieldModifiers: {
       type: Array as PropType<string[]>,
       required: false,
-      default: () => ['select-field-0001--size-md'],
+      default: () => ['selectField0001--sizeMd'],
     },
     validatorNames: {
       type: Array as PropType<string[]>,
