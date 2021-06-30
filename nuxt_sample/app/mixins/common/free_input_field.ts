@@ -15,7 +15,7 @@ export default Vue.extend({
     modifiers: {
       type: Array as PropType<string[]>,
       required: false,
-      default: () => ['basic-field-0001--size-md'],
+      default: () => ['basicField0001--sizeMd'],
     },
     placeholder: {
       type: String as PropType<string>,
@@ -40,16 +40,16 @@ export default Vue.extend({
   },
   computed: {
     classes() {
-      const classes = ['basic-field-0001', ...this.modifiers]
+      const classes = ['basicField0001', ...this.modifiers]
 
       if (this.leftIcon !== null) {
-        classes.push('basic-field-0001--icon-absolute-left')
+        classes.push('basicField0001--iconAbsoluteLeft')
       }
       if (this.rightIcon !== null) {
-        classes.push('basic-field-0001--icon-absolute-right')
+        classes.push('basicField0001--iconAbsoluteRight')
       }
       if ((this as any).hasRealtimeErrors) {
-        classes.push('basic-field-0001--invalid')
+        classes.push('basicField0001--invalid')
       }
 
       return classes
