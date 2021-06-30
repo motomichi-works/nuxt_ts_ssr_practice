@@ -29,7 +29,7 @@ export default Vue.extend({
   },
   computed: {
     identifierStr() {
-      return this.identifiers.join('_')
+      return this.identifiers.join('/')
     },
   },
 })
