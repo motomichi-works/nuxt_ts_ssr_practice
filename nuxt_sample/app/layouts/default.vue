@@ -1,13 +1,7 @@
 <template>
   <div :data-selector="joinedIdentifiers" class="l-body-inner-0001">
     <div class="l-body-inner-0001__header-wrapper">
-      <header class="header-0001">
-        <div class="header-0001__inner">
-          <div class="header-0001__logo-area">
-            <NuxtLink to="/" class="header-0001__logo">ロゴ</NuxtLink>
-          </div>
-        </div>
-      </header>
+      <Header0001 :identifiers="[...identifiers, 'Header0001']" />
     </div>
     <div class="l-body-inner-0001__contents-wrapper">
       <Nuxt />
