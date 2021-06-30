@@ -1,8 +1,8 @@
 <template>
-  <section :data-selector="joinedIdentifiers" class="basic-field-unit-0001">
+  <section :data-selector="joinedIdentifiers" class="basicFieldUnit0001">
     <div
       v-if="headingText.length > 0"
-      class="basic-field-unit-0001__heading-wrapper"
+      class="basicFieldUnit0001__headingWrapper"
     >
       <FieldHeading0001
         :identifiers="[...identifiers, 'Heading']"
@@ -10,8 +10,8 @@
         :is-required="isRequired"
       />
     </div>
-    <div class="basic-field-unit-0001__body">
-      <div class="basic-field-unit-0001__field-wrapper">
+    <div class="basicFieldUnit0001__body">
+      <div class="basicFieldUnit0001__fieldWrapper">
         <BasicField0001
           :identifiers="[...identifiers, 'Field']"
           :namespace="namespace"
@@ -30,21 +30,18 @@
           @on-input-field="emitOnInputField"
         />
       </div>
-      <ul
-        v-if="descriptions.length > 0"
-        class="basic-field-unit-0001__desc-group"
-      >
+      <ul v-if="descriptions.length > 0" class="basicFieldUnit0001__descGroup">
         <li
           v-for="desc in descriptions"
           :key="desc"
-          class="basic-field-unit-0001__desc-item"
+          class="basicFieldUnit0001__descItem"
           v-text="desc"
         />
       </ul>
     </div>
     <div
       v-if="realtimeErrors.length > 0"
-      class="basic-field-unit-0001__error-messages-wrapper"
+      class="basicFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
         :identifiers="[...identifiers, 'FieldErrorMessages']"
@@ -145,6 +142,30 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// modules
-@import '~/assets/scss/modules/basic_field_unit_0001';
+.basicFieldUnit0001 {
+  &:not(:first-child) {
+    margin-top: 48px;
+  }
+  .basicFieldUnit0001__headingWrapper {
+  }
+  .basicFieldUnit0001__body {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #dddddd;
+    border-radius: 4px;
+  }
+  .basicFieldUnit0001__fieldWrapper {
+  }
+  .basicFieldUnit0001__descGroup {
+    margin-top: 8px;
+    padding: 0 4px;
+  }
+  .basicFieldUnit0001__descItem {
+    color: #555555;
+    font-size: 14px;
+  }
+  .basicFieldUnit0001__errorMessagesWrapper {
+    margin-top: 8px;
+  }
+}
 </style>
