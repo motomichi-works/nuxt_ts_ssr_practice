@@ -12,7 +12,7 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    validatorNames: {
+    validatorNamesThatDependsOnDynamicOptions: {
       type: Array as PropType<string[]>,
       required: false,
       default: () => [],

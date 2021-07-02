@@ -47,7 +47,8 @@ export default Vue.extend({
           key: (this as any).nameProperty,
           value,
           eventType: 'change',
-          validatorNames: (this as any).validatorNames,
+          validatorNamesThatDependsOnDynamicOptions: (this as any)
+            .validatorNamesThatDependsOnDynamicOptions,
         }
 
         ;(this as any).emitOnChangeField(payload)

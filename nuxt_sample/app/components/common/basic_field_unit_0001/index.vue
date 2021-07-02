@@ -17,7 +17,9 @@
           :namespace="namespace"
           :field-value-obj="fieldValueObj"
           :modifiers="fieldModifiers"
-          :validator-names="validatorNames"
+          :validator-names-that-depends-on-dynamic-options="
+            validatorNamesThatDependsOnDynamicOptions
+          "
           :value="value"
           :name-property="nameProperty"
           :is-disabled="isDisabled"

@@ -7,7 +7,7 @@ type PayloadForValidateSingle = {
   key: string
   value: string
   eventType: 'input' | 'blur' | 'change'
-  validatorNames: string[]
+  validatorNamesThatDependsOnDynamicOptions: string[]
 }
 
 export default function validateSingle<C extends { [key: string]: any }>(
@@ -17,10 +17,10 @@ export default function validateSingle<C extends { [key: string]: any }>(
   const constraintsKey = payload.key
   const constraint = constraints[payload.namespace][constraintsKey]
 
-  // 動的なオプションに依存しているvalidatorがある場合はオプションを渡す
-  payload.validatorNames.forEach((validatorName) => {
+  // 動的なオプションに依存しているvalidatorにはオプションを追加する
+  payload.validatorNamesThatDependsOnDynamicOptions.forEach((validatorName) => {
     constraint[validatorName].eventType = payload.eventType
-    constraint[validatorName].prevValues = payload.fieldValueObj
+    constraint[validatorName].fieldValueObj = payload.fieldValueObj
   })
 
   const result = validate.single(payload.value, constraint)

@@ -12,7 +12,7 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :modifiers="[]"
-        :validator-names="['presence']"
+        :validator-names-that-depends-on-dynamic-options="[]"
         :value="fieldValueObj['styleguides[basic_field_0001_a]']"
         :name-property="'styleguides[basic_field_0001_a]'"
         :is-disabled="false"

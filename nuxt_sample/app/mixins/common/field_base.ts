@@ -12,9 +12,10 @@ export default Vue.extend({
       required: false,
       default: () => [],
     },
-    validatorNames: {
+    validatorNamesThatDependsOnDynamicOptions: {
       type: Array as PropType<string[]>,
-      required: true,
+      required: false,
+      default: () => [],
     },
     value: {
       type: String as PropType<string>,
@@ -49,7 +50,8 @@ export default Vue.extend({
         key: this.nameProperty,
         value: target.value,
         eventType: 'blur',
-        validatorNames: this.validatorNames,
+        validatorNamesThatDependsOnDynamicOptions: this
+          .validatorNamesThatDependsOnDynamicOptions,
       }
 
       ;(this as any).emitOnBlurField(payload)
