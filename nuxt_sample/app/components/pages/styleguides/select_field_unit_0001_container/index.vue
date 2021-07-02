@@ -26,9 +26,6 @@
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"
-        :realtime-errors="
-          realtimeErrorsObj['styleguides[select_field_unit_0001_a]']
-        "
         @on-blur-field="emitOnBlurField"
         @on-change-field="emitOnChangeField"
       />

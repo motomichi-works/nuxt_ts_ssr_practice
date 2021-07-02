@@ -22,9 +22,6 @@
         :maxlength="'100'"
         :left-icon="fa.search"
         :right-icon="fa.search"
-        :has-realtime-errors="
-          realtimeErrorsObj['styleguides[basic_field_0001_a]'].length > 0
-        "
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />

@@ -60,16 +60,18 @@ export default Vue.extend({
       type: Object as PropType<{ [key: string]: string[] }>,
       required: true,
     },
-    realtimeErrors: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
-    },
   },
   computed: {
     fieldValue() {
       const key = this.sharedKey
       return (this as any).fieldValueObj[key]
+    },
+    realtimeErrors() {
+      const key = this.sharedKey
+      return (this as any).realtimeErrorsObj[key]
+    },
+    hasRealtimeErrors() {
+      return (this as any).realtimeErrors.length > 0
     },
   },
 })

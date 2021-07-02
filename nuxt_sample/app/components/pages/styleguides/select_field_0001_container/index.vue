@@ -23,9 +23,6 @@
           { label: '選択肢1', value: 'value1' },
           { label: '選択肢2', value: 'value2' },
         ]"
-        :has-realtime-errors="
-          realtimeErrorsObj['styleguides[select_field_0001_a]'].length > 0
-        "
         @on-blur-field="emitOnBlurField"
         @on-change-field="emitOnChangeField"
       />

@@ -26,7 +26,6 @@
           :is-disabled="isDisabled"
           :is-readonly="isReadonly"
           :options="options"
-          :has-realtime-errors="realtimeErrors.length > 0"
           @on-blur-field="emitOnBlurField"
           @on-change-field="emitOnChangeField"
         />
@@ -41,7 +40,7 @@
       </ul>
     </div>
     <div
-      v-if="realtimeErrors.length > 0"
+      v-if="hasRealtimeErrors"
       class="selectFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001

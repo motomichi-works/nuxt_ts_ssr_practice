@@ -24,9 +24,6 @@
         :descriptions="['例: placeholder@example.com']"
         :heading-text="'メールアドレス'"
         :badge-type="'required'"
-        :realtime-errors="
-          realtimeErrorsObj['styleguides[basic_field_unit_0001_email]']
-        "
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />
@@ -47,9 +44,6 @@
         :descriptions="['例: サンプル タロウ']"
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
-        :realtime-errors="
-          realtimeErrorsObj['styleguides[basic_field_unit_0001_name_kana]']
-        "
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />

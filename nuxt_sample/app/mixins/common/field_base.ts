@@ -37,11 +37,6 @@ export default Vue.extend({
       required: false,
       default: false,
     },
-    hasRealtimeErrors: {
-      type: Boolean as PropType<boolean>,
-      required: false,
-      default: false,
-    },
     fieldValueObj: {
       type: Object as PropType<{ [key: string]: string }>,
       required: true,
@@ -55,6 +50,13 @@ export default Vue.extend({
     fieldValue() {
       const key = this.sharedKey
       return (this as any).fieldValueObj[key]
+    },
+    realtimeErrors() {
+      const key = this.sharedKey
+      return (this as any).realtimeErrorsObj[key]
+    },
+    hasRealtimeErrors() {
+      return (this as any).realtimeErrors.length > 0
     },
   },
   methods: {

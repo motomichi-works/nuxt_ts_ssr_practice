@@ -29,7 +29,6 @@
           :maxlength="maxlength"
           :left-icon="leftIcon"
           :right-icon="rightIcon"
-          :has-realtime-errors="realtimeErrors.length > 0"
           @on-blur-field="emitOnBlurField"
           @on-input-field="emitOnInputField"
         />
@@ -44,7 +43,7 @@
       </ul>
     </div>
     <div
-      v-if="realtimeErrors.length > 0"
+      v-if="hasRealtimeErrors"
       class="basicFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
