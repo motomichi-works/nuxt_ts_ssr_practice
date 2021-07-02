@@ -12,7 +12,7 @@
       <component
         :is="component.name"
         v-for="component in components"
-        :key="component.identifiers.join('_')"
+        :key="component.identifiers.join('/')"
         :identifiers="component.identifiers"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
