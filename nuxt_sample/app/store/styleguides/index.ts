@@ -10,22 +10,22 @@ import makeObjectFromArray from '~/utils/make_object_from_array'
 // state
 const fieldValueObj = makeObjectFromArray(sharedKeys, '')
 const realtimeErrorsObj = makeObjectFromArray(sharedKeys, [] as string[])
-const isTainted = makeObjectFromArray(sharedKeys, false)
+const isTaintedObj = makeObjectFromArray(sharedKeys, false)
 export const state = () => ({
   fieldValueObj,
   realtimeErrorsObj,
-  isTainted,
+  isTaintedObj,
 })
 export type FieldValueObj = typeof fieldValueObj
 export type RealtimeErrorsObj = typeof realtimeErrorsObj
-export type IsTainted = typeof isTainted
+export type IsTainted = typeof isTaintedObj
 export type StyleguidesState = ReturnType<typeof state>
 
 // getters
 export const getters: GetterTree<StyleguidesState, RootState> = {
   fieldValueObj: (state) => state.fieldValueObj,
   realtimeErrorsObj: (state) => state.realtimeErrorsObj,
-  isTainted: (state) => state.isTainted,
+  isTaintedObj: (state) => state.isTaintedObj,
 }
 
 // mutations

@@ -91,8 +91,8 @@ export default Vue.extend({
     realtimeErrorsObj(): RealtimeErrorsObj {
       return this.$store.getters[`${this.namespace}/realtimeErrorsObj`]
     },
-    isTainted(): IsTainted {
-      return this.$store.getters[`${this.namespace}/isTainted`]
+    isTaintedObj(): IsTainted {
+      return this.$store.getters[`${this.namespace}/isTaintedObj`]
     },
     components() {
       const componentNames = [
