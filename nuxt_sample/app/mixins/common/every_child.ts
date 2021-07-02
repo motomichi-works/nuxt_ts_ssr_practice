@@ -21,11 +21,6 @@ export default Vue.extend({
       required: false,
       default: '',
     },
-    fieldValueObj: {
-      type: Object as PropType<{ [key: string]: string }>,
-      required: false,
-      default: () => ({}),
-    },
   },
   computed: {
     joinedIdentifiers() {

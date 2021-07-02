@@ -13,7 +13,6 @@
         :field-value-obj="fieldValueObj"
         :modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"
-        :value="fieldValueObj['styleguides[select_field_0001_a]']"
         :name-property="'styleguides[select_field_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"

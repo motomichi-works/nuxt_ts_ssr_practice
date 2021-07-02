@@ -17,10 +17,6 @@ export default Vue.extend({
       required: false,
       default: () => [],
     },
-    value: {
-      type: String as PropType<string>,
-      required: true,
-    },
     nameProperty: {
       type: String as PropType<string>,
       required: false,
@@ -40,6 +36,16 @@ export default Vue.extend({
       type: Boolean as PropType<boolean>,
       required: false,
       default: false,
+    },
+    fieldValueObj: {
+      type: Object as PropType<{ [key: string]: string }>,
+      required: true,
+    },
+  },
+  computed: {
+    fieldValue() {
+      const key = this.nameProperty
+      return (this as any).fieldValueObj[key]
     },
   },
   methods: {

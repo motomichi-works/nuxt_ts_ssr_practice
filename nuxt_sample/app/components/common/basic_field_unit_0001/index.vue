@@ -20,7 +20,6 @@
           :validator-names-that-depends-on-dynamic-options="
             validatorNamesThatDependsOnDynamicOptions
           "
-          :value="value"
           :name-property="nameProperty"
           :is-disabled="isDisabled"
           :is-readonly="isReadonly"

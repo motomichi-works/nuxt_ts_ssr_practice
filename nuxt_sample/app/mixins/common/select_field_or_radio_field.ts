@@ -38,7 +38,7 @@ export default Vue.extend({
     },
     bindValue: {
       get(): string {
-        return (this as any).value
+        return (this as any).fieldValue
       },
       set(value: string) {
         const payload: PayloadForOnChangeField = {

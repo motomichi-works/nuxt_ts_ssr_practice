@@ -12,7 +12,6 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :validator-names-that-depends-on-dynamic-options="['customEmail']"
-        :value="fieldValueObj['styleguides[basic_field_unit_0001_email]']"
         :name-property="'styleguides[basic_field_unit_0001_email]'"
         :is-disabled="false"
         :is-readonly="false"
@@ -32,8 +31,8 @@
       <BasicFieldUnit0001
         :identifiers="[...identifiers, 'basicFieldUnitNameKana']"
         :namespace="namespace"
+        :field-value-obj="fieldValueObj"
         :validator-names-that-depends-on-dynamic-options="['katakana']"
-        :value="fieldValueObj['styleguides[basic_field_unit_0001_name_kana]']"
         :name-property="'styleguides[basic_field_unit_0001_name_kana]'"
         :is-disabled="false"
         :is-readonly="false"
