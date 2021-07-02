@@ -23,7 +23,7 @@
           { label: '選択肢2', value: 'value2' },
         ]"
         :has-realtime-errors="
-          realtimeErrors['styleguides[select_field_0001_a]'].length > 0
+          realtimeErrorsObj['styleguides[select_field_0001_a]'].length > 0
         "
         @on-blur-field="emitOnBlurField"
         @on-change-field="emitOnChangeField"

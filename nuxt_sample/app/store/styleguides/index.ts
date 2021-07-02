@@ -9,22 +9,22 @@ import makeObjectFromArray from '~/utils/make_object_from_array'
 
 // state
 const fieldValueObj = makeObjectFromArray(sharedKeys, '')
-const realtimeErrors = makeObjectFromArray(sharedKeys, [] as string[])
+const realtimeErrorsObj = makeObjectFromArray(sharedKeys, [] as string[])
 const isTainted = makeObjectFromArray(sharedKeys, false)
 export const state = () => ({
   fieldValueObj,
-  realtimeErrors,
+  realtimeErrorsObj,
   isTainted,
 })
 export type FieldValueObj = typeof fieldValueObj
-export type RealtimeErrors = typeof realtimeErrors
+export type RealtimeErrorsObj = typeof realtimeErrorsObj
 export type IsTainted = typeof isTainted
 export type StyleguidesState = ReturnType<typeof state>
 
 // getters
 export const getters: GetterTree<StyleguidesState, RootState> = {
   fieldValueObj: (state) => state.fieldValueObj,
-  realtimeErrors: (state) => state.realtimeErrors,
+  realtimeErrorsObj: (state) => state.realtimeErrorsObj,
   isTainted: (state) => state.isTainted,
 }
 
@@ -38,9 +38,9 @@ export const mutations: MutationTree<StyleguidesState> = {
   },
   changeRealtimeErrors: (
     state,
-    payload: { key: keyof RealtimeErrors; value: string[] }
+    payload: { key: keyof RealtimeErrorsObj; value: string[] }
   ) => {
-    state.realtimeErrors[payload.key] = payload.value
+    state.realtimeErrorsObj[payload.key] = payload.value
   },
 }
 

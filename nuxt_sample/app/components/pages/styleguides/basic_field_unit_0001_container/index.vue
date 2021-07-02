@@ -24,7 +24,7 @@
         :heading-text="'メールアドレス'"
         :badge-type="'required'"
         :realtime-errors="
-          realtimeErrors['styleguides[basic_field_unit_0001_email]']
+          realtimeErrorsObj['styleguides[basic_field_unit_0001_email]']
         "
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
@@ -45,7 +45,7 @@
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
         :realtime-errors="
-          realtimeErrors['styleguides[basic_field_unit_0001_name_kana]']
+          realtimeErrorsObj['styleguides[basic_field_unit_0001_name_kana]']
         "
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"

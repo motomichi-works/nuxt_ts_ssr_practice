@@ -22,7 +22,7 @@
         :left-icon="fa.search"
         :right-icon="fa.search"
         :has-realtime-errors="
-          realtimeErrors['styleguides[basic_field_0001_a]'].length > 0
+          realtimeErrorsObj['styleguides[basic_field_0001_a]'].length > 0
         "
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"

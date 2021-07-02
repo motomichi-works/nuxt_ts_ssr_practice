@@ -26,7 +26,7 @@
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"
         :realtime-errors="
-          realtimeErrors['styleguides[select_field_unit_0001_a]']
+          realtimeErrorsObj['styleguides[select_field_unit_0001_a]']
         "
         @on-blur-field="emitOnBlurField"
         @on-change-field="emitOnChangeField"
