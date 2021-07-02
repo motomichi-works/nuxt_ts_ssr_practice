@@ -22,7 +22,6 @@ export default Vue.extend({
       })
 
       const validationResult = validateSingle(payload, constraintsBaseOfAll)
-
       ;(this as any).changeRealtimeErrors({
         namespace: payload.namespace,
         key: payload.key,
