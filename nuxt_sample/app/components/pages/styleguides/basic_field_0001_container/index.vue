@@ -13,7 +13,7 @@
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :modifiers="[]"
         :validator-names="['presence']"
-        :value="fieldValues['styleguides[basic_field_0001_a]']"
+        :value="fieldValueObj['styleguides[basic_field_0001_a]']"
         :name-property="'styleguides[basic_field_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"

@@ -2,13 +2,13 @@
 import Vue, { PropType } from 'vue'
 
 // store, store types
-import { FieldValues, RealtimeErrors } from '~/store/styleguides/index'
+import { FieldValueObj, RealtimeErrors } from '~/store/styleguides/index'
 
 // Vue.extend
 export default Vue.extend({
   props: {
-    fieldValues: {
-      type: Object as PropType<FieldValues>,
+    fieldValueObj: {
+      type: Object as PropType<FieldValueObj>,
       required: true,
     },
     realtimeErrors: {

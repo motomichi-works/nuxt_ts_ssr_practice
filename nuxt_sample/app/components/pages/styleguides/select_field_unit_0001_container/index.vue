@@ -13,7 +13,7 @@
         :prev-values-for-validator-options="prevValuesForValidatorOptions"
         :field-modifiers="[]"
         :validator-names="['presence']"
-        :value="fieldValues['styleguides[select_field_unit_0001_a]']"
+        :value="fieldValueObj['styleguides[select_field_unit_0001_a]']"
         :name-property="'styleguides[select_field_unit_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"

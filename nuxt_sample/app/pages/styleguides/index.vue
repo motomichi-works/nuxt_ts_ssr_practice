@@ -15,8 +15,8 @@
         :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
         :namespace="namespace"
-        :prev-values-for-validator-options="fieldValues"
-        :field-values="fieldValues"
+        :prev-values-for-validator-options="fieldValueObj"
+        :field-value-obj="fieldValueObj"
         :realtime-errors="realtimeErrors"
         @on-input-field="onInputField"
         @on-change-field="onChangeField"
@@ -36,7 +36,7 @@ import { namespace } from '~/settings/pages/styleguides/index'
 
 // store, store types
 import {
-  FieldValues,
+  FieldValueObj,
   RealtimeErrors,
   IsTainted,
 } from '~/store/styleguides/index'
@@ -85,8 +85,8 @@ export default Vue.extend({
     namespace() {
       return namespace
     },
-    fieldValues(): FieldValues {
-      return this.$store.getters[`${this.namespace}/fieldValues`]
+    fieldValueObj(): FieldValueObj {
+      return this.$store.getters[`${this.namespace}/fieldValueObj`]
     },
     realtimeErrors(): RealtimeErrors {
       return this.$store.getters[`${this.namespace}/realtimeErrors`]

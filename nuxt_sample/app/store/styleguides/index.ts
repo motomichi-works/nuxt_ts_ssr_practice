@@ -8,30 +8,33 @@ import { sharedKeys } from '~/settings/pages/styleguides/index'
 import makeObjectFromArray from '~/utils/make_object_from_array'
 
 // state
-const fieldValues = makeObjectFromArray(sharedKeys, '')
+const fieldValueObj = makeObjectFromArray(sharedKeys, '')
 const realtimeErrors = makeObjectFromArray(sharedKeys, [] as string[])
 const isTainted = makeObjectFromArray(sharedKeys, false)
 export const state = () => ({
-  fieldValues,
+  fieldValueObj,
   realtimeErrors,
   isTainted,
 })
-export type FieldValues = typeof fieldValues
+export type FieldValueObj = typeof fieldValueObj
 export type RealtimeErrors = typeof realtimeErrors
 export type IsTainted = typeof isTainted
 export type StyleguidesState = ReturnType<typeof state>
 
 // getters
 export const getters: GetterTree<StyleguidesState, RootState> = {
-  fieldValues: (state) => state.fieldValues,
+  fieldValueObj: (state) => state.fieldValueObj,
   realtimeErrors: (state) => state.realtimeErrors,
   isTainted: (state) => state.isTainted,
 }
 
 // mutations
 export const mutations: MutationTree<StyleguidesState> = {
-  changeFieldValue(state, payload: { key: keyof FieldValues; value: string }) {
-    state.fieldValues[payload.key] = payload.value
+  changeFieldValue(
+    state,
+    payload: { key: keyof FieldValueObj; value: string }
+  ) {
+    state.fieldValueObj[payload.key] = payload.value
   },
   changeRealtimeErrors: (
     state,
