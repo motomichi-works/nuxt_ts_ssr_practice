@@ -14,7 +14,16 @@ export default Vue.extend({
     onInputField(payload: PayloadForOnInputField) {
       ;(this as any).changeFieldValue(payload)
 
-      const validationResult = validateSingle(payload, constraintsBaseOfAll)
+      const isTaintedObj = payload.isTaintedObj
+      const key = payload.key
+
+      // NOTE: 以下の意図があります。
+      // - isTaintedでない場合はページ描画後の初回入力なので、入力途中でエラーメッセージを表示しない
+      // - isTaintedでない場合は、サーバーサイドから渡されたエラーメッセージをinputイベントで非表示にする
+      const validationResult = isTaintedObj[key]
+        ? validateSingle(payload, constraintsBaseOfAll)
+        : []
+
       ;(this as any).changeRealtimeErrors({
         namespace: payload.namespace,
         key: payload.key,
