@@ -42,6 +42,12 @@ export const mutations: MutationTree<StyleguidesState> = {
   ) => {
     state.realtimeErrorsObj[payload.key] = payload.value
   },
+  changeIsTainted: (
+    state,
+    payload: { key: keyof IsTainted; value: boolean }
+  ) => {
+    state.isTaintedObj[payload.key] = payload.value
+  },
 }
 
 // actions
