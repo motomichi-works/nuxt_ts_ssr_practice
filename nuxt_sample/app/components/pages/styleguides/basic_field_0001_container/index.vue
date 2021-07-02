@@ -11,6 +11,7 @@
         :identifiers="[...identifiers, 'basicFieldA']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
+        :realtime-errors-obj="realtimeErrorsObj"
         :modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"
         :name-property="'styleguides[basic_field_0001_a]'"

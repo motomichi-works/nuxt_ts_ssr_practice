@@ -16,6 +16,7 @@
           :identifiers="[...identifiers, 'field']"
           :namespace="namespace"
           :field-value-obj="fieldValueObj"
+          :realtime-errors-obj="realtimeErrorsObj"
           :modifiers="fieldModifiers"
           :validator-names-that-depends-on-dynamic-options="
             validatorNamesThatDependsOnDynamicOptions

@@ -56,6 +56,10 @@ export default Vue.extend({
       type: Object as PropType<{ [key: string]: string }>,
       required: true,
     },
+    realtimeErrorsObj: {
+      type: Object as PropType<{ [key: string]: string[] }>,
+      required: true,
+    },
     realtimeErrors: {
       type: Array as PropType<string[]>,
       required: false,

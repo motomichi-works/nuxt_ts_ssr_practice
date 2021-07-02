@@ -11,6 +11,7 @@
         :identifiers="[...identifiers, 'SelectFieldUnit0001A']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
+        :realtime-errors-obj="realtimeErrorsObj"
         :field-modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"
         :name-property="'styleguides[select_field_unit_0001_a]'"
