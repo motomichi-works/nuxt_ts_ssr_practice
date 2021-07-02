@@ -44,7 +44,7 @@ export default Vue.extend({
         const payload: PayloadForOnChangeField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
-          key: (this as any).nameProperty,
+          key: (this as any).sharedKey,
           value,
           eventType: 'change',
           validatorNamesThatDependsOnDynamicOptions: (this as any)

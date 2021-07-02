@@ -22,6 +22,11 @@ export default Vue.extend({
       required: false,
       default: '',
     },
+    sharedKey: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
     isDisabled: {
       type: Boolean as PropType<boolean>,
       required: false,
@@ -44,7 +49,7 @@ export default Vue.extend({
   },
   computed: {
     fieldValue() {
-      const key = this.nameProperty
+      const key = this.sharedKey
       return (this as any).fieldValueObj[key]
     },
   },

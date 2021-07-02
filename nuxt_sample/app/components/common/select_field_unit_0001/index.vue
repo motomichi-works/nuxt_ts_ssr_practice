@@ -21,6 +21,7 @@
             validatorNamesThatDependsOnDynamicOptions
           "
           :name-property="nameProperty"
+          :shared-key="sharedKey"
           :is-disabled="isDisabled"
           :is-readonly="isReadonly"
           :options="options"

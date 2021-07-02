@@ -63,7 +63,7 @@ export default Vue.extend({
         const payload: PayloadForOnInputField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
-          key: (this as any).nameProperty,
+          key: (this as any).sharedKey,
           value,
           eventType: 'input',
           validatorNamesThatDependsOnDynamicOptions: (this as any)
