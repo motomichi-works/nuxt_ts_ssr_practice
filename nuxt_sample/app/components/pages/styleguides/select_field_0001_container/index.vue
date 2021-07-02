@@ -12,6 +12,7 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
+        :is-tainted-obj="isTaintedObj"
         :modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"
         :name-property="'styleguides[select_field_0001_a]'"

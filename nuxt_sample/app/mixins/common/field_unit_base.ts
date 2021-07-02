@@ -60,6 +60,10 @@ export default Vue.extend({
       type: Object as PropType<{ [key: string]: string[] }>,
       required: true,
     },
+    isTaintedObj: {
+      type: Object as PropType<{ [key: string]: boolean }>,
+      required: true,
+    },
   },
   computed: {
     fieldValue() {

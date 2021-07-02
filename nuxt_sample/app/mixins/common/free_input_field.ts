@@ -63,6 +63,7 @@ export default Vue.extend({
         const payload: PayloadForOnInputField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
+          isTaintedObj: (this as any).isTaintedObj,
           key: (this as any).sharedKey,
           value,
           eventType: 'input',

@@ -17,6 +17,7 @@
           :namespace="namespace"
           :field-value-obj="fieldValueObj"
           :realtime-errors-obj="realtimeErrorsObj"
+          :is-tainted-obj="isTaintedObj"
           :modifiers="fieldModifiers"
           :validator-names-that-depends-on-dynamic-options="
             validatorNamesThatDependsOnDynamicOptions
