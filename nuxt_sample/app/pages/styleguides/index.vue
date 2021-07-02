@@ -15,7 +15,6 @@
         :key="component.identifiers.join('_')"
         :identifiers="component.identifiers"
         :namespace="namespace"
-        :prev-values-for-validator-options="fieldValueObj"
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
         @on-input-field="onInputField"

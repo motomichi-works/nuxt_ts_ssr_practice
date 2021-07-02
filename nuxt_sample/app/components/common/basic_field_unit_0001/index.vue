@@ -15,7 +15,7 @@
         <BasicField0001
           :identifiers="[...identifiers, 'field']"
           :namespace="namespace"
-          :prev-values-for-validator-options="prevValuesForValidatorOptions"
+          :field-value-obj="fieldValueObj"
           :modifiers="fieldModifiers"
           :validator-names="validatorNames"
           :value="value"

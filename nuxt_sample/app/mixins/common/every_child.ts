@@ -21,7 +21,7 @@ export default Vue.extend({
       required: false,
       default: '',
     },
-    prevValuesForValidatorOptions: {
+    fieldValueObj: {
       type: Object as PropType<{ [key: string]: string }>,
       required: false,
       default: () => ({}),

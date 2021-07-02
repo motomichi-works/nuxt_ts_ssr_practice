@@ -3,7 +3,7 @@ import validate from 'validate.js'
 
 type PayloadForValidateSingle = {
   namespace: string
-  prevValuesForValidatorOptions: { [key: string]: string }
+  fieldValueObj: { [key: string]: string }
   key: string
   value: string
   eventType: 'input' | 'blur' | 'change'
@@ -20,7 +20,7 @@ export default function validateSingle<C extends { [key: string]: any }>(
   // 動的なオプションに依存しているvalidatorがある場合はオプションを渡す
   payload.validatorNames.forEach((validatorName) => {
     constraint[validatorName].eventType = payload.eventType
-    constraint[validatorName].prevValues = payload.prevValuesForValidatorOptions
+    constraint[validatorName].prevValues = payload.fieldValueObj
   })
 
   const result = validate.single(payload.value, constraint)

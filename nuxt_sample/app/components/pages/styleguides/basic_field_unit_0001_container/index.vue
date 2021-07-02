@@ -10,7 +10,7 @@
       <BasicFieldUnit0001
         :identifiers="[...identifiers, 'basicFieldUnitEmail']"
         :namespace="namespace"
-        :prev-values-for-validator-options="prevValuesForValidatorOptions"
+        :field-value-obj="fieldValueObj"
         :validator-names="['customEmail']"
         :value="fieldValueObj['styleguides[basic_field_unit_0001_email]']"
         :name-property="'styleguides[basic_field_unit_0001_email]'"

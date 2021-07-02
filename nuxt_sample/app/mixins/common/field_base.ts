@@ -45,8 +45,7 @@ export default Vue.extend({
     onBlur({ target }: { target: HTMLInputElement }) {
       const payload: PayloadForOnBlurField = {
         namespace: (this as any).namespace,
-        prevValuesForValidatorOptions: (this as any)
-          .prevValuesForValidatorOptions,
+        fieldValueObj: (this as any).fieldValueObj,
         key: this.nameProperty,
         value: target.value,
         eventType: 'blur',

@@ -10,7 +10,7 @@
       <SelectField0001
         :identifiers="[...identifiers, 'SelectField0001A']"
         :namespace="namespace"
-        :prev-values-for-validator-options="prevValuesForValidatorOptions"
+        :field-value-obj="fieldValueObj"
         :modifiers="[]"
         :validator-names="['presence']"
         :value="fieldValueObj['styleguides[select_field_0001_a]']"
