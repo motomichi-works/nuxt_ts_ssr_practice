@@ -12,16 +12,15 @@ import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
 export default Vue.extend({
   methods: {
     onBlurField(payload: PayloadForOnBlurField) {
+      ;(this as any).changeFieldValue(payload)
+
       const validationResult = validateSingle(payload, constraintsBaseOfAll)
-      // eslint-disable-next-line no-console
-      // console.log('validationResult: ', validationResult)
 
       ;(this as any).changeRealtimeErrors({
         namespace: payload.namespace,
         key: payload.key,
         value: validationResult,
       })
-      ;(this as any).changeFieldValue(payload)
     },
   },
 })
