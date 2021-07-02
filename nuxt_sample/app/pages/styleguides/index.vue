@@ -17,6 +17,7 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
+        :is-tainted-obj="isTaintedObj"
         @on-input-field="onInputField"
         @on-change-field="onChangeField"
         @on-blur-field="onBlurField"

@@ -14,6 +14,13 @@ export default Vue.extend({
     onBlurField(payload: PayloadForOnBlurField) {
       ;(this as any).changeFieldValue(payload)
 
+      // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
+      ;(this as any).changeIsTainted({
+        namespace: payload.namespace,
+        key: payload.key,
+        value: true,
+      })
+
       const validationResult = validateSingle(payload, constraintsBaseOfAll)
 
       ;(this as any).changeRealtimeErrors({

@@ -15,5 +15,9 @@ export default Vue.extend({
       type: Object as PropType<RealtimeErrorsObj>,
       required: true,
     },
+    isTaintedObj: {
+      type: Object as PropType<RealtimeErrorsObj>,
+      required: true,
+    },
   },
 })
