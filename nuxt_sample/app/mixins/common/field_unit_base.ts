@@ -25,7 +25,7 @@ type NamePropertyObj = {
   field04?: string
 }
 type TextColumnContentObj = {
-  first?: string
+  field00?: string
   field01?: string
   field02?: string
   field03?: string

@@ -16,9 +16,9 @@
     <div class="basicFieldUnit0001__body">
       <ul class="basicFieldUnit0001__mainContentsRow">
         <li
-          v-if="textColumnContentObj.first !== undefined"
+          v-if="textColumnContentObj.field00 !== undefined"
           class="basicFieldUnit0001__plainTextColumnLast"
-          v-text="textColumnContentObj.first"
+          v-text="textColumnContentObj.field00"
         />
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
