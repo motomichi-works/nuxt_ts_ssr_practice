@@ -69,7 +69,7 @@ import BasicField0001 from '~/components/common/basic_field_0001/index.vue'
 // mixins
 import everyChild from '~/mixins/common/every_child'
 import fieldUnitBase from '~/mixins/common/field_unit_base'
-import fieldUnitThatIncludesOneField from '~/mixins/common/field_unit_that_includes_one_field'
+import fieldUnitBaseForContainingOneField from '~/mixins/common/field_unit_base_for_containing_one_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -77,7 +77,7 @@ export default Vue.extend({
   components: {
     BasicField0001,
   },
-  mixins: [everyChild, fieldUnitBase, fieldUnitThatIncludesOneField],
+  mixins: [everyChild, fieldUnitBase, fieldUnitBaseForContainingOneField],
   props: {
     placeholder: {
       type: String as PropType<string>,
