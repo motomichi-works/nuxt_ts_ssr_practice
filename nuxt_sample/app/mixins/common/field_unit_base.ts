@@ -12,21 +12,6 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    validatorNamesThatDependsOnDynamicOptions: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
-    },
-    nameProperty: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    sharedKey: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
     isDisabled: {
       type: Boolean as PropType<boolean>,
       required: false,
@@ -63,19 +48,6 @@ export default Vue.extend({
     isTaintedObj: {
       type: Object as PropType<{ [key: string]: boolean }>,
       required: true,
-    },
-  },
-  computed: {
-    fieldValue() {
-      const key = this.sharedKey
-      return (this as any).fieldValueObj[key]
-    },
-    realtimeErrors() {
-      const key = this.sharedKey
-      return (this as any).realtimeErrorsObj[key]
-    },
-    hasRealtimeErrors() {
-      return (this as any).realtimeErrors.length > 0
     },
   },
 })
