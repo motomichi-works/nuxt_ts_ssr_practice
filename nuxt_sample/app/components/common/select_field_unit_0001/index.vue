@@ -15,6 +15,11 @@
     </div>
     <div class="selectFieldUnit0001__body">
       <ul class="selectFieldUnit0001__mainContentsRow">
+        <li
+          v-if="textColumnContentObj.first !== undefined"
+          class="selectFieldUnit0001__plainTextColumnLast"
+          v-text="textColumnContentObj.first"
+        />
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
             v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
@@ -47,11 +52,6 @@
             />
           </li>
         </template>
-        <li
-          v-if="textColumnContentObj.last !== undefined"
-          class="selectFieldUnit0001__plainTextColumnLast"
-          v-text="textColumnContentObj.last"
-        />
       </ul>
       <ul v-if="descriptions.length > 0" class="selectFieldUnit0001__descGroup">
         <li

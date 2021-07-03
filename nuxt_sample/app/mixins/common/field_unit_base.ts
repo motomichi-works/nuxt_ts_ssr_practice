@@ -25,11 +25,11 @@ type NamePropertyObj = {
   field04?: string
 }
 type TextColumnContentObj = {
+  first?: string
   field01?: string
   field02?: string
   field03?: string
   field04?: string
-  last?: string
 }
 // Vue.extend
 export default Vue.extend({

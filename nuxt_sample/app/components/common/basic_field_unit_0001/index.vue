@@ -15,6 +15,11 @@
     </div>
     <div class="basicFieldUnit0001__body">
       <ul class="basicFieldUnit0001__mainContentsRow">
+        <li
+          v-if="textColumnContentObj.first !== undefined"
+          class="basicFieldUnit0001__plainTextColumnLast"
+          v-text="textColumnContentObj.first"
+        />
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
             v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
@@ -50,11 +55,6 @@
             />
           </li>
         </template>
-        <li
-          v-if="textColumnContentObj.last !== undefined"
-          class="basicFieldUnit0001__plainTextColumnLast"
-          v-text="textColumnContentObj.last"
-        />
       </ul>
       <ul v-if="descriptions.length > 0" class="basicFieldUnit0001__descGroup">
         <li
