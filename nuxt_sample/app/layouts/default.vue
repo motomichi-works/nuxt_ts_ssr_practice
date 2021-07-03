@@ -1,5 +1,5 @@
 <template>
-  <div :data-selector="joinedIdentifiers" class="l-bodyInner0001">
+  <div :data-joined-identifiers="joinedIdentifiers" class="l-bodyInner0001">
     <div class="l-bodyInner0001__headerWrapper">
       <Header0001 :identifiers="[...identifiers, 'Header0001']" />
     </div>

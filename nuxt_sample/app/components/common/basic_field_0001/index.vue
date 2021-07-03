@@ -1,5 +1,5 @@
 <template>
-  <div :data-selector="joinedIdentifiers" :class="classes">
+  <div :data-joined-identifiers="joinedIdentifiers" :class="classes">
     <div v-if="isVisibleLeftIcon" class="basicField0001__iconWrapper">
       <fa :icon="leftIcon" />
     </div>

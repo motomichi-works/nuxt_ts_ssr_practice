@@ -1,5 +1,5 @@
 <template>
-  <section :data-selector="joinedIdentifiers" class="container-0001">
+  <section :data-joined-identifiers="joinedIdentifiers" class="container-0001">
     <div class="container-0001__heading-wrapper">
       <Heading0001
         :identifiers="[...identifiers, 'heading']"

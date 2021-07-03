@@ -1,6 +1,6 @@
 <template>
   <span
-    :data-selector="joinedIdentifiers"
+    :data-joined-identifiers="joinedIdentifiers"
     class="badge0001"
     :class="modifierClasses"
     >{{ text }}</span
