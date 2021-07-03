@@ -15,15 +15,15 @@
     </div>
     <div class="selectFieldUnit0001__body">
       <ul class="selectFieldUnit0001__mainContentsRow">
-        <template v-for="indexStr in ['1', '2', '3', '4']">
+        <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
-            :key="`textColumn0${indexStr}`"
+            :key="`textColumn${indexStr}`"
             class="selectFieldUnit0001__plainTextColumn01"
           >
             テキスト01
           </li>
           <li
-            :key="`fieldColumn0${indexStr}`"
+            :key="`fieldColumn${indexStr}`"
             class="selectFieldUnit0001__fieldColumn01"
           >
             <SelectField0001

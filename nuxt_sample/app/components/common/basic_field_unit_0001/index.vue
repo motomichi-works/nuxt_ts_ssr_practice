@@ -18,23 +18,23 @@
         <li class="basicFieldUnit0001__plainTextColumn01">テキスト01</li>
         <li class="basicFieldUnit0001__fieldColumn01">
           <BasicField0001
-            :identifiers="[...identifiers, 'field1']"
+            :identifiers="[...identifiers, 'field01']"
             :namespace="namespace"
             :field-value-obj="fieldValueObj"
             :realtime-errors-obj="realtimeErrorsObj"
             :is-tainted-obj="isTaintedObj"
-            :modifiers="fieldModifiersObj.field1"
+            :modifiers="fieldModifiersObj.field01"
             :validator-names-that-depends-on-dynamic-options="
-              validatorNamesThatDependsOnDynamicOptionsObj.field1
+              validatorNamesThatDependsOnDynamicOptionsObj.field01
             "
             :name-property="nameProperty"
             :shared-key="sharedKey"
             :is-disabled="isDisabled"
             :is-readonly="isReadonly"
-            :placeholder="placeholderObj.field1"
-            :maxlength="maxlengthObj.field1"
-            :left-icon="leftIconObj.field1"
-            :right-icon="rightIconObj.field1"
+            :placeholder="placeholderObj.field01"
+            :maxlength="maxlengthObj.field01"
+            :left-icon="leftIconObj.field01"
+            :right-icon="rightIconObj.field01"
             @on-blur-field="emitOnBlurField"
             @on-input-field="emitOnInputField"
           />
