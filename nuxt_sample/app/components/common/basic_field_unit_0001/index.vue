@@ -18,13 +18,13 @@
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
             :key="`textColumn${indexStr}`"
-            class="basicFieldUnit0001__plainTextColumn01"
+            :class="`basicFieldUnit0001__plainTextColumn${indexStr}`"
           >
             テキスト01
           </li>
           <li
             :key="`fieldColumn${indexStr}`"
-            class="basicFieldUnit0001__fieldColumn01"
+            :class="`basicFieldUnit0001__fieldColumn${indexStr}`"
           >
             <BasicField0001
               :identifiers="[...identifiers, `field${indexStr}`]"
@@ -108,11 +108,11 @@ export default Vue.extend({
       margin-left: 0.5em;
     }
   }
-  .basicFieldUnit0001__fieldColumn01 {
+  [class^='basicFieldUnit0001__fieldColumn0'] {
     flex: 1 1 100%;
   }
   .basicFieldUnit0001__plainTextColumnLast,
-  .basicFieldUnit0001__plainTextColumn01 {
+  [class^='basicFieldUnit0001__plainTextColumn0'] {
     white-space: nowrap;
   }
   .basicFieldUnit0001__descGroup {

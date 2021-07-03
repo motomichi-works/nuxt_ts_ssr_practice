@@ -18,13 +18,13 @@
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
             :key="`textColumn${indexStr}`"
-            class="selectFieldUnit0001__plainTextColumn01"
+            :class="`selectFieldUnit0001__plainTextColumn${indexStr}`"
           >
             テキスト01
           </li>
           <li
             :key="`fieldColumn${indexStr}`"
-            class="selectFieldUnit0001__fieldColumn01"
+            :class="`selectFieldUnit0001__fieldColumn${indexStr}`"
           >
             <SelectField0001
               :identifiers="[...identifiers, `selectField${indexStr}`]"
@@ -111,11 +111,11 @@ export default Vue.extend({
       margin-left: 0.5em;
     }
   }
-  .selectFieldUnit0001__fieldColumn01 {
+  [class^='selectFieldUnit0001__fieldColumn0'] {
     flex: 1 1 100%;
   }
   .selectFieldUnit0001__plainTextColumnLast,
-  .selectFieldUnit0001__plainTextColumn01 {
+  [class^='selectFieldUnit0001__plainTextColumn0'] {
     white-space: nowrap;
   }
   .selectFieldUnit0001__descGroup {
