@@ -69,7 +69,6 @@ import SelectField0001 from '~/components/common/select_field_0001/index.vue'
 // mixins
 import everyChild from '~/mixins/common/every_child'
 import fieldUnitBase from '~/mixins/common/field_unit_base'
-import fieldUnitBaseForContainingOneField from '~/mixins/common/field_unit_base_for_containing_one_field'
 import fieldUnitForContainingOneSelectFieldOrRadioField from '~/mixins/common/field_unit_for_containing_one_select_field_or_radio_field'
 
 // Vue.extend
@@ -81,7 +80,6 @@ export default Vue.extend({
   mixins: [
     everyChild,
     fieldUnitBase,
-    fieldUnitBaseForContainingOneField,
     fieldUnitForContainingOneSelectFieldOrRadioField,
   ],
 })
