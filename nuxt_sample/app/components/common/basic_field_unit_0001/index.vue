@@ -23,6 +23,7 @@
             テキスト01
           </li>
           <li
+            v-if="namePropertyObj[`field${indexStr}`] !== undefined"
             :key="`fieldColumn${indexStr}`"
             :class="`basicFieldUnit0001__fieldColumn${indexStr}`"
           >
@@ -36,7 +37,7 @@
               :validator-names-that-depends-on-dynamic-options="
                 validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
               "
-              :name-property="nameProperty"
+              :name-property="namePropertyObj[`field${indexStr}`]"
               :shared-key="sharedKey"
               :is-disabled="isDisabled"
               :is-readonly="isReadonly"

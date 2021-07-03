@@ -17,7 +17,9 @@
         :validator-names-that-depends-on-dynamic-options-obj="{
           field01: ['customEmail'],
         }"
-        :name-property="'styleguides[basic_field_unit_0001_email]'"
+        :name-property-obj="{
+          field01: 'styleguides[basic_field_unit_0001_email]',
+        }"
         :shared-key="'styleguides[basic_field_unit_0001_email]'"
         :is-disabled="false"
         :is-readonly="false"
@@ -41,7 +43,9 @@
         :validator-names-that-depends-on-dynamic-options-obj="{
           field01: ['katakana'],
         }"
-        :name-property="'styleguides[basic_field_unit_0001_name_kana]'"
+        :name-property-obj="{
+          field01: 'styleguides[basic_field_unit_0001_name_kana]',
+        }"
         :shared-key="'styleguides[basic_field_unit_0001_name_kana]'"
         :is-disabled="false"
         :is-readonly="false"

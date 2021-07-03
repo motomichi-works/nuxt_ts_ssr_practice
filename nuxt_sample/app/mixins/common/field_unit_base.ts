@@ -18,7 +18,12 @@ type ValidatorNamesThatDependsOnDynamicOptionsObj = {
   field03?: string[]
   field04?: string[]
 }
-
+type NamePropertyObj = {
+  field01: string
+  field02?: string
+  field03?: string
+  field04?: string
+}
 // Vue.extend
 export default Vue.extend({
   components: {
@@ -36,10 +41,10 @@ export default Vue.extend({
       required: false,
       default: () => ({ field01: [] }),
     },
-    nameProperty: {
-      type: String as PropType<string>,
+    namePropertyObj: {
+      type: Object as PropType<NamePropertyObj>,
       required: false,
-      default: '',
+      default: () => ({ field01: '' }),
     },
     sharedKey: {
       type: String as PropType<string>,
