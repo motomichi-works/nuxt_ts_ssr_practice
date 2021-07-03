@@ -18,7 +18,7 @@
         <li class="basicFieldUnit0001__plainTextColumn01">テキスト01</li>
         <li class="basicFieldUnit0001__fieldColumn01">
           <BasicField0001
-            :identifiers="[...identifiers, 'field']"
+            :identifiers="[...identifiers, 'field1']"
             :namespace="namespace"
             :field-value-obj="fieldValueObj"
             :realtime-errors-obj="realtimeErrorsObj"
@@ -31,10 +31,10 @@
             :shared-key="sharedKey"
             :is-disabled="isDisabled"
             :is-readonly="isReadonly"
-            :placeholder="placeholder"
-            :maxlength="maxlength"
-            :left-icon="leftIcon"
-            :right-icon="rightIcon"
+            :placeholder="placeholderObj.field1"
+            :maxlength="maxlengthObj.field1"
+            :left-icon="leftIconObj.field1"
+            :right-icon="rightIconObj.field1"
             @on-blur-field="emitOnBlurField"
             @on-input-field="emitOnInputField"
           />
