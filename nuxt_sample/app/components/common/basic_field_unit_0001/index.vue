@@ -60,46 +60,23 @@
 
 <script lang="ts">
 // import node_modules
-import Vue, { PropType } from 'vue'
-import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
-
-// import components/common
-import BasicField0001 from '~/components/common/basic_field_0001/index.vue'
+import Vue from 'vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'
 import fieldUnitBase from '~/mixins/common/field_unit_base'
 import fieldUnitBaseForContainingOneField from '~/mixins/common/field_unit_base_for_containing_one_field'
+import fieldUnitForContainingOneBasicField from '~/mixins/common/field_unit_for_containing_one_basic_field'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicFieldUnit0001',
-  components: {
-    BasicField0001,
-  },
-  mixins: [everyChild, fieldUnitBase, fieldUnitBaseForContainingOneField],
-  props: {
-    placeholder: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    maxlength: {
-      type: String as PropType<string>,
-      required: false,
-      default: '',
-    },
-    leftIcon: {
-      type: Object as PropType<IconDefinition>,
-      required: false,
-      default: () => null,
-    },
-    rightIcon: {
-      type: Object as PropType<IconDefinition>,
-      required: false,
-      default: () => null,
-    },
-  },
+  mixins: [
+    everyChild,
+    fieldUnitBase,
+    fieldUnitBaseForContainingOneField,
+    fieldUnitForContainingOneBasicField,
+  ],
 })
 </script>
 
