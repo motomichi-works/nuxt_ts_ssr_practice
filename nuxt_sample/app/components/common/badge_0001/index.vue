@@ -3,8 +3,9 @@
     :data-joined-identifiers="joinedIdentifiers"
     class="badge0001"
     :class="modifierClasses"
-    >{{ text }}</span
   >
+    {{ text }}
+  </span>
 </template>
 
 <script lang="ts">
