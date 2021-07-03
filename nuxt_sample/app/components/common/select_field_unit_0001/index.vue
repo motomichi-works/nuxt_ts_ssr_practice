@@ -15,27 +15,37 @@
     </div>
     <div class="selectFieldUnit0001__body">
       <ul class="selectFieldUnit0001__mainContentsRow">
-        <li class="selectFieldUnit0001__plainTextColumn01">テキスト01</li>
-        <li class="selectFieldUnit0001__fieldColumn01">
-          <SelectField0001
-            :identifiers="[...identifiers, 'selectField1']"
-            :namespace="namespace"
-            :field-value-obj="fieldValueObj"
-            :realtime-errors-obj="realtimeErrorsObj"
-            :is-tainted-obj="isTaintedObj"
-            :modifiers="fieldModifiersObj.field1"
-            :validator-names-that-depends-on-dynamic-options="
-              validatorNamesThatDependsOnDynamicOptionsObj.field1
-            "
-            :name-property="nameProperty"
-            :shared-key="sharedKey"
-            :is-disabled="isDisabled"
-            :is-readonly="isReadonly"
-            :options="optionsObj.field1"
-            @on-blur-field="emitOnBlurField"
-            @on-change-field="emitOnChangeField"
-          />
-        </li>
+        <template v-for="indexStr in ['1', '2', '3', '4']">
+          <li
+            :key="`textColumn0${indexStr}`"
+            class="selectFieldUnit0001__plainTextColumn01"
+          >
+            テキスト01
+          </li>
+          <li
+            :key="`fieldColumn0${indexStr}`"
+            class="selectFieldUnit0001__fieldColumn01"
+          >
+            <SelectField0001
+              :identifiers="[...identifiers, `selectField${indexStr}`]"
+              :namespace="namespace"
+              :field-value-obj="fieldValueObj"
+              :realtime-errors-obj="realtimeErrorsObj"
+              :is-tainted-obj="isTaintedObj"
+              :modifiers="fieldModifiersObj[`field${indexStr}`]"
+              :validator-names-that-depends-on-dynamic-options="
+                validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
+              "
+              :name-property="nameProperty"
+              :shared-key="sharedKey"
+              :is-disabled="isDisabled"
+              :is-readonly="isReadonly"
+              :options="optionsObj[`field${indexStr}`]"
+              @on-blur-field="emitOnBlurField"
+              @on-change-field="emitOnChangeField"
+            />
+          </li>
+        </template>
         <li class="selectFieldUnit0001__plainTextColumnLast">テキストLast</li>
       </ul>
       <ul v-if="descriptions.length > 0" class="selectFieldUnit0001__descGroup">
