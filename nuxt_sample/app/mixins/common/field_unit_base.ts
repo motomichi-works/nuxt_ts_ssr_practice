@@ -24,6 +24,13 @@ type NamePropertyObj = {
   field03?: string
   field04?: string
 }
+type TextColumnContentObj = {
+  field01?: string
+  field02?: string
+  field03?: string
+  field04?: string
+  last?: string
+}
 // Vue.extend
 export default Vue.extend({
   components: {
@@ -45,6 +52,11 @@ export default Vue.extend({
       type: Object as PropType<NamePropertyObj>,
       required: false,
       default: () => ({ field01: '' }),
+    },
+    textColumnContentObj: {
+      type: Object as PropType<TextColumnContentObj>,
+      required: false,
+      default: () => ({}),
     },
     sharedKey: {
       type: String as PropType<string>,

@@ -17,11 +17,11 @@
       <ul class="basicFieldUnit0001__mainContentsRow">
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
+            v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
             :key="`textColumn${indexStr}`"
             :class="`basicFieldUnit0001__plainTextColumn${indexStr}`"
-          >
-            テキスト01
-          </li>
+            v-text="textColumnContentObj[`field${indexStr}`]"
+          />
           <li
             v-if="namePropertyObj[`field${indexStr}`] !== undefined"
             :key="`fieldColumn${indexStr}`"
@@ -50,7 +50,11 @@
             />
           </li>
         </template>
-        <li class="basicFieldUnit0001__plainTextColumnLast">テキストLast</li>
+        <li
+          v-if="textColumnContentObj.last !== undefined"
+          class="basicFieldUnit0001__plainTextColumnLast"
+          v-text="textColumnContentObj.last"
+        />
       </ul>
       <ul v-if="descriptions.length > 0" class="basicFieldUnit0001__descGroup">
         <li
