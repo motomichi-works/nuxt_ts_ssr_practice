@@ -25,7 +25,7 @@
             :is-tainted-obj="isTaintedObj"
             :modifiers="fieldModifiersObj.field1"
             :validator-names-that-depends-on-dynamic-options="
-              validatorNamesThatDependsOnDynamicOptions
+              validatorNamesThatDependsOnDynamicOptionsObj.field1
             "
             :name-property="nameProperty"
             :shared-key="sharedKey"

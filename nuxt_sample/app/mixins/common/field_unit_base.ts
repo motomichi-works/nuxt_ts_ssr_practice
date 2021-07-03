@@ -12,6 +12,12 @@ type FieldModifiersObj = {
   field3?: string[]
   field4?: string[]
 }
+type ValidatorNamesThatDependsOnDynamicOptionsObj = {
+  field1: string[]
+  field2?: string[]
+  field3?: string[]
+  field4?: string[]
+}
 
 // Vue.extend
 export default Vue.extend({
@@ -25,10 +31,10 @@ export default Vue.extend({
       required: false,
       default: () => ({ field1: [] }),
     },
-    validatorNamesThatDependsOnDynamicOptions: {
-      type: Array as PropType<string[]>,
+    validatorNamesThatDependsOnDynamicOptionsObj: {
+      type: Object as PropType<ValidatorNamesThatDependsOnDynamicOptionsObj>,
       required: false,
-      default: () => [],
+      default: () => ({ field1: [] }),
     },
     nameProperty: {
       type: String as PropType<string>,

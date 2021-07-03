@@ -14,7 +14,7 @@
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
         :field-modifiers-obj="{ field1: [] }"
-        :validator-names-that-depends-on-dynamic-options="[]"
+        :validator-names-that-depends-on-dynamic-options-obj="{ field1: [] }"
         :name-property="'styleguides[select_field_unit_0001_a]'"
         :shared-key="'styleguides[select_field_unit_0001_a]'"
         :is-disabled="false"

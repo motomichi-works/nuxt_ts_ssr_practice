@@ -14,7 +14,9 @@
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
         :field-modifiers-obj="{ field1: [] }"
-        :validator-names-that-depends-on-dynamic-options="['customEmail']"
+        :validator-names-that-depends-on-dynamic-options-obj="{
+          field1: ['customEmail'],
+        }"
         :name-property="'styleguides[basic_field_unit_0001_email]'"
         :shared-key="'styleguides[basic_field_unit_0001_email]'"
         :is-disabled="false"
@@ -36,7 +38,9 @@
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
         :field-modifiers-obj="{ field1: [] }"
-        :validator-names-that-depends-on-dynamic-options="['katakana']"
+        :validator-names-that-depends-on-dynamic-options-obj="{
+          field1: ['katakana'],
+        }"
         :name-property="'styleguides[basic_field_unit_0001_name_kana]'"
         :shared-key="'styleguides[basic_field_unit_0001_name_kana]'"
         :is-disabled="false"
