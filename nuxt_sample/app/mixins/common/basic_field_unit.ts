@@ -7,25 +7,25 @@ import BasicField0001 from '~/components/common/basic_field_0001/index.vue'
 
 // types
 type PlaceholderObj = {
-  field01: string
+  field01?: string
   field02?: string
   field03?: string
   field04?: string
 }
 type MaxlengthObj = {
-  field01: string
+  field01?: string
   field02?: string
   field03?: string
   field04?: string
 }
 type LeftIconObj = {
-  field01: IconDefinition | null
+  field01?: IconDefinition | null
   field02?: IconDefinition | null
   field03?: IconDefinition | null
   field04?: IconDefinition | null
 }
 type RightIconObj = {
-  field01: IconDefinition | null
+  field01?: IconDefinition | null
   field02?: IconDefinition | null
   field03?: IconDefinition | null
   field04?: IconDefinition | null
@@ -40,22 +40,32 @@ export default Vue.extend({
     placeholderObj: {
       type: Object as PropType<PlaceholderObj>,
       required: false,
-      default: () => ({ field01: '' }),
+      default: () => ({ field01: '', field02: '', field03: '', field04: '' }),
     },
     maxlengthObj: {
       type: Object as PropType<MaxlengthObj>,
       required: false,
-      default: () => ({ field01: '' }),
+      default: () => ({ field01: '', field02: '', field03: '', field04: '' }),
     },
     leftIconObj: {
       type: Object as PropType<LeftIconObj>,
       required: false,
-      default: () => ({ field01: null }),
+      default: () => ({
+        field01: null,
+        field02: null,
+        field03: null,
+        field04: null,
+      }),
     },
     rightIconObj: {
       type: Object as PropType<RightIconObj>,
       required: false,
-      default: () => ({ field01: null }),
+      default: () => ({
+        field01: null,
+        field02: null,
+        field03: null,
+        field04: null,
+      }),
     },
   },
 })

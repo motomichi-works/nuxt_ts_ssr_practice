@@ -4,7 +4,7 @@ import Vue, { PropType } from 'vue'
 // types
 import { Option } from '~/mixins/common/select_field_or_radio_field'
 type OptionsObj = {
-  field01: Option[]
+  field01?: Option[]
   field02?: Option[]
   field03?: Option[]
   field04?: Option[]
@@ -15,7 +15,12 @@ export default Vue.extend({
     optionsObj: {
       type: Object as PropType<OptionsObj>,
       required: false,
-      default: () => ({ field01: [{ label: '選択してください', value: '' }] }),
+      default: () => ({
+        field01: [{ label: '選択してください', value: '' }],
+        field02: [{ label: '選択してください', value: '' }],
+        field03: [{ label: '選択してください', value: '' }],
+        field04: [{ label: '選択してください', value: '' }],
+      }),
     },
   },
 })
