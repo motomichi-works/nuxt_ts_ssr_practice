@@ -5,6 +5,14 @@ import Vue, { PropType } from 'vue'
 import FieldErrorMessages0001 from '~/components/common/field_error_messages_0001/index.vue'
 import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
+// types
+type FieldModifiersObj = {
+  field1: string[]
+  field2?: string[]
+  field3?: string[]
+  field4?: string[]
+}
+
 // Vue.extend
 export default Vue.extend({
   components: {
@@ -12,10 +20,10 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
-    fieldModifiers: {
-      type: Array as PropType<string[]>,
+    fieldModifiersObj: {
+      type: Object as PropType<FieldModifiersObj>,
       required: false,
-      default: () => [],
+      default: () => ({ field1: [] }),
     },
     validatorNamesThatDependsOnDynamicOptions: {
       type: Array as PropType<string[]>,

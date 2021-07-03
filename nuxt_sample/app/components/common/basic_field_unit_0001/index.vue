@@ -23,7 +23,7 @@
             :field-value-obj="fieldValueObj"
             :realtime-errors-obj="realtimeErrorsObj"
             :is-tainted-obj="isTaintedObj"
-            :modifiers="fieldModifiers"
+            :modifiers="fieldModifiersObj.field1"
             :validator-names-that-depends-on-dynamic-options="
               validatorNamesThatDependsOnDynamicOptions
             "

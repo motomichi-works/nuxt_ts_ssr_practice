@@ -13,7 +13,7 @@
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
-        :field-modifiers="[]"
+        :field-modifiers-obj="{ field1: [] }"
         :validator-names-that-depends-on-dynamic-options="[]"
         :name-property="'styleguides[select_field_unit_0001_a]'"
         :shared-key="'styleguides[select_field_unit_0001_a]'"
