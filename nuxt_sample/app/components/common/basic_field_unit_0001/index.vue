@@ -15,30 +15,40 @@
     </div>
     <div class="basicFieldUnit0001__body">
       <ul class="basicFieldUnit0001__mainContentsRow">
-        <li class="basicFieldUnit0001__plainTextColumn01">テキスト01</li>
-        <li class="basicFieldUnit0001__fieldColumn01">
-          <BasicField0001
-            :identifiers="[...identifiers, 'field01']"
-            :namespace="namespace"
-            :field-value-obj="fieldValueObj"
-            :realtime-errors-obj="realtimeErrorsObj"
-            :is-tainted-obj="isTaintedObj"
-            :modifiers="fieldModifiersObj.field01"
-            :validator-names-that-depends-on-dynamic-options="
-              validatorNamesThatDependsOnDynamicOptionsObj.field01
-            "
-            :name-property="nameProperty"
-            :shared-key="sharedKey"
-            :is-disabled="isDisabled"
-            :is-readonly="isReadonly"
-            :placeholder="placeholderObj.field01"
-            :maxlength="maxlengthObj.field01"
-            :left-icon="leftIconObj.field01"
-            :right-icon="rightIconObj.field01"
-            @on-blur-field="emitOnBlurField"
-            @on-input-field="emitOnInputField"
-          />
-        </li>
+        <template v-for="indexStr in ['01', '02', '03', '04']">
+          <li
+            :key="`textColumn${indexStr}`"
+            class="basicFieldUnit0001__plainTextColumn01"
+          >
+            テキスト01
+          </li>
+          <li
+            :key="`fieldColumn${indexStr}`"
+            class="basicFieldUnit0001__fieldColumn01"
+          >
+            <BasicField0001
+              :identifiers="[...identifiers, `field${indexStr}`]"
+              :namespace="namespace"
+              :field-value-obj="fieldValueObj"
+              :realtime-errors-obj="realtimeErrorsObj"
+              :is-tainted-obj="isTaintedObj"
+              :modifiers="fieldModifiersObj[`field${indexStr}`]"
+              :validator-names-that-depends-on-dynamic-options="
+                validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
+              "
+              :name-property="nameProperty"
+              :shared-key="sharedKey"
+              :is-disabled="isDisabled"
+              :is-readonly="isReadonly"
+              :placeholder="placeholderObj[`field${indexStr}`]"
+              :maxlength="maxlengthObj[`field${indexStr}`]"
+              :left-icon="leftIconObj[`field${indexStr}`]"
+              :right-icon="rightIconObj[`field${indexStr}`]"
+              @on-blur-field="emitOnBlurField"
+              @on-input-field="emitOnInputField"
+            />
+          </li>
+        </template>
         <li class="basicFieldUnit0001__plainTextColumnLast">テキストLast</li>
       </ul>
       <ul v-if="descriptions.length > 0" class="basicFieldUnit0001__descGroup">
