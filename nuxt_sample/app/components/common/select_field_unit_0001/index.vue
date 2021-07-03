@@ -14,26 +14,30 @@
       />
     </div>
     <div class="selectFieldUnit0001__body">
-      <div class="selectFieldUnit0001__fieldWrapper">
-        <SelectField0001
-          :identifiers="[...identifiers, 'selectField']"
-          :namespace="namespace"
-          :field-value-obj="fieldValueObj"
-          :realtime-errors-obj="realtimeErrorsObj"
-          :is-tainted-obj="isTaintedObj"
-          :modifiers="fieldModifiers"
-          :validator-names-that-depends-on-dynamic-options="
-            validatorNamesThatDependsOnDynamicOptions
-          "
-          :name-property="nameProperty"
-          :shared-key="sharedKey"
-          :is-disabled="isDisabled"
-          :is-readonly="isReadonly"
-          :options="options"
-          @on-blur-field="emitOnBlurField"
-          @on-change-field="emitOnChangeField"
-        />
-      </div>
+      <ul class="selectFieldUnit0001__mainContentsRow">
+        <li class="selectFieldUnit0001__plainTextColumn01">テキスト01</li>
+        <li class="selectFieldUnit0001__fieldColumn01">
+          <SelectField0001
+            :identifiers="[...identifiers, 'selectField']"
+            :namespace="namespace"
+            :field-value-obj="fieldValueObj"
+            :realtime-errors-obj="realtimeErrorsObj"
+            :is-tainted-obj="isTaintedObj"
+            :modifiers="fieldModifiers"
+            :validator-names-that-depends-on-dynamic-options="
+              validatorNamesThatDependsOnDynamicOptions
+            "
+            :name-property="nameProperty"
+            :shared-key="sharedKey"
+            :is-disabled="isDisabled"
+            :is-readonly="isReadonly"
+            :options="options"
+            @on-blur-field="emitOnBlurField"
+            @on-change-field="emitOnChangeField"
+          />
+        </li>
+        <li class="selectFieldUnit0001__plainTextColumnLast">テキストLast</li>
+      </ul>
       <ul v-if="descriptions.length > 0" class="selectFieldUnit0001__descGroup">
         <li
           v-for="desc in descriptions"
@@ -96,7 +100,19 @@ export default Vue.extend({
     background-color: #dddddd;
     border-radius: 4px;
   }
-  .selectFieldUnit0001__fieldWrapper {
+  .selectFieldUnit0001__mainContentsRow {
+    display: flex;
+    align-items: center;
+    & > li:not(:first-child) {
+      margin-left: 0.5em;
+    }
+  }
+  .selectFieldUnit0001__fieldColumn01 {
+    flex: 1 1 100%;
+  }
+  .selectFieldUnit0001__plainTextColumnLast,
+  .selectFieldUnit0001__plainTextColumn01 {
+    white-space: nowrap;
   }
   .selectFieldUnit0001__descGroup {
     margin-top: 8px;
