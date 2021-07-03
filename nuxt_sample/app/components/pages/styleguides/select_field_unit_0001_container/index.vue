@@ -19,11 +19,13 @@
         :shared-key="'styleguides[select_field_unit_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"
-        :options="[
-          { label: '選択してください', value: '' },
-          { label: 'SelectFieldUnitAの選択肢1', value: 'value1' },
-          { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },
-        ]"
+        :options-obj="{
+          field1: [
+            { label: '選択してください', value: '' },
+            { label: 'SelectFieldUnitAの選択肢1', value: 'value1' },
+            { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },
+          ],
+        }"
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"

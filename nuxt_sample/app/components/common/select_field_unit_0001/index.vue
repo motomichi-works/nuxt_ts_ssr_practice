@@ -18,7 +18,7 @@
         <li class="selectFieldUnit0001__plainTextColumn01">テキスト01</li>
         <li class="selectFieldUnit0001__fieldColumn01">
           <SelectField0001
-            :identifiers="[...identifiers, 'selectField']"
+            :identifiers="[...identifiers, 'selectField1']"
             :namespace="namespace"
             :field-value-obj="fieldValueObj"
             :realtime-errors-obj="realtimeErrorsObj"
@@ -31,7 +31,7 @@
             :shared-key="sharedKey"
             :is-disabled="isDisabled"
             :is-readonly="isReadonly"
-            :options="options"
+            :options="optionsObj.field1"
             @on-blur-field="emitOnBlurField"
             @on-change-field="emitOnChangeField"
           />
