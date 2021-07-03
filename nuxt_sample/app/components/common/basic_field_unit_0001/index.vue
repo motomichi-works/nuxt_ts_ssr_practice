@@ -69,12 +69,12 @@ import Vue from 'vue'
 // mixins
 import everyChild from '~/mixins/common/every_child'
 import fieldUnitBase from '~/mixins/common/field_unit_base'
-import fieldUnitForContainingOneBasicField from '~/mixins/common/field_unit_for_containing_one_basic_field'
+import basicFieldUnit from '~/mixins/common/basic_field_unit'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicFieldUnit0001',
-  mixins: [everyChild, fieldUnitBase, fieldUnitForContainingOneBasicField],
+  mixins: [everyChild, fieldUnitBase, basicFieldUnit],
 })
 </script>
 
