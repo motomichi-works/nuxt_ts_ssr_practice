@@ -78,11 +78,6 @@ export default Vue.extend({
   },
   mixins: [everyChild, fieldUnitBase, fieldUnitThatIncludesOneField],
   props: {
-    fieldModifiers: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
-    },
     options: {
       type: Array as PropType<Option[]>,
       required: false,

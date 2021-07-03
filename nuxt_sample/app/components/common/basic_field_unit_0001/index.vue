@@ -79,11 +79,6 @@ export default Vue.extend({
   },
   mixins: [everyChild, fieldUnitBase, fieldUnitThatIncludesOneField],
   props: {
-    fieldModifiers: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
-    },
     placeholder: {
       type: String as PropType<string>,
       required: false,

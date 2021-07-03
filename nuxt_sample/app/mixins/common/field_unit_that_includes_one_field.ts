@@ -4,6 +4,11 @@ import Vue, { PropType } from 'vue'
 // Vue.extend
 export default Vue.extend({
   props: {
+    fieldModifiers: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: () => [],
+    },
     validatorNamesThatDependsOnDynamicOptions: {
       type: Array as PropType<string[]>,
       required: false,
