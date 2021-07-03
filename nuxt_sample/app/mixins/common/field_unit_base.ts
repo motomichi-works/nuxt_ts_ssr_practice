@@ -7,13 +7,13 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // types
 type FieldModifiersObj = {
-  field01: string[]
+  field01?: string[]
   field02?: string[]
   field03?: string[]
   field04?: string[]
 }
 type ValidatorNamesThatDependsOnDynamicOptionsObj = {
-  field01: string[]
+  field01?: string[]
   field02?: string[]
   field03?: string[]
   field04?: string[]
@@ -41,17 +41,16 @@ export default Vue.extend({
     fieldModifiersObj: {
       type: Object as PropType<FieldModifiersObj>,
       required: false,
-      default: () => ({ field01: [] }),
+      default: () => ({ field01: [], field02: [], field03: [], field04: [] }),
     },
     validatorNamesThatDependsOnDynamicOptionsObj: {
       type: Object as PropType<ValidatorNamesThatDependsOnDynamicOptionsObj>,
       required: false,
-      default: () => ({ field01: [] }),
+      default: () => ({ field01: [], field02: [], field03: [], field04: [] }),
     },
     namePropertyObj: {
       type: Object as PropType<NamePropertyObj>,
-      required: false,
-      default: () => ({ field01: '' }),
+      required: true,
     },
     textColumnContentObj: {
       type: Object as PropType<TextColumnContentObj>,
