@@ -17,37 +17,42 @@
       <ul class="basicFieldUnit0001__mainContentsGroup">
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
-            v-if="namePropertyObj[`field${indexStr}`] !== undefined || textColumnContentObj[`field${indexStr}`] !== undefined"
+            v-if="
+              namePropertyObj[`item${indexStr}`] !== undefined ||
+              textColumnContentObj[`item${indexStr}`] !== undefined
+            "
             :key="`item${indexStr}`"
             :class="`basicFieldUnit0001__item${indexStr}`"
           >
-            <div v-if="namePropertyObj[`field${indexStr}`] !== undefined">
+            <div v-if="namePropertyObj[`item${indexStr}`] !== undefined">
               <BasicField0001
                 :identifiers="[...identifiers, `field${indexStr}`]"
                 :namespace="namespace"
                 :field-value-obj="fieldValueObj"
                 :realtime-errors-obj="realtimeErrorsObj"
                 :is-tainted-obj="isTaintedObj"
-                :modifiers="fieldModifiersObj[`field${indexStr}`]"
+                :modifiers="fieldModifiersObj[`item${indexStr}`]"
                 :validator-names-that-depends-on-dynamic-options="
-                  validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
+                  validatorNamesThatDependsOnDynamicOptionsObj[
+                    `item${indexStr}`
+                  ]
                 "
-                :name-property="namePropertyObj[`field${indexStr}`]"
+                :name-property="namePropertyObj[`item${indexStr}`]"
                 :shared-key="sharedKey"
                 :is-disabled="isDisabled"
                 :is-readonly="isReadonly"
-                :placeholder="placeholderObj[`field${indexStr}`]"
-                :maxlength="maxlengthObj[`field${indexStr}`]"
-                :left-icon="leftIconObj[`field${indexStr}`]"
-                :right-icon="rightIconObj[`field${indexStr}`]"
+                :placeholder="placeholderObj[`item${indexStr}`]"
+                :maxlength="maxlengthObj[`item${indexStr}`]"
+                :left-icon="leftIconObj[`item${indexStr}`]"
+                :right-icon="rightIconObj[`item${indexStr}`]"
                 @on-blur-field="emitOnBlurField"
                 @on-input-field="emitOnInputField"
               />
             </div>
             <div
-              v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
+              v-if="textColumnContentObj[`item${indexStr}`] !== undefined"
               class="basicFieldUnit0001__plainTextWrapper"
-              v-text="textColumnContentObj[`field${indexStr}`]"
+              v-text="textColumnContentObj[`item${indexStr}`]"
             />
           </li>
         </template>

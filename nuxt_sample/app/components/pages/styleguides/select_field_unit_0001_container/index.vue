@@ -13,16 +13,16 @@
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
-        :field-modifiers-obj="{ field01: [] }"
-        :validator-names-that-depends-on-dynamic-options-obj="{ field01: [] }"
+        :field-modifiers-obj="{ item01: [] }"
+        :validator-names-that-depends-on-dynamic-options-obj="{ item01: [] }"
         :name-property-obj="{
-          field01: 'styleguides[select_field_unit_0001_a]',
+          item01: 'styleguides[select_field_unit_0001_a]',
         }"
         :shared-key="'styleguides[select_field_unit_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"
         :options-obj="{
-          field01: [
+          item01: [
             { label: '選択してください', value: '' },
             { label: 'SelectFieldUnitAの選択肢1', value: 'value1' },
             { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },

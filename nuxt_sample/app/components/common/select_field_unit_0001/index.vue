@@ -17,34 +17,39 @@
       <ul class="selectFieldUnit0001__mainContentsGroup">
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
-            v-if="namePropertyObj[`field${indexStr}`] !== undefined || textColumnContentObj[`field${indexStr}`] !== undefined"
+            v-if="
+              namePropertyObj[`item${indexStr}`] !== undefined ||
+              textColumnContentObj[`item${indexStr}`] !== undefined
+            "
             :key="`item${indexStr}`"
             :class="`selectFieldUnit0001__item${indexStr}`"
           >
-            <div v-if="namePropertyObj[`field${indexStr}`] !== undefined">
+            <div v-if="namePropertyObj[`item${indexStr}`] !== undefined">
               <SelectField0001
-                :identifiers="[...identifiers, `selectField${indexStr}`]"
+                :identifiers="[...identifiers, `field${indexStr}`]"
                 :namespace="namespace"
                 :field-value-obj="fieldValueObj"
                 :realtime-errors-obj="realtimeErrorsObj"
                 :is-tainted-obj="isTaintedObj"
-                :modifiers="fieldModifiersObj[`field${indexStr}`]"
+                :modifiers="fieldModifiersObj[`item${indexStr}`]"
                 :validator-names-that-depends-on-dynamic-options="
-                  validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
+                  validatorNamesThatDependsOnDynamicOptionsObj[
+                    `item${indexStr}`
+                  ]
                 "
-                :name-property="namePropertyObj[`field${indexStr}`]"
+                :name-property="namePropertyObj[`item${indexStr}`]"
                 :shared-key="sharedKey"
                 :is-disabled="isDisabled"
                 :is-readonly="isReadonly"
-                :options="optionsObj[`field${indexStr}`]"
+                :options="optionsObj[`item${indexStr}`]"
                 @on-blur-field="emitOnBlurField"
                 @on-change-field="emitOnChangeField"
               />
             </div>
             <div
-              v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
+              v-if="textColumnContentObj[`item${indexStr}`] !== undefined"
               class="selectFieldUnit0001__plainTextWrapper"
-              v-text="textColumnContentObj[`field${indexStr}`]"
+              v-text="textColumnContentObj[`item${indexStr}`]"
             />
           </li>
         </template>

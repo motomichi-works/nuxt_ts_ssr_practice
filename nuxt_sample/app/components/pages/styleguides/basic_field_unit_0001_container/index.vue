@@ -13,20 +13,20 @@
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
-        :field-modifiers-obj="{ field01: [] }"
+        :field-modifiers-obj="{ item01: [] }"
         :validator-names-that-depends-on-dynamic-options-obj="{
-          field01: ['customEmail'],
+          item01: ['customEmail'],
         }"
         :name-property-obj="{
-          field01: 'styleguides[basic_field_unit_0001_email]',
+          item01: 'styleguides[basic_field_unit_0001_email]',
         }"
         :shared-key="'styleguides[basic_field_unit_0001_email]'"
         :is-disabled="false"
         :is-readonly="false"
-        :placeholder-obj="{ field01: 'placeholder@example.com' }"
-        :maxlength-obj="{ field01: '100' }"
-        :left-icon-obj="{ field01: fa.search }"
-        :right-icon-obj="{ field01: fa.search }"
+        :placeholder-obj="{ item01: 'placeholder@example.com' }"
+        :maxlength-obj="{ item01: '100' }"
+        :left-icon-obj="{ item01: fa.search }"
+        :right-icon-obj="{ item01: fa.search }"
         :descriptions="['例: placeholder@example.com']"
         :heading-text="'メールアドレス'"
         :badge-type="'required'"
@@ -39,20 +39,20 @@
         :field-value-obj="fieldValueObj"
         :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
-        :field-modifiers-obj="{ field01: [] }"
+        :field-modifiers-obj="{ item01: [] }"
         :validator-names-that-depends-on-dynamic-options-obj="{
-          field01: ['katakana'],
+          item01: ['katakana'],
         }"
         :name-property-obj="{
-          field01: 'styleguides[basic_field_unit_0001_name_kana]',
+          item01: 'styleguides[basic_field_unit_0001_name_kana]',
         }"
         :shared-key="'styleguides[basic_field_unit_0001_name_kana]'"
         :is-disabled="false"
         :is-readonly="false"
-        :placeholder-obj="{ field01: 'サンプル タロウ' }"
-        :maxlength-obj="{ field01: '100' }"
-        :left-icon-obj="{ field01: fa.search }"
-        :right-icon-obj="{ field01: fa.search }"
+        :placeholder-obj="{ item01: 'サンプル タロウ' }"
+        :maxlength-obj="{ item01: '100' }"
+        :left-icon-obj="{ item01: fa.search }"
+        :right-icon-obj="{ item01: fa.search }"
         :descriptions="['例: サンプル タロウ']"
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
