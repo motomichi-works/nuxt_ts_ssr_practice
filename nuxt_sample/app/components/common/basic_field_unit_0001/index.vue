@@ -15,43 +15,39 @@
     </div>
     <div class="basicFieldUnit0001__body">
       <ul class="basicFieldUnit0001__mainContentsGroup">
-        <li
-          v-if="textColumnContentObj.field00 !== undefined"
-          class="basicFieldUnit0001__item00"
-          v-text="textColumnContentObj.field00"
-        />
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
-            v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
-            :key="`textColumn${indexStr}`"
-            :class="`basicFieldUnit0001__plainText${indexStr}`"
-            v-text="textColumnContentObj[`field${indexStr}`]"
-          />
-          <li
-            v-if="namePropertyObj[`field${indexStr}`] !== undefined"
-            :key="`fieldColumn${indexStr}`"
+            v-if="namePropertyObj[`field${indexStr}`] !== undefined || textColumnContentObj[`field${indexStr}`] !== undefined"
+            :key="`item${indexStr}`"
             :class="`basicFieldUnit0001__item${indexStr}`"
           >
-            <BasicField0001
-              :identifiers="[...identifiers, `field${indexStr}`]"
-              :namespace="namespace"
-              :field-value-obj="fieldValueObj"
-              :realtime-errors-obj="realtimeErrorsObj"
-              :is-tainted-obj="isTaintedObj"
-              :modifiers="fieldModifiersObj[`field${indexStr}`]"
-              :validator-names-that-depends-on-dynamic-options="
-                validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
-              "
-              :name-property="namePropertyObj[`field${indexStr}`]"
-              :shared-key="sharedKey"
-              :is-disabled="isDisabled"
-              :is-readonly="isReadonly"
-              :placeholder="placeholderObj[`field${indexStr}`]"
-              :maxlength="maxlengthObj[`field${indexStr}`]"
-              :left-icon="leftIconObj[`field${indexStr}`]"
-              :right-icon="rightIconObj[`field${indexStr}`]"
-              @on-blur-field="emitOnBlurField"
-              @on-input-field="emitOnInputField"
+            <div v-if="namePropertyObj[`field${indexStr}`] !== undefined">
+              <BasicField0001
+                :identifiers="[...identifiers, `field${indexStr}`]"
+                :namespace="namespace"
+                :field-value-obj="fieldValueObj"
+                :realtime-errors-obj="realtimeErrorsObj"
+                :is-tainted-obj="isTaintedObj"
+                :modifiers="fieldModifiersObj[`field${indexStr}`]"
+                :validator-names-that-depends-on-dynamic-options="
+                  validatorNamesThatDependsOnDynamicOptionsObj[`field${indexStr}`]
+                "
+                :name-property="namePropertyObj[`field${indexStr}`]"
+                :shared-key="sharedKey"
+                :is-disabled="isDisabled"
+                :is-readonly="isReadonly"
+                :placeholder="placeholderObj[`field${indexStr}`]"
+                :maxlength="maxlengthObj[`field${indexStr}`]"
+                :left-icon="leftIconObj[`field${indexStr}`]"
+                :right-icon="rightIconObj[`field${indexStr}`]"
+                @on-blur-field="emitOnBlurField"
+                @on-input-field="emitOnInputField"
+              />
+            </div>
+            <div
+              v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
+              class="basicFieldUnit0001__plainTextWrapper"
+              v-text="textColumnContentObj[`field${indexStr}`]"
             />
           </li>
         </template>
@@ -113,13 +109,13 @@ export default Vue.extend({
       margin-left: 0.5em;
     }
   }
-  [class^='basicFieldUnit0001__item0'] {
-    flex: 1 1 100%;
-  }
-  .basicFieldUnit0001__item00,
-  [class^='basicFieldUnit0001__plainText0'] {
-    white-space: nowrap;
-  }
+  // [class^='basicFieldUnit0001__item0'] {
+  //   flex: 1 1 100%;
+  // }
+  // .basicFieldUnit0001__item00,
+  // [class^='basicFieldUnit0001__plainText0'] {
+  //   white-space: nowrap;
+  // }
   .basicFieldUnit0001__descGroup {
     margin-top: 8px;
     padding: 0 4px;
