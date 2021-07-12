@@ -14,23 +14,23 @@
       />
     </div>
     <div class="basicFieldUnit0001__body">
-      <ul class="basicFieldUnit0001__mainContentsRow">
+      <ul class="basicFieldUnit0001__mainContentsGroup">
         <li
           v-if="textColumnContentObj.field00 !== undefined"
-          class="basicFieldUnit0001__plainTextColumnLast"
+          class="basicFieldUnit0001__item00"
           v-text="textColumnContentObj.field00"
         />
         <template v-for="indexStr in ['01', '02', '03', '04']">
           <li
             v-if="textColumnContentObj[`field${indexStr}`] !== undefined"
             :key="`textColumn${indexStr}`"
-            :class="`basicFieldUnit0001__plainTextColumn${indexStr}`"
+            :class="`basicFieldUnit0001__plainText${indexStr}`"
             v-text="textColumnContentObj[`field${indexStr}`]"
           />
           <li
             v-if="namePropertyObj[`field${indexStr}`] !== undefined"
             :key="`fieldColumn${indexStr}`"
-            :class="`basicFieldUnit0001__fieldColumn${indexStr}`"
+            :class="`basicFieldUnit0001__item${indexStr}`"
           >
             <BasicField0001
               :identifiers="[...identifiers, `field${indexStr}`]"
@@ -106,18 +106,18 @@ export default Vue.extend({
     background-color: #dddddd;
     border-radius: 4px;
   }
-  .basicFieldUnit0001__mainContentsRow {
+  .basicFieldUnit0001__mainContentsGroup {
     display: flex;
     align-items: center;
     & > li:not(:first-child) {
       margin-left: 0.5em;
     }
   }
-  [class^='basicFieldUnit0001__fieldColumn0'] {
+  [class^='basicFieldUnit0001__item0'] {
     flex: 1 1 100%;
   }
-  .basicFieldUnit0001__plainTextColumnLast,
-  [class^='basicFieldUnit0001__plainTextColumn0'] {
+  .basicFieldUnit0001__item00,
+  [class^='basicFieldUnit0001__plainText0'] {
     white-space: nowrap;
   }
   .basicFieldUnit0001__descGroup {
