@@ -41,8 +41,8 @@ export default Vue.extend({
       type: Object as PropType<{ [key: string]: string }>,
       required: true,
     },
-    realtimeErrorsObj: {
-      type: Object as PropType<{ [key: string]: string[] }>,
+    realtimeErrors: {
+      type: Array as PropType<string[]>,
       required: true,
     },
     isTaintedObj: {
@@ -54,10 +54,6 @@ export default Vue.extend({
     fieldValue() {
       const key = this.sharedKey
       return (this as any).fieldValueObj[key]
-    },
-    realtimeErrors() {
-      const key = this.sharedKey
-      return (this as any).realtimeErrorsObj[key]
     },
     hasRealtimeErrors() {
       return (this as any).realtimeErrors.length > 0

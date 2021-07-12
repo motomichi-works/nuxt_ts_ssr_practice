@@ -11,7 +11,7 @@
         :identifiers="[...identifiers, 'basicFieldA']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
-        :realtime-errors-obj="realtimeErrorsObj"
+        :realtime-errors="realtimeErrorsObj['styleguides[basic_field_0001_a]']"
         :is-tainted-obj="isTaintedObj"
         :modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"

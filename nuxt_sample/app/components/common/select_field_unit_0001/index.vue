@@ -15,42 +15,42 @@
     </div>
     <div class="selectFieldUnit0001__body">
       <ul class="selectFieldUnit0001__mainContentsGroup">
-        <template v-for="indexStr in ['01', '02', '03', '04']">
+        <template v-for="(item, index) in items">
           <li
-            v-if="
-              namePropertyObj[`item${indexStr}`] !== undefined ||
-              textColumnContentObj[`item${indexStr}`] !== undefined
-            "
-            :key="`item${indexStr}`"
-            :class="`selectFieldUnit0001__item${indexStr}`"
+            v-if="item.nameProperty !== null || item.plainText !== null"
+            :key="`${item.nameProperty}${index}`"
+            :class="`selectFieldUnit0001__item${index}`"
           >
-            <div v-if="namePropertyObj[`item${indexStr}`] !== undefined">
-              <SelectField0001
-                :identifiers="[...identifiers, `field${indexStr}`]"
-                :namespace="namespace"
-                :field-value-obj="fieldValueObj"
-                :realtime-errors-obj="realtimeErrorsObj"
-                :is-tainted-obj="isTaintedObj"
-                :modifiers="fieldModifiersObj[`item${indexStr}`]"
-                :validator-names-that-depends-on-dynamic-options="
-                  validatorNamesThatDependsOnDynamicOptionsObj[
-                    `item${indexStr}`
-                  ]
-                "
-                :name-property="namePropertyObj[`item${indexStr}`]"
-                :shared-key="sharedKey"
-                :is-disabled="isDisabled"
-                :is-readonly="isReadonly"
-                :options="optionsObj[`item${indexStr}`]"
-                @on-blur-field="emitOnBlurField"
-                @on-change-field="emitOnChangeField"
+            <div class="selectFieldUnit0001__itemBody">
+              <div
+                v-if="item.nameProperty !== null"
+                class="selectFieldUnit0001__fieldWrapper"
+              >
+                <SelectField0001
+                  :identifiers="[...identifiers, `field${item.nameProperty}`]"
+                  :namespace="namespace"
+                  :field-value-obj="fieldValueObj"
+                  :is-tainted-obj="isTaintedObj"
+                  :realtime-errors="item.realtimeErrors"
+                  :modifiers="item.fieldModifiers"
+                  :validator-names-that-depends-on-dynamic-options="
+                    item.validatorNamesThatDependsOnDynamicOptions
+                  "
+                  :name-property="item.nameProperty"
+                  :shared-key="item.sharedKey"
+                  :is-disabled="item.isDisabled"
+                  :is-readonly="item.isReadonly"
+                  :options="item.options"
+                  @on-blur-field="emitOnBlurField"
+                  @on-change-field="emitOnChangeField"
+                />
+              </div>
+              <div
+                v-if="item.plainText !== null"
+                class="selectFieldUnit0001__plainTextWrapper"
+                v-text="item.plainText"
               />
             </div>
-            <div
-              v-if="textColumnContentObj[`item${indexStr}`] !== undefined"
-              class="selectFieldUnit0001__plainTextWrapper"
-              v-text="textColumnContentObj[`item${indexStr}`]"
-            />
           </li>
         </template>
       </ul>
@@ -63,15 +63,18 @@
         />
       </ul>
     </div>
-    <div
-      v-if="hasRealtimeErrors"
-      class="selectFieldUnit0001__errorMessagesWrapper"
-    >
-      <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'fieldErrorMessages']"
-        :error-messages="realtimeErrors"
-      />
-    </div>
+    <template v-for="item in items">
+      <div
+        v-if="item.realtimeErrors.length > 0"
+        :key="item.nameProperty"
+        class="selectFieldUnit0001__errorMessagesWrapper"
+      >
+        <FieldErrorMessages0001
+          :identifiers="[...identifiers, 'fieldErrorMessages']"
+          :error-messages="item.realtimeErrors"
+        />
+      </div>
+    </template>
   </section>
 </template>
 
@@ -112,18 +115,29 @@ export default Vue.extend({
   }
   .selectFieldUnit0001__mainContentsGroup {
     display: flex;
-    align-items: center;
-    & > li:not(:first-child) {
-      margin-left: 0.5em;
+  }
+  [class^='selectFieldUnit0001__item'] {
+    flex: 1 1 100%;
+    &:not(:first-child) {
+      margin-left: 8px;
     }
   }
-  // [class^='selectFieldUnit0001__item0'] {
-  //   flex: 1 1 100%;
-  // }
-  // .selectFieldUnit0001__item00,
-  // [class^='selectFieldUnit0001__plainText0'] {
-  //   white-space: nowrap;
-  // }
+  .selectFieldUnit0001__itemSubHeading {
+  }
+  .selectFieldUnit0001__itemBody {
+    display: flex;
+    align-items: center;
+  }
+  .selectFieldUnit0001__fieldWrapper {
+    flex: 1 1 100%;
+  }
+  .selectFieldUnit0001__plainTextWrapper {
+    flex: 1 1;
+    white-space: nowrap;
+  }
+  .selectFieldUnit0001__fieldWrapper + .selectFieldUnit0001__plainTextWrapper {
+    margin-left: 8px;
+  }
   .selectFieldUnit0001__descGroup {
     margin-top: 8px;
     padding: 0 4px;

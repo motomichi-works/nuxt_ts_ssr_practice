@@ -15,45 +15,45 @@
     </div>
     <div class="basicFieldUnit0001__body">
       <ul class="basicFieldUnit0001__mainContentsGroup">
-        <template v-for="indexStr in ['01', '02', '03', '04']">
+        <template v-for="(item, index) in items">
           <li
-            v-if="
-              namePropertyObj[`item${indexStr}`] !== undefined ||
-              textColumnContentObj[`item${indexStr}`] !== undefined
-            "
-            :key="`item${indexStr}`"
-            :class="`basicFieldUnit0001__item${indexStr}`"
+            v-if="item.nameProperty !== null || item.plainText !== null"
+            :key="`${item.nameProperty}${index}`"
+            :class="`basicFieldUnit0001__item${index}`"
           >
-            <div v-if="namePropertyObj[`item${indexStr}`] !== undefined">
-              <BasicField0001
-                :identifiers="[...identifiers, `field${indexStr}`]"
-                :namespace="namespace"
-                :field-value-obj="fieldValueObj"
-                :realtime-errors-obj="realtimeErrorsObj"
-                :is-tainted-obj="isTaintedObj"
-                :modifiers="fieldModifiersObj[`item${indexStr}`]"
-                :validator-names-that-depends-on-dynamic-options="
-                  validatorNamesThatDependsOnDynamicOptionsObj[
-                    `item${indexStr}`
-                  ]
-                "
-                :name-property="namePropertyObj[`item${indexStr}`]"
-                :shared-key="sharedKey"
-                :is-disabled="isDisabled"
-                :is-readonly="isReadonly"
-                :placeholder="placeholderObj[`item${indexStr}`]"
-                :maxlength="maxlengthObj[`item${indexStr}`]"
-                :left-icon="leftIconObj[`item${indexStr}`]"
-                :right-icon="rightIconObj[`item${indexStr}`]"
-                @on-blur-field="emitOnBlurField"
-                @on-input-field="emitOnInputField"
+            <div class="basicFieldUnit0001__itemBody">
+              <div
+                v-if="item.nameProperty !== null"
+                class="basicFieldUnit0001__fieldWrapper"
+              >
+                <BasicField0001
+                  :identifiers="[...identifiers, `field${item.nameProperty}`]"
+                  :namespace="namespace"
+                  :field-value-obj="fieldValueObj"
+                  :is-tainted-obj="isTaintedObj"
+                  :realtime-errors="item.realtimeErrors"
+                  :modifiers="item.fieldModifiers"
+                  :validator-names-that-depends-on-dynamic-options="
+                    item.validatorNamesThatDependsOnDynamicOptions
+                  "
+                  :name-property="item.nameProperty"
+                  :shared-key="item.sharedKey"
+                  :is-disabled="item.isDisabled"
+                  :is-readonly="item.isReadonly"
+                  :placeholder="item.placeholder"
+                  :maxlength="item.maxlength"
+                  :left-icon="item.leftIcon"
+                  :right-icon="item.rightIcon"
+                  @on-blur-field="emitOnBlurField"
+                  @on-input-field="emitOnInputField"
+                />
+              </div>
+              <div
+                v-if="item.plainText !== null"
+                class="basicFieldUnit0001__plainTextWrapper"
+                v-text="item.plainText"
               />
             </div>
-            <div
-              v-if="textColumnContentObj[`item${indexStr}`] !== undefined"
-              class="basicFieldUnit0001__plainTextWrapper"
-              v-text="textColumnContentObj[`item${indexStr}`]"
-            />
           </li>
         </template>
       </ul>
@@ -66,15 +66,18 @@
         />
       </ul>
     </div>
-    <div
-      v-if="hasRealtimeErrors"
-      class="basicFieldUnit0001__errorMessagesWrapper"
-    >
-      <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'fieldErrorMessages']"
-        :error-messages="realtimeErrors"
-      />
-    </div>
+    <template v-for="item in items">
+      <div
+        v-if="item.realtimeErrors.length > 0"
+        :key="item.nameProperty"
+        class="basicFieldUnit0001__errorMessagesWrapper"
+      >
+        <FieldErrorMessages0001
+          :identifiers="[...identifiers, 'fieldErrorMessages']"
+          :error-messages="item.realtimeErrors"
+        />
+      </div>
+    </template>
   </section>
 </template>
 
@@ -109,18 +112,29 @@ export default Vue.extend({
   }
   .basicFieldUnit0001__mainContentsGroup {
     display: flex;
-    align-items: center;
-    & > li:not(:first-child) {
-      margin-left: 0.5em;
+  }
+  [class^='basicFieldUnit0001__item'] {
+    flex: 1 1 100%;
+    &:not(:first-child) {
+      margin-left: 8px;
     }
   }
-  // [class^='basicFieldUnit0001__item0'] {
-  //   flex: 1 1 100%;
-  // }
-  // .basicFieldUnit0001__item00,
-  // [class^='basicFieldUnit0001__plainText0'] {
-  //   white-space: nowrap;
-  // }
+  .basicFieldUnit0001__itemSubHeading {
+  }
+  .basicFieldUnit0001__itemBody {
+    display: flex;
+    align-items: center;
+  }
+  .basicFieldUnit0001__fieldWrapper {
+    flex: 1 1 100%;
+  }
+  .basicFieldUnit0001__plainTextWrapper {
+    flex: 1 1;
+    white-space: nowrap;
+  }
+  .basicFieldUnit0001__fieldWrapper + .basicFieldUnit0001__plainTextWrapper {
+    margin-left: 8px;
+  }
   .basicFieldUnit0001__descGroup {
     margin-top: 8px;
     padding: 0 4px;

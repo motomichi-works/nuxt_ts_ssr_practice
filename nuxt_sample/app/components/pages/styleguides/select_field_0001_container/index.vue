@@ -11,7 +11,7 @@
         :identifiers="[...identifiers, 'SelectField0001A']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
-        :realtime-errors-obj="realtimeErrorsObj"
+        :realtime-errors="realtimeErrorsObj['styleguides[select_field_0001_a]']"
         :is-tainted-obj="isTaintedObj"
         :modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"

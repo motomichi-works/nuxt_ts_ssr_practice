@@ -3,24 +3,25 @@ import Vue, { PropType } from 'vue'
 
 // types
 import { Option } from '~/mixins/common/select_field_or_radio_field'
-type OptionsObj = {
-  field01?: Option[]
-  field02?: Option[]
-  field03?: Option[]
-  field04?: Option[]
-}
+
 // Vue.extend
 export default Vue.extend({
   props: {
-    optionsObj: {
-      type: Object as PropType<OptionsObj>,
-      required: false,
-      default: () => ({
-        field01: [{ label: '選択してください', value: '' }],
-        field02: [{ label: '選択してください', value: '' }],
-        field03: [{ label: '選択してください', value: '' }],
-        field04: [{ label: '選択してください', value: '' }],
-      }),
+    items: {
+      type: Array as PropType<
+        {
+          nameProperty: string | null
+          sharedKey: string | null
+          realtimeErrors: string[]
+          options: Option[]
+          fieldModifiers: string[]
+          validatorNamesThatDependsOnDynamicOptions: string[]
+          isDisabled: boolean
+          isReadonly: boolean
+          plainText: string
+        }[]
+      >,
+      required: true,
     },
   },
 })

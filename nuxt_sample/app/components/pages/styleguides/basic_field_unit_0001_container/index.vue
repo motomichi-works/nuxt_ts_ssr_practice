@@ -11,22 +11,24 @@
         :identifiers="[...identifiers, 'basicFieldUnitEmail']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
-        :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
-        :field-modifiers-obj="{ item01: [] }"
-        :validator-names-that-depends-on-dynamic-options-obj="{
-          item01: ['customEmail'],
-        }"
-        :name-property-obj="{
-          item01: 'styleguides[basic_field_unit_0001_email]',
-        }"
-        :shared-key="'styleguides[basic_field_unit_0001_email]'"
-        :is-disabled="false"
-        :is-readonly="false"
-        :placeholder-obj="{ item01: 'placeholder@example.com' }"
-        :maxlength-obj="{ item01: '100' }"
-        :left-icon-obj="{ item01: fa.search }"
-        :right-icon-obj="{ item01: fa.search }"
+        :items="[
+          {
+            nameProperty: 'styleguides[basic_field_unit_0001_email]',
+            sharedKey: 'styleguides[basic_field_unit_0001_email]',
+            realtimeErrors:
+              realtimeErrorsObj['styleguides[basic_field_unit_0001_email]'],
+            placeholder: 'placeholder@example.com',
+            maxlength: '100',
+            leftIcon: fa.search,
+            rightIcon: fa.search,
+            fieldModifiers: [],
+            validatorNamesThatDependsOnDynamicOptions: ['customEmail'],
+            isDisabled: false,
+            isReadonly: false,
+            plainText: 'サンプルテキスト',
+          },
+        ]"
         :descriptions="['例: placeholder@example.com']"
         :heading-text="'メールアドレス'"
         :badge-type="'required'"
@@ -37,22 +39,24 @@
         :identifiers="[...identifiers, 'basicFieldUnitNameKana']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
-        :realtime-errors-obj="realtimeErrorsObj"
         :is-tainted-obj="isTaintedObj"
-        :field-modifiers-obj="{ item01: [] }"
-        :validator-names-that-depends-on-dynamic-options-obj="{
-          item01: ['katakana'],
-        }"
-        :name-property-obj="{
-          item01: 'styleguides[basic_field_unit_0001_name_kana]',
-        }"
-        :shared-key="'styleguides[basic_field_unit_0001_name_kana]'"
-        :is-disabled="false"
-        :is-readonly="false"
-        :placeholder-obj="{ item01: 'サンプル タロウ' }"
-        :maxlength-obj="{ item01: '100' }"
-        :left-icon-obj="{ item01: fa.search }"
-        :right-icon-obj="{ item01: fa.search }"
+        :items="[
+          {
+            nameProperty: 'styleguides[basic_field_unit_0001_name_kana]',
+            sharedKey: 'styleguides[basic_field_unit_0001_name_kana]',
+            realtimeErrors:
+              realtimeErrorsObj['styleguides[basic_field_unit_0001_name_kana]'],
+            placeholder: 'サンプル タロウ',
+            maxlength: '100',
+            leftIcon: fa.search,
+            rightIcon: fa.search,
+            fieldModifiers: [],
+            validatorNamesThatDependsOnDynamicOptions: ['katakana'],
+            isDisabled: false,
+            isReadonly: false,
+            plainText: 'サンプルテキスト',
+          },
+        ]"
         :descriptions="['例: サンプル タロウ']"
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
