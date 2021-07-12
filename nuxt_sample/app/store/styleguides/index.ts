@@ -18,7 +18,7 @@ export const state = () => ({
 })
 export type FieldValueObj = typeof fieldValueObj
 export type RealtimeErrorsObj = typeof realtimeErrorsObj
-export type IsTainted = typeof isTaintedObj
+export type IsTaintedObj = typeof isTaintedObj
 export type StyleguidesState = ReturnType<typeof state>
 
 // getters
@@ -44,7 +44,7 @@ export const mutations: MutationTree<StyleguidesState> = {
   },
   changeIsTainted: (
     state,
-    payload: { key: keyof IsTainted; value: boolean }
+    payload: { key: keyof IsTaintedObj; value: boolean }
   ) => {
     state.isTaintedObj[payload.key] = payload.value
   },

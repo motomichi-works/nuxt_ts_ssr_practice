@@ -38,7 +38,7 @@ import { namespace } from '~/settings/pages/styleguides/index'
 import {
   FieldValueObj,
   RealtimeErrorsObj,
-  IsTainted,
+  IsTaintedObj,
 } from '~/store/styleguides/index'
 
 // import components/pages
@@ -93,7 +93,7 @@ export default Vue.extend({
     realtimeErrorsObj(): RealtimeErrorsObj {
       return this.$store.getters[`${this.namespace}/realtimeErrorsObj`]
     },
-    isTaintedObj(): IsTainted {
+    isTaintedObj(): IsTaintedObj {
       return this.$store.getters[`${this.namespace}/isTaintedObj`]
     },
     components() {
