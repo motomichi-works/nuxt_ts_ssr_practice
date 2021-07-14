@@ -5,6 +5,9 @@ import Vue, { PropType } from 'vue'
 import FieldErrorMessages0001 from '~/components/common/field_error_messages_0001/index.vue'
 import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
+// types
+import { PayloadForOnInputCombinationField } from '~/types/payload_for_on_input_combination_field'
+
 // Vue.extend
 export default Vue.extend({
   components: {
@@ -51,5 +54,19 @@ export default Vue.extend({
     //   const key = this.sharedKey
     //   return (this as any).fieldValueObj[key]
     // },
+  },
+  watch: {
+    combinationFieldValue(value) {
+      const payload: PayloadForOnInputCombinationField = {
+        namespace: '',
+        fieldValueObj: (this as any).fieldValueObj,
+        // isTaintedObj: { [key: string]: boolean }
+        // key: string
+        value,
+        // eventType: 'input'
+        // validatorNamesThatDependsOnDynamicOptions: string[]
+      }
+      ;(this as any).emitOnInputCombinationField(payload)
+    },
   },
 })
