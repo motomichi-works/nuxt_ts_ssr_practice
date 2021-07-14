@@ -14,6 +14,16 @@
       />
     </div>
     <div class="selectFieldUnit0001__body">
+      <div
+        v-if="combinationField.nameProperty !== null"
+        class="selectFieldUnit0001__combinationFieldWrapper"
+      >
+        <input
+          v-model="combinationFieldValue"
+          type="hidden"
+          :name="combinationField.nameProperty"
+        />
+      </div>
       <ul class="selectFieldUnit0001__mainContentsGroup">
         <template v-for="(item, index) in items">
           <li

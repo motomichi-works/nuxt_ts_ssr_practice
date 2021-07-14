@@ -12,6 +12,13 @@ export default Vue.extend({
     FieldHeading0001,
   },
   props: {
+    combinationField: {
+      type: Object as PropType<{
+        nameProperty: string | null
+        value?: string
+      }>,
+      required: true,
+    },
     fieldValueObj: {
       type: Object as PropType<{ [key: string]: string }>,
       required: true,
@@ -37,6 +44,9 @@ export default Vue.extend({
     },
   },
   computed: {
+    combinationFieldValue() {
+      return (this as any).combinationField.value
+    },
     // fieldValue() {
     //   const key = this.sharedKey
     //   return (this as any).fieldValueObj[key]

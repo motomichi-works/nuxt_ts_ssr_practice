@@ -12,6 +12,9 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
+        :combination-field="{
+          nameProperty: null,
+        }"
         :items="[
           {
             nameProperty: 'styleguides[basic_field_unit_0001_email]',
@@ -40,6 +43,11 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
+        :combination-field="{
+          nameProperty:
+            'styleguides[basic_field_unit_0001_name_kana_combination]',
+          value: fieldValueObj['styleguides[basic_field_unit_0001_name_kana]'],
+        }"
         :items="[
           {
             nameProperty: 'styleguides[basic_field_unit_0001_name_kana]',

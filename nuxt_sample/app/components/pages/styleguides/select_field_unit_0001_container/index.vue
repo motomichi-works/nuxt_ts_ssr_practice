@@ -12,6 +12,9 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
+        :combination-field="{
+          nameProperty: null,
+        }"
         :items="[
           {
             nameProperty: 'styleguides[select_field_unit_0001_a]',
