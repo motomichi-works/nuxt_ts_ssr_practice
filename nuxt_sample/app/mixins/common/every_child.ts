@@ -7,10 +7,16 @@ import Vue, { PropType } from 'vue'
 import emitOnInputField from '~/mixins/common/methods/emit_on_input_field'
 import emitOnChangeField from '~/mixins/common/methods/emit_on_change_field'
 import emitOnBlurField from '~/mixins/common/methods/emit_on_blur_field'
+import emitOnInputCombinationField from '~/mixins/common/methods/emit_on_input_combination_field'
 
 // Vue.extend
 export default Vue.extend({
-  mixins: [emitOnInputField, emitOnBlurField, emitOnChangeField],
+  mixins: [
+    emitOnInputField,
+    emitOnBlurField,
+    emitOnChangeField,
+    emitOnInputCombinationField,
+  ],
   props: {
     identifiers: {
       type: Array as PropType<string[]>,

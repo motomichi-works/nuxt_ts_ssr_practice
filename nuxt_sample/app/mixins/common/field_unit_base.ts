@@ -18,7 +18,11 @@ export default Vue.extend({
     combinationField: {
       type: Object as PropType<{
         nameProperty: string | null
+        sharedKey?: string
+        realtimeErrors?: string[]
         value?: string
+        isTainted?: boolean
+        validatorNamesThatDependsOnDynamicOptions?: string[]
       }>,
       required: true,
     },
@@ -50,22 +54,37 @@ export default Vue.extend({
     combinationFieldValue() {
       return (this as any).combinationField.value
     },
+    combinationFieldRealtimeErrors() {
+      const combinationFieldRealtimeErrors: string[] | undefined = (this as any)
+        .combinationField.realtimeErrors
+
+      return combinationFieldRealtimeErrors
+    },
+    isVisibleCombinationFieldRealtimeErrors(): boolean {
+      return (
+        (this as any).combinationFieldRealtimeErrors &&
+        (this as any).combinationFieldRealtimeErrors.length > 0
+      )
+    },
     // fieldValue() {
     //   const key = this.sharedKey
     //   return (this as any).fieldValueObj[key]
     // },
   },
   watch: {
-    combinationFieldValue(value) {
+    combinationFieldValue() {
       const payload: PayloadForOnInputCombinationField = {
-        namespace: '',
+        namespace: (this as any).namespace,
         fieldValueObj: (this as any).fieldValueObj,
-        // isTaintedObj: { [key: string]: boolean }
-        // key: string
-        value,
-        // eventType: 'input'
-        // validatorNamesThatDependsOnDynamicOptions: string[]
+        isTaintedObj: (this as any).isTaintedObj,
+        key: (this as any).combinationField.sharedKey,
+        value: (this as any).combinationField.value,
+        isTainted: (this as any).combinationField.isTainted,
+        eventType: 'input',
+        validatorNamesThatDependsOnDynamicOptions: (this as any)
+          .combinationField.validatorNamesThatDependsOnDynamicOptions,
       }
+
       ;(this as any).emitOnInputCombinationField(payload)
     },
   },

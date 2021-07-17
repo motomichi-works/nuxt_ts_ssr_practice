@@ -21,6 +21,7 @@
         @on-input-field="onInputField"
         @on-change-field="onChangeField"
         @on-blur-field="onBlurField"
+        @on-input-combination-field="onInputCombinationField"
       >
       </component>
     </div>
@@ -60,6 +61,7 @@ import changeIsTainted from '~/mixins/common/methods/change_is_tainted'
 import onInputField from '~/mixins/common/methods/on_input_field'
 import onChangeField from '~/mixins/common/methods/on_change_field'
 import onBlurField from '~/mixins/common/methods/on_blur_field'
+import onInputCombinationField from '~/mixins/common/methods/on_input_combination_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -82,6 +84,7 @@ export default Vue.extend({
     onInputField,
     onChangeField,
     onBlurField,
+    onInputCombinationField,
   ],
   computed: {
     namespace() {

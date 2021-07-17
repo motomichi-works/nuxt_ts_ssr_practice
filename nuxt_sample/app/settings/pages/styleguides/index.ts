@@ -5,7 +5,9 @@ export const namespace = 'styleguides'
 export const sharedKeys = [
   'styleguides[basic_field_0001_a]',
   'styleguides[basic_field_unit_0001_email]',
-  'styleguides[basic_field_unit_0001_name_kana]',
+  'styleguides[basic_field_unit_0001_family_name_kana]',
+  'styleguides[basic_field_unit_0001_given_name_kana]',
+  'styleguides[basic_field_unit_0001_full_name_kana]',
   'styleguides[select_field_0001_a]',
   'styleguides[select_field_unit_0001_a]',
 ] as const

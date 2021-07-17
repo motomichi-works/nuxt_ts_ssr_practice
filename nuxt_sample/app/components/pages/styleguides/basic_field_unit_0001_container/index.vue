@@ -39,37 +39,67 @@
         @on-input-field="emitOnInputField"
       />
       <BasicFieldUnit0001
-        :identifiers="[...identifiers, 'basicFieldUnitNameKana']"
+        :identifiers="[...identifiers, 'basicFieldUnitFullNameKana']"
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
         :combination-field="{
-          nameProperty:
-            'styleguides[basic_field_unit_0001_name_kana_combination]',
-          value: fieldValueObj['styleguides[basic_field_unit_0001_name_kana]'],
+          nameProperty: 'styleguides[basic_field_unit_0001_full_name_kana]',
+          sharedKey: 'styleguides[basic_field_unit_0001_full_name_kana]',
+          realtimeErrors:
+            realtimeErrorsObj[
+              'styleguides[basic_field_unit_0001_full_name_kana]'
+            ],
+          value: `${fieldValueObj['styleguides[basic_field_unit_0001_family_name_kana]']}${fieldValueObj['styleguides[basic_field_unit_0001_given_name_kana]']}`,
+          isTainted:
+            isTaintedObj[
+              'styleguides[basic_field_unit_0001_family_name_kana]'
+            ] &&
+            isTaintedObj['styleguides[basic_field_unit_0001_given_name_kana]'],
+          validatorNamesThatDependsOnDynamicOptions: [],
         }"
         :items="[
           {
-            nameProperty: 'styleguides[basic_field_unit_0001_name_kana]',
-            sharedKey: 'styleguides[basic_field_unit_0001_name_kana]',
+            nameProperty: 'styleguides[basic_field_unit_0001_family_name_kana]',
+            sharedKey: 'styleguides[basic_field_unit_0001_family_name_kana]',
             realtimeErrors:
-              realtimeErrorsObj['styleguides[basic_field_unit_0001_name_kana]'],
-            placeholder: 'サンプル タロウ',
+              realtimeErrorsObj[
+                'styleguides[basic_field_unit_0001_family_name_kana]'
+              ],
+            placeholder: 'ミョウジ',
             maxlength: '100',
-            leftIcon: fa.search,
-            rightIcon: fa.search,
+            leftIcon: null,
+            rightIcon: null,
             fieldModifiers: [],
             validatorNamesThatDependsOnDynamicOptions: ['katakana'],
             isDisabled: false,
             isReadonly: false,
-            plainText: 'サンプルテキスト',
+            plainText: null,
+          },
+          {
+            nameProperty: 'styleguides[basic_field_unit_0001_given_name_kana]',
+            sharedKey: 'styleguides[basic_field_unit_0001_given_name_kana]',
+            realtimeErrors:
+              realtimeErrorsObj[
+                'styleguides[basic_field_unit_0001_given_name_kana]'
+              ],
+            placeholder: 'ナマエ',
+            maxlength: '100',
+            leftIcon: null,
+            rightIcon: null,
+            fieldModifiers: [],
+            validatorNamesThatDependsOnDynamicOptions: ['katakana'],
+            isDisabled: false,
+            isReadonly: false,
+            plainText: null,
           },
         ]"
-        :descriptions="['例: サンプル タロウ']"
+        :descriptions="['全角カナで入力してください。']"
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
+        @on-input-combination-field="emitOnInputCombinationField"
       />
     </div>
   </section>

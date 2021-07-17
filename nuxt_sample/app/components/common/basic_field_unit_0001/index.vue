@@ -88,6 +88,15 @@
         />
       </div>
     </template>
+    <div
+      v-if="isVisibleCombinationFieldRealtimeErrors"
+      class="basicFieldUnit0001__errorMessagesWrapper"
+    >
+      <FieldErrorMessages0001
+        :identifiers="[...identifiers, 'combinationFieldErrorMessages']"
+        :error-messages="combinationFieldRealtimeErrors"
+      />
+    </div>
   </section>
 </template>
 

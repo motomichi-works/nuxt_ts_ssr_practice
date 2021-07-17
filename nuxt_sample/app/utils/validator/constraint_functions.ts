@@ -28,7 +28,7 @@ export default {
       customEmail: {
         label,
         isRequired,
-      } as any,
+      },
     }
   },
   katakana(label: string, isRequired: boolean = true) {
@@ -36,7 +36,15 @@ export default {
       katakana: {
         label,
         isRequired,
-      } as any,
+      },
+    }
+  },
+  fullNameKana(label: string) {
+    return {
+      length: {
+        maximum: 40,
+        tooLong: `^${label}は合計%{count}文字以内で入力してください。`,
+      },
     }
   },
 }

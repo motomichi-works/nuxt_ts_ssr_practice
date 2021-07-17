@@ -17,7 +17,13 @@ export const constraintsBase: ConstraintsBase = {
   'styleguides[basic_field_unit_0001_email]': constraintFunctions.customEmail(
     'メールアドレス'
   ),
-  'styleguides[basic_field_unit_0001_name_kana]': constraintFunctions.katakana(
+  'styleguides[basic_field_unit_0001_family_name_kana]': constraintFunctions.katakana(
+    '姓（カナ）'
+  ),
+  'styleguides[basic_field_unit_0001_given_name_kana]': constraintFunctions.katakana(
+    '名（カナ）'
+  ),
+  'styleguides[basic_field_unit_0001_full_name_kana]': constraintFunctions.fullNameKana(
     'お名前（カナ）'
   ),
   'styleguides[select_field_0001_a]': constraintFunctions.requiredSelectField(
