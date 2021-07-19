@@ -3,6 +3,7 @@ import Vue, { PropType } from 'vue'
 
 // types
 import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
+import { CombinationField } from '~/types/combination_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -49,6 +50,11 @@ export default Vue.extend({
       type: Object as PropType<{ [key: string]: boolean }>,
       required: true,
     },
+    combinationField: {
+      type: Object as PropType<CombinationField>,
+      required: false,
+      default: null,
+    },
   },
   computed: {
     fieldValue() {
@@ -69,6 +75,7 @@ export default Vue.extend({
         eventType: 'blur',
         validatorNamesThatDependsOnDynamicOptions: this
           .validatorNamesThatDependsOnDynamicOptions,
+        combinationField: this.combinationField,
       }
 
       ;(this as any).emitOnBlurField(payload)

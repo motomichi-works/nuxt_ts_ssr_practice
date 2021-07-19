@@ -28,6 +28,10 @@ export default Vue.extend({
         key: payload.key,
         value: validationResult,
       })
+
+      if (payload.combinationField) {
+        console.log('onChangeField combination', payload.combinationField)
+      }
     },
   },
 })

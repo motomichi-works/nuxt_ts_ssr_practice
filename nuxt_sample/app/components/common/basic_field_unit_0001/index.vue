@@ -19,8 +19,8 @@
         class="basicFieldUnit0001__combinationFieldWrapper"
       >
         <input
-          v-model="combinationFieldValue"
           type="hidden"
+          :value="combinationField.value"
           :name="combinationField.nameProperty"
         />
       </div>
@@ -51,6 +51,7 @@
                   :maxlength="item.field.maxlength"
                   :left-icon="item.field.leftIcon"
                   :right-icon="item.field.rightIcon"
+                  :combination-field="combinationField"
                   @on-blur-field="emitOnBlurField"
                   @on-input-field="emitOnInputField"
                 />
@@ -85,15 +86,6 @@
         />
       </div>
     </template>
-    <div
-      v-if="isVisibleCombinationFieldRealtimeErrors"
-      class="basicFieldUnit0001__errorMessagesWrapper"
-    >
-      <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'combinationFieldErrorMessages']"
-        :error-messages="combinationFieldRealtimeErrors"
-      />
-    </div>
   </section>
 </template>
 
@@ -105,17 +97,11 @@ import Vue from 'vue'
 import everyChild from '~/mixins/common/every_child'
 import fieldUnitBase from '~/mixins/common/field_unit_base'
 import basicFieldUnit from '~/mixins/common/basic_field_unit'
-import emitOnInputCombinationField from '~/mixins/common/methods/emit_on_input_combination_field'
 
 // Vue.extend
 export default Vue.extend({
   name: 'BasicFieldUnit0001',
-  mixins: [
-    everyChild,
-    fieldUnitBase,
-    basicFieldUnit,
-    emitOnInputCombinationField,
-  ],
+  mixins: [everyChild, fieldUnitBase, basicFieldUnit],
 })
 </script>
 

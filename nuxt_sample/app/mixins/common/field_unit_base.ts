@@ -6,7 +6,6 @@ import FieldErrorMessages0001 from '~/components/common/field_error_messages_000
 import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // types
-import { PayloadForOnInputCombinationField } from '~/types/payload_for_on_input_combination_field'
 import { CombinationField } from '~/types/combination_field'
 
 // Vue.extend
@@ -18,7 +17,8 @@ export default Vue.extend({
   props: {
     combinationField: {
       type: Object as PropType<CombinationField>,
-      required: true,
+      required: false,
+      default: null,
     },
     fieldValueObj: {
       type: Object as PropType<{ [key: string]: string }>,
@@ -45,41 +45,9 @@ export default Vue.extend({
     },
   },
   computed: {
-    combinationFieldValue() {
-      return (this as any).combinationField.value
-    },
-    combinationFieldRealtimeErrors() {
-      const combinationFieldRealtimeErrors: string[] | undefined = (this as any)
-        .combinationField.realtimeErrors
-
-      return combinationFieldRealtimeErrors
-    },
-    isVisibleCombinationFieldRealtimeErrors(): boolean {
-      return (
-        (this as any).combinationFieldRealtimeErrors &&
-        (this as any).combinationFieldRealtimeErrors.length > 0
-      )
-    },
     // fieldValue() {
     //   const key = this.sharedKey
     //   return (this as any).fieldValueObj[key]
     // },
-  },
-  watch: {
-    combinationFieldValue() {
-      const payload: PayloadForOnInputCombinationField = {
-        namespace: (this as any).namespace,
-        fieldValueObj: (this as any).fieldValueObj,
-        isTaintedObj: (this as any).isTaintedObj,
-        key: (this as any).combinationField.sharedKey,
-        value: (this as any).combinationField.value,
-        isTainted: (this as any).combinationField.isTainted,
-        eventType: 'input',
-        validatorNamesThatDependsOnDynamicOptions: (this as any)
-          .combinationField.validatorNamesThatDependsOnDynamicOptions,
-      }
-
-      ;(this as any).emitOnInputCombinationField(payload)
-    },
   },
 })

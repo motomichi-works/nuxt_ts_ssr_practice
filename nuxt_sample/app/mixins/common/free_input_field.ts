@@ -69,6 +69,7 @@ export default Vue.extend({
           eventType: 'input',
           validatorNamesThatDependsOnDynamicOptions: (this as any)
             .validatorNamesThatDependsOnDynamicOptions,
+          combinationField: (this as any).combinationField,
         }
 
         ;(this as any).emitOnInputField(payload)

@@ -19,8 +19,8 @@
         class="selectFieldUnit0001__combinationFieldWrapper"
       >
         <input
-          v-model="combinationFieldValue"
           type="hidden"
+          :value="combinationField.value"
           :name="combinationField.nameProperty"
         />
       </div>
@@ -48,6 +48,7 @@
                   :is-disabled="item.field.isDisabled"
                   :is-readonly="item.field.isReadonly"
                   :options="item.field.options"
+                  :combination-field="combinationField"
                   @on-blur-field="emitOnBlurField"
                   @on-change-field="emitOnChangeField"
                 />
@@ -96,7 +97,6 @@ import SelectField0001 from '~/components/common/select_field_0001/index.vue'
 import everyChild from '~/mixins/common/every_child'
 import fieldUnitBase from '~/mixins/common/field_unit_base'
 import selectFieldUnitOrRadioFieldUnit from '~/mixins/common/select_field_unit_or_radio_field_unit'
-import emitOnInputCombinationField from '~/mixins/common/methods/emit_on_input_combination_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -104,12 +104,7 @@ export default Vue.extend({
   components: {
     SelectField0001,
   },
-  mixins: [
-    everyChild,
-    fieldUnitBase,
-    selectFieldUnitOrRadioFieldUnit,
-    emitOnInputCombinationField,
-  ],
+  mixins: [everyChild, fieldUnitBase, selectFieldUnitOrRadioFieldUnit],
 })
 </script>
 

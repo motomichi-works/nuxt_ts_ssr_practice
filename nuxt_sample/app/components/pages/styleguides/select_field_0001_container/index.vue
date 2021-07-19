@@ -24,6 +24,7 @@
           { label: '選択肢1', value: 'value1' },
           { label: '選択肢2', value: 'value2' },
         ]"
+        :combination-field="null"
         @on-blur-field="emitOnBlurField"
         @on-change-field="emitOnChangeField"
       />

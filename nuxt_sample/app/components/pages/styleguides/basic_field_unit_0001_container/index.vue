@@ -12,9 +12,7 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
-        :combination-field="{
-          nameProperty: null,
-        }"
+        :combination-field="null"
         :items="[
           {
             field: {
@@ -107,7 +105,6 @@
         :badge-type="'required'"
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
-        @on-input-combination-field="emitOnInputCombinationField"
       />
     </div>
   </section>

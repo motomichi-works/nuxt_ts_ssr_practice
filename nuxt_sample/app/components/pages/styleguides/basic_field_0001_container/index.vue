@@ -23,6 +23,7 @@
         :maxlength="'100'"
         :left-icon="fa.search"
         :right-icon="fa.search"
+        :combination-field="null"
         @on-blur-field="emitOnBlurField"
         @on-input-field="emitOnInputField"
       />
