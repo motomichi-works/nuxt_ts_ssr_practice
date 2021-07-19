@@ -17,19 +17,21 @@
         }"
         :items="[
           {
-            nameProperty: 'styleguides[select_field_unit_0001_a]',
-            sharedKey: 'styleguides[select_field_unit_0001_a]',
-            realtimeErrors:
-              realtimeErrorsObj['styleguides[select_field_unit_0001_a]'],
-            options: [
-              { label: '選択してください', value: '' },
-              { label: 'SelectFieldUnitAの選択肢1', value: 'value1' },
-              { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },
-            ],
-            fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: [],
-            isDisabled: false,
-            isReadonly: false,
+            field: {
+              nameProperty: 'styleguides[select_field_unit_0001_a]',
+              sharedKey: 'styleguides[select_field_unit_0001_a]',
+              realtimeErrors:
+                realtimeErrorsObj['styleguides[select_field_unit_0001_a]'],
+              options: [
+                { label: '選択してください', value: '' },
+                { label: 'SelectFieldUnitAの選択肢1', value: 'value1' },
+                { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },
+              ],
+              fieldModifiers: [],
+              validatorNamesThatDependsOnDynamicOptions: [],
+              isDisabled: false,
+              isReadonly: false,
+            },
             plainText: 'サンプルテキスト',
           },
         ]"

@@ -17,18 +17,20 @@
         }"
         :items="[
           {
-            nameProperty: 'styleguides[basic_field_unit_0001_email]',
-            sharedKey: 'styleguides[basic_field_unit_0001_email]',
-            realtimeErrors:
-              realtimeErrorsObj['styleguides[basic_field_unit_0001_email]'],
-            placeholder: 'placeholder@example.com',
-            maxlength: '100',
-            leftIcon: fa.search,
-            rightIcon: fa.search,
-            fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: ['customEmail'],
-            isDisabled: false,
-            isReadonly: false,
+            field: {
+              nameProperty: 'styleguides[basic_field_unit_0001_email]',
+              sharedKey: 'styleguides[basic_field_unit_0001_email]',
+              realtimeErrors:
+                realtimeErrorsObj['styleguides[basic_field_unit_0001_email]'],
+              placeholder: 'placeholder@example.com',
+              maxlength: '100',
+              leftIcon: fa.search,
+              rightIcon: fa.search,
+              fieldModifiers: [],
+              validatorNamesThatDependsOnDynamicOptions: ['customEmail'],
+              isDisabled: false,
+              isReadonly: false,
+            },
             plainText: 'サンプルテキスト',
           },
         ]"
@@ -60,37 +62,43 @@
         }"
         :items="[
           {
-            nameProperty: 'styleguides[basic_field_unit_0001_family_name_kana]',
-            sharedKey: 'styleguides[basic_field_unit_0001_family_name_kana]',
-            realtimeErrors:
-              realtimeErrorsObj[
-                'styleguides[basic_field_unit_0001_family_name_kana]'
-              ],
-            placeholder: 'ミョウジ',
-            maxlength: '100',
-            leftIcon: null,
-            rightIcon: null,
-            fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: ['katakana'],
-            isDisabled: false,
-            isReadonly: false,
+            field: {
+              nameProperty:
+                'styleguides[basic_field_unit_0001_family_name_kana]',
+              sharedKey: 'styleguides[basic_field_unit_0001_family_name_kana]',
+              realtimeErrors:
+                realtimeErrorsObj[
+                  'styleguides[basic_field_unit_0001_family_name_kana]'
+                ],
+              placeholder: 'ミョウジ',
+              maxlength: '100',
+              leftIcon: null,
+              rightIcon: null,
+              fieldModifiers: [],
+              validatorNamesThatDependsOnDynamicOptions: ['katakana'],
+              isDisabled: false,
+              isReadonly: false,
+            },
             plainText: null,
           },
           {
-            nameProperty: 'styleguides[basic_field_unit_0001_given_name_kana]',
-            sharedKey: 'styleguides[basic_field_unit_0001_given_name_kana]',
-            realtimeErrors:
-              realtimeErrorsObj[
-                'styleguides[basic_field_unit_0001_given_name_kana]'
-              ],
-            placeholder: 'ナマエ',
-            maxlength: '100',
-            leftIcon: null,
-            rightIcon: null,
-            fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: ['katakana'],
-            isDisabled: false,
-            isReadonly: false,
+            field: {
+              nameProperty:
+                'styleguides[basic_field_unit_0001_given_name_kana]',
+              sharedKey: 'styleguides[basic_field_unit_0001_given_name_kana]',
+              realtimeErrors:
+                realtimeErrorsObj[
+                  'styleguides[basic_field_unit_0001_given_name_kana]'
+                ],
+              placeholder: 'ナマエ',
+              maxlength: '100',
+              leftIcon: null,
+              rightIcon: null,
+              fieldModifiers: [],
+              validatorNamesThatDependsOnDynamicOptions: ['katakana'],
+              isDisabled: false,
+              isReadonly: false,
+            },
             plainText: null,
           },
         ]"

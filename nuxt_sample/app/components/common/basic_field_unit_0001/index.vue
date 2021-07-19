@@ -27,39 +27,36 @@
       <ul class="basicFieldUnit0001__mainContentsGroup">
         <template v-for="(item, index) in items">
           <li
-            v-if="item.nameProperty !== null || item.plainText !== null"
-            :key="`${item.nameProperty}${index}`"
+            v-if="item.field || item.plainText"
+            :key="`item${index}`"
             :class="`basicFieldUnit0001__item${index}`"
           >
             <div class="basicFieldUnit0001__itemBody">
-              <div
-                v-if="item.nameProperty !== null"
-                class="basicFieldUnit0001__fieldWrapper"
-              >
+              <div v-if="item.field" class="basicFieldUnit0001__fieldWrapper">
                 <BasicField0001
-                  :identifiers="[...identifiers, `field${item.nameProperty}`]"
+                  :identifiers="[...identifiers, `field${index}`]"
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
-                  :realtime-errors="item.realtimeErrors"
-                  :modifiers="item.fieldModifiers"
+                  :realtime-errors="item.field.realtimeErrors"
+                  :modifiers="item.field.fieldModifiers"
                   :validator-names-that-depends-on-dynamic-options="
-                    item.validatorNamesThatDependsOnDynamicOptions
+                    item.field.validatorNamesThatDependsOnDynamicOptions
                   "
-                  :name-property="item.nameProperty"
-                  :shared-key="item.sharedKey"
-                  :is-disabled="item.isDisabled"
-                  :is-readonly="item.isReadonly"
-                  :placeholder="item.placeholder"
-                  :maxlength="item.maxlength"
-                  :left-icon="item.leftIcon"
-                  :right-icon="item.rightIcon"
+                  :name-property="item.field.nameProperty"
+                  :shared-key="item.field.sharedKey"
+                  :is-disabled="item.field.isDisabled"
+                  :is-readonly="item.field.isReadonly"
+                  :placeholder="item.field.placeholder"
+                  :maxlength="item.field.maxlength"
+                  :left-icon="item.field.leftIcon"
+                  :right-icon="item.field.rightIcon"
                   @on-blur-field="emitOnBlurField"
                   @on-input-field="emitOnInputField"
                 />
               </div>
               <div
-                v-if="item.plainText !== null"
+                v-if="item.plainText"
                 class="basicFieldUnit0001__plainTextWrapper"
                 v-text="item.plainText"
               />
@@ -76,15 +73,15 @@
         />
       </ul>
     </div>
-    <template v-for="item in items">
+    <template v-for="(item, index) in items">
       <div
-        v-if="item.realtimeErrors.length > 0"
-        :key="item.nameProperty"
+        v-if="item.field && item.field.realtimeErrors.length > 0"
+        :key="`item${index}`"
         class="basicFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
           :identifiers="[...identifiers, 'fieldErrorMessages']"
-          :error-messages="item.realtimeErrors"
+          :error-messages="item.field.realtimeErrors"
         />
       </div>
     </template>

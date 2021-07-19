@@ -27,30 +27,27 @@
       <ul class="selectFieldUnit0001__mainContentsGroup">
         <template v-for="(item, index) in items">
           <li
-            v-if="item.nameProperty !== null || item.plainText !== null"
-            :key="`${item.nameProperty}${index}`"
+            v-if="item.field || item.plainText"
+            :key="`item${index}`"
             :class="`selectFieldUnit0001__item${index}`"
           >
             <div class="selectFieldUnit0001__itemBody">
-              <div
-                v-if="item.nameProperty !== null"
-                class="selectFieldUnit0001__fieldWrapper"
-              >
+              <div v-if="item.field" class="selectFieldUnit0001__fieldWrapper">
                 <SelectField0001
-                  :identifiers="[...identifiers, `field${item.nameProperty}`]"
+                  :identifiers="[...identifiers, `field${index}`]"
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
-                  :realtime-errors="item.realtimeErrors"
-                  :modifiers="item.fieldModifiers"
+                  :realtime-errors="item.field.realtimeErrors"
+                  :modifiers="item.field.fieldModifiers"
                   :validator-names-that-depends-on-dynamic-options="
-                    item.validatorNamesThatDependsOnDynamicOptions
+                    item.field.validatorNamesThatDependsOnDynamicOptions
                   "
-                  :name-property="item.nameProperty"
-                  :shared-key="item.sharedKey"
-                  :is-disabled="item.isDisabled"
-                  :is-readonly="item.isReadonly"
-                  :options="item.options"
+                  :name-property="item.field.nameProperty"
+                  :shared-key="item.field.sharedKey"
+                  :is-disabled="item.field.isDisabled"
+                  :is-readonly="item.field.isReadonly"
+                  :options="item.field.options"
                   @on-blur-field="emitOnBlurField"
                   @on-change-field="emitOnChangeField"
                 />
@@ -73,15 +70,15 @@
         />
       </ul>
     </div>
-    <template v-for="item in items">
+    <template v-for="(item, index) in items">
       <div
-        v-if="item.realtimeErrors.length > 0"
-        :key="item.nameProperty"
+        v-if="item.field && item.field.realtimeErrors.length > 0"
+        :key="`item${index}`"
         class="selectFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
           :identifiers="[...identifiers, 'fieldErrorMessages']"
-          :error-messages="item.realtimeErrors"
+          :error-messages="item.field.realtimeErrors"
         />
       </div>
     </template>

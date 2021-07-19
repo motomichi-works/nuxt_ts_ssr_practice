@@ -14,18 +14,20 @@ export default Vue.extend({
     items: {
       type: Array as PropType<
         {
-          nameProperty: string | null
-          sharedKey: string | null
-          realtimeErrors: string[]
-          placeholder: string
-          maxlength: string
-          leftIcon: IconDefinition | null
-          rightIcon: IconDefinition | null
-          fieldModifiers: string[]
-          validatorNamesThatDependsOnDynamicOptions: string[]
-          isDisabled: boolean
-          isReadonly: boolean
-          plainText: string
+          field?: {
+            nameProperty: string
+            sharedKey: string
+            realtimeErrors: string[]
+            placeholder: string
+            maxlength: string
+            leftIcon: IconDefinition | null
+            rightIcon: IconDefinition | null
+            fieldModifiers: string[]
+            validatorNamesThatDependsOnDynamicOptions: string[]
+            isDisabled: boolean
+            isReadonly: boolean
+          }
+          plainText?: string
         }[]
       >,
       required: true,
