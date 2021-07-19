@@ -15,7 +15,7 @@
     </div>
     <div class="selectFieldUnit0001__body">
       <div
-        v-if="combinationField.nameProperty !== null"
+        v-if="combinationField !== null"
         class="selectFieldUnit0001__combinationFieldWrapper"
       >
         <input

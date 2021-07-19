@@ -10,7 +10,7 @@ export default Vue.extend({
     items: {
       type: Array as PropType<
         {
-          field?: {
+          field: {
             nameProperty: string
             sharedKey: string
             realtimeErrors: string[]
@@ -19,8 +19,8 @@ export default Vue.extend({
             validatorNamesThatDependsOnDynamicOptions: string[]
             isDisabled: boolean
             isReadonly: boolean
-          }
-          plainText?: string
+          } | null
+          plainText: string | null
         }[]
       >,
       required: true,

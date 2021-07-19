@@ -17,13 +17,13 @@ export default Vue.extend({
   props: {
     combinationField: {
       type: Object as PropType<{
-        nameProperty: string | null
-        sharedKey?: string
-        realtimeErrors?: string[]
-        value?: string
-        isTainted?: boolean
-        validatorNamesThatDependsOnDynamicOptions?: string[]
-      }>,
+        nameProperty: string
+        sharedKey: string
+        realtimeErrors: string[]
+        value: string
+        isTainted: boolean
+        validatorNamesThatDependsOnDynamicOptions: string[]
+      } | null>,
       required: true,
     },
     fieldValueObj: {
