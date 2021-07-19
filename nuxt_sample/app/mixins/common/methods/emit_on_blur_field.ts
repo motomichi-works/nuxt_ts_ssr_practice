@@ -2,12 +2,12 @@
 import Vue from 'vue'
 
 // types
-import { PayloadForOnBlurField } from '~/types/payload_for_on_blur_field'
+import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
 
 // Vue.extend
 export default Vue.extend({
   methods: {
-    emitOnBlurField(payload: PayloadForOnBlurField) {
+    emitOnBlurField(payload: PayloadForOnInputChangeBlurField) {
       this.$emit('on-blur-field', payload)
     },
   },

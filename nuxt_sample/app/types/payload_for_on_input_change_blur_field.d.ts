@@ -1,12 +1,12 @@
-import { CombinationField } from "~/types/combination_field"
+import { CombinationField } from '~/types/combination_field'
 
-export type PayloadForOnInputField = {
+export type PayloadForOnInputChangeBlurField = {
   namespace: string
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }
   key: string
   value: string
-  eventType: 'input'
+  eventType: 'input' | 'change' | 'blur'
   validatorNamesThatDependsOnDynamicOptions: string[]
   combinationField: CombinationField
 }

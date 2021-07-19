@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
-import { PayloadForOnChangeField } from '~/types/payload_for_on_change_field'
+import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
 export type Option = {
   label: string
   value: string
@@ -41,15 +41,16 @@ export default Vue.extend({
         return (this as any).fieldValue
       },
       set(value: string) {
-        const payload: PayloadForOnChangeField = {
+        const payload: PayloadForOnInputChangeBlurField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
+          isTaintedObj: (this as any).isTaintedObj,
           key: (this as any).sharedKey,
           value,
           eventType: 'change',
           validatorNamesThatDependsOnDynamicOptions: (this as any)
             .validatorNamesThatDependsOnDynamicOptions,
-          combinationField: this.combinationField,
+          combinationField: (this as any).combinationField,
         }
 
         ;(this as any).emitOnChangeField(payload)
