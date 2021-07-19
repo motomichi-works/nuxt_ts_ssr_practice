@@ -7,6 +7,7 @@ import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // types
 import { PayloadForOnInputCombinationField } from '~/types/payload_for_on_input_combination_field'
+import { CombinationField } from '~/types/combination_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -16,14 +17,7 @@ export default Vue.extend({
   },
   props: {
     combinationField: {
-      type: Object as PropType<{
-        nameProperty: string
-        sharedKey: string
-        realtimeErrors: string[]
-        value: string
-        isTainted: boolean
-        validatorNamesThatDependsOnDynamicOptions: string[]
-      } | null>,
+      type: Object as PropType<CombinationField>,
       required: true,
     },
     fieldValueObj: {
