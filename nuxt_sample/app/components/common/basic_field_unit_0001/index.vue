@@ -21,7 +21,7 @@
         <input
           type="hidden"
           :value="combinationField.value"
-          :name="combinationField.nameProperty"
+          :name="combinationField.name"
         />
       </div>
       <ul class="basicFieldUnit0001__mainContentsGroup">
@@ -43,7 +43,7 @@
                   :validator-names-that-depends-on-dynamic-options="
                     item.field.validatorNamesThatDependsOnDynamicOptions
                   "
-                  :name-property="item.field.nameProperty"
+                  :name="item.field.name"
                   :shared-key="item.field.sharedKey"
                   :is-disabled="item.field.isDisabled"
                   :is-readonly="item.field.isReadonly"

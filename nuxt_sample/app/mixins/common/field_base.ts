@@ -18,7 +18,7 @@ export default Vue.extend({
       required: false,
       default: () => [],
     },
-    nameProperty: {
+    name: {
       type: String as PropType<string>,
       required: false,
       default: '',
@@ -71,7 +71,7 @@ export default Vue.extend({
         namespace: (this as any).namespace,
         fieldValueObj: (this as any).fieldValueObj,
         isTaintedObj: (this as any).isTaintedObj,
-        key: this.nameProperty,
+        key: this.name,
         value: target.value,
         eventType: 'blur',
         validatorNamesThatDependsOnDynamicOptions: this

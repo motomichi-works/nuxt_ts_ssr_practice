@@ -8,7 +8,7 @@
       type="text"
       :disabled="isDisabled"
       :readonly="isReadonly"
-      :name="nameProperty"
+      :name="name"
       :placeholder="placeholder"
       :maxlength="maxlength"
       class="basicField0001__field"

@@ -16,7 +16,7 @@
         :items="[
           {
             field: {
-              nameProperty: 'styleguides[select_field_unit_0001_a]',
+              name: 'styleguides[select_field_unit_0001_a]',
               sharedKey: 'styleguides[select_field_unit_0001_a]',
               realtimeErrors:
                 realtimeErrorsObj['styleguides[select_field_unit_0001_a]'],

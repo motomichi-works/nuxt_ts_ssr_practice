@@ -11,7 +11,7 @@ export default Vue.extend({
       type: Array as PropType<
         {
           field: {
-            nameProperty: string
+            name: string
             sharedKey: string
             realtimeErrors: string[]
             options: Option[]

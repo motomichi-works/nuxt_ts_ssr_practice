@@ -16,7 +16,7 @@
         :items="[
           {
             field: {
-              nameProperty: 'styleguides[basic_field_unit_0001_email]',
+              name: 'styleguides[basic_field_unit_0001_email]',
               sharedKey: 'styleguides[basic_field_unit_0001_email]',
               realtimeErrors:
                 realtimeErrorsObj['styleguides[basic_field_unit_0001_email]'],
@@ -44,7 +44,7 @@
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
         :combination-field="{
-          nameProperty: 'styleguides[basic_field_unit_0001_full_name_kana]',
+          name: 'styleguides[basic_field_unit_0001_full_name_kana]',
           sharedKey: 'styleguides[basic_field_unit_0001_full_name_kana]',
           realtimeErrors:
             realtimeErrorsObj[
@@ -71,8 +71,7 @@
         :items="[
           {
             field: {
-              nameProperty:
-                'styleguides[basic_field_unit_0001_family_name_kana]',
+              name: 'styleguides[basic_field_unit_0001_family_name_kana]',
               sharedKey: 'styleguides[basic_field_unit_0001_family_name_kana]',
               realtimeErrors:
                 realtimeErrorsObj[
@@ -91,8 +90,7 @@
           },
           {
             field: {
-              nameProperty:
-                'styleguides[basic_field_unit_0001_given_name_kana]',
+              name: 'styleguides[basic_field_unit_0001_given_name_kana]',
               sharedKey: 'styleguides[basic_field_unit_0001_given_name_kana]',
               realtimeErrors:
                 realtimeErrorsObj[

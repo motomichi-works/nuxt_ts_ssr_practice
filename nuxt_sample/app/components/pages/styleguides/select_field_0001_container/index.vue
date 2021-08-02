@@ -15,7 +15,7 @@
         :is-tainted-obj="isTaintedObj"
         :modifiers="[]"
         :validator-names-that-depends-on-dynamic-options="[]"
-        :name-property="'styleguides[select_field_0001_a]'"
+        :name="'styleguides[select_field_0001_a]'"
         :shared-key="'styleguides[select_field_0001_a]'"
         :is-disabled="false"
         :is-readonly="false"

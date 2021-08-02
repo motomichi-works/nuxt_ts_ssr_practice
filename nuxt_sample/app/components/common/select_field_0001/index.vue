@@ -8,7 +8,7 @@
       v-model="bindValue"
       type="text"
       :disabled="isDisabled"
-      :name="nameProperty"
+      :name="name"
       class="selectField0001__field"
       @blur="onBlur($event)"
     >
