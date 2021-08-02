@@ -45,7 +45,7 @@ export default Vue.extend({
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
           isTaintedObj: (this as any).isTaintedObj,
-          key: (this as any).sharedKey,
+          sharedKey: (this as any).sharedKey,
           value,
           eventType: 'change',
           validatorNamesThatDependsOnDynamicOptions: (this as any)

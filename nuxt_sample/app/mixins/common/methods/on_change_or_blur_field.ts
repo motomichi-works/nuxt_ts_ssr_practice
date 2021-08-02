@@ -17,7 +17,7 @@ export default Vue.extend({
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
       ;(this as any).changeIsTainted({
         namespace: payload.namespace,
-        key: payload.key,
+        sharedKey: payload.sharedKey,
         value: true,
       })
 
@@ -25,7 +25,7 @@ export default Vue.extend({
 
       ;(this as any).changeRealtimeErrors({
         namespace: payload.namespace,
-        key: payload.key,
+        sharedKey: payload.sharedKey,
         value: validationResult,
       })
 

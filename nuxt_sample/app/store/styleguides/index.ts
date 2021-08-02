@@ -32,21 +32,21 @@ export const getters: GetterTree<StyleguidesState, RootState> = {
 export const mutations: MutationTree<StyleguidesState> = {
   changeFieldValue(
     state,
-    payload: { key: keyof FieldValueObj; value: string }
+    payload: { sharedKey: keyof FieldValueObj; value: string }
   ) {
-    state.fieldValueObj[payload.key] = payload.value
+    state.fieldValueObj[payload.sharedKey] = payload.value
   },
   changeRealtimeErrors: (
     state,
-    payload: { key: keyof RealtimeErrorsObj; value: string[] }
+    payload: { sharedKey: keyof RealtimeErrorsObj; value: string[] }
   ) => {
-    state.realtimeErrorsObj[payload.key] = payload.value
+    state.realtimeErrorsObj[payload.sharedKey] = payload.value
   },
   changeIsTainted: (
     state,
-    payload: { key: keyof IsTaintedObj; value: boolean }
+    payload: { sharedKey: keyof IsTaintedObj; value: boolean }
   ) => {
-    state.isTaintedObj[payload.key] = payload.value
+    state.isTaintedObj[payload.sharedKey] = payload.value
   },
 }
 

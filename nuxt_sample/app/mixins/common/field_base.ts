@@ -71,7 +71,7 @@ export default Vue.extend({
         namespace: (this as any).namespace,
         fieldValueObj: (this as any).fieldValueObj,
         isTaintedObj: (this as any).isTaintedObj,
-        key: this.name,
+        sharedKey: this.name,
         value: target.value,
         eventType: 'blur',
         validatorNamesThatDependsOnDynamicOptions: this

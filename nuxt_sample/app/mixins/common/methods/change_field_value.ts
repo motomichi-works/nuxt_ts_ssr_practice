@@ -4,7 +4,7 @@ import Vue from 'vue'
 // types
 type ArgsOfChangeFieldValue = {
   namespace: string
-  key: string
+  sharedKey: string
   value: string
 }
 

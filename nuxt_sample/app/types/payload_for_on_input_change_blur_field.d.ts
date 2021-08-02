@@ -4,7 +4,7 @@ export type PayloadForOnInputChangeBlurField = {
   namespace: string
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }
-  key: string
+  sharedKey: string
   value: string
   eventType: 'input' | 'change' | 'blur'
   validatorNamesThatDependsOnDynamicOptions: string[]
