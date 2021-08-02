@@ -11,7 +11,7 @@ import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_c
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onBlurField(payload: PayloadForOnInputChangeBlurField) {
+    onChangeOrBlurField(payload: PayloadForOnInputChangeBlurField) {
       ;(this as any).changeFieldValue(payload)
 
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
@@ -30,7 +30,7 @@ export default Vue.extend({
       })
 
       if (payload.combinationField) {
-        console.log('onBlurField combination', payload.combinationField)
+        console.log('onChangeOrBlurField combination', payload.combinationField)
       }
     },
   },
