@@ -59,4 +59,18 @@ export default {
 
     return undefined
   },
+  fullNameKana(
+    valueObj: { [key: string]: string },
+    options: any
+  ): string[] | undefined {
+    const joinedValue = valueObj.familyName + valueObj.givenName
+
+    if (joinedValue.length > options.maximum) {
+      return [
+        `${options.label}は合計${options.maximum}文字以内で入力してください。`,
+      ]
+    }
+
+    return undefined
+  },
 }

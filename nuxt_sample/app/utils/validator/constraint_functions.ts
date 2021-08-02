@@ -41,9 +41,9 @@ export default {
   },
   fullNameKana(label: string) {
     return {
-      length: {
+      fullNameKana: {
+        label,
         maximum: 40,
-        tooLong: `^${label}は合計%{count}文字以内で入力してください。`,
       },
     }
   },

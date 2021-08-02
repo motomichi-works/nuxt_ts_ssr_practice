@@ -81,11 +81,22 @@
         class="basicFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
-          :identifiers="[...identifiers, 'fieldErrorMessages']"
+          :identifiers="[...identifiers, `fieldErrorMessages${index}`]"
           :error-messages="item.field.realtimeErrors"
         />
       </div>
     </template>
+    <div
+      v-if="
+        combinationField !== null && combinationField.realtimeErrors.length > 0
+      "
+      class="basicFieldUnit0001__errorMessagesWrapper"
+    >
+      <FieldErrorMessages0001
+        :identifiers="[...identifiers, 'combinationFieldErrorMessages']"
+        :error-messages="combinationField.realtimeErrors"
+      />
+    </div>
   </section>
 </template>
 

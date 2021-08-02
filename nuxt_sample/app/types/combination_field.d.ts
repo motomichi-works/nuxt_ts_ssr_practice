@@ -1,5 +1,6 @@
 export type CombinationField = {
   namespace: string
+  fieldValueObj: { [key: string]: string }
   sharedKey: string
   realtimeErrors: string[]
   value: string

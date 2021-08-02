@@ -3,9 +3,8 @@ import validate from 'validate.js'
 
 type PayloadForValidateSingle = {
   namespace: string
-  fieldValueObj: { [key: string]: string }
   sharedKey: string
-  value: string
+  value: string | { [key: string]: string }
   eventType: 'input' | 'blur' | 'change'
   validatorNamesThatDependsOnDynamicOptions: string[]
 }
