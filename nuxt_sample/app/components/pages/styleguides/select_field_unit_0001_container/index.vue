@@ -12,9 +12,7 @@
         :namespace="namespace"
         :field-value-obj="fieldValueObj"
         :is-tainted-obj="isTaintedObj"
-        :combination-field="{
-          nameProperty: null,
-        }"
+        :combination-field="null"
         :items="[
           {
             field: {

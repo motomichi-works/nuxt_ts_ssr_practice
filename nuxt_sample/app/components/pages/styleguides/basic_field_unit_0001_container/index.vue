@@ -51,6 +51,16 @@
               'styleguides[basic_field_unit_0001_full_name_kana]'
             ],
           value: `${fieldValueObj['styleguides[basic_field_unit_0001_family_name_kana]']}${fieldValueObj['styleguides[basic_field_unit_0001_given_name_kana]']}`,
+          combinationFieldValueObj: {
+            familyName:
+              fieldValueObj[
+                'styleguides[basic_field_unit_0001_family_name_kana]'
+              ],
+            givenName:
+              fieldValueObj[
+                'styleguides[basic_field_unit_0001_given_name_kana]'
+              ],
+          },
           isTainted:
             isTaintedObj[
               'styleguides[basic_field_unit_0001_family_name_kana]'
