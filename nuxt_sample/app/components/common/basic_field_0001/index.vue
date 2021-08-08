@@ -1,7 +1,7 @@
 <template>
   <div :data-joined-identifiers="joinedIdentifiers" :class="classes">
     <div v-if="isVisibleLeftIcon" class="basicField0001__iconWrapper">
-      <fa :icon="leftIcon" />
+      <FontAwesomeIcon :icon="leftIcon" />
     </div>
     <input
       v-model="bindValue"
@@ -15,7 +15,7 @@
       @blur="onBlur($event)"
     />
     <div v-if="isVisibleRightIcon" class="basicField0001__iconWrapper">
-      <fa :icon="rightIcon" />
+      <FontAwesomeIcon :icon="rightIcon" />
     </div>
   </div>
 </template>

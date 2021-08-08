@@ -1,6 +1,7 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // mixins
 import fieldBase from '~/mixins/common/field_base'
@@ -10,6 +11,9 @@ import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_c
 
 // Vue.extend
 export default Vue.extend({
+  components: {
+    FontAwesomeIcon,
+  },
   mixins: [fieldBase],
   props: {
     placeholder: {

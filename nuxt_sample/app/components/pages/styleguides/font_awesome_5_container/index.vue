@@ -7,14 +7,15 @@
       />
     </div>
     <div class="container-0001__body">
-      <fa :icon="fa.search" />
-      <fa :icon="fa.searchPlus" />
+      <FontAwesomeIcon :icon="fa.search" />
+      <FontAwesomeIcon :icon="fa.searchPlus" />
     </div>
   </section>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 // import components/common
@@ -28,6 +29,7 @@ export default Vue.extend({
   name: 'FontAwesome5Container',
   components: {
     Heading0001,
+    FontAwesomeIcon,
   },
   mixins: [everyChild],
   computed: {
