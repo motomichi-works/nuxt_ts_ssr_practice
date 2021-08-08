@@ -4,6 +4,7 @@ import validate from 'validate.js'
 type PayloadForValidateSingle = {
   namespace: string
   sharedKey: string
+  fieldValueObj: { [key: string]: string }
   value: string | { [key: string]: string }
   eventType: 'input' | 'blur' | 'change'
   validatorNamesThatDependsOnDynamicOptions: string[]
