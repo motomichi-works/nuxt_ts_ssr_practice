@@ -10,7 +10,7 @@ type OptionsForMount = {
   store?: any
 }
 
-const createWrapper = (optionsForMount: OptionsForMount) => {
+function createWrapper<T> (Component: T, optionsForMount: OptionsForMount) {
   const wrapper = mount(Component, optionsForMount)
 
   return wrapper
@@ -21,7 +21,7 @@ localVue.use(Vuex)
 
 describe('StyleguidesIndex', () => {
   test('正常にmount完了する', () => {
-    const wrapper = createWrapper({
+    const wrapper = createWrapper(Component, {
       store: createStore(),
       localVue,
     })
