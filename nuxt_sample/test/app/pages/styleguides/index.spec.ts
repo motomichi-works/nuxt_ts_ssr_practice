@@ -12,10 +12,10 @@ localVue.use(Vuex)
 
 describe('StyleguidesIndex', () => {
   test('正常にmount完了する', () => {
-    const activationKeys = [
-      'styleguides',
-    ] as const
-    const optionsForStoreConstructor = createOptionsForStoreConstructor(activationKeys)
+    const activationKeys = ['styleguides'] as const
+    const optionsForStoreConstructor = createOptionsForStoreConstructor(
+      activationKeys
+    )
     const store = new Vuex.Store(optionsForStoreConstructor)
     const wrapper = createWrapper(Component, {
       store,

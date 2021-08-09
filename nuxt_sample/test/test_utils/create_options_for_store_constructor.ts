@@ -1,5 +1,3 @@
-import Vuex from 'vuex'
-
 import {
   state as rootState,
   getters as rootGetters,
@@ -16,7 +14,9 @@ import {
   // @ts-ignore
 } from '@/app/store/styleguides/index.ts'
 
-export function createOptionsForStoreConstructor<T extends readonly string[]>(activationKeys: T) {
+export function createOptionsForStoreConstructor<T extends readonly string[]>(
+  activationKeys: T
+) {
   const allModules = {
     styleguides: {
       namespaced: true,

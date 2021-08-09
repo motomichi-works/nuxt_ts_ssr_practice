@@ -5,7 +5,10 @@ type OptionsForMount = {
   store?: any
 }
 
-export function createWrapper<T> (Component: T, optionsForMount: OptionsForMount) {
+export function createWrapper<T>(
+  Component: T,
+  optionsForMount: OptionsForMount
+) {
   const wrapper = mount(Component, optionsForMount)
 
   return wrapper
