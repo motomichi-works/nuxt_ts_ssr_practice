@@ -3,25 +3,31 @@ import Vuex from 'vuex'
 import Component from '@/app/pages/styleguides/index.vue'
 
 import {
-  state,
-  getters,
-  mutations,
-  actions,
+  state as styleguidesIndexState,
+  getters as styleguidesIndexGetters,
+  mutations as styleguidesIndexMutations,
+  actions as styleguidesIndexActions,
   // @ts-ignore
 } from '@/app/store/styleguides/index.ts'
 
-const createWrapper = () => {
+const createStore = () => {
   const store = new Vuex.Store({
     modules: {
       styleguides: {
         namespaced: true,
-        state,
-        getters,
-        mutations,
-        actions,
+        state: styleguidesIndexState,
+        getters: styleguidesIndexGetters,
+        mutations: styleguidesIndexMutations,
+        actions: styleguidesIndexActions,
       },
     },
   })
+
+  return store
+}
+
+const createWrapper = () => {
+  const store = createStore()
 
   const wrapper = mount(Component, {
     store,
