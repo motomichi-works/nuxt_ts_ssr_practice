@@ -16,11 +16,7 @@ import {
   // @ts-ignore
 } from '@/app/store/styleguides/index.ts'
 
-export const createStore = () => {
-  const keysToActivate = [
-    'styleguides',
-  ] as const
-
+export function createStore<T extends readonly string[]>(activationKeys: T) {
   const allModules = {
     styleguides: {
       namespaced: true,
@@ -33,7 +29,7 @@ export const createStore = () => {
 
   const pickedModules: any = {}
 
-  if (keysToActivate.includes('styleguides')) {
+  if (activationKeys.includes('styleguides')) {
     pickedModules.styleguides = allModules.styleguides
   }
 
