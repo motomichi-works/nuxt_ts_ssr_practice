@@ -16,7 +16,7 @@ import {
   // @ts-ignore
 } from '@/app/store/styleguides/index.ts'
 
-export function createStore<T extends readonly string[]>(activationKeys: T) {
+export function createOptionsForStoreConstructor<T extends readonly string[]>(activationKeys: T) {
   const allModules = {
     styleguides: {
       namespaced: true,
@@ -41,7 +41,5 @@ export function createStore<T extends readonly string[]>(activationKeys: T) {
     modules: pickedModules,
   }
 
-  const store = new Vuex.Store(optionsForStoreConstructor)
-
-  return store
+  return optionsForStoreConstructor
 }
