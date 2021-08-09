@@ -5,13 +5,13 @@ import Component from '@/app/pages/styleguides/index.vue'
 // @ts-ignore
 import { createStore } from '@/test/test_utils/create_store.ts'
 
-const createWrapper = () => {
-  const store = createStore()
+type OptionsForMount = {
+  localVue: any
+  store?: any
+}
 
-  const wrapper = mount(Component, {
-    store,
-    localVue,
-  })
+const createWrapper = (optionsForMount: OptionsForMount) => {
+  const wrapper = mount(Component, optionsForMount)
 
   return wrapper
 }
@@ -21,7 +21,11 @@ localVue.use(Vuex)
 
 describe('StyleguidesIndex', () => {
   test('正常にmount完了する', () => {
-    const wrapper = createWrapper()
+    const wrapper = createWrapper({
+      store: createStore(),
+      localVue,
+    })
+
     expect(wrapper.vm).toBeTruthy()
   })
 })
