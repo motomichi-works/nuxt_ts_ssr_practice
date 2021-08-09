@@ -1,11 +1,9 @@
-import { createLocalVue } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Component from '@/app/pages/styleguides/index.vue'
 
 // @ts-ignore
 import { createOptionsForStoreConstructor } from '@/test/test_utils/create_options_for_store_constructor.ts'
-// @ts-ignore
-import { createWrapper } from '@/test/test_utils/create_wrapper.ts'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -17,7 +15,7 @@ describe('StyleguidesIndex', () => {
       activationKeys
     )
     const store = new Vuex.Store(optionsForStoreConstructor)
-    const wrapper = createWrapper(Component, {
+    const wrapper = mount(Component, {
       store,
       localVue,
     })
