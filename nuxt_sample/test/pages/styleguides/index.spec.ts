@@ -10,10 +10,7 @@ import {
   // @ts-ignore
 } from '@/app/store/styleguides/index.ts'
 
-const localVue = createLocalVue()
-localVue.use(Vuex)
-
-describe('StyleguidesIndex', () => {
+const createWrapper = () => {
   const store = new Vuex.Store({
     modules: {
       styleguides: {
@@ -26,11 +23,20 @@ describe('StyleguidesIndex', () => {
     },
   })
 
+  const wrapper = mount(Component, {
+    store,
+    localVue,
+  })
+
+  return wrapper
+}
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
+
+describe('StyleguidesIndex', () => {
   test('正常にmount完了する', () => {
-    const wrapper = mount(Component, {
-      store,
-      localVue,
-    })
+    const wrapper = createWrapper()
     expect(wrapper.vm).toBeTruthy()
   })
 })
