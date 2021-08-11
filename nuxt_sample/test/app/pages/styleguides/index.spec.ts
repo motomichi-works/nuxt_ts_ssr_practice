@@ -1,5 +1,6 @@
 // node_modulesをimport
 import { createLocalVue, mount } from '@vue/test-utils'
+import flushPromises from 'flush-promises'
 import Vuex from 'vuex'
 
 // Componentをimport
@@ -37,5 +38,31 @@ describe('styleguies', () => {
     const wrapper = createWrapper(store)
 
     expect(wrapper.vm).toBeTruthy()
+  })
+
+  describe('メールアドレスフィールド', () => {
+    test('何も入力せずにblurした場合はエラーメッセージが正しく表示される。', async () => {
+      const store = createStore()
+      const wrapper = createWrapper(store)
+
+      const fieldUnit = wrapper.find(
+        '[data-joined-identifiers="BasicFieldUnit0001Container/basicFieldUnitEmail"]'
+      )
+      const emailField = fieldUnit.find(
+        '[name="styleguides[basic_field_unit_0001_email]"]'
+      )
+
+      // blurイベント発火
+      emailField.trigger('blur')
+      await flushPromises()
+
+      const errorMessagesWrapper = fieldUnit.find(
+        '.basicFieldUnit0001__errorMessagesWrapper'
+      )
+
+      expect(errorMessagesWrapper.text()).toBe(
+        'メールアドレスを入力してください。'
+      )
+    })
   })
 })
