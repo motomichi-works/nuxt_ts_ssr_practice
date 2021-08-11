@@ -33,7 +33,7 @@ function createWrapper(store: any) {
 
 // テストケース
 describe('styleguies', () => {
-  test('正常にmount完了する', () => {
+  test('正常にmount完了する。', () => {
     const store = createStore()
     const wrapper = createWrapper(store)
 
