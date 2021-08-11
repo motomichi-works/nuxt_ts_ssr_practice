@@ -31,7 +31,7 @@ function createWrapper(store: any) {
 }
 
 // テストケース
-describe('StyleguidesIndex', () => {
+describe('styleguies', () => {
   test('正常にmount完了する', () => {
     const store = createStore()
     const wrapper = createWrapper(store)
