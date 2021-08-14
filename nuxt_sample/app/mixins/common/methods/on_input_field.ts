@@ -12,7 +12,7 @@ import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 export default Vue.extend({
   methods: {
     onInputField(payload: PayloadForOnInputField) {
-      ;(this as any).changeFieldValue(payload)
+      ;(this as any).mappedChangeFieldValue(payload)
 
       const isTaintedObj = payload.isTaintedObj
       const sharedKey = payload.sharedKey

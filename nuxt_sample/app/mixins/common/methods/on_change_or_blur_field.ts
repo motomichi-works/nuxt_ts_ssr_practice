@@ -12,7 +12,7 @@ import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_
 export default Vue.extend({
   methods: {
     onChangeOrBlurField(payload: PayloadForOnChangeOrBlurField) {
-      ;(this as any).changeFieldValue(payload)
+      ;(this as any).mappedChangeFieldValue(payload)
 
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
       ;(this as any).changeIsTainted({
@@ -45,7 +45,7 @@ export default Vue.extend({
       validatorNamesThatDependsOnDynamicOptions: string[]
     }) {
       console.log('onChangeOrBlurCombinationField', combinationField)
-      ;(this as any).changeFieldValue(combinationField)
+      ;(this as any).mappedChangeFieldValue(combinationField)
 
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
       ;(this as any).changeIsTainted({

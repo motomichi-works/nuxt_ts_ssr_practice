@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // types
-type ArgsOfChangeFieldValue = {
+type ArgsOfMappedChangeFieldValue = {
   namespace: string
   sharedKey: string
   value: string
@@ -11,7 +11,7 @@ type ArgsOfChangeFieldValue = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    changeFieldValue(args: ArgsOfChangeFieldValue): void {
+    mappedChangeFieldValue(args: ArgsOfMappedChangeFieldValue): void {
       this.$store.commit(`${args.namespace}/changeFieldValue`, args)
     },
   },
