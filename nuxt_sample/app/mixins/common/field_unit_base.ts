@@ -6,7 +6,7 @@ import FieldErrorMessages0001 from '~/components/common/field_error_messages_000
 import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
 
 // types
-import { CombinationField } from '~/types/combination_field'
+import { CombinationFieldForFieldUnitProp } from '~/types/combination_field_for_field_unit_prop'
 
 // Vue.extend
 export default Vue.extend({
@@ -16,7 +16,7 @@ export default Vue.extend({
   },
   props: {
     combinationField: {
-      type: Object as PropType<CombinationField>,
+      type: Object as PropType<CombinationFieldForFieldUnitProp>,
       required: false,
       default: null,
     },
