@@ -1,4 +1,4 @@
-import { CombinationField } from '~/types/combination_field'
+import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
 
 export type PayloadForOnInputField = {
   namespace: string
@@ -8,5 +8,5 @@ export type PayloadForOnInputField = {
   value: string
   eventType: 'input'
   validatorNamesThatDependsOnDynamicOptions: string[]
-  combinationField: CombinationField
+  combinationField: ArgsForOnInputCombinationField | null
 }

@@ -1,11 +1,10 @@
-export type CombinationField = {
+export type ArgsForOnChangeOrBlurCombinationField = {
   namespace: string
   fieldValueObj: { [key: string]: string }
   sharedKey: string
-  realtimeErrors: string[]
   value: string
   combinationFieldValueObj: { [key: string]: string }
   isTainted: boolean
-  eventType: 'input' | 'change' | 'blur'
+  eventType: 'change' | 'blur'
   validatorNamesThatDependsOnDynamicOptions: string[]
-} | null
+}

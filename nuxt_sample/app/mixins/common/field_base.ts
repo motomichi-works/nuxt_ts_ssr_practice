@@ -2,6 +2,7 @@
 import Vue, { PropType } from 'vue'
 
 // types
+import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 
@@ -67,6 +68,22 @@ export default Vue.extend({
   },
   methods: {
     onBlur({ target }: { target: HTMLInputElement }) {
+      const combinationField: ArgsForOnChangeOrBlurCombinationField | null = this
+        .combinationField
+        ? {
+            namespace: this.combinationField.namespace,
+            fieldValueObj: this.combinationField.fieldValueObj,
+            sharedKey: this.combinationField.sharedKey,
+            value: this.combinationField.value,
+            combinationFieldValueObj: this.combinationField
+              .combinationFieldValueObj,
+            isTainted: this.combinationField.isTainted,
+            eventType: 'blur',
+            validatorNamesThatDependsOnDynamicOptions: this.combinationField
+              .validatorNamesThatDependsOnDynamicOptions,
+          }
+        : null
+
       const payload: PayloadForOnChangeOrBlurField = {
         namespace: (this as any).namespace,
         fieldValueObj: (this as any).fieldValueObj,
@@ -76,7 +93,7 @@ export default Vue.extend({
         eventType: 'blur',
         validatorNamesThatDependsOnDynamicOptions: this
           .validatorNamesThatDependsOnDynamicOptions,
-        combinationField: this.combinationField,
+        combinationField,
       }
 
       ;(this as any).emitBlurField(payload)

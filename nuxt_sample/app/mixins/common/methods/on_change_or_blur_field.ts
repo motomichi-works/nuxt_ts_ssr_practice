@@ -6,6 +6,7 @@ import validateSingle from '~/utils/validate_single'
 import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
+import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 
 // Vue.extend
@@ -33,45 +34,36 @@ export default Vue.extend({
         value: validationResult,
       })
 
-      if (payload.combinationField) {
+      if (payload.combinationField !== null) {
         this.onChangeOrBlurCombinationField(payload.combinationField)
       }
     },
-    onChangeOrBlurCombinationField(combinationField: {
-      namespace: string
-      fieldValueObj: { [key: string]: string }
-      sharedKey: string
-      realtimeErrors: string[]
-      value: string
-      combinationFieldValueObj: { [key: string]: string }
-      isTainted: boolean
-      eventType: 'input' | 'change' | 'blur'
-      validatorNamesThatDependsOnDynamicOptions: string[]
-    }) {
-      console.log('onChangeOrBlurCombinationField', combinationField)
+    onChangeOrBlurCombinationField(
+      combinationField: ArgsForOnChangeOrBlurCombinationField
+    ) {
       ;(this as any).mappedChangeFieldValue({
         namespace: combinationField.namespace,
         sharedKey: combinationField.sharedKey,
         value: combinationField.value,
       })
-
-      // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
       ;(this as any).mappedChangeIsTainted({
         namespace: combinationField.namespace,
         sharedKey: combinationField.sharedKey,
-        value: true,
+        value: combinationField.isTainted,
       })
 
       const validationResult = validateSingle(
         {
-          ...combinationField,
-          ...{
-            value: combinationField.combinationFieldValueObj,
-          },
+          namespace: combinationField.namespace,
+          sharedKey: combinationField.sharedKey,
+          fieldValueObj: combinationField.fieldValueObj,
+          value: combinationField.combinationFieldValueObj,
+          eventType: combinationField.eventType,
+          validatorNamesThatDependsOnDynamicOptions:
+            combinationField.validatorNamesThatDependsOnDynamicOptions,
         },
         constraintsBaseOfAll
       )
-
       ;(this as any).mappedChangeRealtimeErrors({
         namespace: combinationField.namespace,
         sharedKey: combinationField.sharedKey,
