@@ -24,7 +24,7 @@
         :left-icon="fa.search"
         :right-icon="fa.search"
         :combination-field="null"
-        @on-blur-field="emitOnBlurField"
+        @blur-field="emitBlurField"
         @on-input-field="emitOnInputField"
       />
     </div>

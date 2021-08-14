@@ -49,7 +49,7 @@
                   :is-readonly="item.field.isReadonly"
                   :options="item.field.options"
                   :combination-field="combinationField"
-                  @on-blur-field="emitOnBlurField"
+                  @blur-field="emitBlurField"
                   @change-field="emitChangeField"
                 />
               </div>

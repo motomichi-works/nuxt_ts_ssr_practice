@@ -24,7 +24,7 @@
           :is-tainted-obj="isTaintedObj"
           @on-input-field="onInputField"
           @change-field="onChangeOrBlurField"
-          @on-blur-field="onChangeOrBlurField"
+          @blur-field="onChangeOrBlurField"
         >
         </component>
       </div>

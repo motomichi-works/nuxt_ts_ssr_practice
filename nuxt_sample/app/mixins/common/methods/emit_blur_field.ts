@@ -7,8 +7,8 @@ import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_
 // Vue.extend
 export default Vue.extend({
   methods: {
-    emitOnBlurField(payload: PayloadForOnChangeOrBlurField) {
-      this.$emit('on-blur-field', payload)
+    emitBlurField(payload: PayloadForOnChangeOrBlurField) {
+      this.$emit('blur-field', payload)
     },
   },
 })

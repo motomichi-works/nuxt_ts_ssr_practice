@@ -52,7 +52,7 @@
                   :left-icon="item.field.leftIcon"
                   :right-icon="item.field.rightIcon"
                   :combination-field="combinationField"
-                  @on-blur-field="emitOnBlurField"
+                  @blur-field="emitBlurField"
                   @on-input-field="emitOnInputField"
                 />
               </div>

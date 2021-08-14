@@ -36,7 +36,7 @@
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"
-        @on-blur-field="emitOnBlurField"
+        @blur-field="emitBlurField"
         @change-field="emitChangeField"
       />
     </div>
