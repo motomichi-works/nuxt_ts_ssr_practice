@@ -1,6 +1,6 @@
 import { CombinationField } from '~/types/combination_field'
 
-export type PayloadForOnInputChangeBlurField = {
+export type PayloadForOnChangeOrBlurField = {
   namespace: string
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }

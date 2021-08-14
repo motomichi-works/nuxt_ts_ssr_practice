@@ -6,12 +6,12 @@ import validateSingle from '~/utils/validate_single'
 import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
-import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
+import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onChangeOrBlurField(payload: PayloadForOnInputChangeBlurField) {
+    onChangeOrBlurField(payload: PayloadForOnChangeOrBlurField) {
       ;(this as any).changeFieldValue(payload)
 
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。

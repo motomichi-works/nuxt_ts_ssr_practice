@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
-import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
+import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 export type Option = {
   label: string
   value: string
@@ -41,7 +41,7 @@ export default Vue.extend({
         return (this as any).fieldValue
       },
       set(value: string) {
-        const payload: PayloadForOnInputChangeBlurField = {
+        const payload: PayloadForOnChangeOrBlurField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
           isTaintedObj: (this as any).isTaintedObj,

@@ -2,7 +2,7 @@
 import Vue, { PropType } from 'vue'
 
 // types
-import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
+import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 import { CombinationField } from '~/types/combination_field'
 
 // Vue.extend
@@ -67,7 +67,7 @@ export default Vue.extend({
   },
   methods: {
     onBlur({ target }: { target: HTMLInputElement }) {
-      const payload: PayloadForOnInputChangeBlurField = {
+      const payload: PayloadForOnChangeOrBlurField = {
         namespace: (this as any).namespace,
         fieldValueObj: (this as any).fieldValueObj,
         isTaintedObj: (this as any).isTaintedObj,
