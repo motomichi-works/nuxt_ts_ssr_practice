@@ -56,7 +56,7 @@ import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_
 import everyPage from '~/mixins/common/every_page'
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'
 import mappedChangeRealtimeErrors from '~/mixins/common/methods/mapped_change_realtime_errors'
-import changeIsTainted from '~/mixins/common/methods/change_is_tainted'
+import mappedChangeIsTainted from '~/mixins/common/methods/mapped_change_is_tainted'
 import onInputField from '~/mixins/common/methods/on_input_field'
 import onChangeOrBlurField from '~/mixins/common/methods/on_change_or_blur_field'
 
@@ -77,7 +77,7 @@ export default Vue.extend({
     everyPage,
     mappedChangeFieldValue,
     mappedChangeRealtimeErrors,
-    changeIsTainted,
+    mappedChangeIsTainted,
     onInputField,
     onChangeOrBlurField,
   ],
