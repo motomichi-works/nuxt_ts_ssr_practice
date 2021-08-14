@@ -3,7 +3,7 @@ import Vue, { PropType } from 'vue'
 
 // types
 import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
-import { CombinationField } from '~/types/combination_field'
+import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 
 // Vue.extend
 export default Vue.extend({
@@ -51,7 +51,7 @@ export default Vue.extend({
       required: true,
     },
     combinationField: {
-      type: Object as PropType<CombinationField>,
+      type: Object as PropType<CombinationFieldForFieldProp>,
       required: false,
       default: null,
     },
