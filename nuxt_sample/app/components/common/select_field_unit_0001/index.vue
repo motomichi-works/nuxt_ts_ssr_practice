@@ -50,7 +50,7 @@
                   :options="item.field.options"
                   :combination-field="combinationField"
                   @on-blur-field="emitOnBlurField"
-                  @on-change-field="emitOnChangeField"
+                  @change-field="emitChangeField"
                 />
               </div>
               <div

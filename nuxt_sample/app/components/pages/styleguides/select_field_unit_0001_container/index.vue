@@ -37,7 +37,7 @@
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"
         @on-blur-field="emitOnBlurField"
-        @on-change-field="emitOnChangeField"
+        @change-field="emitChangeField"
       />
     </div>
   </section>

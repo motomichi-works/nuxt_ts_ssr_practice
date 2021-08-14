@@ -23,7 +23,7 @@
           :realtime-errors-obj="realtimeErrorsObj"
           :is-tainted-obj="isTaintedObj"
           @on-input-field="onInputField"
-          @on-change-field="onChangeOrBlurField"
+          @change-field="onChangeOrBlurField"
           @on-blur-field="onChangeOrBlurField"
         >
         </component>
