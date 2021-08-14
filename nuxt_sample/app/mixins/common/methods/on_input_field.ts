@@ -6,12 +6,12 @@ import validateSingle from '~/utils/validate_single'
 import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
-import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
+import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onInputField(payload: PayloadForOnInputChangeBlurField) {
+    onInputField(payload: PayloadForOnInputField) {
       ;(this as any).changeFieldValue(payload)
 
       const isTaintedObj = payload.isTaintedObj

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
-import { PayloadForOnInputChangeBlurField } from '~/types/payload_for_on_input_change_blur_field'
+import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -64,7 +64,7 @@ export default Vue.extend({
         return (this as any).fieldValue
       },
       set(value: string) {
-        const payload: PayloadForOnInputChangeBlurField = {
+        const payload: PayloadForOnInputField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
           isTaintedObj: (this as any).isTaintedObj,
