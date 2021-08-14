@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // types
-type ArgsOfChangeIsTainted = {
+type ArgsForChangeIsTainted = {
   namespace: string
   sharedKey: string
   value: boolean
@@ -11,7 +11,7 @@ type ArgsOfChangeIsTainted = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    mappedChangeIsTainted(args: ArgsOfChangeIsTainted): void {
+    mappedChangeIsTainted(args: ArgsForChangeIsTainted): void {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,

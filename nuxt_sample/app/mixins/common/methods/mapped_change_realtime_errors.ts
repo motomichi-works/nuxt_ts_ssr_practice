@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // types
-type ArgsOfMappedChangeRealtimeErrors = {
+type ArgsForMappedChangeRealtimeErrors = {
   namespace: string
   sharedKey: string
   value: string[]
@@ -11,7 +11,7 @@ type ArgsOfMappedChangeRealtimeErrors = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    mappedChangeRealtimeErrors(args: ArgsOfMappedChangeRealtimeErrors): void {
+    mappedChangeRealtimeErrors(args: ArgsForMappedChangeRealtimeErrors): void {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,
