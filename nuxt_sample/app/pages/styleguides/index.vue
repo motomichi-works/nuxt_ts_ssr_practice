@@ -1,28 +1,36 @@
 <template>
   <div :data-joined-identifiers="joinedIdentifiers" class="l-contentsType0001">
-    <div class="l-contentsType0001__headingWrapper">
-      <Heading0001
-        :identifiers="[...identifiers, 'Heading0001']"
-        text="styleguides/index.vue"
-        :modifier-classes="['heading0001--Lv1']"
-        :tag-name="'h1'"
-      />
+    <div class="l-contentsType0001__headerWrapper">
+      <Header0001 :identifiers="[...identifiers, 'Header0001']" />
     </div>
-    <div class="l-contentsType0001__body">
-      <component
-        :is="component.name"
-        v-for="component in components"
-        :key="component.identifiers.join('/')"
-        :identifiers="component.identifiers"
-        :namespace="namespace"
-        :field-value-obj="fieldValueObj"
-        :realtime-errors-obj="realtimeErrorsObj"
-        :is-tainted-obj="isTaintedObj"
-        @on-input-field="onInputField"
-        @on-change-field="onChangeOrBlurField"
-        @on-blur-field="onChangeOrBlurField"
-      >
-      </component>
+    <div class="l-contentsType0001__contentsWrapper">
+      <div class="l-contentsType0001__headingWrapper">
+        <Heading0001
+          :identifiers="[...identifiers, 'Heading0001']"
+          text="styleguides/index.vue"
+          :modifier-classes="['heading0001--Lv1']"
+          :tag-name="'h1'"
+        />
+      </div>
+      <div class="l-contentsType0001__body">
+        <component
+          :is="component.name"
+          v-for="component in components"
+          :key="component.identifiers.join('/')"
+          :identifiers="component.identifiers"
+          :namespace="namespace"
+          :field-value-obj="fieldValueObj"
+          :realtime-errors-obj="realtimeErrorsObj"
+          :is-tainted-obj="isTaintedObj"
+          @on-input-field="onInputField"
+          @on-change-field="onChangeOrBlurField"
+          @on-blur-field="onChangeOrBlurField"
+        >
+        </component>
+      </div>
+    </div>
+    <div class="l-contentsType0001__footerWrapper">
+      <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
     </div>
   </div>
 </template>

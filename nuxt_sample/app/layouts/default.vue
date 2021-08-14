@@ -1,14 +1,6 @@
 <template>
   <div :data-joined-identifiers="joinedIdentifiers" class="l-bodyInner0001">
-    <div class="l-bodyInner0001__headerWrapper">
-      <Header0001 :identifiers="[...identifiers, 'Header0001']" />
-    </div>
-    <div class="l-bodyInner0001__contentsWrapper">
-      <Nuxt />
-    </div>
-    <div class="l-bodyInner0001__footerWrapper">
-      <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
-    </div>
+    <Nuxt />
   </div>
 </template>
 
