@@ -12,7 +12,12 @@ type ArgsOfMappedChangeRealtimeErrors = {
 export default Vue.extend({
   methods: {
     mappedChangeRealtimeErrors(args: ArgsOfMappedChangeRealtimeErrors): void {
-      this.$store.commit(`${args.namespace}/changeRealtimeErrors`, args)
+      const payload = {
+        sharedKey: args.sharedKey,
+        value: args.value,
+      }
+
+      this.$store.commit(`${args.namespace}/changeRealtimeErrors`, payload)
     },
   },
 })

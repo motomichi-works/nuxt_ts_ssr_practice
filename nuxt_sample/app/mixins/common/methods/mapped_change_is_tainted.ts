@@ -12,7 +12,12 @@ type ArgsOfChangeIsTainted = {
 export default Vue.extend({
   methods: {
     mappedChangeIsTainted(args: ArgsOfChangeIsTainted): void {
-      this.$store.commit(`${args.namespace}/changeIsTainted`, args)
+      const payload = {
+        sharedKey: args.sharedKey,
+        value: args.value,
+      }
+
+      this.$store.commit(`${args.namespace}/changeIsTainted`, payload)
     },
   },
 })

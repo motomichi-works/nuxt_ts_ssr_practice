@@ -12,7 +12,12 @@ type ArgsOfMappedChangeFieldValue = {
 export default Vue.extend({
   methods: {
     mappedChangeFieldValue(args: ArgsOfMappedChangeFieldValue): void {
-      this.$store.commit(`${args.namespace}/changeFieldValue`, args)
+      const payload = {
+        sharedKey: args.sharedKey,
+        value: args.value,
+      }
+
+      this.$store.commit(`${args.namespace}/changeFieldValue`, payload)
     },
   },
 })
