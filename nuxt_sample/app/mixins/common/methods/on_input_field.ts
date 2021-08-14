@@ -28,7 +28,7 @@ export default Vue.extend({
         ? validateSingle(payload, constraintsBaseOfAll)
         : []
 
-      ;(this as any).changeRealtimeErrors({
+      ;(this as any).mappedChangeRealtimeErrors({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: validationResult,

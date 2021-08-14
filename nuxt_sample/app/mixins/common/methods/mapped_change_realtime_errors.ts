@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // types
-type ArgsOfChangeRealtimeErrors = {
+type ArgsOfMappedChangeRealtimeErrors = {
   namespace: string
   sharedKey: string
   value: string[]
@@ -11,7 +11,7 @@ type ArgsOfChangeRealtimeErrors = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    changeRealtimeErrors(args: ArgsOfChangeRealtimeErrors): void {
+    mappedChangeRealtimeErrors(args: ArgsOfMappedChangeRealtimeErrors): void {
       this.$store.commit(`${args.namespace}/changeRealtimeErrors`, args)
     },
   },

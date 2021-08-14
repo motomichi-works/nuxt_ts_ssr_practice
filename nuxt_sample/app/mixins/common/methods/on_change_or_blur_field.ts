@@ -27,7 +27,7 @@ export default Vue.extend({
 
       const validationResult = validateSingle(payload, constraintsBaseOfAll)
 
-      ;(this as any).changeRealtimeErrors({
+      ;(this as any).mappedChangeRealtimeErrors({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: validationResult,
@@ -72,7 +72,7 @@ export default Vue.extend({
         constraintsBaseOfAll
       )
 
-      ;(this as any).changeRealtimeErrors({
+      ;(this as any).mappedChangeRealtimeErrors({
         namespace: combinationField.namespace,
         sharedKey: combinationField.sharedKey,
         value: validationResult,
