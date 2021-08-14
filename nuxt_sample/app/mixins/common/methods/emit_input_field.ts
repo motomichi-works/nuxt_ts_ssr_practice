@@ -7,8 +7,8 @@ import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 // Vue.extend
 export default Vue.extend({
   methods: {
-    emitOnInputField(payload: PayloadForOnInputField) {
-      this.$emit('on-input-field', payload)
+    emitInputField(payload: PayloadForOnInputField) {
+      this.$emit('input-field', payload)
     },
   },
 })

@@ -36,7 +36,7 @@
         :heading-text="'メールアドレス'"
         :badge-type="'required'"
         @blur-field="emitBlurField"
-        @on-input-field="emitOnInputField"
+        @input-field="emitInputField"
       />
       <BasicFieldUnit0001
         :identifiers="[...identifiers, 'basicFieldUnitFullNameKana']"
@@ -113,7 +113,7 @@
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
         @blur-field="emitBlurField"
-        @on-input-field="emitOnInputField"
+        @input-field="emitInputField"
       />
     </div>
   </section>

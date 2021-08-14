@@ -22,7 +22,7 @@
           :field-value-obj="fieldValueObj"
           :realtime-errors-obj="realtimeErrorsObj"
           :is-tainted-obj="isTaintedObj"
-          @on-input-field="onInputField"
+          @input-field="onInputField"
           @change-field="onChangeOrBlurField"
           @blur-field="onChangeOrBlurField"
         >
