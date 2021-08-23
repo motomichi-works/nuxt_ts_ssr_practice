@@ -20,7 +20,7 @@
       >
         <input
           type="hidden"
-          :value="combinationField.value"
+          :value="fieldValueObj[combinationField.sharedKey]"
           :name="combinationField.name"
         />
       </div>
@@ -38,7 +38,10 @@
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
-                  :has-realtime-errors="item.field.realtimeErrors.length > 0"
+                  :has-realtime-errors="
+                    item.field.realtimeErrors.length > 0 ||
+                    hasCombinationFieldRealtimeErrors
+                  "
                   :modifiers="item.field.fieldModifiers"
                   :validator-names-that-depends-on-dynamic-options="
                     item.field.validatorNamesThatDependsOnDynamicOptions
@@ -54,7 +57,7 @@
                 />
               </div>
               <div
-                v-if="item.plainText !== null"
+                v-if="item.plainText"
                 class="selectFieldUnit0001__plainTextWrapper"
                 v-text="item.plainText"
               />
@@ -78,11 +81,20 @@
         class="selectFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
-          :identifiers="[...identifiers, 'fieldErrorMessages']"
+          :identifiers="[...identifiers, `fieldErrorMessages${index}`]"
           :error-messages="item.field.realtimeErrors"
         />
       </div>
     </template>
+    <div
+      v-if="hasCombinationFieldRealtimeErrors"
+      class="basicFieldUnit0001__errorMessagesWrapper"
+    >
+      <FieldErrorMessages0001
+        :identifiers="[...identifiers, 'combinationFieldErrorMessages']"
+        :error-messages="combinationField.realtimeErrors"
+      />
+    </div>
   </section>
 </template>
 
