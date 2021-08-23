@@ -74,4 +74,14 @@ export default {
 
     return undefined
   },
+  selectFieldUnit0001BCombinationSample(
+    value: string,
+    options: any
+  ): string[] | undefined {
+    if (value === 'value1value1') {
+      return [`${options.label}は選択できない組み合わせです。`]
+    }
+
+    return undefined
+  },
 }

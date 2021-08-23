@@ -10,4 +10,7 @@ export const sharedKeys = [
   'styleguides[basic_field_unit_0001_full_name_kana]',
   'styleguides[select_field_0001_a]',
   'styleguides[select_field_unit_0001_a]',
+  'styleguides[select_field_unit_0001_b_01]',
+  'styleguides[select_field_unit_0001_b_02]',
+  'styleguides[select_field_unit_0001_b_combination_sample]',
 ] as const

@@ -88,7 +88,7 @@
     </template>
     <div
       v-if="hasCombinationFieldRealtimeErrors"
-      class="basicFieldUnit0001__errorMessagesWrapper"
+      class="selectFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
         :identifiers="[...identifiers, 'combinationFieldErrorMessages']"

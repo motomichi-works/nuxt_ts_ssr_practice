@@ -39,6 +39,70 @@
         @blur-field="emitBlurField"
         @change-field="emitChangeField"
       />
+      <SelectFieldUnit0001
+        :identifiers="[...identifiers, 'SelectFieldUnit0001B']"
+        :namespace="namespace"
+        :field-value-obj="fieldValueObj"
+        :is-tainted-obj="isTaintedObj"
+        :combination-field="{
+          name: 'styleguides[select_field_unit_0001_b_combination_sample]',
+          sharedKey: 'styleguides[select_field_unit_0001_b_combination_sample]',
+          combinationSharedKeys: [
+            'styleguides[select_field_unit_0001_b_01]',
+            'styleguides[select_field_unit_0001_b_02]',
+          ],
+          realtimeErrors:
+            realtimeErrorsObj[
+              'styleguides[select_field_unit_0001_b_combination_sample]'
+            ],
+          validatorNamesThatDependsOnDynamicOptions: [
+            'selectFieldUnit0001BCombinationSample',
+          ],
+        }"
+        :items="[
+          {
+            field: {
+              name: 'styleguides[select_field_unit_0001_b_01]',
+              sharedKey: 'styleguides[select_field_unit_0001_b_01]',
+              realtimeErrors:
+                realtimeErrorsObj['styleguides[select_field_unit_0001_b_01]'],
+              options: [
+                { label: '選択してください', value: '' },
+                { label: 'SelectFieldUnitB01の選択肢1', value: 'value1' },
+                { label: 'SelectFieldUnitB01の選択肢2', value: 'value2' },
+              ],
+              fieldModifiers: [],
+              validatorNamesThatDependsOnDynamicOptions: [],
+              isDisabled: false,
+              isReadonly: false,
+            },
+            plainText: 'サンプルテキスト',
+          },
+          {
+            field: {
+              name: 'styleguides[select_field_unit_0001_b_02]',
+              sharedKey: 'styleguides[select_field_unit_0001_b_02]',
+              realtimeErrors:
+                realtimeErrorsObj['styleguides[select_field_unit_0001_b_02]'],
+              options: [
+                { label: '選択してください', value: '' },
+                { label: 'SelectFieldUnitB02の選択肢1', value: 'value1' },
+                { label: 'SelectFieldUnitB02の選択肢2', value: 'value2' },
+              ],
+              fieldModifiers: [],
+              validatorNamesThatDependsOnDynamicOptions: [],
+              isDisabled: false,
+              isReadonly: false,
+            },
+            plainText: 'サンプルテキスト',
+          },
+        ]"
+        :descriptions="['説明文1', '説明文2']"
+        :heading-text="'セレクトフィールドユニット0001B'"
+        :badge-type="'required'"
+        @blur-field="emitBlurField"
+        @change-field="emitChangeField"
+      />
     </div>
   </section>
 </template>

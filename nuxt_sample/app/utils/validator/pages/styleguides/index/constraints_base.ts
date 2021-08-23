@@ -32,4 +32,13 @@ export const constraintsBase: ConstraintsBase = {
   'styleguides[select_field_unit_0001_a]': constraintFunctions.requiredSelectField(
     'セレクトフィールドユニット0001A'
   ),
+  'styleguides[select_field_unit_0001_b_01]': constraintFunctions.requiredSelectField(
+    'セレクトフィールドユニット0001B01'
+  ),
+  'styleguides[select_field_unit_0001_b_02]': constraintFunctions.requiredSelectField(
+    'セレクトフィールドユニット0001B02'
+  ),
+  'styleguides[select_field_unit_0001_b_combination_sample]': constraintFunctions.selectFieldUnit0001BCombinationSample(
+    'セレクトフィールドユニット0001B'
+  ),
 }

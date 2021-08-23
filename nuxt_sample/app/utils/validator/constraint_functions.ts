@@ -47,4 +47,11 @@ export default {
       },
     }
   },
+  selectFieldUnit0001BCombinationSample(label: string) {
+    return {
+      selectFieldUnit0001BCombinationSample: {
+        label,
+      },
+    }
+  },
 }
