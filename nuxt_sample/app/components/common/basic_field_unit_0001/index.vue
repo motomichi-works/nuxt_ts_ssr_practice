@@ -38,7 +38,10 @@
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
-                  :realtime-errors="item.field.realtimeErrors"
+                  :has-realtime-errors="
+                    item.field.realtimeErrors.length > 0 ||
+                    hasCombinationFieldRealtimeErrors
+                  "
                   :modifiers="item.field.fieldModifiers"
                   :validator-names-that-depends-on-dynamic-options="
                     item.field.validatorNamesThatDependsOnDynamicOptions
@@ -87,9 +90,7 @@
       </div>
     </template>
     <div
-      v-if="
-        combinationField !== null && combinationField.realtimeErrors.length > 0
-      "
+      v-if="hasCombinationFieldRealtimeErrors"
       class="basicFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001

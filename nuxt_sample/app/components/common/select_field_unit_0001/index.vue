@@ -38,7 +38,7 @@
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
-                  :realtime-errors="item.field.realtimeErrors"
+                  :has-realtime-errors="item.field.realtimeErrors.length > 0"
                   :modifiers="item.field.fieldModifiers"
                   :validator-names-that-depends-on-dynamic-options="
                     item.field.validatorNamesThatDependsOnDynamicOptions

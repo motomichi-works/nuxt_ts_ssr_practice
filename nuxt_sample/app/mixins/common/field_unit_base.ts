@@ -45,9 +45,11 @@ export default Vue.extend({
     },
   },
   computed: {
-    // fieldValue() {
-    //   const key = this.sharedKey
-    //   return (this as any).fieldValueObj[key]
-    // },
+    hasCombinationFieldRealtimeErrors() {
+      return (
+        this.combinationField !== null &&
+        (this as any).combinationField.realtimeErrors.length > 0
+      )
+    },
   },
 })
