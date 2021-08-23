@@ -41,23 +41,35 @@ export default Vue.extend({
     onChangeOrBlurCombinationField(
       combinationField: ArgsForOnChangeOrBlurCombinationField
     ) {
+      const sharedKey = combinationField.sharedKey
+      const value = combinationField.combinationSharedKeys
+        .map((key) => {
+          return combinationField.fieldValueObj[key]
+        })
+        .join('')
+      const isTainted = combinationField.combinationSharedKeys
+        .map((key) => {
+          return combinationField.isTaintedObj[key]
+        })
+        .every((element) => element)
+
       ;(this as any).mappedChangeFieldValue({
         namespace: combinationField.namespace,
-        sharedKey: combinationField.sharedKey,
-        value: combinationField.value,
+        sharedKey,
+        value,
       })
       ;(this as any).mappedChangeIsTainted({
         namespace: combinationField.namespace,
-        sharedKey: combinationField.sharedKey,
-        value: combinationField.isTainted,
+        sharedKey,
+        value: isTainted,
       })
 
       const validationResult = validateSingle(
         {
           namespace: combinationField.namespace,
-          sharedKey: combinationField.sharedKey,
+          sharedKey,
           fieldValueObj: combinationField.fieldValueObj,
-          value: combinationField.combinationFieldValueObj,
+          value,
           eventType: combinationField.eventType,
           validatorNamesThatDependsOnDynamicOptions:
             combinationField.validatorNamesThatDependsOnDynamicOptions,
@@ -66,7 +78,7 @@ export default Vue.extend({
       )
       ;(this as any).mappedChangeRealtimeErrors({
         namespace: combinationField.namespace,
-        sharedKey: combinationField.sharedKey,
+        sharedKey,
         value: validationResult,
       })
     },

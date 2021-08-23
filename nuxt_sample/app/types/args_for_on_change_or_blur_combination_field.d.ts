@@ -1,10 +1,9 @@
 export type ArgsForOnChangeOrBlurCombinationField = {
   namespace: string
-  fieldValueObj: { [key: string]: string }
   sharedKey: string
-  value: string
-  combinationFieldValueObj: { [key: string]: string }
-  isTainted: boolean
+  combinationSharedKeys: string[]
+  fieldValueObj: { [key: string]: string }
+  isTaintedObj: { [key: string]: boolean }
   eventType: 'change' | 'blur'
   validatorNamesThatDependsOnDynamicOptions: string[]
 }

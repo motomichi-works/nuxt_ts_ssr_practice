@@ -71,13 +71,11 @@ export default Vue.extend({
       const combinationField: ArgsForOnChangeOrBlurCombinationField | null = this
         .combinationField
         ? {
-            namespace: this.combinationField.namespace,
-            fieldValueObj: this.combinationField.fieldValueObj,
+            namespace: (this as any).namespace,
             sharedKey: this.combinationField.sharedKey,
-            value: this.combinationField.value,
-            combinationFieldValueObj: this.combinationField
-              .combinationFieldValueObj,
-            isTainted: this.combinationField.isTainted,
+            combinationSharedKeys: this.combinationField.combinationSharedKeys,
+            fieldValueObj: this.fieldValueObj,
+            isTaintedObj: this.isTaintedObj,
             eventType: 'blur',
             validatorNamesThatDependsOnDynamicOptions: this.combinationField
               .validatorNamesThatDependsOnDynamicOptions,

@@ -1,11 +1,9 @@
 export type ArgsForOnInputCombinationField = {
   namespace: string
-  fieldValueObj: { [key: string]: string }
   sharedKey: string
-  realtimeErrors: string[]
-  value: string
-  combinationFieldValueObj: { [key: string]: string }
-  isTainted: boolean
+  combinationSharedKeys: string[]
+  fieldValueObj: { [key: string]: string }
+  isTaintedObj: { [key: string]: boolean }
   eventType: 'input'
   validatorNamesThatDependsOnDynamicOptions: string[]
 }

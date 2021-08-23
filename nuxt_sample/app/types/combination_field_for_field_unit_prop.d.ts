@@ -1,11 +1,7 @@
 export type CombinationFieldForFieldUnitProp = {
-  namespace: string
-  fieldValueObj: { [key: string]: string }
-  name: string
   sharedKey: string
-  realtimeErrors: string[]
-  value: string
-  combinationFieldValueObj: { [key: string]: string }
-  isTainted: boolean
+  combinationSharedKeys: string[]
   validatorNamesThatDependsOnDynamicOptions: string[]
+  name: string
+  realtimeErrors: string[]
 } | null

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
+import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
 import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
@@ -64,6 +65,21 @@ export default Vue.extend({
         return (this as any).fieldValue
       },
       set(value: string) {
+        const combinationField: ArgsForOnInputCombinationField | null = (this as any)
+          .combinationField
+          ? {
+              namespace: (this as any).namespace,
+              sharedKey: (this as any).combinationField.sharedKey,
+              combinationSharedKeys: (this as any).combinationField
+                .combinationSharedKeys,
+              fieldValueObj: (this as any).fieldValueObj,
+              isTaintedObj: (this as any).isTaintedObj,
+              eventType: 'input',
+              validatorNamesThatDependsOnDynamicOptions: (this as any)
+                .combinationField.validatorNamesThatDependsOnDynamicOptions,
+            }
+          : null
+
         const payload: PayloadForOnInputField = {
           namespace: (this as any).namespace,
           fieldValueObj: (this as any).fieldValueObj,
@@ -73,7 +89,7 @@ export default Vue.extend({
           eventType: 'input',
           validatorNamesThatDependsOnDynamicOptions: (this as any)
             .validatorNamesThatDependsOnDynamicOptions,
-          combinationField: (this as any).combinationField,
+          combinationField,
         }
 
         ;(this as any).emitInputField(payload)

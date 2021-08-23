@@ -20,7 +20,7 @@
       >
         <input
           type="hidden"
-          :value="combinationField.value"
+          :value="fieldValueObj[combinationField.sharedKey]"
           :name="combinationField.name"
         />
       </div>
