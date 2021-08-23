@@ -1,29 +1,29 @@
 // import node_modules
 import validate from 'validate.js'
 
-type PayloadForValidateSingle = {
+type ArgsForValidateSingle<C> = {
   namespace: string
   sharedKey: string
   fieldValueObj: { [key: string]: string }
-  value: string | { [key: string]: string }
+  value: string
   eventType: 'input' | 'blur' | 'change'
   validatorNamesThatDependsOnDynamicOptions: string[]
+  constraintsBaseOfAll: C
 }
 
 export default function validateSingle<C extends { [key: string]: any }>(
-  payload: PayloadForValidateSingle,
-  constraints: C
+  args: ArgsForValidateSingle<C>
 ): string[] {
-  const sharedKey = payload.sharedKey
-  const constraint = constraints[payload.namespace][sharedKey]
+  const sharedKey = args.sharedKey
+  const constraint = args.constraintsBaseOfAll[args.namespace][sharedKey]
 
   // 動的なオプションに依存しているvalidatorにはオプションを追加する
-  payload.validatorNamesThatDependsOnDynamicOptions.forEach((validatorName) => {
-    constraint[validatorName].eventType = payload.eventType
-    constraint[validatorName].fieldValueObj = payload.fieldValueObj
+  args.validatorNamesThatDependsOnDynamicOptions.forEach((validatorName) => {
+    constraint[validatorName].eventType = args.eventType
+    constraint[validatorName].fieldValueObj = args.fieldValueObj
   })
 
-  const result = validate.single(payload.value, constraint)
+  const result = validate.single(args.value, constraint)
 
   return result ?? []
 }

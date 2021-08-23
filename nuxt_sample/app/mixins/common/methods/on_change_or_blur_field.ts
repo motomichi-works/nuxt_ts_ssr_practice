@@ -26,7 +26,16 @@ export default Vue.extend({
         value: true,
       })
 
-      const validationResult = validateSingle(payload, constraintsBaseOfAll)
+      const validationResult = validateSingle({
+        namespace: payload.namespace,
+        sharedKey: payload.sharedKey,
+        fieldValueObj: payload.fieldValueObj,
+        value: payload.value,
+        eventType: payload.eventType,
+        validatorNamesThatDependsOnDynamicOptions:
+          payload.validatorNamesThatDependsOnDynamicOptions,
+        constraintsBaseOfAll,
+      })
 
       ;(this as any).mappedChangeRealtimeErrors({
         namespace: payload.namespace,
@@ -64,18 +73,16 @@ export default Vue.extend({
         value: isTainted,
       })
 
-      const validationResult = validateSingle(
-        {
-          namespace: combinationField.namespace,
-          sharedKey,
-          fieldValueObj: combinationField.fieldValueObj,
-          value,
-          eventType: combinationField.eventType,
-          validatorNamesThatDependsOnDynamicOptions:
-            combinationField.validatorNamesThatDependsOnDynamicOptions,
-        },
-        constraintsBaseOfAll
-      )
+      const validationResult = validateSingle({
+        namespace: combinationField.namespace,
+        sharedKey,
+        fieldValueObj: combinationField.fieldValueObj,
+        value,
+        eventType: combinationField.eventType,
+        validatorNamesThatDependsOnDynamicOptions:
+          combinationField.validatorNamesThatDependsOnDynamicOptions,
+        constraintsBaseOfAll,
+      })
       ;(this as any).mappedChangeRealtimeErrors({
         namespace: combinationField.namespace,
         sharedKey,

@@ -26,7 +26,16 @@ export default Vue.extend({
       // - isTaintedでない場合はページ描画後の初回入力なので、入力途中でエラーメッセージを表示しない
       // - isTaintedでない場合は、サーバーサイドから渡されたエラーメッセージをinputイベントで非表示にする
       const validationResult = isTaintedObj[sharedKey]
-        ? validateSingle(payload, constraintsBaseOfAll)
+        ? validateSingle({
+            namespace: payload.namespace,
+            sharedKey: payload.sharedKey,
+            fieldValueObj: payload.fieldValueObj,
+            value: payload.value,
+            eventType: payload.eventType,
+            validatorNamesThatDependsOnDynamicOptions:
+              payload.validatorNamesThatDependsOnDynamicOptions,
+            constraintsBaseOfAll,
+          })
         : []
 
       ;(this as any).mappedChangeRealtimeErrors({
@@ -67,18 +76,16 @@ export default Vue.extend({
       // - isTaintedでない場合は組み合わせフィールドのうち1つ以上がページ描画後の初回入力なので、入力途中でエラーメッセージを表示しない
       // - isTaintedでない場合は、サーバーサイドから渡されたエラーメッセージをinputイベントで非表示にする
       const validationResult = isTainted
-        ? validateSingle(
-            {
-              namespace: combinationField.namespace,
-              sharedKey,
-              fieldValueObj: combinationField.fieldValueObj,
-              value,
-              eventType: combinationField.eventType,
-              validatorNamesThatDependsOnDynamicOptions:
-                combinationField.validatorNamesThatDependsOnDynamicOptions,
-            },
-            constraintsBaseOfAll
-          )
+        ? validateSingle({
+            namespace: combinationField.namespace,
+            sharedKey,
+            fieldValueObj: combinationField.fieldValueObj,
+            value,
+            eventType: combinationField.eventType,
+            validatorNamesThatDependsOnDynamicOptions:
+              combinationField.validatorNamesThatDependsOnDynamicOptions,
+            constraintsBaseOfAll,
+          })
         : []
 
       ;(this as any).mappedChangeRealtimeErrors({
