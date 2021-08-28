@@ -8,7 +8,7 @@ import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
 // Vue.extend
 export default Vue.extend({
   methods: {
-    emitBlurField(payload: PayloadForOnChangeOrBlurField) {
+    $_emitBlurField(payload: PayloadForOnChangeOrBlurField) {
       this.$emit('blur-field', payload)
     },
     emitChangeField(payload: PayloadForOnChangeOrBlurField) {

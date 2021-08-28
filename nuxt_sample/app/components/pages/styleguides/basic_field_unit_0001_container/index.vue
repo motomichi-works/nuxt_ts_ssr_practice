@@ -35,7 +35,7 @@
         :descriptions="['例: placeholder@example.com']"
         :heading-text="'メールアドレス'"
         :badge-type="'required'"
-        @blur-field="emitBlurField"
+        @blur-field="$_emitBlurField"
         @input-field="emitInputField"
       />
       <BasicFieldUnit0001
@@ -99,7 +99,7 @@
         :descriptions="['全角カナで入力してください。']"
         :heading-text="'お名前（カナ）'"
         :badge-type="'required'"
-        @blur-field="emitBlurField"
+        @blur-field="$_emitBlurField"
         @input-field="emitInputField"
       />
     </div>

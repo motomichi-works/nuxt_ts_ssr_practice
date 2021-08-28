@@ -36,7 +36,7 @@
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"
-        @blur-field="emitBlurField"
+        @blur-field="$_emitBlurField"
         @change-field="emitChangeField"
       />
       <SelectFieldUnit0001
@@ -100,7 +100,7 @@
         :descriptions="['説明文1', '説明文2']"
         :heading-text="'セレクトフィールドユニット0001B'"
         :badge-type="'required'"
-        @blur-field="emitBlurField"
+        @blur-field="$_emitBlurField"
         @change-field="emitChangeField"
       />
     </div>

@@ -92,7 +92,7 @@ export default Vue.extend({
         combinationField,
       }
 
-      ;(this as any).emitBlurField(payload)
+      ;(this as any).$_emitBlurField(payload)
     },
   },
 })

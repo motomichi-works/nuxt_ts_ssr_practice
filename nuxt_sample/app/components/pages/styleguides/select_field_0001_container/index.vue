@@ -27,7 +27,7 @@
           { label: '選択肢2', value: 'value2' },
         ]"
         :combination-field="null"
-        @blur-field="emitBlurField"
+        @blur-field="$_emitBlurField"
         @change-field="emitChangeField"
       />
     </div>

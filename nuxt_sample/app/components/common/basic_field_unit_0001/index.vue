@@ -55,7 +55,7 @@
                   :left-icon="item.field.leftIcon"
                   :right-icon="item.field.rightIcon"
                   :combination-field="combinationField"
-                  @blur-field="emitBlurField"
+                  @blur-field="$_emitBlurField"
                   @input-field="emitInputField"
                 />
               </div>
