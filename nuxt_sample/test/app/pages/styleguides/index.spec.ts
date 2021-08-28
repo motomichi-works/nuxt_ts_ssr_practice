@@ -1,5 +1,5 @@
 // node_modulesをimport
-import { createLocalVue, mount } from '@vue/test-utils'
+import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils'
 import flushPromises from 'flush-promises'
 import Vuex from 'vuex'
 
@@ -25,10 +25,15 @@ function createStore() {
 
 // createWrapper関数を定義（createWrapper関数は無理に外部に切り出さずspecファイルごとに定義する）
 function createWrapper(store: any) {
-  return mount(Component, {
+  const wrapper = mount(Component, {
     store,
     localVue,
+    stubs: {
+      NuxtLink: RouterLinkStub,
+    },
   })
+
+  return wrapper
 }
 
 // テストケース
