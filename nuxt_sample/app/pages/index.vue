@@ -1,5 +1,5 @@
 <template>
-  <PagePresentational0001>
+  <PagePresentational0001 page-heading-text="index.vue">
     <QiitaItemsContainer
       :identifiers="['QiitaItemsContainer']"
       :qiita-items="qiitaItems"

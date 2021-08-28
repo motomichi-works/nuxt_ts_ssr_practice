@@ -7,7 +7,7 @@
       <div class="pageFrameType0001__headingWrapper">
         <Heading0001
           :identifiers="[...identifiers, 'Heading0001']"
-          text="styleguides/index.vue"
+          :text="pageHeadingText"
           :modifier-classes="['heading0001--Lv1']"
           :tag-name="'h1'"
         />
@@ -24,7 +24,7 @@
 
 <script lang="ts">
 // import node_modules
-import Vue from 'vue'
+import Vue, { PropType } from 'vue'
 
 // import components/common
 import Footer0001 from '~/components/common/footer_0001/index.vue'
@@ -43,6 +43,13 @@ export default Vue.extend({
     Heading0001,
   },
   mixins: [everyPagePresentational],
+  props: {
+    pageHeadingText: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
+  },
 })
 </script>
 
