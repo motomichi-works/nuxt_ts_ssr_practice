@@ -1,5 +1,5 @@
 <template>
-  <div :data-joined-identifiers="joinedIdentifiers" class="l-bodyInner0001">
+  <div :data-joined-identifiers="joinedIdentifiers" class="layoutTypeDefault">
     <Nuxt />
   </div>
 </template>
@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// layouts
-@import '~/assets/scss/layouts/l_body_inner_0001.scss';
+.layoutTypeDefault {
+  display: block;
+}
 </style>
