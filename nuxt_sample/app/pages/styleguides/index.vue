@@ -1,38 +1,19 @@
 <template>
-  <div :data-joined-identifiers="joinedIdentifiers" class="l-contentsType0001">
-    <div class="l-contentsType0001__headerWrapper">
-      <Header0001 :identifiers="[...identifiers, 'Header0001']" />
-    </div>
-    <div class="l-contentsType0001__contentsWrapper">
-      <div class="l-contentsType0001__headingWrapper">
-        <Heading0001
-          :identifiers="[...identifiers, 'Heading0001']"
-          text="styleguides/index.vue"
-          :modifier-classes="['heading0001--Lv1']"
-          :tag-name="'h1'"
-        />
-      </div>
-      <div class="l-contentsType0001__body">
-        <component
-          :is="component.name"
-          v-for="component in components"
-          :key="component.identifiers.join('/')"
-          :identifiers="component.identifiers"
-          :namespace="namespace"
-          :field-value-obj="fieldValueObj"
-          :realtime-errors-obj="realtimeErrorsObj"
-          :is-tainted-obj="isTaintedObj"
-          @input-field="onInputField"
-          @change-field="onChangeOrBlurField"
-          @blur-field="onChangeOrBlurField"
-        >
-        </component>
-      </div>
-    </div>
-    <div class="l-contentsType0001__footerWrapper">
-      <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
-    </div>
-  </div>
+  <PageFrameType0001>
+    <component
+      :is="component.name"
+      v-for="component in components"
+      :key="component.identifiers.join('/')"
+      :identifiers="component.identifiers"
+      :namespace="namespace"
+      :field-value-obj="fieldValueObj"
+      :realtime-errors-obj="realtimeErrorsObj"
+      :is-tainted-obj="isTaintedObj"
+      @input-field="onInputField"
+      @change-field="onChangeOrBlurField"
+      @blur-field="onChangeOrBlurField"
+    />
+  </PageFrameType0001>
 </template>
 
 <script lang="ts">
@@ -49,6 +30,9 @@ import {
   IsTaintedObj,
 } from '~/store/styleguides/index'
 
+// import components/common
+import PageFrameType0001 from '~/components/common/page_frame_type_0001/index.vue'
+
 // import components/pages
 import Badge0001Container from '~/components/pages/styleguides/badge_0001_container/index.vue'
 import BasicField0001Container from '~/components/pages/styleguides/basic_field_0001_container/index.vue'
@@ -61,7 +45,6 @@ import SelectField0001Container from '~/components/pages/styleguides/select_fiel
 import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
 
 // mixins
-import everyPage from '~/mixins/common/every_page'
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'
 import mappedChangeRealtimeErrors from '~/mixins/common/methods/mapped_change_realtime_errors'
 import mappedChangeIsTainted from '~/mixins/common/methods/mapped_change_is_tainted'
@@ -71,6 +54,7 @@ import onChangeOrBlurField from '~/mixins/common/methods/on_change_or_blur_field
 // Vue.extend
 export default Vue.extend({
   components: {
+    PageFrameType0001,
     Badge0001Container,
     BasicField0001Container,
     BasicFieldUnit0001Container,
@@ -82,7 +66,6 @@ export default Vue.extend({
     SelectFieldUnit0001Container,
   },
   mixins: [
-    everyPage,
     mappedChangeFieldValue,
     mappedChangeRealtimeErrors,
     mappedChangeIsTainted,
@@ -125,7 +108,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
-// layouts
-@import '~/assets/scss/layouts/l_contents_type_0001';
-</style>
+<style lang="scss" scoped></style>
