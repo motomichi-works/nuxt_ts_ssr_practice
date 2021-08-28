@@ -1,10 +1,10 @@
 <template>
-  <PageFrameType0001>
+  <PagePresentational0001>
     <QiitaItemsContainer
       :identifiers="['QiitaItemsContainer']"
       :qiita-items="qiitaItems"
     />
-  </PageFrameType0001>
+  </PagePresentational0001>
 </template>
 
 <script lang="ts">
@@ -13,7 +13,7 @@ import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
 // import components/common
-import PageFrameType0001 from '~/components/common/page_frame_type_0001/index.vue'
+import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
 // import components/pages
 import QiitaItemsContainer from '~/components/pages/index/qiita_items_container/index.vue'
@@ -21,7 +21,7 @@ import QiitaItemsContainer from '~/components/pages/index/qiita_items_container/
 // Vue.extend
 export default Vue.extend({
   components: {
-    PageFrameType0001,
+    PagePresentational0001,
     QiitaItemsContainer,
   },
   async asyncData(context: Context): Promise<any> {

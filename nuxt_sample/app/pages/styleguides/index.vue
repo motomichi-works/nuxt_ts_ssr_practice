@@ -1,5 +1,5 @@
 <template>
-  <PageFrameType0001>
+  <PagePresentational0001>
     <component
       :is="component.name"
       v-for="component in components"
@@ -13,7 +13,7 @@
       @change-field="onChangeOrBlurField"
       @blur-field="onChangeOrBlurField"
     />
-  </PageFrameType0001>
+  </PagePresentational0001>
 </template>
 
 <script lang="ts">
@@ -31,7 +31,7 @@ import {
 } from '~/store/styleguides/index'
 
 // import components/common
-import PageFrameType0001 from '~/components/common/page_frame_type_0001/index.vue'
+import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
 // import components/pages
 import Badge0001Container from '~/components/pages/styleguides/badge_0001_container/index.vue'
@@ -54,7 +54,7 @@ import onChangeOrBlurField from '~/mixins/common/methods/on_change_or_blur_field
 // Vue.extend
 export default Vue.extend({
   components: {
-    PageFrameType0001,
+    PagePresentational0001,
     Badge0001Container,
     BasicField0001Container,
     BasicFieldUnit0001Container,

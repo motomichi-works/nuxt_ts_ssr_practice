@@ -32,17 +32,17 @@ import Header0001 from '~/components/common/header_0001/index.vue'
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
 // mixins
-import everyPageFrame from '~/mixins/common/every_page_frame'
+import everyPagePresentational from '~/mixins/common/every_page_presentational'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'PageFrameType0001',
+  name: 'PagePresentational0001',
   components: {
     Footer0001,
     Header0001,
     Heading0001,
   },
-  mixins: [everyPageFrame],
+  mixins: [everyPagePresentational],
 })
 </script>
 

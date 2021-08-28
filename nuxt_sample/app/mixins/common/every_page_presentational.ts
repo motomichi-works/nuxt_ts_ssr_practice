@@ -5,7 +5,7 @@ import Vue from 'vue'
 export default Vue.extend({
   computed: {
     identifiers() {
-      return ['PageFrame']
+      return ['Page']
     },
     joinedIdentifiers() {
       return (this as any).identifiers.join('/')
