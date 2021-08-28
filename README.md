@@ -1,8 +1,7 @@
 # nuxt_ts_ssr_practice
 
 ## 概要
-
-NuxtのSSRモードでTypeScriptの練習をするリポジトリです。
+Vue2またはNuxt用に汎用コンポーネントなどを作成しているリポジトリです。
 
 ## プロジェクトの作成
 
