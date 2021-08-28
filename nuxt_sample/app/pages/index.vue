@@ -1,6 +1,9 @@
 <template>
   <PageFrameType0001>
-    <QiitaItemsContainer :identifiers="[]" :qiita-items="qiitaItems" />
+    <QiitaItemsContainer
+      :identifiers="['QiitaItemsContainer']"
+      :qiita-items="qiitaItems"
+    />
   </PageFrameType0001>
 </template>
 
