@@ -31,6 +31,9 @@ import Footer0001 from '~/components/common/footer_0001/index.vue'
 import Header0001 from '~/components/common/header_0001/index.vue'
 import Heading0001 from '~/components/common/heading_0001/index.vue'
 
+// mixins
+import everyPageFrame from '~/mixins/common/every_page_frame'
+
 // Vue.extend
 export default Vue.extend({
   name: 'PageFrameType0001',
@@ -39,14 +42,7 @@ export default Vue.extend({
     Header0001,
     Heading0001,
   },
-  computed: {
-    identifiers() {
-      return ['PageFrame']
-    },
-    joinedIdentifiers() {
-      return (this as any).identifiers.join('/')
-    },
-  },
+  mixins: [everyPageFrame],
 })
 </script>
 
