@@ -1,10 +1,13 @@
 <template>
-  <div :data-joined-identifiers="joinedIdentifiers" class="pageFrameType0001">
-    <div class="pageFrameType0001__headerWrapper">
+  <div
+    :data-joined-identifiers="joinedIdentifiers"
+    class="pagePresentational0001"
+  >
+    <div class="pagePresentational0001__headerWrapper">
       <Header0001 :identifiers="[...identifiers, 'Header0001']" />
     </div>
-    <div class="pageFrameType0001__contentsWrapper">
-      <div class="pageFrameType0001__headingWrapper">
+    <div class="pagePresentational0001__contentsWrapper">
+      <div class="pagePresentational0001__headingWrapper">
         <Heading0001
           :identifiers="[...identifiers, 'Heading0001']"
           :text="pageHeadingText"
@@ -12,11 +15,11 @@
           :tag-name="'h1'"
         />
       </div>
-      <div class="pageFrameType0001__body">
+      <div class="pagePresentational0001__body">
         <slot />
       </div>
     </div>
-    <div class="pageFrameType0001__footerWrapper">
+    <div class="pagePresentational0001__footerWrapper">
       <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
     </div>
   </div>
@@ -54,7 +57,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.pageFrameType0001 {
+.pagePresentational0001 {
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
@@ -62,22 +65,22 @@ export default Vue.extend({
   @media #{$g__is-md} {
     min-height: 0;
   }
-  .pageFrameType0001__headerWrapper {
+  .pagePresentational0001__headerWrapper {
   }
-  .pageFrameType0001__contentsWrapper {
+  .pagePresentational0001__contentsWrapper {
     padding: 1px 8px calc(41px + 80px);
-    // .pageFrameType0001__contentsWrapperのpadding-topを補完する初期値
+    // .pagePresentational0001__contentsWrapperのpadding-topを補完する初期値
     > :first-child {
       margin-top: 39px;
     }
   }
-  .pageFrameType0001__footerWrapper {
+  .pagePresentational0001__footerWrapper {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
   }
-  .pageFrameType0001__headingWrapper {
+  .pagePresentational0001__headingWrapper {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
@@ -87,7 +90,7 @@ export default Vue.extend({
       width: 100%;
     }
   }
-  .pageFrameType0001__body {
+  .pagePresentational0001__body {
     width: 1200px;
     margin-top: 32px;
     margin-right: auto;
