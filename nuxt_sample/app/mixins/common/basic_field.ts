@@ -8,7 +8,7 @@ import fieldBase from '~/mixins/common/field_base'
 
 // types
 import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
-import { ArgsForHandleInputField } from '~/types/payload_of_input_field'
+import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
 export default Vue.extend({

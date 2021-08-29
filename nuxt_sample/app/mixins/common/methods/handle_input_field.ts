@@ -7,7 +7,7 @@ import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
 import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
-import { ArgsForHandleInputField } from '~/types/payload_of_input_field'
+import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
 export default Vue.extend({

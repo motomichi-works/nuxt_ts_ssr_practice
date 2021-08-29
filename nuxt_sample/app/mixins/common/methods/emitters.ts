@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 // types
 import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_change_field_or_blur_field'
-import { ArgsForHandleInputField } from '~/types/payload_of_input_field'
+import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
 export default Vue.extend({
