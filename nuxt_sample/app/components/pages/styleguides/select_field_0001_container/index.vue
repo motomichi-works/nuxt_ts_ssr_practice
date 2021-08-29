@@ -28,7 +28,7 @@
         ]"
         :combination-field="null"
         @blur-field="$_emitBlurField"
-        @change-field="emitChangeField"
+        @change-field="$_emitChangeField"
       />
     </div>
   </section>

@@ -69,7 +69,7 @@ export default Vue.extend({
           combinationField,
         }
 
-        ;(this as any).emitChangeField(payload)
+        ;(this as any).$_emitChangeField(payload)
       },
     },
     selectedLabel() {

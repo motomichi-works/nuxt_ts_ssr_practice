@@ -53,7 +53,7 @@
                   :options="item.field.options"
                   :combination-field="combinationField"
                   @blur-field="$_emitBlurField"
-                  @change-field="emitChangeField"
+                  @change-field="$_emitChangeField"
                 />
               </div>
               <div

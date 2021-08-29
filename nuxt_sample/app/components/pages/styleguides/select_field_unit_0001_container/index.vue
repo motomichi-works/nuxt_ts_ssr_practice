@@ -37,7 +37,7 @@
         :heading-text="'セレクトフィールドユニット0001A'"
         :badge-type="'required'"
         @blur-field="$_emitBlurField"
-        @change-field="emitChangeField"
+        @change-field="$_emitChangeField"
       />
       <SelectFieldUnit0001
         :identifiers="[...identifiers, 'SelectFieldUnit0001B']"
@@ -101,7 +101,7 @@
         :heading-text="'セレクトフィールドユニット0001B'"
         :badge-type="'required'"
         @blur-field="$_emitBlurField"
-        @change-field="emitChangeField"
+        @change-field="$_emitChangeField"
       />
     </div>
   </section>

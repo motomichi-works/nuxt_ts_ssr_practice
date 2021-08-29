@@ -11,7 +11,7 @@ export default Vue.extend({
     $_emitBlurField(payload: PayloadForOnChangeOrBlurField) {
       this.$emit('blur-field', payload)
     },
-    emitChangeField(payload: PayloadForOnChangeOrBlurField) {
+    $_emitChangeField(payload: PayloadForOnChangeOrBlurField) {
       this.$emit('change-field', payload)
     },
     emitInputField(payload: PayloadForOnInputField) {
