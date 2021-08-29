@@ -2,7 +2,7 @@
 import Vue, { PropType } from 'vue'
 
 // types
-import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
+import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_change_field_or_blur_field'
 import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 
@@ -70,7 +70,7 @@ export default Vue.extend({
   },
   methods: {
     onBlur({ target }: { target: HTMLInputElement }) {
-      const combinationField: ArgsForOnChangeOrBlurCombinationField | null = this
+      const combinationField: ArgsForHandleChangeCombinationFieldOrBlurCombinationField | null = this
         .combinationField
         ? {
             namespace: (this as any).namespace,

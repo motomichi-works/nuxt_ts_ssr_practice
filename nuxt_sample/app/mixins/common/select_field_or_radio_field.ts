@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
-import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
+import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_change_field_or_blur_field'
 export type Option = {
   label: string
@@ -42,7 +42,7 @@ export default Vue.extend({
         return (this as any).fieldValue
       },
       set(value: string) {
-        const combinationField: ArgsForOnChangeOrBlurCombinationField | null = (this as any)
+        const combinationField: ArgsForHandleChangeCombinationFieldOrBlurCombinationField | null = (this as any)
           .combinationField
           ? {
               namespace: (this as any).namespace,

@@ -1,4 +1,4 @@
-export type ArgsForOnChangeOrBlurCombinationField = {
+export type ArgsForHandleChangeCombinationFieldOrBlurCombinationField = {
   namespace: string
   sharedKey: string
   combinationSharedKeys: string[]

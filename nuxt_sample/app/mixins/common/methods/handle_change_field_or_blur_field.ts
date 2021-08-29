@@ -6,7 +6,7 @@ import validateSingle from '~/utils/validate_single'
 import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
-import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
+import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_change_field_or_blur_field'
 
 // Vue.extend
@@ -52,7 +52,7 @@ export default Vue.extend({
       }
     },
     $_handleChangeCombinationFieldOrBlurCombinationField(
-      combinationField: ArgsForOnChangeOrBlurCombinationField
+      combinationField: ArgsForHandleChangeCombinationFieldOrBlurCombinationField
     ) {
       const sharedKey = combinationField.sharedKey
       const value = combinationField.combinationSharedKeys

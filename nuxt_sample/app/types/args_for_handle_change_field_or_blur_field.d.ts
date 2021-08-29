@@ -1,4 +1,4 @@
-import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
+import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 
 export type ArgsForHandleChangeFieldOrBlurField = {
   namespace: string
@@ -8,5 +8,5 @@ export type ArgsForHandleChangeFieldOrBlurField = {
   value: string
   eventType: 'change' | 'blur'
   validatorNamesThatDependsOnDynamicOptions: string[]
-  combinationField: ArgsForOnChangeOrBlurCombinationField | null
+  combinationField: ArgsForHandleChangeCombinationFieldOrBlurCombinationField | null
 }
