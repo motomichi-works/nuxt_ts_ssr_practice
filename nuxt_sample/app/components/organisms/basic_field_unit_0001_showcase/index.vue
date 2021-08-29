@@ -110,9 +110,9 @@
 import Vue from 'vue'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-// import components/common
-import BasicFieldUnit0001 from '~/components/common/basic_field_unit_0001/index.vue'
-import Heading0001 from '~/components/common/heading_0001/index.vue'
+// import components/molecules_and_atoms
+import BasicFieldUnit0001 from '~/components/molecules_and_atoms/basic_field_unit_0001/index.vue'
+import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

@@ -26,10 +26,10 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// import components/common
-import Footer0001 from '~/components/common/footer_0001/index.vue'
-import Header0001 from '~/components/common/header_0001/index.vue'
-import Heading0001 from '~/components/common/heading_0001/index.vue'
+// import components/molecules_and_atoms
+import Footer0001 from '~/components/molecules_and_atoms/footer_0001/index.vue'
+import Header0001 from '~/components/molecules_and_atoms/header_0001/index.vue'
+import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
 import everyPagePresentational from '~/mixins/common/every_page_presentational'

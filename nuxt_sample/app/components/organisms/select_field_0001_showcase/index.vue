@@ -37,9 +37,9 @@
 // import node_modules
 import Vue from 'vue'
 
-// import components/common
-import SelectField0001 from '~/components/common/select_field_0001/index.vue'
-import Heading0001 from '~/components/common/heading_0001/index.vue'
+// import components/molecules_and_atoms
+import SelectField0001 from '~/components/molecules_and_atoms/select_field_0001/index.vue'
+import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

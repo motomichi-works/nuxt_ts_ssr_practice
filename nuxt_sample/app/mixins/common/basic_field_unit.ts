@@ -2,8 +2,8 @@
 import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
-// import components/common
-import BasicField0001 from '~/components/common/basic_field_0001/index.vue'
+// import components/molecules_and_atoms
+import BasicField0001 from '~/components/molecules_and_atoms/basic_field_0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({

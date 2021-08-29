@@ -34,9 +34,9 @@
 // import node_modules
 import Vue from 'vue'
 
-// import components/common
-import FieldHeading0001 from '~/components/common/field_heading_0001/index.vue'
-import Heading0001 from '~/components/common/heading_0001/index.vue'
+// import components/molecules_and_atoms
+import FieldHeading0001 from '~/components/molecules_and_atoms/field_heading_0001/index.vue'
+import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

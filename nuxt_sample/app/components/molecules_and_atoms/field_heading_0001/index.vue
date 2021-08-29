@@ -17,8 +17,8 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// import components/common
-import Badge0001 from '~/components/common/badge_0001/index.vue'
+// import components/molecules_and_atoms
+import Badge0001 from '~/components/molecules_and_atoms/badge_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

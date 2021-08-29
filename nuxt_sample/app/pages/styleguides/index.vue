@@ -30,8 +30,8 @@ import {
   IsTaintedObj,
 } from '~/store/styleguides/index'
 
-// import components/common
-import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
+// import components/molecules_and_atoms
+import PagePresentational0001 from '~/components/molecules_and_atoms/page_presentational_0001/index.vue'
 
 // import components/organisms
 import Badge0001Showcase from '~/components/organisms/badge_0001_showcase/index.vue'

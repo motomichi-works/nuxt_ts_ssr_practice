@@ -14,7 +14,7 @@
 import Vue from 'vue'
 
 // import components/organisms
-import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
+import PagePresentational0001 from '~/components/molecules_and_atoms/page_presentational_0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({
