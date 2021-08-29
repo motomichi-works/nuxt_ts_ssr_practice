@@ -1,4 +1,4 @@
-export type ArgsForOnInputCombinationField = {
+export type ArgsForHandleInputCombinationField = {
   namespace: string
   sharedKey: string
   combinationSharedKeys: string[]

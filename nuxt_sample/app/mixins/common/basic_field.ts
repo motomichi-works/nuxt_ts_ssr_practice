@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
-import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
+import { ArgsForHandleInputCombinationField } from '~/types/args_for_on_input_combination_field'
 import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
@@ -65,7 +65,7 @@ export default Vue.extend({
         return (this as any).fieldValue
       },
       set(value: string) {
-        const combinationField: ArgsForOnInputCombinationField | null = (this as any)
+        const combinationField: ArgsForHandleInputCombinationField | null = (this as any)
           .combinationField
           ? {
               namespace: (this as any).namespace,
