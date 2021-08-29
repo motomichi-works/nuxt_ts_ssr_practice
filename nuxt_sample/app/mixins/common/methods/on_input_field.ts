@@ -66,7 +66,7 @@ export default Vue.extend({
         sharedKey,
         value,
       })
-      ;(this as any).mappedChangeIsTainted({
+      ;(this as any).$_mappedChangeIsTainted({
         namespace: combinationField.namespace,
         sharedKey,
         value: isTainted,

@@ -20,7 +20,7 @@ export default Vue.extend({
       })
 
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
-      ;(this as any).mappedChangeIsTainted({
+      ;(this as any).$_mappedChangeIsTainted({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: true,
@@ -67,7 +67,7 @@ export default Vue.extend({
         sharedKey,
         value,
       })
-      ;(this as any).mappedChangeIsTainted({
+      ;(this as any).$_mappedChangeIsTainted({
         namespace: combinationField.namespace,
         sharedKey,
         value: isTainted,
