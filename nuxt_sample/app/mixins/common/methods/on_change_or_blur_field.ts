@@ -44,10 +44,12 @@ export default Vue.extend({
       })
 
       if (payload.combinationField !== null) {
-        this.onChangeOrBlurCombinationField(payload.combinationField)
+        this.$_handleChangeCombinationFieldOrBlurCombinationField(
+          payload.combinationField
+        )
       }
     },
-    onChangeOrBlurCombinationField(
+    $_handleChangeCombinationFieldOrBlurCombinationField(
       combinationField: ArgsForOnChangeOrBlurCombinationField
     ) {
       const sharedKey = combinationField.sharedKey
