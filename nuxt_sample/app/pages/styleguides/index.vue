@@ -33,16 +33,16 @@ import {
 // import components/common
 import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
-// import components/pages
-import Badge0001Container from '~/components/pages/styleguides/badge_0001_container/index.vue'
-import BasicField0001Container from '~/components/pages/styleguides/basic_field_0001_container/index.vue'
-import BasicFieldUnit0001Container from '~/components/pages/styleguides/basic_field_unit_0001_container/index.vue'
-import FieldErrorMessages0001Container from '~/components/pages/styleguides/field_error_messages_0001_container/index.vue'
-import FieldHeading0001Container from '~/components/pages/styleguides/field_heading_0001_container/index.vue'
-import FontAwesome5Container from '~/components/pages/styleguides/font_awesome_5_container/index.vue'
-import Heading0001Container from '~/components/pages/styleguides/heading_0001_container/index.vue'
-import SelectField0001Container from '~/components/pages/styleguides/select_field_0001_container/index.vue'
-import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_field_unit_0001_container/index.vue'
+// import components/organisms
+import Badge0001Container from '~/components/organisms/badge_0001_container/index.vue'
+import BasicField0001Container from '~/components/organisms/basic_field_0001_container/index.vue'
+import BasicFieldUnit0001Container from '~/components/organisms/basic_field_unit_0001_container/index.vue'
+import FieldErrorMessages0001Container from '~/components/organisms/field_error_messages_0001_container/index.vue'
+import FieldHeading0001Container from '~/components/organisms/field_heading_0001_container/index.vue'
+import FontAwesome5Container from '~/components/organisms/font_awesome_5_container/index.vue'
+import Heading0001Container from '~/components/organisms/heading_0001_container/index.vue'
+import SelectField0001Container from '~/components/organisms/select_field_0001_container/index.vue'
+import SelectFieldUnit0001Container from '~/components/organisms/select_field_unit_0001_container/index.vue'
 
 // mixins
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'

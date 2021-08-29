@@ -12,8 +12,8 @@ import Vue from 'vue'
 // import components/common
 import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
-// import components/pages
-import OrgQiitaItems from '~/components/pages/org_qiita_items/index.vue'
+// import components/organisms
+import OrgQiitaItems from '~/components/organisms/hoge_qiita_items/index.vue'
 
 // Vue.extend
 export default Vue.extend({
