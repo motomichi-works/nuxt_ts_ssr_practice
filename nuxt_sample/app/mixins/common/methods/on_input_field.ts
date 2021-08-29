@@ -13,7 +13,7 @@ import { PayloadOfInputField } from '~/types/payload_of_input_field'
 export default Vue.extend({
   methods: {
     onInputField(payload: PayloadOfInputField) {
-      ;(this as any).mappedChangeFieldValue({
+      ;(this as any).$_mappedChangeFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: payload.value,
@@ -61,7 +61,7 @@ export default Vue.extend({
         })
         .every((element) => element)
 
-      ;(this as any).mappedChangeFieldValue({
+      ;(this as any).$_mappedChangeFieldValue({
         namespace: combinationField.namespace,
         sharedKey,
         value,
