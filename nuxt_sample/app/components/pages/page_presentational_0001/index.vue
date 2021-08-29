@@ -27,8 +27,8 @@
 import Vue, { PropType } from 'vue'
 
 // import components/molecules_and_atoms
-import Footer0001 from '~/components/molecules_and_atoms/footer_0001/index.vue'
-import Header0001 from '~/components/molecules_and_atoms/header_0001/index.vue'
+import Footer0001 from '~/components/organisms/footer_0001/index.vue'
+import Header0001 from '~/components/organisms/header_0001/index.vue'
 import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
