@@ -7,12 +7,12 @@ import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
 import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
-import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
+import { PayloadOfInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onInputField(payload: PayloadForOnInputField) {
+    onInputField(payload: PayloadOfInputField) {
       ;(this as any).mappedChangeFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,

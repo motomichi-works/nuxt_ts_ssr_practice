@@ -1,6 +1,6 @@
 import { ArgsForOnInputCombinationField } from '~/types/args_for_on_input_combination_field'
 
-export type PayloadForOnInputField = {
+export type PayloadOfInputField = {
   namespace: string
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }

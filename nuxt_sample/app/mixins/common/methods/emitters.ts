@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 // types
 import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
-import { PayloadForOnInputField } from '~/types/payload_for_on_input_field'
+import { PayloadOfInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -14,7 +14,7 @@ export default Vue.extend({
     $_emitChangeField(payload: PayloadOfChangeFieldOrBlurField) {
       this.$emit('change-field', payload)
     },
-    $_emitInputField(payload: PayloadForOnInputField) {
+    $_emitInputField(payload: PayloadOfInputField) {
       this.$emit('input-field', payload)
     },
   },
