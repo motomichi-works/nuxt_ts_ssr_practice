@@ -34,15 +34,15 @@ import {
 import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
 // import components/organisms
-import Badge0001Container from '~/components/organisms/badge_0001_container/index.vue'
-import BasicField0001Container from '~/components/organisms/basic_field_0001_container/index.vue'
-import BasicFieldUnit0001Container from '~/components/organisms/basic_field_unit_0001_container/index.vue'
-import FieldErrorMessages0001Container from '~/components/organisms/field_error_messages_0001_container/index.vue'
-import FieldHeading0001Container from '~/components/organisms/field_heading_0001_container/index.vue'
-import FontAwesome5Container from '~/components/organisms/font_awesome_5_container/index.vue'
-import Heading0001Container from '~/components/organisms/heading_0001_container/index.vue'
-import SelectField0001Container from '~/components/organisms/select_field_0001_container/index.vue'
-import SelectFieldUnit0001Container from '~/components/organisms/select_field_unit_0001_container/index.vue'
+import Badge0001Container from '~/components/organisms/badge_0001_showcase/index.vue'
+import BasicField0001Container from '~/components/organisms/basic_field_0001_showcase/index.vue'
+import BasicFieldUnit0001Container from '~/components/organisms/basic_field_unit_0001_showcase/index.vue'
+import FieldErrorMessages0001Container from '~/components/organisms/field_error_messages_0001_showcase/index.vue'
+import FieldHeading0001Container from '~/components/organisms/field_heading_0001_showcase/index.vue'
+import FontAwesome5Container from '~/components/organisms/font_awesome_5_showcase/index.vue'
+import Heading0001Container from '~/components/organisms/heading_0001_showcase/index.vue'
+import SelectField0001Container from '~/components/organisms/select_field_0001_showcase/index.vue'
+import SelectFieldUnit0001Container from '~/components/organisms/select_field_unit_0001_showcase/index.vue'
 
 // mixins
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'
