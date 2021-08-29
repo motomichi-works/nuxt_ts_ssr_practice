@@ -2,7 +2,7 @@
 import Vue, { PropType } from 'vue'
 
 // types
-import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
+import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_handle_change_combination_field_or_blur_combination_field'
 import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_change_field_or_blur_field'
 import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 

@@ -1,4 +1,4 @@
-import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
+import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_handle_change_combination_field_or_blur_combination_field'
 
 export type ArgsForHandleChangeFieldOrBlurField = {
   namespace: string
