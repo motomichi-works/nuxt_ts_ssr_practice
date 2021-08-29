@@ -6,8 +6,12 @@ import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_chang
 import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_of_change_field_or_blur_field'
 import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 
+// mixins
+import everyChild from '~/mixins/common/every_child'
+
 // Vue.extend
 export default Vue.extend({
+  mixins: [everyChild],
   props: {
     modifiers: {
       type: Array as PropType<string[]>,
