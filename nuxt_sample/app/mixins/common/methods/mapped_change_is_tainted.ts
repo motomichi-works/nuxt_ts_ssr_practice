@@ -11,7 +11,7 @@ type ArgsForMappedChangeIsTainted = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    $_mappedChangeIsTainted(args: ArgsForMappedChangeIsTainted): void {
+    $_mappedChangeIsTainted(args: ArgsForMappedChangeIsTainted) {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,

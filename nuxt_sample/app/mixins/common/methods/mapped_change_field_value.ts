@@ -11,7 +11,7 @@ type ArgsForMappedChangeFieldValue = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    $_mappedChangeFieldValue(args: ArgsForMappedChangeFieldValue): void {
+    $_mappedChangeFieldValue(args: ArgsForMappedChangeFieldValue) {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,
