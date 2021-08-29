@@ -45,10 +45,12 @@ export default Vue.extend({
       })
 
       if (payload.combinationField) {
-        this.onInputCombinationField(payload.combinationField)
+        this.$_handleInputCombinationField(payload.combinationField)
       }
     },
-    onInputCombinationField(combinationField: ArgsForOnInputCombinationField) {
+    $_handleInputCombinationField(
+      combinationField: ArgsForOnInputCombinationField
+    ) {
       const sharedKey = combinationField.sharedKey
       const value = combinationField.combinationSharedKeys
         .map((key) => {
