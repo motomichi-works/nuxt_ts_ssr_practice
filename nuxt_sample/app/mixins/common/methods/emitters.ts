@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // types
-import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
+import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_of_change_field_or_blur_field'
 import { PayloadOfInputField } from '~/types/payload_for_on_input_field'
 
 // Vue.extend

@@ -6,7 +6,7 @@ import fieldBase from '~/mixins/common/field_base'
 
 // types
 import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
-import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
+import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_of_change_field_or_blur_field'
 export type Option = {
   label: string
   value: string
