@@ -11,7 +11,9 @@ type ArgsForMappedChangeRealtimeErrors = {
 // Vue.extend
 export default Vue.extend({
   methods: {
-    mappedChangeRealtimeErrors(args: ArgsForMappedChangeRealtimeErrors): void {
+    $_mappedChangeRealtimeErrors(
+      args: ArgsForMappedChangeRealtimeErrors
+    ): void {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,

@@ -37,7 +37,7 @@ export default Vue.extend({
         constraintsBaseOfAll,
       })
 
-      ;(this as any).mappedChangeRealtimeErrors({
+      ;(this as any).$_mappedChangeRealtimeErrors({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: validationResult,
@@ -83,7 +83,7 @@ export default Vue.extend({
           combinationField.validatorNamesThatDependsOnDynamicOptions,
         constraintsBaseOfAll,
       })
-      ;(this as any).mappedChangeRealtimeErrors({
+      ;(this as any).$_mappedChangeRealtimeErrors({
         namespace: combinationField.namespace,
         sharedKey,
         value: validationResult,
