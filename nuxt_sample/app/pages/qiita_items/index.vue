@@ -1,9 +1,6 @@
 <template>
   <PagePresentational0001 page-heading-text="index.vue">
-    <QiitaItemsContainer
-      :identifiers="['QiitaItemsContainer']"
-      :qiita-items="qiitaItems"
-    />
+    <OrgQiitaItems :identifiers="['OrgQiitaItems']" :qiita-items="qiitaItems" />
   </PagePresentational0001>
 </template>
 
@@ -16,13 +13,13 @@ import Vue from 'vue'
 import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
 // import components/pages
-import QiitaItemsContainer from '~/components/pages/qiita_items/qiita_items_container/index.vue'
+import OrgQiitaItems from '~/components/pages/qiita_items/qiita_items_container/index.vue'
 
 // Vue.extend
 export default Vue.extend({
   components: {
     PagePresentational0001,
-    QiitaItemsContainer,
+    OrgQiitaItems,
   },
   async asyncData(context: Context): Promise<any> {
     const { app } = context
