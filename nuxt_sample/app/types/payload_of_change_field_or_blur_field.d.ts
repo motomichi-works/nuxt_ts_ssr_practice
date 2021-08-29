@@ -1,6 +1,6 @@
 import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
 
-export type PayloadOfChangeFieldOrBlurField = {
+export type ArgsForHandleChangeFieldOrBlurField = {
   namespace: string
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }
