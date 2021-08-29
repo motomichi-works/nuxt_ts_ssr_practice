@@ -10,7 +10,7 @@
       :disabled="isDisabled"
       :name="name"
       class="selectField0001__field"
-      @blur="onBlur($event)"
+      @blur="$_handleBlur($event)"
     >
       <option
         v-for="item in options"

@@ -12,7 +12,7 @@
       :placeholder="placeholder"
       :maxlength="maxlength"
       class="basicField0001__field"
-      @blur="onBlur($event)"
+      @blur="$_handleBlur($event)"
     />
     <div v-if="isVisibleRightIcon" class="basicField0001__iconWrapper">
       <FontAwesomeIcon :icon="rightIcon" />

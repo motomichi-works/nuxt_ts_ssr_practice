@@ -69,7 +69,7 @@ export default Vue.extend({
     },
   },
   methods: {
-    onBlur({ target }: { target: HTMLInputElement }) {
+    $_handleBlur({ target }: { target: HTMLInputElement }) {
       const combinationField: ArgsForHandleChangeCombinationFieldOrBlurCombinationField | null = this
         .combinationField
         ? {
