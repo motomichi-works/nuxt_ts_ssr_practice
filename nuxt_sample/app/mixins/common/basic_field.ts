@@ -92,7 +92,7 @@ export default Vue.extend({
           combinationField,
         }
 
-        ;(this as any).emitInputField(payload)
+        ;(this as any).$_emitInputField(payload)
       },
     },
   },
