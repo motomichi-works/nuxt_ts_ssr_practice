@@ -6,7 +6,7 @@ import validateSingle from '~/utils/validate_single'
 import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
-import { ArgsForHandleInputCombinationField } from '~/types/args_for_on_input_combination_field'
+import { ArgsForHandleInputCombinationField } from '~/types/args_for_handle_input_combination_field'
 import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend

@@ -1,4 +1,4 @@
-import { ArgsForHandleInputCombinationField } from '~/types/args_for_on_input_combination_field'
+import { ArgsForHandleInputCombinationField } from '~/types/args_for_handle_input_combination_field'
 
 export type ArgsForHandleInputField = {
   namespace: string

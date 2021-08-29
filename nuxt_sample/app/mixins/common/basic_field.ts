@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import fieldBase from '~/mixins/common/field_base'
 
 // types
-import { ArgsForHandleInputCombinationField } from '~/types/args_for_on_input_combination_field'
+import { ArgsForHandleInputCombinationField } from '~/types/args_for_handle_input_combination_field'
 import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
