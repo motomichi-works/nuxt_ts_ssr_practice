@@ -48,7 +48,7 @@ import SelectFieldUnit0001Container from '~/components/pages/styleguides/select_
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'
 import mappedChangeRealtimeErrors from '~/mixins/common/methods/mapped_change_realtime_errors'
 import mappedChangeIsTainted from '~/mixins/common/methods/mapped_change_is_tainted'
-import handleInputField from '~/mixins/common/methods/on_input_field'
+import handleInputField from '~/mixins/common/methods/handle_input_field'
 import handleChangeFieldOrBlurField from '~/mixins/common/methods/handle_change_field_or_blur_field'
 
 // Vue.extend
