@@ -3,7 +3,7 @@ import Vue, { PropType } from 'vue'
 
 // types
 import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
-import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
+import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 
 // Vue.extend
@@ -80,7 +80,7 @@ export default Vue.extend({
           }
         : null
 
-      const payload: PayloadForOnChangeOrBlurField = {
+      const payload: PayloadOfChangeFieldOrBlurField = {
         namespace: (this as any).namespace,
         fieldValueObj: (this as any).fieldValueObj,
         isTaintedObj: (this as any).isTaintedObj,

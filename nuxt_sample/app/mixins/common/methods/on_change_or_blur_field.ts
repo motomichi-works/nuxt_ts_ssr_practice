@@ -7,12 +7,12 @@ import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types
 import { ArgsForOnChangeOrBlurCombinationField } from '~/types/args_for_on_change_or_blur_combination_field'
-import { PayloadForOnChangeOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
+import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_for_on_change_or_blur_field'
 
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onChangeOrBlurField(payload: PayloadForOnChangeOrBlurField) {
+    onChangeOrBlurField(payload: PayloadOfChangeFieldOrBlurField) {
       ;(this as any).mappedChangeFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
