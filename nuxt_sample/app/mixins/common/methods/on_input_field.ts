@@ -12,7 +12,7 @@ import { PayloadOfInputField } from '~/types/payload_of_input_field'
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onInputField(payload: PayloadOfInputField) {
+    $_handleInputField(payload: PayloadOfInputField) {
       ;(this as any).$_mappedChangeFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
