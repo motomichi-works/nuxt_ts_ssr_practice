@@ -15,6 +15,8 @@ export default Vue.extend({
     $_handleChangeFieldOrBlurField(
       payload: ArgsForHandleChangeFieldOrBlurField
     ) {
+      // NOTE: changeイベント、またはblurイベントが発火したとき、trimしてからstateに入れる
+      payload.value = payload.value.trim()
       ;(this as any).$_mappedChangeFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
