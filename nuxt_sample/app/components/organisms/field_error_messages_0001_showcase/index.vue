@@ -30,7 +30,7 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'FieldErrorMessages0001Container',
+  name: 'FieldErrorMessages0001Showcase',
   components: {
     FieldErrorMessages0001,
     Heading0001,

@@ -34,15 +34,15 @@ import {
 import PagePresentational0001 from '~/components/common/page_presentational_0001/index.vue'
 
 // import components/organisms
-import Badge0001Container from '~/components/organisms/badge_0001_showcase/index.vue'
-import BasicField0001Container from '~/components/organisms/basic_field_0001_showcase/index.vue'
-import BasicFieldUnit0001Container from '~/components/organisms/basic_field_unit_0001_showcase/index.vue'
-import FieldErrorMessages0001Container from '~/components/organisms/field_error_messages_0001_showcase/index.vue'
-import FieldHeading0001Container from '~/components/organisms/field_heading_0001_showcase/index.vue'
-import FontAwesome5Container from '~/components/organisms/font_awesome_5_showcase/index.vue'
-import Heading0001Container from '~/components/organisms/heading_0001_showcase/index.vue'
-import SelectField0001Container from '~/components/organisms/select_field_0001_showcase/index.vue'
-import SelectFieldUnit0001Container from '~/components/organisms/select_field_unit_0001_showcase/index.vue'
+import Badge0001Showcase from '~/components/organisms/badge_0001_showcase/index.vue'
+import BasicField0001Showcase from '~/components/organisms/basic_field_0001_showcase/index.vue'
+import BasicFieldUnit0001Showcase from '~/components/organisms/basic_field_unit_0001_showcase/index.vue'
+import FieldErrorMessages0001Showcase from '~/components/organisms/field_error_messages_0001_showcase/index.vue'
+import FieldHeading0001Showcase from '~/components/organisms/field_heading_0001_showcase/index.vue'
+import FontAwesome5Showcase from '~/components/organisms/font_awesome_5_showcase/index.vue'
+import Heading0001Showcase from '~/components/organisms/heading_0001_showcase/index.vue'
+import SelectField0001Showcase from '~/components/organisms/select_field_0001_showcase/index.vue'
+import SelectFieldUnit0001Showcase from '~/components/organisms/select_field_unit_0001_showcase/index.vue'
 
 // mixins
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'
@@ -55,15 +55,15 @@ import handleChangeFieldOrBlurField from '~/mixins/common/methods/handle_change_
 export default Vue.extend({
   components: {
     PagePresentational0001,
-    Badge0001Container,
-    BasicField0001Container,
-    BasicFieldUnit0001Container,
-    FieldErrorMessages0001Container,
-    FieldHeading0001Container,
-    FontAwesome5Container,
-    Heading0001Container,
-    SelectField0001Container,
-    SelectFieldUnit0001Container,
+    Badge0001Showcase,
+    BasicField0001Showcase,
+    BasicFieldUnit0001Showcase,
+    FieldErrorMessages0001Showcase,
+    FieldHeading0001Showcase,
+    FontAwesome5Showcase,
+    Heading0001Showcase,
+    SelectField0001Showcase,
+    SelectFieldUnit0001Showcase,
   },
   mixins: [
     mappedChangeFieldValue,
@@ -87,15 +87,15 @@ export default Vue.extend({
     },
     components() {
       const componentNames = [
-        'Badge0001Container',
-        'BasicField0001Container',
-        'BasicFieldUnit0001Container',
-        'FieldErrorMessages0001Container',
-        'FieldHeading0001Container',
-        'FontAwesome5Container',
-        'Heading0001Container',
-        'SelectField0001Container',
-        'SelectFieldUnit0001Container',
+        'Badge0001Showcase',
+        'BasicField0001Showcase',
+        'BasicFieldUnit0001Showcase',
+        'FieldErrorMessages0001Showcase',
+        'FieldHeading0001Showcase',
+        'FontAwesome5Showcase',
+        'Heading0001Showcase',
+        'SelectField0001Showcase',
+        'SelectFieldUnit0001Showcase',
       ] as const
 
       const components = componentNames.map((name) => {

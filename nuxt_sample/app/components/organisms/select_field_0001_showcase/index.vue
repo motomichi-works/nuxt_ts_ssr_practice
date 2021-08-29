@@ -47,7 +47,7 @@ import containingTheField from '~/mixins/pages/styleguides/index/containing_the_
 
 // Vue.extend
 export default Vue.extend({
-  name: 'SelectField0001Container',
+  name: 'SelectField0001Showcase',
   components: {
     SelectField0001,
     Heading0001,

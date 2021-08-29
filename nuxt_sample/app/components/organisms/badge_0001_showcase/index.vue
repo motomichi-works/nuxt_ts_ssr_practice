@@ -29,7 +29,7 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'Badge0001Container',
+  name: 'Badge0001Showcase',
   components: {
     Badge0001,
     Heading0001,

@@ -26,7 +26,7 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'FontAwesome5Container',
+  name: 'FontAwesome5Showcase',
   components: {
     Heading0001,
     FontAwesomeIcon,

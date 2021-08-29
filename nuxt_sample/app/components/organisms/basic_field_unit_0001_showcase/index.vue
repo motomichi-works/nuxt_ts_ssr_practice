@@ -120,7 +120,7 @@ import containingTheField from '~/mixins/pages/styleguides/index/containing_the_
 
 // Vue.extend
 export default Vue.extend({
-  name: 'BasicFieldUnit0001Container',
+  name: 'BasicFieldUnit0001Showcase',
   components: {
     BasicFieldUnit0001,
     Heading0001,
