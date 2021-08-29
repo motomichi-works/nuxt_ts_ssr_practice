@@ -12,7 +12,7 @@ import { PayloadOfChangeFieldOrBlurField } from '~/types/payload_of_change_field
 // Vue.extend
 export default Vue.extend({
   methods: {
-    onChangeOrBlurField(payload: PayloadOfChangeFieldOrBlurField) {
+    $_handleChangeFieldOrBlurField(payload: PayloadOfChangeFieldOrBlurField) {
       ;(this as any).$_mappedChangeFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,

@@ -10,8 +10,8 @@
       :realtime-errors-obj="realtimeErrorsObj"
       :is-tainted-obj="isTaintedObj"
       @input-field="onInputField"
-      @change-field="onChangeOrBlurField"
-      @blur-field="onChangeOrBlurField"
+      @change-field="$_handleChangeFieldOrBlurField"
+      @blur-field="$_handleChangeFieldOrBlurField"
     />
   </PagePresentational0001>
 </template>
@@ -49,7 +49,7 @@ import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_
 import mappedChangeRealtimeErrors from '~/mixins/common/methods/mapped_change_realtime_errors'
 import mappedChangeIsTainted from '~/mixins/common/methods/mapped_change_is_tainted'
 import onInputField from '~/mixins/common/methods/on_input_field'
-import onChangeOrBlurField from '~/mixins/common/methods/on_change_or_blur_field'
+import handleChangeFieldOrBlurField from '~/mixins/common/methods/on_change_or_blur_field'
 
 // Vue.extend
 export default Vue.extend({
@@ -70,7 +70,7 @@ export default Vue.extend({
     mappedChangeRealtimeErrors,
     mappedChangeIsTainted,
     onInputField,
-    onChangeOrBlurField,
+    handleChangeFieldOrBlurField,
   ],
   computed: {
     namespace() {
