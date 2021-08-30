@@ -7,18 +7,24 @@
       />
     </div>
     <div class="container-0001__body">
-      <FontAwesomeIcon :icon="fa.search" />
-      <FontAwesomeIcon :icon="fa.searchPlus" />
+      <FontAwesomeIconWrapper
+        :identifiers="[...identifiers, 'FontAwesomeIconWrapper01']"
+        :icon="fa.search"
+      />
+      <FontAwesomeIconWrapper
+        :identifiers="[...identifiers, 'FontAwesomeIconWrapper02']"
+        :icon="fa.searchPlus"
+      />
     </div>
   </section>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 // import components/molecules_and_atoms
+import FontAwesomeIconWrapper from '~/components/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
 import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
@@ -29,7 +35,7 @@ export default Vue.extend({
   name: 'OrgFontAwesome5Showcase',
   components: {
     Heading0001,
-    FontAwesomeIcon,
+    FontAwesomeIconWrapper,
   },
   mixins: [everyChild],
   computed: {

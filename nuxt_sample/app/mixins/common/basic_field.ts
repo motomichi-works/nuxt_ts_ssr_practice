@@ -1,7 +1,7 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import FontAwesomeIconWrapper from '~/components/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
 
 // mixins
 import fieldBase from '~/mixins/common/field_base'
@@ -13,7 +13,7 @@ import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 // Vue.extend
 export default Vue.extend({
   components: {
-    FontAwesomeIcon,
+    FontAwesomeIconWrapper,
   },
   mixins: [fieldBase],
   props: {
