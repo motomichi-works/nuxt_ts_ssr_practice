@@ -3,15 +3,16 @@
     <div class="container-0001__heading-wrapper">
       <Heading0001
         :identifiers="[...identifiers, 'heading']"
-        text="Badge0001"
+        text="FieldErrorMessages0001"
       />
     </div>
     <div class="container-0001__body">
-      <Badge0001 :identifiers="[...identifiers, 'badge']" text="必須" />
-      <Badge0001
-        :identifiers="[...identifiers, 'badgeA']"
-        text="任意"
-        :modifier-classes="['badge0001--bgColorGray']"
+      <FieldErrorMessages0001
+        :identifiers="[...identifiers, 'fieldErrorMessages']"
+        :error-messages="[
+          'エラーメッセージサンプル1',
+          'エラーメッセージサンプル2',
+        ]"
       />
     </div>
   </section>
@@ -21,7 +22,7 @@
 import Vue from 'vue'
 
 // import components/molecules_and_atoms
-import Badge0001 from '~/components/molecules_and_atoms/badge_0001/index.vue'
+import FieldErrorMessages0001 from '~/components/molecules_and_atoms/field_error_messages_0001/index.vue'
 import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
@@ -29,9 +30,9 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'Badge0001Showcase',
+  name: 'OrgFieldErrorMessages0001Showcase',
   components: {
-    Badge0001,
+    FieldErrorMessages0001,
     Heading0001,
   },
   mixins: [everyChild],

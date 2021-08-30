@@ -4,7 +4,7 @@
     class="pagePresentational0001"
   >
     <div class="pagePresentational0001__headerWrapper">
-      <Header0001 :identifiers="[...identifiers, 'Header0001']" />
+      <OrgHeader0001 :identifiers="[...identifiers, 'OrgHeader0001']" />
     </div>
     <div class="pagePresentational0001__contentsWrapper">
       <div class="pagePresentational0001__headingWrapper">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="pagePresentational0001__footerWrapper">
-      <Footer0001 :identifiers="[...identifiers, 'Footer0001']" />
+      <OrgFooter0001 :identifiers="[...identifiers, 'OrgFooter0001']" />
     </div>
   </div>
 </template>
@@ -30,8 +30,8 @@
 import Vue, { PropType } from 'vue'
 
 // import components/molecules_and_atoms
-import Footer0001 from '~/components/organisms/footer_0001/index.vue'
-import Header0001 from '~/components/organisms/header_0001/index.vue'
+import OrgFooter0001 from '~/components/organisms/shared/org_footer_0001/index.vue'
+import OrgHeader0001 from '~/components/organisms/shared/org_header_0001/index.vue'
 import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
@@ -41,8 +41,8 @@ import everyPagePresentational from '~/mixins/common/every_page_presentational'
 export default Vue.extend({
   name: 'PagePresentational0001',
   components: {
-    Footer0001,
-    Header0001,
+    OrgFooter0001,
+    OrgHeader0001,
     Heading0001,
   },
   mixins: [everyPagePresentational],

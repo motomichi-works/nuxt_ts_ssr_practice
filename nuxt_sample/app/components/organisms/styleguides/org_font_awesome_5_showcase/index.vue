@@ -3,26 +3,22 @@
     <div class="container-0001__heading-wrapper">
       <Heading0001
         :identifiers="[...identifiers, 'heading']"
-        text="FieldErrorMessages0001"
+        text="FontAwesome5"
       />
     </div>
     <div class="container-0001__body">
-      <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'fieldErrorMessages']"
-        :error-messages="[
-          'エラーメッセージサンプル1',
-          'エラーメッセージサンプル2',
-        ]"
-      />
+      <FontAwesomeIcon :icon="fa.search" />
+      <FontAwesomeIcon :icon="fa.searchPlus" />
     </div>
   </section>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 // import components/molecules_and_atoms
-import FieldErrorMessages0001 from '~/components/molecules_and_atoms/field_error_messages_0001/index.vue'
 import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
@@ -30,12 +26,20 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'FieldErrorMessages0001Showcase',
+  name: 'OrgFontAwesome5Showcase',
   components: {
-    FieldErrorMessages0001,
     Heading0001,
+    FontAwesomeIcon,
   },
   mixins: [everyChild],
+  computed: {
+    fa() {
+      return {
+        search: faSearch,
+        searchPlus: faSearchPlus,
+      }
+    },
+  },
 })
 </script>
 <style lang="scss" scoped>

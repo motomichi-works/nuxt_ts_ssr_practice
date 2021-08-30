@@ -32,7 +32,7 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'QiitaItems',
+  name: 'OrgQiitaItems',
   components: {
     Heading0001,
   },

@@ -17,7 +17,7 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'Header0001',
+  name: 'OrgHeader0001',
   mixins: [everyChild],
 })
 </script>

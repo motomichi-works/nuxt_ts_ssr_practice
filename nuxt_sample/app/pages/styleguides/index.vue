@@ -34,15 +34,15 @@ import {
 import PagePresentational0001 from '~/components/pages/page_presentational_0001/index.vue'
 
 // import components/organisms
-import Badge0001Showcase from '~/components/organisms/badge_0001_showcase/index.vue'
-import BasicField0001Showcase from '~/components/organisms/basic_field_0001_showcase/index.vue'
-import BasicFieldUnit0001Showcase from '~/components/organisms/basic_field_unit_0001_showcase/index.vue'
-import FieldErrorMessages0001Showcase from '~/components/organisms/field_error_messages_0001_showcase/index.vue'
-import FieldHeading0001Showcase from '~/components/organisms/field_heading_0001_showcase/index.vue'
-import FontAwesome5Showcase from '~/components/organisms/font_awesome_5_showcase/index.vue'
-import Heading0001Showcase from '~/components/organisms/heading_0001_showcase/index.vue'
-import SelectField0001Showcase from '~/components/organisms/select_field_0001_showcase/index.vue'
-import SelectFieldUnit0001Showcase from '~/components/organisms/select_field_unit_0001_showcase/index.vue'
+import OrgBadge0001Showcase from '~/components/organisms/styleguides/org_badge_0001_showcase/index.vue'
+import OrgBasicField0001Showcase from '~/components/organisms/styleguides/org_basic_field_0001_showcase/index.vue'
+import OrgBasicFieldUnit0001Showcase from '~/components/organisms/styleguides/org_basic_field_unit_0001_showcase/index.vue'
+import OrgFieldErrorMessages0001Showcase from '~/components/organisms/styleguides/org_field_error_messages_0001_showcase/index.vue'
+import OrgFieldHeading0001Showcase from '~/components/organisms/styleguides/org_field_heading_0001_showcase/index.vue'
+import OrgFontAwesome5Showcase from '~/components/organisms/styleguides/org_font_awesome_5_showcase/index.vue'
+import OrgHeading0001Showcase from '~/components/organisms/styleguides/org_heading_0001_showcase/index.vue'
+import OrgSelectField0001Showcase from '~/components/organisms/styleguides/org_select_field_0001_showcase/index.vue'
+import OrgSelectFieldUnit0001Showcase from '~/components/organisms/styleguides/org_select_field_unit_0001_showcase/index.vue'
 
 // mixins
 import mappedChangeFieldValue from '~/mixins/common/methods/mapped_change_field_value'
@@ -55,15 +55,15 @@ import handleChangeFieldOrBlurField from '~/mixins/common/methods/handle_change_
 export default Vue.extend({
   components: {
     PagePresentational0001,
-    Badge0001Showcase,
-    BasicField0001Showcase,
-    BasicFieldUnit0001Showcase,
-    FieldErrorMessages0001Showcase,
-    FieldHeading0001Showcase,
-    FontAwesome5Showcase,
-    Heading0001Showcase,
-    SelectField0001Showcase,
-    SelectFieldUnit0001Showcase,
+    OrgBadge0001Showcase,
+    OrgBasicField0001Showcase,
+    OrgBasicFieldUnit0001Showcase,
+    OrgFieldErrorMessages0001Showcase,
+    OrgFieldHeading0001Showcase,
+    OrgFontAwesome5Showcase,
+    OrgHeading0001Showcase,
+    OrgSelectField0001Showcase,
+    OrgSelectFieldUnit0001Showcase,
   },
   mixins: [
     mappedChangeFieldValue,
@@ -87,15 +87,15 @@ export default Vue.extend({
     },
     components() {
       const componentNames = [
-        'Badge0001Showcase',
-        'BasicField0001Showcase',
-        'BasicFieldUnit0001Showcase',
-        'FieldErrorMessages0001Showcase',
-        'FieldHeading0001Showcase',
-        'FontAwesome5Showcase',
-        'Heading0001Showcase',
-        'SelectField0001Showcase',
-        'SelectFieldUnit0001Showcase',
+        'OrgBadge0001Showcase',
+        'OrgBasicField0001Showcase',
+        'OrgBasicFieldUnit0001Showcase',
+        'OrgFieldErrorMessages0001Showcase',
+        'OrgFieldHeading0001Showcase',
+        'OrgFontAwesome5Showcase',
+        'OrgHeading0001Showcase',
+        'OrgSelectField0001Showcase',
+        'OrgSelectFieldUnit0001Showcase',
       ] as const
 
       const components = componentNames.map((name) => {

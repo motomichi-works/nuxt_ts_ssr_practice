@@ -3,22 +3,25 @@
     <div class="container-0001__heading-wrapper">
       <Heading0001
         :identifiers="[...identifiers, 'heading']"
-        text="FontAwesome5"
+        text="Badge0001"
       />
     </div>
     <div class="container-0001__body">
-      <FontAwesomeIcon :icon="fa.search" />
-      <FontAwesomeIcon :icon="fa.searchPlus" />
+      <Badge0001 :identifiers="[...identifiers, 'badge']" text="必須" />
+      <Badge0001
+        :identifiers="[...identifiers, 'badgeA']"
+        text="任意"
+        :modifier-classes="['badge0001--bgColorGray']"
+      />
     </div>
   </section>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
 // import components/molecules_and_atoms
+import Badge0001 from '~/components/molecules_and_atoms/badge_0001/index.vue'
 import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
@@ -26,20 +29,12 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'FontAwesome5Showcase',
+  name: 'OrgBadge0001Showcase',
   components: {
+    Badge0001,
     Heading0001,
-    FontAwesomeIcon,
   },
   mixins: [everyChild],
-  computed: {
-    fa() {
-      return {
-        search: faSearch,
-        searchPlus: faSearchPlus,
-      }
-    },
-  },
 })
 </script>
 <style lang="scss" scoped>

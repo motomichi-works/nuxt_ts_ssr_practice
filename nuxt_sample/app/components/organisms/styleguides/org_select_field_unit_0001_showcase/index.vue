@@ -121,7 +121,7 @@ import containingTheField from '~/mixins/pages/styleguides/index/containing_the_
 
 // Vue.extend
 export default Vue.extend({
-  name: 'SelectFieldUnit0001Showcase',
+  name: 'OrgSelectFieldUnit0001Showcase',
   components: {
     SelectFieldUnit0001,
     Heading0001,

@@ -47,7 +47,7 @@ import containingTheField from '~/mixins/pages/styleguides/index/containing_the_
 
 // Vue.extend
 export default Vue.extend({
-  name: 'BasicField0001Showcase',
+  name: 'OrgBasicField0001Showcase',
   components: {
     BasicField0001,
     Heading0001,

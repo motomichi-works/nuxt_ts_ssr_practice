@@ -58,7 +58,7 @@ import everyChild from '~/mixins/common/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'Heading0001Showcase',
+  name: 'OrgHeading0001Showcase',
   components: {
     Heading0001,
   },
