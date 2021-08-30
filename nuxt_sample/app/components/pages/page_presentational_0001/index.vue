@@ -8,11 +8,9 @@
     </div>
     <div class="pagePresentational0001__contentsWrapper">
       <div class="pagePresentational0001__headingWrapper">
-        <Heading0001
+        <OrgPageHeading0001
           :identifiers="[...identifiers, 'Heading0001']"
-          :text="pageHeadingText"
-          :modifier-classes="['heading0001--Lv1']"
-          :tag-name="'h1'"
+          :page-heading-text="pageHeadingText"
         />
       </div>
       <div class="pagePresentational0001__body">
@@ -29,10 +27,10 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// import components/molecules_and_atoms
+// import components/organisms
 import OrgFooter0001 from '~/components/organisms/shared/org_footer_0001/index.vue'
 import OrgHeader0001 from '~/components/organisms/shared/org_header_0001/index.vue'
-import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
+import OrgPageHeading0001 from '~/components/organisms/shared/org_page_heading_0001/index.vue'
 
 // mixins
 import everyPagePresentational from '~/mixins/common/every_page_presentational'
@@ -43,7 +41,7 @@ export default Vue.extend({
   components: {
     OrgFooter0001,
     OrgHeader0001,
-    Heading0001,
+    OrgPageHeading0001,
   },
   mixins: [everyPagePresentational],
   props: {
