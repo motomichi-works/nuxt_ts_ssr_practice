@@ -28,9 +28,9 @@
 import Vue, { PropType } from 'vue'
 
 // import components/organisms
-import OrgFooter0001 from '~/components/organisms/shared/org_footer_0001/index.vue'
-import OrgHeader0001 from '~/components/organisms/shared/org_header_0001/index.vue'
-import OrgPageHeading0001 from '~/components/organisms/shared/org_page_heading_0001/index.vue'
+import OrgFooter0001 from '~/components/organism_containers/shared/org_footer_0001/index.vue'
+import OrgHeader0001 from '~/components/organism_containers/shared/org_header_0001/index.vue'
+import OrgPageHeading0001 from '~/components/organism_containers/shared/org_page_heading_0001/index.vue'
 
 // mixins
 import everyPagePresentational from '~/mixins/common/every_page_presentational'
