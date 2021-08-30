@@ -31,7 +31,7 @@ import {
 } from '~/store/styleguides/index'
 
 // import components/molecules_and_atoms
-import PagePresentational0001 from '~/components/pages/page_presentational_0001/index.vue'
+import PagePresentational0001 from '~/components/page_presentationals/page_presentational_0001/index.vue'
 
 // import components/organisms
 import OrgBadge0001Showcase from '~/components/organism_containers/styleguides/org_badge_0001_showcase/index.vue'
