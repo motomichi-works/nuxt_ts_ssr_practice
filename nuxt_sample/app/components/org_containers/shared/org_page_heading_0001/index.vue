@@ -14,7 +14,7 @@
 import Vue, { PropType } from 'vue'
 
 // import components/molecules_and_atoms
-import Heading0001 from '~/components/molecules_and_atoms/heading_0001/index.vue'
+import Heading0001 from '~/components/molecules_and_atoms/shared/heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

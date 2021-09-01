@@ -33,7 +33,7 @@ import Vue from 'vue'
 import OrgPresentational0001 from '~/components/org_presentationals/org_presentational_0001/index.vue'
 
 // import components/molecules_and_atoms
-import FieldHeading0001 from '~/components/molecules_and_atoms/field_heading_0001/index.vue'
+import FieldHeading0001 from '~/components/molecules_and_atoms/shared/field_heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

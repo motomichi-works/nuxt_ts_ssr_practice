@@ -110,7 +110,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import OrgPresentational0001 from '~/components/org_presentationals/org_presentational_0001/index.vue'
 
 // import components/molecules_and_atoms
-import SelectFieldUnit0001 from '~/components/molecules_and_atoms/select_field_unit_0001/index.vue'
+import SelectFieldUnit0001 from '~/components/molecules_and_atoms/shared/select_field_unit_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

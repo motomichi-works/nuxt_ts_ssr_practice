@@ -19,7 +19,7 @@ import Vue from 'vue'
 import OrgPresentational0001 from '~/components/org_presentationals/org_presentational_0001/index.vue'
 
 // import components/molecules_and_atoms
-import Badge0001 from '~/components/molecules_and_atoms/badge_0001/index.vue'
+import Badge0001 from '~/components/molecules_and_atoms/shared/badge_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'
