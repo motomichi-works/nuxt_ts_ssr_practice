@@ -46,10 +46,10 @@
 import Vue from 'vue'
 
 // import components/org_presentationals
-import OrgPresentational0001 from '~/components/shared/org_presentationals/org_presentational_0001/index.vue'
+import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001/index.vue'
 
 // import components/molecules_and_atoms
-import Heading0001 from '~/components/shared/molecules_and_atoms/heading_0001/index.vue'
+import Heading0001 from '~/components/common/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

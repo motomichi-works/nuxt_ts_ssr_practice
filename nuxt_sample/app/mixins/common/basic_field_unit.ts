@@ -3,7 +3,7 @@ import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // import components/molecules_and_atoms
-import BasicField0001 from '~/components/shared/molecules_and_atoms/basic_field_0001/index.vue'
+import BasicField0001 from '~/components/common/molecules_and_atoms/basic_field_0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({

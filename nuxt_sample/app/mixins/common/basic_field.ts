@@ -1,7 +1,7 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
-import FontAwesomeIconWrapper from '~/components/shared/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
+import FontAwesomeIconWrapper from '~/components/common/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
 
 // mixins
 import fieldBase from '~/mixins/common/field_base'

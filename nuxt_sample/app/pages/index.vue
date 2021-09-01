@@ -14,7 +14,7 @@
 import Vue from 'vue'
 
 // import components/orgs
-import PagePresentational0001 from '~/components/shared/page_presentationals/page_presentational_0001/index.vue'
+import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001/index.vue'
 
 // Vue.extend
 export default Vue.extend({
