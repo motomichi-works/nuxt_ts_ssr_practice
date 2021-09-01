@@ -33,7 +33,7 @@ import OrgHeader0001 from '~/components/common/org_containers/org_header_0001/in
 import OrgPageHeading0001 from '~/components/common/org_containers/org_page_heading_0001/index.vue'
 
 // mixins
-import everyPagePresentational from '~/mixins/common/every_page_presentational'
+import everyPagePresentational from '~/mixins/common/page_presentationals/every_page_presentational'
 
 // Vue.extend
 export default Vue.extend({
