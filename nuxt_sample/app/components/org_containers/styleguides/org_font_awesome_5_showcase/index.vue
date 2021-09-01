@@ -22,7 +22,7 @@ import { faSearch, faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 import OrgPresentational0001 from '~/components/org_presentationals/shared/org_presentational_0001/index.vue'
 
 // import components/molecules_and_atoms
-import FontAwesomeIconWrapper from '~/components/molecules_and_atoms/shared/font_awesome_icon_wrapper/index.vue'
+import FontAwesomeIconWrapper from '~/components/shared/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

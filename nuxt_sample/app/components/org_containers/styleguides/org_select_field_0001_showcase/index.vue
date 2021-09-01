@@ -36,7 +36,7 @@ import Vue from 'vue'
 import OrgPresentational0001 from '~/components/org_presentationals/shared/org_presentational_0001/index.vue'
 
 // import components/molecules_and_atoms
-import SelectField0001 from '~/components/molecules_and_atoms/shared/select_field_0001/index.vue'
+import SelectField0001 from '~/components/shared/molecules_and_atoms/select_field_0001/index.vue'
 
 // mixins
 import everyChild from '~/mixins/common/every_child'

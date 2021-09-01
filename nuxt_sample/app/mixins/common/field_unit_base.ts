@@ -2,8 +2,8 @@
 import Vue, { PropType } from 'vue'
 
 // components
-import FieldErrorMessages0001 from '~/components/molecules_and_atoms/shared/field_error_messages_0001/index.vue'
-import FieldHeading0001 from '~/components/molecules_and_atoms/shared/field_heading_0001/index.vue'
+import FieldErrorMessages0001 from '~/components/shared/molecules_and_atoms/field_error_messages_0001/index.vue'
+import FieldHeading0001 from '~/components/shared/molecules_and_atoms/field_heading_0001/index.vue'
 
 // types
 import { CombinationFieldForFieldUnitProp } from '~/types/combination_field_for_field_unit_prop'
