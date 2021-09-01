@@ -4,12 +4,12 @@
     class="pagePresentational0001"
   >
     <div class="pagePresentational0001__headerWrapper">
-      <OrgHeader0001 :identifiers="[...identifiers, 'OrgHeader0001']" />
+      <OrgHeader0001 :identifiers="['OrgHeader0001']" />
     </div>
     <div class="pagePresentational0001__contentsWrapper">
       <div class="pagePresentational0001__headingWrapper">
         <OrgPageHeading0001
-          :identifiers="[...identifiers, 'Heading0001']"
+          :identifiers="['OrgPageHeading']"
           :page-heading-text="pageHeadingText"
         />
       </div>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="pagePresentational0001__footerWrapper">
-      <OrgFooter0001 :identifiers="[...identifiers, 'OrgFooter0001']" />
+      <OrgFooter0001 :identifiers="['OrgFooter0001']" />
     </div>
   </div>
 </template>
@@ -27,10 +27,10 @@
 // import node_modules
 import Vue, { PropType } from 'vue'
 
-// import components/organisms
-import OrgFooter0001 from '~/components/organism_containers/shared/org_footer_0001/index.vue'
-import OrgHeader0001 from '~/components/organism_containers/shared/org_header_0001/index.vue'
-import OrgPageHeading0001 from '~/components/organism_containers/shared/org_page_heading_0001/index.vue'
+// import components/orgs
+import OrgFooter0001 from '~/components/org_containers/shared/org_footer_0001/index.vue'
+import OrgHeader0001 from '~/components/org_containers/shared/org_header_0001/index.vue'
+import OrgPageHeading0001 from '~/components/org_containers/shared/org_page_heading_0001/index.vue'
 
 // mixins
 import everyPagePresentational from '~/mixins/common/every_page_presentational'

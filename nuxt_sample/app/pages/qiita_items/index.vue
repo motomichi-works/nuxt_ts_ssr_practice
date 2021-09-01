@@ -12,8 +12,8 @@ import Vue from 'vue'
 // import components/molecules_and_atoms
 import PagePresentational0001 from '~/components/page_presentationals/page_presentational_0001/index.vue'
 
-// import components/organisms
-import OrgQiitaItems from '~/components/organism_containers/qiita_items/org_qiita_items/index.vue'
+// import components/orgs
+import OrgQiitaItems from '~/components/org_containers/qiita_items/org_qiita_items/index.vue'
 
 // Vue.extend
 export default Vue.extend({

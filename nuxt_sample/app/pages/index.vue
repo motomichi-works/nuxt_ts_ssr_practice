@@ -13,7 +13,7 @@
 // import node_modules
 import Vue from 'vue'
 
-// import components/organisms
+// import components/orgs
 import PagePresentational0001 from '~/components/page_presentationals/page_presentational_0001/index.vue'
 
 // Vue.extend
