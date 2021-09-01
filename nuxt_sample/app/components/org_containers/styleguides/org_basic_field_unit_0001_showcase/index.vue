@@ -113,7 +113,7 @@ import BasicFieldUnit0001 from '~/components/molecules_and_atoms/shared/basic_fi
 
 // mixins
 import everyChild from '~/mixins/common/every_child'
-import containingTheField from '~/mixins/pages/styleguides/index/containing_the_field'
+import containingTheField from '~/mixins/org_containers/shared/containing_the_field'
 
 // Vue.extend
 export default Vue.extend({
