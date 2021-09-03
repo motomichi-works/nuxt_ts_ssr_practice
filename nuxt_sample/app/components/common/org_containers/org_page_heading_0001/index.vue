@@ -17,7 +17,7 @@ import Vue, { PropType } from 'vue'
 import Heading0001 from '~/components/common/molecules_and_atoms/heading_0001/index.vue'
 
 // mixins
-import everyChild from '~/mixins/common/every_child'
+import everyChild from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({

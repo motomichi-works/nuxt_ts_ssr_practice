@@ -25,7 +25,7 @@ import OrgPresentational0001 from '~/components/common/org_presentationals/org_p
 import FontAwesomeIconWrapper from '~/components/common/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
 
 // mixins
-import everyChild from '~/mixins/common/every_child'
+import everyChild from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
