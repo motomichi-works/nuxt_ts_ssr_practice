@@ -34,7 +34,7 @@
 import Vue from 'vue'
 
 // mixins
-import selectFieldOrRadioField from '~/mixins/common/select_field_or_radio_field'
+import selectFieldOrRadioField from '~/mixins/common/molecules_and_atoms/select_field_or_radio_field'
 
 // Vue.extend
 export default Vue.extend({
