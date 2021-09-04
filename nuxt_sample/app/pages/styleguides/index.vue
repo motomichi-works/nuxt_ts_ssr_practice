@@ -41,6 +41,7 @@ import OrgFieldErrorMessages0001Showcase from '~/components/styleguides/index/or
 import OrgFieldHeading0001Showcase from '~/components/styleguides/index/org_containers/org_field_heading_0001_showcase/index.vue'
 import OrgFontAwesome5Showcase from '~/components/styleguides/index/org_containers/org_font_awesome_5_showcase/index.vue'
 import OrgHeading0001Showcase from '~/components/styleguides/index/org_containers/org_heading_0001_showcase/index.vue'
+import OrgList0001Showcase from '~/components/styleguides/index/org_containers/org_list_0001_showcase/index.vue'
 import OrgSelectField0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_0001_showcase/index.vue'
 import OrgSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_unit_0001_showcase/index.vue'
 
@@ -62,6 +63,7 @@ export default Vue.extend({
     OrgFieldHeading0001Showcase,
     OrgFontAwesome5Showcase,
     OrgHeading0001Showcase,
+    OrgList0001Showcase,
     OrgSelectField0001Showcase,
     OrgSelectFieldUnit0001Showcase,
   },
@@ -94,6 +96,7 @@ export default Vue.extend({
         'OrgFieldHeading0001Showcase',
         'OrgFontAwesome5Showcase',
         'OrgHeading0001Showcase',
+        'OrgList0001Showcase',
         'OrgSelectField0001Showcase',
         'OrgSelectFieldUnit0001Showcase',
       ] as const
