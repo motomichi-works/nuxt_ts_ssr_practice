@@ -28,7 +28,7 @@ import {
   FieldValueObj,
   RealtimeErrorsObj,
   IsTaintedObj,
-} from '~/store/styleguides/index'
+} from '~/store/styleguidesIndex'
 
 // import components/molecules_and_atoms
 import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001/index.vue'
