@@ -1,5 +1,5 @@
 <template>
-  <PagePresentational0001 page-heading-text="styleguides/index.vue">
+  <PagePresentational0001 page-heading-text="styleguides/index">
     <component
       :is="component.name"
       v-for="component in components"

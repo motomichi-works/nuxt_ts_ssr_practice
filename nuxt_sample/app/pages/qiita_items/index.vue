@@ -1,5 +1,5 @@
 <template>
-  <PagePresentational0001 page-heading-text="index.vue">
+  <PagePresentational0001 page-heading-text="qiita_items/index">
     <OrgQiitaItems :identifiers="['OrgQiitaItems']" :qiita-items="qiitaItems" />
   </PagePresentational0001>
 </template>
