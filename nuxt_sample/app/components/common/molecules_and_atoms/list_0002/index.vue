@@ -13,6 +13,15 @@
           :to="element.to"
           v-text="element.text"
         />
+        <a
+          v-else-if="element.tagName === 'a'"
+          :key="`${JSON.stringify(innerItems)}${lv2Index}`"
+          :class="element.className"
+          :href="element.href"
+          :target="element.isTargetBlank ? '_blank' : false"
+          :rel="element.isTargetBlank ? 'noopener' : false"
+          v-text="element.text"
+        />
         <component
           :is="element.tagName"
           v-else
@@ -38,6 +47,13 @@ type InnerItem =
       text: string
       className: string
       to: string
+    }
+  | {
+      tagName: 'a'
+      text: string
+      className: string
+      href: string
+      isTargetBlank: boolean
     }
   | {
       tagName: 'div' | 'span'
