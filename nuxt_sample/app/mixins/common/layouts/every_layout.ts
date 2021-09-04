@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // Vue.extend
-export default Vue.extend({
+export const everyLayout = Vue.extend({
   computed: {
     identifiers() {
       return ['Layout']

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 // mixins
-import everyLayout from '~/mixins/common/layouts/every_layout'
+import { everyLayout } from '~/mixins/common/layouts/every_layout'
 
 export default {
   mixins: [everyLayout],
