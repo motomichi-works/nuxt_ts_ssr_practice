@@ -11,7 +11,7 @@ import { ArgsForHandleInputCombinationField } from '~/types/args_for_handle_inpu
 import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
-export default Vue.extend({
+export const basicField = Vue.extend({
   components: {
     FontAwesomeIconWrapper,
   },

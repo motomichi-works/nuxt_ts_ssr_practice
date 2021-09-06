@@ -31,7 +31,7 @@
 import Vue from 'vue'
 
 // mixins
-import basicField from '~/mixins/common/molecules_and_atoms/basic_field'
+import { basicField } from '~/mixins/common/molecules_and_atoms/basic_field'
 
 // Vue.extend
 export default Vue.extend({
