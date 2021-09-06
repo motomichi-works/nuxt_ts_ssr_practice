@@ -16,7 +16,7 @@
 import Vue from 'vue'
 
 // import components/org_presentationals
-import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001/index.vue'
+import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001.vue'
 
 // import components/molecules_and_atoms
 import Badge0001 from '~/components/common/molecules_and_atoms/badge_0001/index.vue'
