@@ -16,7 +16,7 @@ import Vue, { PropType } from 'vue'
 
 // import components/org_presentationals
 import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001.vue'
-import List0001 from '~/components/common/molecules_and_atoms/list_0001/index.vue'
+import List0001 from '~/components/common/molecules_and_atoms/list_0001.vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'

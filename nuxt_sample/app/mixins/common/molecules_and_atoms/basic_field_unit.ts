@@ -3,7 +3,7 @@ import Vue, { PropType } from 'vue'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 
 // import components/molecules_and_atoms
-import BasicField0001 from '~/components/common/molecules_and_atoms/basic_field_0001/index.vue'
+import BasicField0001 from '~/components/common/molecules_and_atoms/basic_field_0001.vue'
 
 // mixins
 import { fieldUnitBase } from '~/mixins/common/molecules_and_atoms/field_unit_base'

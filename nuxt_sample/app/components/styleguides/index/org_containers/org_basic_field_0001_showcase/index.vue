@@ -36,7 +36,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001.vue'
 
 // import components/molecules_and_atoms
-import BasicField0001 from '~/components/common/molecules_and_atoms/basic_field_0001/index.vue'
+import BasicField0001 from '~/components/common/molecules_and_atoms/basic_field_0001.vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'

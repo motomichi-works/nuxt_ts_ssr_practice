@@ -30,7 +30,7 @@ import Vue from 'vue'
 
 // import components/orgs
 import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001.vue'
-import List0002 from '~/components/common/molecules_and_atoms/list_0002/index.vue'
+import List0002 from '~/components/common/molecules_and_atoms/list_0002.vue'
 
 // Vue.extend
 export default Vue.extend({

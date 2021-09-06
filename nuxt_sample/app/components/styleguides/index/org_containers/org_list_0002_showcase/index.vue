@@ -50,7 +50,7 @@ import Vue from 'vue'
 import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001.vue'
 
 // import components/molecules_and_atoms
-import List0002 from '~/components/common/molecules_and_atoms/list_0002/index.vue'
+import List0002 from '~/components/common/molecules_and_atoms/list_0002.vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'
