@@ -10,7 +10,7 @@ import { CombinationFieldForFieldProp } from '~/types/combination_field_for_fiel
 import everyChild from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
-export default Vue.extend({
+export const fieldBase = Vue.extend({
   mixins: [everyChild],
   props: {
     modifiers: {

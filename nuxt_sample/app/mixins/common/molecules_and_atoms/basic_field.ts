@@ -4,7 +4,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 import FontAwesomeIconWrapper from '~/components/common/molecules_and_atoms/font_awesome_icon_wrapper/index.vue'
 
 // mixins
-import fieldBase from '~/mixins/common/molecules_and_atoms/field_base'
+import { fieldBase } from '~/mixins/common/molecules_and_atoms/field_base'
 
 // types
 import { ArgsForHandleInputCombinationField } from '~/types/args_for_handle_input_combination_field'

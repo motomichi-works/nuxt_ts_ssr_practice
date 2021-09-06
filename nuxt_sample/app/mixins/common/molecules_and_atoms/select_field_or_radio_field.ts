@@ -2,7 +2,7 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import fieldBase from '~/mixins/common/molecules_and_atoms/field_base'
+import { fieldBase } from '~/mixins/common/molecules_and_atoms/field_base'
 
 // types
 import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/types/args_for_handle_change_combination_field_or_blur_combination_field'
