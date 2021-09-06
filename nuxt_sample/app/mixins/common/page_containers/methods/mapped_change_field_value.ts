@@ -9,7 +9,7 @@ type ArgsForMappedChangeFieldValue = {
 }
 
 // Vue.extend
-export default Vue.extend({
+export const mappedChangeFieldValue = Vue.extend({
   methods: {
     $_mappedChangeFieldValue(args: ArgsForMappedChangeFieldValue) {
       const payload = {

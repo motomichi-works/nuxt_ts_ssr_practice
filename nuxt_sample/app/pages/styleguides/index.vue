@@ -47,7 +47,7 @@ import OrgSelectField0001Showcase from '~/components/styleguides/index/org_conta
 import OrgSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_unit_0001_showcase/index.vue'
 
 // mixins
-import mappedChangeFieldValue from '~/mixins/common/page_containers/methods/mapped_change_field_value'
+import { mappedChangeFieldValue } from '~/mixins/common/page_containers/methods/mapped_change_field_value'
 import mappedChangeRealtimeErrors from '~/mixins/common/page_containers/methods/mapped_change_realtime_errors'
 import mappedChangeIsTainted from '~/mixins/common/page_containers/methods/mapped_change_is_tainted'
 import { handleInputField } from '~/mixins/common/page_containers/methods/handle_input_field'
