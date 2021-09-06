@@ -1,5 +1,5 @@
 <template>
-  <OrgPresentational0001
+  <OrgGeneralPurpose0001Presentational
     :identifiers="[...identifiers, 'OrgPresentational']"
     org-presentational-heading-text="FieldHeading0001"
   >
@@ -23,14 +23,14 @@
       :badge-type="'notRequired'"
       tag-name="h3"
     />
-  </OrgPresentational0001>
+  </OrgGeneralPurpose0001Presentational>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
 
 // import components/org_presentationals
-import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001.vue'
+import OrgGeneralPurpose0001Presentational from '~/components/common/org_presentationals/org_general_purpose_0001_presentational.vue'
 
 // import components/molecules_and_atoms
 import FieldHeading0001 from '~/components/common/molecules_and_atoms/field_heading_0001.vue'
@@ -42,7 +42,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 export default Vue.extend({
   name: 'OrgFieldHeading0001Showcase',
   components: {
-    OrgPresentational0001,
+    OrgGeneralPurpose0001Presentational,
     FieldHeading0001,
   },
   mixins: [everyChild],

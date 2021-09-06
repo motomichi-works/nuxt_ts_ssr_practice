@@ -1,5 +1,5 @@
 <template>
-  <OrgPresentational0001
+  <OrgGeneralPurpose0001Presentational
     :identifiers="[...identifiers, 'OrgPresentational']"
     org-presentational-heading-text="qiitaのAPIから取得したitem情報のサンプル"
   >
@@ -8,14 +8,14 @@
       :identifiers="[...identifiers, 'CreatedAtList']"
       :items="createdAtItems"
     />
-  </OrgPresentational0001>
+  </OrgGeneralPurpose0001Presentational>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue, { PropType } from 'vue'
 
 // import components/org_presentationals
-import OrgPresentational0001 from '~/components/common/org_presentationals/org_presentational_0001.vue'
+import OrgGeneralPurpose0001Presentational from '~/components/common/org_presentationals/org_general_purpose_0001_presentational.vue'
 import List0001 from '~/components/common/molecules_and_atoms/list_0001.vue'
 
 // mixins
@@ -25,7 +25,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 export default Vue.extend({
   name: 'OrgQiitaItems',
   components: {
-    OrgPresentational0001,
+    OrgGeneralPurpose0001Presentational,
     List0001,
   },
   mixins: [everyChild],
