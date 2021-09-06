@@ -29,7 +29,7 @@ import Vue, { PropType } from 'vue'
 
 // import components/orgs
 import OrgFooter0001 from '~/components/common/org_containers/org_footer_0001_container.vue'
-import OrgHeader0001 from '~/components/common/org_containers/org_header_0001.vue'
+import OrgHeader0001 from '~/components/common/org_containers/org_header_0001_container.vue'
 import OrgPageHeading0001 from '~/components/common/org_containers/org_page_heading_0001.vue'
 
 // mixins
