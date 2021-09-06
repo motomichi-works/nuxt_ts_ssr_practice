@@ -10,7 +10,7 @@ import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
 // import components/molecules_and_atoms
-import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001/index.vue'
+import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001.vue'
 
 // import components/orgs
 import OrgQiitaItems from '~/components/qiita_items/index/org_containers/org_qiita_items/index.vue'
