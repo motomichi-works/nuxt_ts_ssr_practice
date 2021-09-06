@@ -13,7 +13,7 @@ export type Option = {
 }
 
 // Vue.extend
-export default Vue.extend({
+export const selectFieldOrRadioField = Vue.extend({
   mixins: [fieldBase],
   props: {
     options: {
