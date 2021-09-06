@@ -13,7 +13,7 @@ import Vue from 'vue'
 import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001.vue'
 
 // import components/orgs
-import OrgQiitaItems from '~/components/qiita_items/index/org_containers/org_qiita_items/index.vue'
+import OrgQiitaItems from '~/components/qiita_items/index/org_containers/org_qiita_items.vue'
 
 // Vue.extend
 export default Vue.extend({
