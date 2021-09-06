@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import { FieldValueObj, RealtimeErrorsObj } from '~/store/styleguidesIndex'
 
 // Vue.extend
-export default Vue.extend({
+export const containingTheField = Vue.extend({
   props: {
     fieldValueObj: {
       type: Object as PropType<FieldValueObj>,

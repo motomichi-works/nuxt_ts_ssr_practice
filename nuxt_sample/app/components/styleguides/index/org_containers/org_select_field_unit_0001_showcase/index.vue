@@ -114,7 +114,7 @@ import SelectFieldUnit0001 from '~/components/common/molecules_and_atoms/select_
 
 // mixins
 import everyChild from '~/mixins/common/unclassifiable/every_child'
-import containingTheField from '~/mixins/common/org_containers/containing_the_field'
+import { containingTheField } from '~/mixins/common/org_containers/containing_the_field'
 
 // Vue.extend
 export default Vue.extend({
