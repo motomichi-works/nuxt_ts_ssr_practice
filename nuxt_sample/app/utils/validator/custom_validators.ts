@@ -27,7 +27,7 @@ const patterns = {
   katakana: '^[ア-ン゛゜ァ-ォャ-ョー「」、 　A-Za-z0-9]*$',
 } as const
 
-export default {
+export const customValidators = {
   customEmail(value: string, options: any): string[] | undefined {
     const regExpForBlur = new RegExp(patterns.customEmailForBlur)
     const regExpForNotBlur = new RegExp(patterns.CustomEmailForNotBlur)
