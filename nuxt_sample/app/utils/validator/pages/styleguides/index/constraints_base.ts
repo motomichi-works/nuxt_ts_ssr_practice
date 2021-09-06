@@ -2,7 +2,7 @@
 import { sharedKeys } from '~/settings/pages/styleguides'
 
 // utils
-import constraintFunctions from '~/utils/validator/constraint_functions'
+import { constraintFunctions } from '~/utils/validator/constraint_functions'
 
 // types
 export type ConstraintsBase = Record<

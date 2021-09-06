@@ -6,7 +6,7 @@ validate.validators = {
   ...customValidators,
 }
 
-export default {
+export const constraintFunctions = {
   requiredBasicField(label: string) {
     return {
       presence: {
