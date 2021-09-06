@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // utils
-import validateSingle from '~/utils/validate_single'
+import { validateSingle } from '~/utils/validate_single'
 import { constraintsBaseOfAll } from '~/utils/validator/constraints_base_of_all'
 
 // types

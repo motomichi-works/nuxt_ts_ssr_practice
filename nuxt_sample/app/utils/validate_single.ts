@@ -11,7 +11,7 @@ type ArgsForValidateSingle<C> = {
   constraintsBaseOfAll: C
 }
 
-export default function validateSingle<C extends { [key: string]: any }>(
+export const validateSingle = function <C extends { [key: string]: any }>(
   args: ArgsForValidateSingle<C>
 ): string[] {
   const sharedKey = args.sharedKey
