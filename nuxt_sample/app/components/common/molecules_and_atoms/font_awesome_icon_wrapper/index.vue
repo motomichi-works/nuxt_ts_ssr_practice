@@ -14,7 +14,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // mixins
-import everyChild from '~/mixins/common/unclassifiable/every_child'
+import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({

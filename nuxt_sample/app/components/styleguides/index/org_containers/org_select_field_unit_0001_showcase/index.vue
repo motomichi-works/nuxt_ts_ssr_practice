@@ -113,7 +113,7 @@ import OrgPresentational0001 from '~/components/common/org_presentationals/org_p
 import SelectFieldUnit0001 from '~/components/common/molecules_and_atoms/select_field_unit_0001/index.vue'
 
 // mixins
-import everyChild from '~/mixins/common/unclassifiable/every_child'
+import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 import { containingTheField } from '~/mixins/common/org_containers/containing_the_field'
 
 // Vue.extend

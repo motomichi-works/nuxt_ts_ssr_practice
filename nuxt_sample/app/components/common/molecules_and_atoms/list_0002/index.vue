@@ -39,7 +39,7 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import everyChild from '~/mixins/common/unclassifiable/every_child'
+import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 type InnerItem =
   | {

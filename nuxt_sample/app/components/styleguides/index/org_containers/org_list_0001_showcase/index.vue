@@ -20,7 +20,7 @@ import OrgPresentational0001 from '~/components/common/org_presentationals/org_p
 import List0001 from '~/components/common/molecules_and_atoms/list_0001/index.vue'
 
 // mixins
-import everyChild from '~/mixins/common/unclassifiable/every_child'
+import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({

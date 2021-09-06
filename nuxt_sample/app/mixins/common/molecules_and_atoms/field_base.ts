@@ -7,7 +7,7 @@ import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_cha
 import { CombinationFieldForFieldProp } from '~/types/combination_field_for_field_prop'
 
 // mixins
-import everyChild from '~/mixins/common/unclassifiable/every_child'
+import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export const fieldBase = Vue.extend({

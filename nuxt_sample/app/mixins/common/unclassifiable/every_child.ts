@@ -7,7 +7,7 @@ import Vue, { PropType } from 'vue'
 import { emitters } from '~/mixins/common/unclassifiable/methods/emitters'
 
 // Vue.extend
-export default Vue.extend({
+export const everyChild = Vue.extend({
   mixins: [emitters],
   props: {
     identifiers: {
