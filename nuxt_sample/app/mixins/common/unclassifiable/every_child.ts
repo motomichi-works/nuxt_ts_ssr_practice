@@ -4,7 +4,7 @@
 import Vue, { PropType } from 'vue'
 
 // mixins
-import emitters from '~/mixins/common/unclassifiable/methods/emitters'
+import { emitters } from '~/mixins/common/unclassifiable/methods/emitters'
 
 // Vue.extend
 export default Vue.extend({

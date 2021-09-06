@@ -6,7 +6,7 @@ import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_cha
 import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 
 // Vue.extend
-export default Vue.extend({
+export const emitters = Vue.extend({
   methods: {
     $_emitBlurField(payload: ArgsForHandleChangeFieldOrBlurField) {
       this.$emit('blur-field', payload)
