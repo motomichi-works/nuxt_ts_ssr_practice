@@ -6,7 +6,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types/index'
 import BasicField0001 from '~/components/common/molecules_and_atoms/basic_field_0001/index.vue'
 
 // Vue.extend
-export default Vue.extend({
+export const basicFieldUnit = Vue.extend({
   components: {
     BasicField0001,
   },
