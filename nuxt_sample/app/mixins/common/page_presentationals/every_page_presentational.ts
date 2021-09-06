@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // Vue.extend
-export default Vue.extend({
+export const everyPagePresentational = Vue.extend({
   computed: {
     identifiers() {
       return ['PagePresentational']
