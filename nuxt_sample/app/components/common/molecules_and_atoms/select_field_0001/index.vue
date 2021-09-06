@@ -34,12 +34,13 @@
 import Vue from 'vue'
 
 // mixins
+import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 import { selectFieldOrRadioField } from '~/mixins/common/molecules_and_atoms/select_field_or_radio_field'
 
 // Vue.extend
 export default Vue.extend({
   name: 'SelectField0001',
-  mixins: [selectFieldOrRadioField],
+  mixins: [everyChild, selectFieldOrRadioField],
 })
 </script>
 
