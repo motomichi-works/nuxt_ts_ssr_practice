@@ -9,7 +9,7 @@ type ArgsForMappedChangeIsTainted = {
 }
 
 // Vue.extend
-export default Vue.extend({
+export const mappedChangeIsTainted = Vue.extend({
   methods: {
     $_mappedChangeIsTainted(args: ArgsForMappedChangeIsTainted) {
       const payload = {
