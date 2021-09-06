@@ -34,17 +34,17 @@ import {
 import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001.vue'
 
 // import components/orgs
-import OrgBadge0001Showcase from '~/components/styleguides/index/org_containers/org_badge_0001_showcase/index.vue'
-import OrgBasicField0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_0001_showcase/index.vue'
-import OrgBasicFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_unit_0001_showcase/index.vue'
-import OrgFieldErrorMessages0001Showcase from '~/components/styleguides/index/org_containers/org_field_error_messages_0001_showcase/index.vue'
-import OrgFieldHeading0001Showcase from '~/components/styleguides/index/org_containers/org_field_heading_0001_showcase/index.vue'
-import OrgFontAwesome5Showcase from '~/components/styleguides/index/org_containers/org_font_awesome_5_showcase/index.vue'
-import OrgHeading0001Showcase from '~/components/styleguides/index/org_containers/org_heading_0001_showcase/index.vue'
-import OrgList0001Showcase from '~/components/styleguides/index/org_containers/org_list_0001_showcase/index.vue'
-import OrgList0002Showcase from '~/components/styleguides/index/org_containers/org_list_0002_showcase/index.vue'
-import OrgSelectField0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_0001_showcase/index.vue'
-import OrgSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_unit_0001_showcase/index.vue'
+import OrgBadge0001Showcase from '~/components/styleguides/index/org_containers/org_badge_0001_showcase.vue'
+import OrgBasicField0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_0001_showcase.vue'
+import OrgBasicFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_unit_0001_showcase.vue'
+import OrgFieldErrorMessages0001Showcase from '~/components/styleguides/index/org_containers/org_field_error_messages_0001_showcase.vue'
+import OrgFieldHeading0001Showcase from '~/components/styleguides/index/org_containers/org_field_heading_0001_showcase.vue'
+import OrgFontAwesome5Showcase from '~/components/styleguides/index/org_containers/org_font_awesome_5_showcase.vue'
+import OrgHeading0001Showcase from '~/components/styleguides/index/org_containers/org_heading_0001_showcase.vue'
+import OrgList0001Showcase from '~/components/styleguides/index/org_containers/org_list_0001_showcase.vue'
+import OrgList0002Showcase from '~/components/styleguides/index/org_containers/org_list_0002_showcase.vue'
+import OrgSelectField0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_0001_showcase.vue'
+import OrgSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_unit_0001_showcase.vue'
 
 // mixins
 import { mappedChangeFieldValue } from '~/mixins/common/page_containers/methods/mapped_change_field_value'
