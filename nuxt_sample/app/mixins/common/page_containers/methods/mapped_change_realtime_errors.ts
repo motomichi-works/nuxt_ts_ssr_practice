@@ -9,7 +9,7 @@ type ArgsForMappedChangeRealtimeErrors = {
 }
 
 // Vue.extend
-export default Vue.extend({
+export const mappedChangeRealtimeErrors = Vue.extend({
   methods: {
     $_mappedChangeRealtimeErrors(args: ArgsForMappedChangeRealtimeErrors) {
       const payload = {
