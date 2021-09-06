@@ -9,7 +9,7 @@ import FieldHeading0001 from '~/components/common/molecules_and_atoms/field_head
 import { CombinationFieldForFieldUnitProp } from '~/types/combination_field_for_field_unit_prop'
 
 // Vue.extend
-export default Vue.extend({
+export const fieldUnitBase = Vue.extend({
   components: {
     FieldErrorMessages0001,
     FieldHeading0001,

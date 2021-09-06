@@ -107,7 +107,7 @@ import Vue from 'vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'
-import fieldUnitBase from '~/mixins/common/molecules_and_atoms/field_unit_base'
+import { fieldUnitBase } from '~/mixins/common/molecules_and_atoms/field_unit_base'
 import { basicFieldUnit } from '~/mixins/common/molecules_and_atoms/basic_field_unit'
 
 // Vue.extend
