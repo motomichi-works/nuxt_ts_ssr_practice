@@ -8,8 +8,8 @@
     </div>
     <div class="pagePresentational0001__contentsWrapper">
       <div class="pagePresentational0001__headingWrapper">
-        <OrgPageHeading0001
-          :identifiers="['OrgPageHeading']"
+        <OrgPageHeading0001Container
+          :identifiers="['OrgPageHeading0001']"
           :page-heading-text="pageHeadingText"
         />
       </div>
@@ -30,7 +30,7 @@ import Vue, { PropType } from 'vue'
 // import components/orgs
 import OrgFooter0001Container from '~/components/common/org_containers/org_footer_0001_container.vue'
 import OrgHeader0001Container from '~/components/common/org_containers/org_header_0001_container.vue'
-import OrgPageHeading0001 from '~/components/common/org_containers/org_page_heading_0001_container.vue'
+import OrgPageHeading0001Container from '~/components/common/org_containers/org_page_heading_0001_container.vue'
 
 // mixins
 import { everyPagePresentational } from '~/mixins/common/page_presentationals/every_page_presentational'
@@ -41,7 +41,7 @@ export default Vue.extend({
   components: {
     OrgFooter0001Container,
     OrgHeader0001Container,
-    OrgPageHeading0001,
+    OrgPageHeading0001Container,
   },
   mixins: [everyPagePresentational],
   props: {
