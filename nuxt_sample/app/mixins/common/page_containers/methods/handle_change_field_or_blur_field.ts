@@ -10,7 +10,7 @@ import { ArgsForHandleChangeCombinationFieldOrBlurCombinationField } from '~/typ
 import { ArgsForHandleChangeFieldOrBlurField } from '~/types/args_for_handle_change_field_or_blur_field'
 
 // Vue.extend
-export default Vue.extend({
+export const handleChangeFieldOrBlurField = Vue.extend({
   methods: {
     $_handleChangeFieldOrBlurField(
       payload: ArgsForHandleChangeFieldOrBlurField

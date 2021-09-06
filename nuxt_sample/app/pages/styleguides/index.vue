@@ -51,7 +51,7 @@ import mappedChangeFieldValue from '~/mixins/common/page_containers/methods/mapp
 import mappedChangeRealtimeErrors from '~/mixins/common/page_containers/methods/mapped_change_realtime_errors'
 import mappedChangeIsTainted from '~/mixins/common/page_containers/methods/mapped_change_is_tainted'
 import handleInputField from '~/mixins/common/page_containers/methods/handle_input_field'
-import handleChangeFieldOrBlurField from '~/mixins/common/page_containers/methods/handle_change_field_or_blur_field'
+import { handleChangeFieldOrBlurField } from '~/mixins/common/page_containers/methods/handle_change_field_or_blur_field'
 
 // Vue.extend
 export default Vue.extend({
