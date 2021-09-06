@@ -5,7 +5,7 @@ import { RootState } from '~/store'
 import { sharedKeys } from '~/settings/pages/styleguides/index'
 
 // utils
-import makeObjectFromArray from '~/utils/make_object_from_array'
+import { makeObjectFromArray } from '~/utils/make_object_from_array'
 
 // state
 const fieldValueObj = makeObjectFromArray(sharedKeys, '')

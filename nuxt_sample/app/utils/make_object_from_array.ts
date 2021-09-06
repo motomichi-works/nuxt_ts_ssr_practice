@@ -1,7 +1,7 @@
 type MyObj<K extends string, T> = { [K0 in K]: T }
 type MyKeys<T extends string> = readonly T[]
 
-export default function makeObjectFromArray<K extends string, T>(
+export const makeObjectFromArray = function <K extends string, T>(
   myKeys: MyKeys<K>,
   defaultValue: T
 ): MyObj<K, T> {
