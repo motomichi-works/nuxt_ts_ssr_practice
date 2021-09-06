@@ -108,7 +108,7 @@ import SelectField0001 from '~/components/common/molecules_and_atoms/select_fiel
 // mixins
 import everyChild from '~/mixins/common/unclassifiable/every_child'
 import fieldUnitBase from '~/mixins/common/molecules_and_atoms/field_unit_base'
-import selectFieldUnitOrRadioFieldUnit from '~/mixins/common/molecules_and_atoms/select_field_unit_or_radio_field_unit'
+import { selectFieldUnitOrRadioFieldUnit } from '~/mixins/common/molecules_and_atoms/select_field_unit_or_radio_field_unit'
 
 // Vue.extend
 export default Vue.extend({

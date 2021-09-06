@@ -5,7 +5,7 @@ import Vue, { PropType } from 'vue'
 import { Option } from '~/mixins/common/molecules_and_atoms/select_field_or_radio_field'
 
 // Vue.extend
-export default Vue.extend({
+export const selectFieldUnitOrRadioFieldUnit = Vue.extend({
   props: {
     items: {
       type: Array as PropType<
