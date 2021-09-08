@@ -16,7 +16,7 @@ localVue.use(Vuex)
 
 // createStore関数を定義（createStore関数は無理に外部に切り出さずspecファイルごとに定義する）
 function createStore() {
-  const activationKeys = ['styleguides'] as const
+  const activationKeys = ['styleguidesIndex'] as const
   const optionsForStoreConstructor = createOptionsForStoreConstructor(
     activationKeys
   )
@@ -51,7 +51,7 @@ describe('styleguies', () => {
       const wrapper = createWrapper(store)
 
       const fieldUnit = wrapper.find(
-        '[data-joined-identifiers="BasicFieldUnit0001Showcase/basicFieldUnitEmail"]'
+        '[data-joined-identifiers="OrgConBasicFieldUnit0001Showcase/basicFieldUnitEmail"]'
       )
       const emailField = fieldUnit.find(
         '[name="styleguides[basic_field_unit_0001_email]"]'

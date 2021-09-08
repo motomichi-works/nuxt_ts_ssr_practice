@@ -7,30 +7,30 @@ import {
 } from '@/app/store/index.ts'
 
 import {
-  state as styleguidesState,
-  getters as styleguidesGetters,
-  mutations as styleguidesMutations,
-  actions as styleguidesActions,
+  state as styleguidesIndexState,
+  getters as styleguidesIndexGetters,
+  mutations as styleguidesIndexMutations,
+  actions as styleguidesIndexActions,
   // @ts-ignore
-} from '@/app/store/styleguides/index.ts'
+} from '@/app/store/styleguidesIndex.ts'
 
 export function createOptionsForStoreConstructor<T extends readonly string[]>(
   activationKeys: T
 ) {
   const allModules = {
-    styleguides: {
+    styleguidesIndex: {
       namespaced: true,
-      state: styleguidesState,
-      getters: styleguidesGetters,
-      mutations: styleguidesMutations,
-      actions: styleguidesActions,
+      state: styleguidesIndexState,
+      getters: styleguidesIndexGetters,
+      mutations: styleguidesIndexMutations,
+      actions: styleguidesIndexActions,
     },
   }
 
   const pickedModules: any = {}
 
-  if (activationKeys.includes('styleguides')) {
-    pickedModules.styleguides = allModules.styleguides
+  if (activationKeys.includes('styleguidesIndex')) {
+    pickedModules.styleguidesIndex = allModules.styleguidesIndex
   }
 
   const optionsForStoreConstructor = {
