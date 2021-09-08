@@ -1,5 +1,5 @@
 <template>
-  <OrgGeneralPurpose0001Presentational
+  <OrgPreGeneralPurpose0001
     :identifiers="[...identifiers, 'OrgPresentational']"
     org-presentational-heading-text="SelectField0001"
   >
@@ -26,14 +26,14 @@
       @blur-field="$_emitBlurField"
       @change-field="$_emitChangeField"
     />
-  </OrgGeneralPurpose0001Presentational>
+  </OrgPreGeneralPurpose0001>
 </template>
 <script lang="ts">
 // import node_modules
 import Vue from 'vue'
 
 // import components/org_presentationals
-import OrgGeneralPurpose0001Presentational from '~/components/common/org_presentationals/org_general_purpose_0001_presentational.vue'
+import OrgPreGeneralPurpose0001 from '~/components/common/org_presentationals/org_pre_general_purpose_0001.vue'
 
 // import components/molecules_and_atoms
 import SelectField0001 from '~/components/common/molecules_and_atoms/select_field_0001.vue'
@@ -46,7 +46,7 @@ import { containingTheField } from '~/mixins/common/org_containers/containing_th
 export default Vue.extend({
   name: 'OrgSelectField0001Showcase',
   components: {
-    OrgGeneralPurpose0001Presentational,
+    OrgPreGeneralPurpose0001,
     SelectField0001,
   },
   mixins: [everyChild, containingTheField],
