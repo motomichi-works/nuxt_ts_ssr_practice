@@ -6,7 +6,7 @@
     <div class="orgPreShared0001__headingWrapper">
       <Heading0001
         :identifiers="[...identifiers, 'OrgPreHeading']"
-        :text="orgPreShared0001HeadingText"
+        :text="orgHeadingText"
       />
     </div>
     <div class="orgPreShared0001__body">
@@ -33,7 +33,7 @@ export default Vue.extend({
   },
   mixins: [everyChild],
   props: {
-    orgPreShared0001HeadingText: {
+    orgHeadingText: {
       type: String as PropType<string>,
       required: false,
       default: '',

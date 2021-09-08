@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
-    org-presentational-heading-text="qiitaのAPIから取得したitem情報のサンプル"
+    org-heading-text="qiitaのAPIから取得したitem情報のサンプル"
   >
     <List0001
       v-if="createdAtItems.length > 0"

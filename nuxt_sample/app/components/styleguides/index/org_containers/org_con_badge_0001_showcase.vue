@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers, 'OrgPresentational']"
-    org-presentational-heading-text="Badge0001"
+    :identifiers="[...identifiers]"
+    org-heading-text="Badge0001"
   >
     <Badge0001 :identifiers="[...identifiers, 'badge']" text="必須" />
     <Badge0001

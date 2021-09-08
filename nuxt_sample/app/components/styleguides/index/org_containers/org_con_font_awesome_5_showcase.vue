@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
-    org-presentational-heading-text="FontAwesome5"
+    org-heading-text="FontAwesome5"
   >
     <FontAwesomeIconWrapper
       :identifiers="[...identifiers, 'FontAwesomeIconWrapper01']"

@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
-    org-presentational-heading-text="SelectField0001"
+    org-heading-text="SelectField0001"
   >
     <SelectField0001
       :identifiers="[...identifiers, 'SelectField0001A']"

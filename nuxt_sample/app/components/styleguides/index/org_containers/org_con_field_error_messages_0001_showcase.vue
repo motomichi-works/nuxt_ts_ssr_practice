@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
-    org-presentational-heading-text="FieldErrorMessages0001"
+    org-heading-text="FieldErrorMessages0001"
   >
     <FieldErrorMessages0001
       :identifiers="[...identifiers, 'fieldErrorMessages']"

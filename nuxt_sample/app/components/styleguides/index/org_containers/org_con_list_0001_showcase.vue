@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
-    org-presentational-heading-text="List0001"
+    org-heading-text="List0001"
   >
     <List0001
       :identifiers="[...identifiers, 'List0001']"
