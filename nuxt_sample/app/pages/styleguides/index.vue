@@ -34,7 +34,7 @@ import {
 import PagePreGeneralPurpose0001 from '~/components/common/page_presentationals/page_pre_general_purpose_0001.vue'
 
 // import components/orgs
-import OrgBadge0001ShowcaseContainer from '~/components/styleguides/index/org_containers/org_badge_0001_showcase_container.vue'
+import OrgConBadge0001Showcase from '~/components/styleguides/index/org_containers/org_con_badge_0001_showcase.vue'
 import OrgBasicField0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_0001_showcase.vue'
 import OrgBasicFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_unit_0001_showcase.vue'
 import OrgFieldErrorMessages0001Showcase from '~/components/styleguides/index/org_containers/org_field_error_messages_0001_showcase.vue'
@@ -57,7 +57,7 @@ import { handleChangeFieldOrBlurField } from '~/mixins/common/page_containers/me
 export default Vue.extend({
   components: {
     PagePreGeneralPurpose0001,
-    OrgBadge0001ShowcaseContainer,
+    OrgConBadge0001Showcase,
     OrgBasicField0001Showcase,
     OrgBasicFieldUnit0001Showcase,
     OrgFieldErrorMessages0001Showcase,
@@ -91,7 +91,7 @@ export default Vue.extend({
     },
     components() {
       const componentNames = [
-        'OrgBadge0001ShowcaseContainer',
+        'OrgConBadge0001Showcase',
         'OrgBasicField0001Showcase',
         'OrgBasicFieldUnit0001Showcase',
         'OrgFieldErrorMessages0001Showcase',

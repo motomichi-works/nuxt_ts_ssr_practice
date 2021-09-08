@@ -26,7 +26,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgBadge0001ShowcaseContainer',
+  name: 'OrgConBadge0001Showcase',
   components: {
     OrgPreGeneralPurpose0001,
     Badge0001,
