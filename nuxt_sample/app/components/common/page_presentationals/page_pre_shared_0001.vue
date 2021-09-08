@@ -1,20 +1,20 @@
 <template>
-  <div :data-joined-identifiers="joinedIdentifiers" class="pagePre0001">
-    <div class="pagePre0001__headerWrapper">
+  <div :data-joined-identifiers="joinedIdentifiers" class="pagePreShared0001">
+    <div class="pagePreShared0001__headerWrapper">
       <OrgConHeader0001 :identifiers="['OrgHeader0001']" />
     </div>
-    <div class="pagePre0001__contentsWrapper">
-      <div class="pagePre0001__headingWrapper">
+    <div class="pagePreShared0001__contentsWrapper">
+      <div class="pagePreShared0001__headingWrapper">
         <OrgConPageHeading0001
           :identifiers="['OrgPageHeading0001']"
           :page-heading-text="pageHeadingText"
         />
       </div>
-      <div class="pagePre0001__body">
+      <div class="pagePreShared0001__body">
         <slot />
       </div>
     </div>
-    <div class="pagePre0001__footerWrapper">
+    <div class="pagePreShared0001__footerWrapper">
       <OrgConFooter0001 :identifiers="['OrgFooter0001']" />
     </div>
   </div>
@@ -30,7 +30,7 @@ import OrgConHeader0001 from '~/components/common/org_containers/org_con_header_
 import OrgConPageHeading0001 from '~/components/common/org_containers/org_con_page_heading_0001.vue'
 
 // mixins
-import { everyPagePre } from '~/mixins/common/page_presentationals/every_page_presentational'
+import { everyPagePre } from '~/mixins/common/page_presentationals/every_page_pre'
 
 // Vue.extend
 export default Vue.extend({
@@ -52,7 +52,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.pagePre0001 {
+.pagePreShared0001 {
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
@@ -60,22 +60,22 @@ export default Vue.extend({
   @media #{$g__is-md} {
     min-height: 0;
   }
-  .pagePre0001__headerWrapper {
+  .pagePreShared0001__headerWrapper {
   }
-  .pagePre0001__contentsWrapper {
+  .pagePreShared0001__contentsWrapper {
     padding: 1px 8px calc(41px + 80px);
-    // .pagePre0001__contentsWrapperのpadding-topを補完する初期値
+    // .pagePreShared0001__contentsWrapperのpadding-topを補完する初期値
     > :first-child {
       margin-top: 39px;
     }
   }
-  .pagePre0001__footerWrapper {
+  .pagePreShared0001__footerWrapper {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
   }
-  .pagePre0001__headingWrapper {
+  .pagePreShared0001__headingWrapper {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
@@ -85,7 +85,7 @@ export default Vue.extend({
       width: 100%;
     }
   }
-  .pagePre0001__body {
+  .pagePreShared0001__body {
     width: 1200px;
     margin-top: 32px;
     margin-right: auto;
