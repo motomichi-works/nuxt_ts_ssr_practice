@@ -1,5 +1,5 @@
 <template>
-  <PagePresentational0001 page-heading-text="index">
+  <PagePreGeneralPurpose0001 page-heading-text="index">
     <List0002
       :identifiers="['Nav']"
       :items="[
@@ -21,7 +21,7 @@
         ],
       ]"
     />
-  </PagePresentational0001>
+  </PagePreGeneralPurpose0001>
 </template>
 
 <script lang="ts">
@@ -29,13 +29,13 @@
 import Vue from 'vue'
 
 // import components/orgs
-import PagePresentational0001 from '~/components/common/page_presentationals/page_presentational_0001.vue'
+import PagePreGeneralPurpose0001 from '~/components/common/page_presentationals/page_pre_general_purpose_0001.vue'
 import List0002 from '~/components/common/molecules_and_atoms/list_0002.vue'
 
 // Vue.extend
 export default Vue.extend({
   components: {
-    PagePresentational0001,
+    PagePreGeneralPurpose0001,
     List0002,
   },
 })
