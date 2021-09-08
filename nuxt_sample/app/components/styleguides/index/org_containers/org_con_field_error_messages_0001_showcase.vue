@@ -27,7 +27,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgFieldErrorMessages0001Showcase',
+  name: 'OrgConFieldErrorMessages0001Showcase',
   components: {
     OrgPreGeneralPurpose0001,
     FieldErrorMessages0001,
