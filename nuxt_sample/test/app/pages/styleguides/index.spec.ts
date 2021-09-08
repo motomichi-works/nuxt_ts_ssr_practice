@@ -51,7 +51,7 @@ describe('styleguies', () => {
       const wrapper = createWrapper(store)
 
       const fieldUnit = wrapper.find(
-        '[data-joined-identifiers="OrgConBasicFieldUnit0001Showcase/basicFieldUnitEmail"]'
+        '[data-joined-identifiers="OrgPreBasicFieldUnit0001Showcase/basicFieldUnitEmail"]'
       )
       const emailField = fieldUnit.find(
         '[name="styleguides[basic_field_unit_0001_email]"]'

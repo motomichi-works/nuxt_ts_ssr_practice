@@ -105,7 +105,7 @@ export default Vue.extend({
       ] as const
 
       const components = componentNames.map((name) => {
-        const identifiers = [name.replace('Con', '')]
+        const identifiers = [name.replace('Con', 'Pre')]
         return { name, identifiers }
       })
 
