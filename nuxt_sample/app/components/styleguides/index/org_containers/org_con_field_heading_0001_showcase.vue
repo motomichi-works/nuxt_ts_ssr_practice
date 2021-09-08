@@ -40,7 +40,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgFieldHeading0001Showcase',
+  name: 'OrgConFieldHeading0001Showcase',
   components: {
     OrgPreGeneralPurpose0001,
     FieldHeading0001,
