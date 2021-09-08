@@ -1,8 +1,8 @@
 <template>
-  <header :data-joined-identifiers="joinedIdentifiers" class="header0001">
-    <div class="header0001__inner">
-      <div class="header0001__logoArea">
-        <NuxtLink to="/" class="header0001__logo">ロゴ</NuxtLink>
+  <header :data-joined-identifiers="joinedIdentifiers" class="orgPreHeader0001">
+    <div class="orgPreHeader0001__inner">
+      <div class="orgPreHeader0001__logoArea">
+        <NuxtLink to="/" class="orgPreHeader0001__logo">ロゴ</NuxtLink>
       </div>
     </div>
   </header>
@@ -23,11 +23,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.header0001 {
+.orgPreHeader0001 {
   padding: 12px 0;
   background-color: #ffffff;
   border-bottom: 1px solid #dddddd;
-  .header0001__inner {
+  .orgPreHeader0001__inner {
     width: 1200px;
     margin: 0 auto;
     padding: 0 8px;
@@ -41,10 +41,10 @@ export default Vue.extend({
       clear: both;
     }
   }
-  .header0001__logoArea {
+  .orgPreHeader0001__logoArea {
     float: left;
   }
-  .header0001__logo {
+  .orgPreHeader0001__logo {
     color: #222222;
     font-weight: bold;
     font-size: 20px;

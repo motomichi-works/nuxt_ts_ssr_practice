@@ -1,7 +1,7 @@
 <template>
   <h1
     :data-joined-identifiers="joinedIdentifiers"
-    class="orgPageHeading"
+    class="orgPrePageHeading"
     v-text="pageHeadingText"
   />
 </template>
@@ -28,7 +28,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.orgPageHeading {
+.orgPrePageHeading {
   font-weight: bold;
   font-size: 32px;
   color: #222222;

@@ -1,7 +1,7 @@
 <template>
-  <footer :data-joined-identifiers="joinedIdentifiers" class="footer0001">
-    <div class="footer0001__copyArea">
-      <NuxtLink to="/" class="footer0001__copy">
+  <footer :data-joined-identifiers="joinedIdentifiers" class="orgPreFooter0001">
+    <div class="orgPreFooter0001__copyArea">
+      <NuxtLink to="/" class="orgPreFooter0001__copy">
         &copy;MotomichiWorks
       </NuxtLink>
     </div>
@@ -23,10 +23,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.footer0001 {
+.orgPreFooter0001 {
   padding: 8px 0;
   background-color: #222222;
-  .footer0001__copyArea {
+  .orgPreFooter0001__copyArea {
     width: 1200px;
     margin: 0 auto;
     padding: 0 8px;
@@ -37,7 +37,7 @@ export default Vue.extend({
       width: 100%;
     }
   }
-  .footer0001__copy {
+  .orgPreFooter0001__copy {
     font-size: 12px;
     color: #ffffff;
     text-decoration: none;
