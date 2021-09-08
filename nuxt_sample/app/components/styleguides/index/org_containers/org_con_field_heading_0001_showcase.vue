@@ -1,6 +1,6 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers, 'OrgPresentational']"
+    :identifiers="[...identifiers]"
     org-heading-text="FieldHeading0001"
   >
     <FieldHeading0001

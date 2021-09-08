@@ -1,6 +1,6 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers, 'OrgPresentational']"
+    :identifiers="[...identifiers]"
     org-heading-text="qiitaのAPIから取得したitem情報のサンプル"
   >
     <List0001

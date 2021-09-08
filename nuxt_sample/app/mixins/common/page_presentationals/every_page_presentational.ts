@@ -2,10 +2,10 @@
 import Vue from 'vue'
 
 // Vue.extend
-export const everyPagePresentational = Vue.extend({
+export const everyPagePre = Vue.extend({
   computed: {
     identifiers() {
-      return ['PagePresentational']
+      return ['PagePre']
     },
     joinedIdentifiers() {
       return (this as any).identifiers.join('/')
