@@ -1,5 +1,5 @@
 <template>
-  <OrgHeader0001Presentational :identifiers="identifiers" />
+  <OrgPreHeader0001 :identifiers="identifiers" />
 </template>
 
 <script lang="ts">
@@ -7,7 +7,7 @@
 import Vue from 'vue'
 
 // import components
-import OrgHeader0001Presentational from '~/components/common/org_presentationals/org_header_0001_presentational.vue'
+import OrgPreHeader0001 from '~/components/common/org_presentationals/org_pre_header_0001.vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'
@@ -16,7 +16,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 export default Vue.extend({
   name: 'OrgConHeader0001',
   components: {
-    OrgHeader0001Presentational,
+    OrgPreHeader0001,
   },
   mixins: [everyChild],
 })
