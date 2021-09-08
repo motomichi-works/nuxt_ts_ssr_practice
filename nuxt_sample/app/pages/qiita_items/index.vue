@@ -1,10 +1,10 @@
 <template>
-  <PagePreGeneralPurpose0001 page-heading-text="qiita_items/index">
+  <PagePreShared0001 page-heading-text="qiita_items/index">
     <OrgConQiitaItems
       :identifiers="['OrgQiitaItems']"
       :qiita-items="qiitaItems"
     />
-  </PagePreGeneralPurpose0001>
+  </PagePreShared0001>
 </template>
 
 <script lang="ts">
@@ -13,7 +13,7 @@ import { Context } from '@nuxt/types'
 import Vue from 'vue'
 
 // import components/molecules_and_atoms
-import PagePreGeneralPurpose0001 from '~/components/common/page_presentationals/page_pre_general_purpose_0001.vue'
+import PagePreShared0001 from '~/components/common/page_presentationals/page_pre_shared_0001.vue'
 
 // import components/orgs
 import OrgConQiitaItems from '~/components/qiita_items/index/org_containers/org_con_qiita_items.vue'
@@ -21,7 +21,7 @@ import OrgConQiitaItems from '~/components/qiita_items/index/org_containers/org_
 // Vue.extend
 export default Vue.extend({
   components: {
-    PagePreGeneralPurpose0001,
+    PagePreShared0001,
     OrgConQiitaItems,
   },
   async asyncData(context: Context): Promise<any> {

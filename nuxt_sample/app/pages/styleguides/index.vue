@@ -1,5 +1,5 @@
 <template>
-  <PagePreGeneralPurpose0001 page-heading-text="styleguides/index">
+  <PagePreShared0001 page-heading-text="styleguides/index">
     <component
       :is="component.name"
       v-for="component in components"
@@ -13,7 +13,7 @@
       @change-field="$_handleChangeFieldOrBlurField"
       @blur-field="$_handleChangeFieldOrBlurField"
     />
-  </PagePreGeneralPurpose0001>
+  </PagePreShared0001>
 </template>
 
 <script lang="ts">
@@ -31,7 +31,7 @@ import {
 } from '~/store/styleguidesIndex'
 
 // import components/molecules_and_atoms
-import PagePreGeneralPurpose0001 from '~/components/common/page_presentationals/page_pre_general_purpose_0001.vue'
+import PagePreShared0001 from '~/components/common/page_presentationals/page_pre_shared_0001.vue'
 
 // import components/orgs
 import OrgConBadge0001Showcase from '~/components/styleguides/index/org_containers/org_con_badge_0001_showcase.vue'
@@ -56,7 +56,7 @@ import { handleChangeFieldOrBlurField } from '~/mixins/common/page_containers/me
 // Vue.extend
 export default Vue.extend({
   components: {
-    PagePreGeneralPurpose0001,
+    PagePreShared0001,
     OrgConBadge0001Showcase,
     OrgConBasicField0001Showcase,
     OrgConBasicFieldUnit0001Showcase,

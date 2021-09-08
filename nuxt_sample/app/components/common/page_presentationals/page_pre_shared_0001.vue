@@ -37,7 +37,7 @@ import { everyPagePresentational } from '~/mixins/common/page_presentationals/ev
 
 // Vue.extend
 export default Vue.extend({
-  name: 'PagePreGeneralPurpose0001',
+  name: 'PagePreShared0001',
   components: {
     OrgConFooter0001,
     OrgConHeader0001,
