@@ -29,7 +29,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgFontAwesome5Showcase',
+  name: 'OrgConFontAwesome5Showcase',
   components: {
     OrgPreGeneralPurpose0001,
     FontAwesomeIconWrapper,
