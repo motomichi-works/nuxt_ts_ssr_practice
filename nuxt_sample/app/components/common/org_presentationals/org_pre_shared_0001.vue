@@ -1,15 +1,15 @@
 <template>
   <section
     :data-joined-identifiers="joinedIdentifiers"
-    class="orgPresentational0001"
+    class="orgPreShared0001"
   >
-    <div class="orgPresentational0001__headingWrapper">
+    <div class="orgPreShared0001__headingWrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'OrgPresentationalHeading']"
-        :text="orgPresentationalHeadingText"
+        :identifiers="[...identifiers, 'OrgPreHeading']"
+        :text="orgPreShared0001HeadingText"
       />
     </div>
-    <div class="orgPresentational0001__body">
+    <div class="orgPreShared0001__body">
       <slot />
     </div>
   </section>
@@ -27,13 +27,13 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgPreGeneralPurpose0001',
+  name: 'OrgPreShared0001',
   components: {
     Heading0001,
   },
   mixins: [everyChild],
   props: {
-    orgPresentationalHeadingText: {
+    orgPreShared0001HeadingText: {
       type: String as PropType<string>,
       required: false,
       default: '',
@@ -43,25 +43,25 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.orgPresentational0001 {
+.orgPreShared0001 {
   padding: 1px 16px;
   background-color: #ffffff;
-  // .orgPresentational0001のpadding-topを補完する初期値
+  // .orgPreShared0001のpadding-topを補完する初期値
   > :first-child {
     margin-top: 15px;
   }
-  // .orgPresentational0001のpadding-bottomを補完する初期値
+  // .orgPreShared0001のpadding-bottomを補完する初期値
   > :last-child {
     margin-bottom: 39px;
   }
-  .orgPresentational0001__headingWrapper {
+  .orgPreShared0001__headingWrapper {
   }
-  .orgPresentational0001__body {
+  .orgPreShared0001__body {
     margin-top: 24px;
   }
 
   // 隣接兄弟要素セレクタによるマージン
-  .orgPresentational0001 + & {
+  .orgPreShared0001 + & {
     margin-top: 48px;
   }
 }

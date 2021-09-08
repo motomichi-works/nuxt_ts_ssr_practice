@@ -1,5 +1,5 @@
 <template>
-  <OrgPreGeneralPurpose0001
+  <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
     org-presentational-heading-text="SelectFieldUnit0001"
   >
@@ -99,7 +99,7 @@
       @blur-field="$_emitBlurField"
       @change-field="$_emitChangeField"
     />
-  </OrgPreGeneralPurpose0001>
+  </OrgPreShared0001>
 </template>
 <script lang="ts">
 // import node_modules
@@ -107,7 +107,7 @@ import Vue from 'vue'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 // import components/org_presentationals
-import OrgPreGeneralPurpose0001 from '~/components/common/org_presentationals/org_pre_general_purpose_0001.vue'
+import OrgPreShared0001 from '~/components/common/org_presentationals/org_pre_shared_0001.vue'
 
 // import components/molecules_and_atoms
 import SelectFieldUnit0001 from '~/components/common/molecules_and_atoms/select_field_unit_0001.vue'
@@ -120,7 +120,7 @@ import { containingTheField } from '~/mixins/common/org_containers/containing_th
 export default Vue.extend({
   name: 'OrgConSelectFieldUnit0001Showcase',
   components: {
-    OrgPreGeneralPurpose0001,
+    OrgPreShared0001,
     SelectFieldUnit0001,
   },
   mixins: [everyChild, containingTheField],

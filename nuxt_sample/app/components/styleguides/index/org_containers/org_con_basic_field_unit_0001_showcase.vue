@@ -1,5 +1,5 @@
 <template>
-  <OrgPreGeneralPurpose0001
+  <OrgPreShared0001
     :identifiers="[...identifiers, 'OrgPresentational']"
     org-presentational-heading-text="BasicFieldUnit0001"
   >
@@ -98,7 +98,7 @@
       @blur-field="$_emitBlurField"
       @input-field="$_emitInputField"
     />
-  </OrgPreGeneralPurpose0001>
+  </OrgPreShared0001>
 </template>
 <script lang="ts">
 // import node_modules
@@ -106,7 +106,7 @@ import Vue from 'vue'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 // import components/org_presentationals
-import OrgPreGeneralPurpose0001 from '~/components/common/org_presentationals/org_pre_general_purpose_0001.vue'
+import OrgPreShared0001 from '~/components/common/org_presentationals/org_pre_shared_0001.vue'
 
 // import components/molecules_and_atoms
 import BasicFieldUnit0001 from '~/components/common/molecules_and_atoms/basic_field_unit_0001.vue'
@@ -119,7 +119,7 @@ import { containingTheField } from '~/mixins/common/org_containers/containing_th
 export default Vue.extend({
   name: 'OrgConBasicFieldUnit0001Showcase',
   components: {
-    OrgPreGeneralPurpose0001,
+    OrgPreShared0001,
     BasicFieldUnit0001,
   },
   mixins: [everyChild, containingTheField],
