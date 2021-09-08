@@ -21,7 +21,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgPageHeading0001Presentational',
+  name: 'OrgPrePageHeading0001',
   components: {
     Heading0001,
   },

@@ -1,5 +1,5 @@
 <template>
-  <OrgPageHeading0001Presentational
+  <OrgPrePageHeading0001
     :page-heading-text="pageHeadingText"
     :identifiers="identifiers"
   />
@@ -10,7 +10,7 @@
 import Vue, { PropType } from 'vue'
 
 // import components/molecules_and_atoms
-import OrgPageHeading0001Presentational from '~/components/common/org_presentationals/org_page_heading_0001_presentational.vue'
+import OrgPrePageHeading0001 from '~/components/common/org_presentationals/org_pre_page_heading_0001.vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'
@@ -19,7 +19,7 @@ import { everyChild } from '~/mixins/common/unclassifiable/every_child'
 export default Vue.extend({
   name: 'OrgConPageHeading0001',
   components: {
-    OrgPageHeading0001Presentational,
+    OrgPrePageHeading0001,
   },
   mixins: [everyChild],
   props: {
