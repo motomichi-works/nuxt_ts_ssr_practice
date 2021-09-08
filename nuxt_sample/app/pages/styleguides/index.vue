@@ -35,7 +35,7 @@ import PagePreGeneralPurpose0001 from '~/components/common/page_presentationals/
 
 // import components/orgs
 import OrgConBadge0001Showcase from '~/components/styleguides/index/org_containers/org_con_badge_0001_showcase.vue'
-import OrgBasicField0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_0001_showcase.vue'
+import OrgConBasicField0001Showcase from '~/components/styleguides/index/org_containers/org_con_basic_field_0001_showcase.vue'
 import OrgBasicFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_basic_field_unit_0001_showcase.vue'
 import OrgFieldErrorMessages0001Showcase from '~/components/styleguides/index/org_containers/org_field_error_messages_0001_showcase.vue'
 import OrgFieldHeading0001Showcase from '~/components/styleguides/index/org_containers/org_field_heading_0001_showcase.vue'
@@ -58,7 +58,7 @@ export default Vue.extend({
   components: {
     PagePreGeneralPurpose0001,
     OrgConBadge0001Showcase,
-    OrgBasicField0001Showcase,
+    OrgConBasicField0001Showcase,
     OrgBasicFieldUnit0001Showcase,
     OrgFieldErrorMessages0001Showcase,
     OrgFieldHeading0001Showcase,
@@ -92,7 +92,7 @@ export default Vue.extend({
     components() {
       const componentNames = [
         'OrgConBadge0001Showcase',
-        'OrgBasicField0001Showcase',
+        'OrgConBasicField0001Showcase',
         'OrgBasicFieldUnit0001Showcase',
         'OrgFieldErrorMessages0001Showcase',
         'OrgFieldHeading0001Showcase',

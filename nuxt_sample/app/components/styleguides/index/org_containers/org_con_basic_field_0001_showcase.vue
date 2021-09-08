@@ -44,7 +44,7 @@ import { containingTheField } from '~/mixins/common/org_containers/containing_th
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgBasicField0001Showcase',
+  name: 'OrgConBasicField0001Showcase',
   components: {
     OrgPreGeneralPurpose0001,
     BasicField0001,
