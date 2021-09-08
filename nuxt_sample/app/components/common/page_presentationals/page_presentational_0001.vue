@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="pagePresentational0001__footerWrapper">
-      <OrgFooter0001Container :identifiers="['OrgFooter0001']" />
+      <OrgConFooter0001 :identifiers="['OrgFooter0001']" />
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@
 import Vue, { PropType } from 'vue'
 
 // import components/orgs
-import OrgFooter0001Container from '~/components/common/org_containers/org_footer_0001_container.vue'
+import OrgConFooter0001 from '~/components/common/org_containers/org_con_footer_0001.vue'
 import OrgHeader0001Container from '~/components/common/org_containers/org_header_0001_container.vue'
 import OrgPageHeading0001Container from '~/components/common/org_containers/org_page_heading_0001_container.vue'
 
@@ -39,7 +39,7 @@ import { everyPagePresentational } from '~/mixins/common/page_presentationals/ev
 export default Vue.extend({
   name: 'PagePresentational0001',
   components: {
-    OrgFooter0001Container,
+    OrgConFooter0001,
     OrgHeader0001Container,
     OrgPageHeading0001Container,
   },
