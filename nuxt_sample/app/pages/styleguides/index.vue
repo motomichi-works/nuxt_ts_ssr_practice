@@ -44,7 +44,7 @@ import OrgConHeading0001Showcase from '~/components/styleguides/index/org_contai
 import OrgConList0001Showcase from '~/components/styleguides/index/org_containers/org_con_list_0001_showcase.vue'
 import OrgConList0002Showcase from '~/components/styleguides/index/org_containers/org_con_list_0002_showcase.vue'
 import OrgConSelectField0001Showcase from '~/components/styleguides/index/org_containers/org_con_select_field_0001_showcase.vue'
-import OrgSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_select_field_unit_0001_showcase.vue'
+import OrgConSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_con_select_field_unit_0001_showcase.vue'
 
 // mixins
 import { mappedChangeFieldValue } from '~/mixins/common/page_containers/methods/mapped_change_field_value'
@@ -67,7 +67,7 @@ export default Vue.extend({
     OrgConList0001Showcase,
     OrgConList0002Showcase,
     OrgConSelectField0001Showcase,
-    OrgSelectFieldUnit0001Showcase,
+    OrgConSelectFieldUnit0001Showcase,
   },
   mixins: [
     mappedChangeFieldValue,
@@ -101,7 +101,7 @@ export default Vue.extend({
         'OrgConList0001Showcase',
         'OrgConList0002Showcase',
         'OrgConSelectField0001Showcase',
-        'OrgSelectFieldUnit0001Showcase',
+        'OrgConSelectFieldUnit0001Showcase',
       ] as const
 
       const components = componentNames.map((name) => {

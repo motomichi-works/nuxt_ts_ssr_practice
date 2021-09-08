@@ -118,7 +118,7 @@ import { containingTheField } from '~/mixins/common/org_containers/containing_th
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgSelectFieldUnit0001Showcase',
+  name: 'OrgConSelectFieldUnit0001Showcase',
   components: {
     OrgPreGeneralPurpose0001,
     SelectFieldUnit0001,
