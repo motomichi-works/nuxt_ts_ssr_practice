@@ -2,7 +2,7 @@
   <div :data-joined-identifiers="joinedIdentifiers" class="fieldHeading0001">
     <div class="fieldHeading0001__badgeWrapper">
       <Badge0001
-        :identifiers="[...identifiers, 'badge']"
+        :identifiers="[...identifiers, 'Badge']"
         :text="propsForBadge.text"
         :modifier-classes="propsForBadge.modifierClasses"
       />

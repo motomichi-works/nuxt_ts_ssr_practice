@@ -8,7 +8,7 @@
       class="basicFieldUnit0001__headingWrapper"
     >
       <FieldHeading0001
-        :identifiers="[...identifiers, 'heading']"
+        :identifiers="[...identifiers, 'FieldHeading']"
         :text="headingText"
         :badge-type="badgeType"
       />
@@ -34,7 +34,7 @@
             <div class="basicFieldUnit0001__itemBody">
               <div v-if="item.field" class="basicFieldUnit0001__fieldWrapper">
                 <BasicField0001
-                  :identifiers="[...identifiers, `field${index}`]"
+                  :identifiers="[...identifiers, `Field${index}`]"
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
@@ -84,7 +84,7 @@
         class="basicFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
-          :identifiers="[...identifiers, `fieldErrorMessages${index}`]"
+          :identifiers="[...identifiers, `FieldErrorMessages${index}`]"
           :error-messages="item.field.realtimeErrors"
         />
       </div>
@@ -94,7 +94,7 @@
       class="basicFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'combinationFieldErrorMessages']"
+        :identifiers="[...identifiers, 'CombinationFieldErrorMessages']"
         :error-messages="combinationField.realtimeErrors"
       />
     </div>
