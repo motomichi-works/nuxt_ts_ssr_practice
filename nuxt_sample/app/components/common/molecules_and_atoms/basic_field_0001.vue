@@ -1,28 +1,42 @@
 <template>
   <div :data-identifier="identifier" :class="classes">
-    <div v-if="isVisibleLeftIcon" class="basicField0001__iconWrapper">
-      <FontAwesomeIconWrapper
-        :identifier="`${identifier}/FontAwesomeIconWrapperLeft`"
-        :icon="leftIcon"
+    <template v-if="type === 'textarea'">
+      <textarea
+        v-model="bindValue"
+        :disabled="isDisabled"
+        :readonly="isReadonly"
+        :name="name"
+        :placeholder="placeholder"
+        :maxlength="maxlength"
+        class="basicField0001__field"
+        @blur="$_handleBlur($event)"
+      ></textarea>
+    </template>
+    <template v-else>
+      <div v-if="isVisibleLeftIcon" class="basicField0001__iconWrapper">
+        <FontAwesomeIconWrapper
+          :identifier="`${identifier}/FontAwesomeIconWrapperLeft`"
+          :icon="leftIcon"
+        />
+      </div>
+      <input
+        v-model="bindValue"
+        :type="type"
+        :disabled="isDisabled"
+        :readonly="isReadonly"
+        :name="name"
+        :placeholder="placeholder"
+        :maxlength="maxlength"
+        class="basicField0001__field"
+        @blur="$_handleBlur($event)"
       />
-    </div>
-    <input
-      v-model="bindValue"
-      :type="type"
-      :disabled="isDisabled"
-      :readonly="isReadonly"
-      :name="name"
-      :placeholder="placeholder"
-      :maxlength="maxlength"
-      class="basicField0001__field"
-      @blur="$_handleBlur($event)"
-    />
-    <div v-if="isVisibleRightIcon" class="basicField0001__iconWrapper">
-      <FontAwesomeIconWrapper
-        :identifier="`${identifier}/FontAwesomeIconWrapperRight`"
-        :icon="rightIcon"
-      />
-    </div>
+      <div v-if="isVisibleRightIcon" class="basicField0001__iconWrapper">
+        <FontAwesomeIconWrapper
+          :identifier="`${identifier}/FontAwesomeIconWrapperRight`"
+          :icon="rightIcon"
+        />
+      </div>
+    </template>
   </div>
 </template>
 
@@ -110,7 +124,13 @@ export default Vue.extend({
       cursor: default;
     }
   }
-
+  textarea.basicField0001__field {
+    display: block;
+    resize: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 200px;
+  }
   &.basicField0001--disabled {
     i.fa {
       color: #cccccc;
