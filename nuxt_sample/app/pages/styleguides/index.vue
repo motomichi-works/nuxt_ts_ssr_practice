@@ -4,7 +4,7 @@
       :is="component.name"
       v-for="component in components"
       :key="component.identifiers.join('/')"
-      :identifiers="component.identifiers"
+      :identifier="component.identifiers"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :realtime-errors-obj="realtimeErrorsObj"

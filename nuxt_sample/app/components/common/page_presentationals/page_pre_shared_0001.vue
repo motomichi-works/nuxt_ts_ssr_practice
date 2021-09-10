@@ -1,12 +1,12 @@
 <template>
   <div :data-identifier="identifier" class="pagePreShared0001">
     <div class="pagePreShared0001__headerWrapper">
-      <OrgConHeader0001 :identifiers="['OrgHeader0001']" />
+      <OrgConHeader0001 :identifier="['OrgHeader0001']" />
     </div>
     <div class="pagePreShared0001__contentsWrapper">
       <div class="pagePreShared0001__headingWrapper">
         <OrgConPageHeading0001
-          :identifiers="['OrgPageHeading0001']"
+          :identifier="['OrgPageHeading0001']"
           :page-heading-text="pageHeadingText"
         />
       </div>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="pagePreShared0001__footerWrapper">
-      <OrgConFooter0001 :identifiers="['OrgFooter0001']" />
+      <OrgConFooter0001 :identifier="['OrgFooter0001']" />
     </div>
   </div>
 </template>

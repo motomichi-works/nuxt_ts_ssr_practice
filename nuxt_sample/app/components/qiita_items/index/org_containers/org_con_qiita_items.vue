@@ -1,11 +1,11 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers]"
+    :identifier="[...identifiers]"
     org-heading-text="qiitaのAPIから取得したitem情報のサンプル"
   >
     <List0001
       v-if="createdAtItems.length > 0"
-      :identifiers="[...identifiers, 'CreatedAtList']"
+      :identifier="[...identifiers, 'CreatedAtList']"
       :items="createdAtItems"
     />
   </OrgPreShared0001>

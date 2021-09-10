@@ -1,40 +1,40 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers]"
+    :identifier="[...identifiers]"
     org-heading-text="Heading0001"
   >
     <Heading0001
-      :identifiers="[...identifiers, 'headingLv1']"
+      :identifier="[...identifiers, 'headingLv1']"
       text="Lv1の見出し"
       :modifier-classes="['heading0001--Lv1']"
       :tag-name="'h2'"
     />
     <Heading0001
-      :identifiers="[...identifiers, 'headingLv2']"
+      :identifier="[...identifiers, 'headingLv2']"
       text="Lv2の見出し"
       :modifier-classes="['heading0001--Lv2']"
       :tag-name="'h2'"
     />
     <Heading0001
-      :identifiers="[...identifiers, 'headingLv3']"
+      :identifier="[...identifiers, 'headingLv3']"
       text="Lv3の見出し"
       :modifier-classes="['heading0001--Lv3']"
       :tag-name="'h2'"
     />
     <Heading0001
-      :identifiers="[...identifiers, 'headingLv4']"
+      :identifier="[...identifiers, 'headingLv4']"
       text="Lv4の見出し"
       :modifier-classes="['heading0001--Lv4']"
       :tag-name="'h2'"
     />
     <Heading0001
-      :identifiers="[...identifiers, 'headingLv5']"
+      :identifier="[...identifiers, 'headingLv5']"
       text="Lv5の見出し"
       :modifier-classes="['heading0001--Lv5']"
       :tag-name="'h2'"
     />
     <Heading0001
-      :identifiers="[...identifiers, 'headingLv6']"
+      :identifier="[...identifiers, 'headingLv6']"
       text="Lv6の見出し"
       :modifier-classes="['heading0001--Lv6']"
       :tag-name="'h2'"

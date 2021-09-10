@@ -2,7 +2,7 @@
   <section :data-identifier="identifier" class="orgPreShared0001">
     <div class="orgPreShared0001__headingWrapper">
       <Heading0001
-        :identifiers="[...identifiers, 'OrgPreHeading']"
+        :identifier="[...identifiers, 'OrgPreHeading']"
         :text="orgHeadingText"
       />
     </div>

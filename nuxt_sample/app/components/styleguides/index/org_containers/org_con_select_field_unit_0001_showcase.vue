@@ -1,10 +1,10 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers]"
+    :identifier="[...identifiers]"
     org-heading-text="SelectFieldUnit0001"
   >
     <SelectFieldUnit0001
-      :identifiers="[...identifiers, 'SelectFieldUnit0001A']"
+      :identifier="[...identifiers, 'SelectFieldUnit0001A']"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :is-tainted-obj="isTaintedObj"
@@ -36,7 +36,7 @@
       @change-field="$_emitChangeField"
     />
     <SelectFieldUnit0001
-      :identifiers="[...identifiers, 'SelectFieldUnit0001B']"
+      :identifier="[...identifiers, 'SelectFieldUnit0001B']"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :is-tainted-obj="isTaintedObj"

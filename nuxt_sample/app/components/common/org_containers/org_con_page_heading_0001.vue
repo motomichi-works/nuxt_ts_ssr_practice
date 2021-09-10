@@ -1,7 +1,7 @@
 <template>
   <OrgPrePageHeading0001
     :page-heading-text="pageHeadingText"
-    :identifiers="identifiers"
+    :identifier="identifiers"
   />
 </template>
 

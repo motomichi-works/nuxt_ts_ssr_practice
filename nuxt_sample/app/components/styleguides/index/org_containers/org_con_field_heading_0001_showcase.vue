@@ -1,24 +1,24 @@
 <template>
   <OrgPreShared0001
-    :identifiers="[...identifiers]"
+    :identifier="[...identifiers]"
     org-heading-text="FieldHeading0001"
   >
     <FieldHeading0001
-      :identifiers="[...identifiers, 'fieldHeading']"
+      :identifier="[...identifiers, 'fieldHeading']"
       text="h2見出し"
     />
     <FieldHeading0001
-      :identifiers="[...identifiers, 'fieldHeadingA']"
+      :identifier="[...identifiers, 'fieldHeadingA']"
       text="h3見出し"
       tag-name="h3"
     />
     <FieldHeading0001
-      :identifiers="[...identifiers, 'fieldHeadingB']"
+      :identifier="[...identifiers, 'fieldHeadingB']"
       text="h2見出し"
       :badge-type="'notRequired'"
     />
     <FieldHeading0001
-      :identifiers="[...identifiers, 'fieldHeadingC']"
+      :identifier="[...identifiers, 'fieldHeadingC']"
       text="h2見出し"
       :badge-type="'notRequired'"
       tag-name="h3"

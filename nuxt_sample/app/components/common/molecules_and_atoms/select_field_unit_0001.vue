@@ -5,7 +5,7 @@
       class="selectFieldUnit0001__headingWrapper"
     >
       <FieldHeading0001
-        :identifiers="[...identifiers, 'FieldHeading']"
+        :identifier="[...identifiers, 'FieldHeading']"
         :text="headingText"
         :badge-type="badgeType"
       />
@@ -31,7 +31,7 @@
             <div class="selectFieldUnit0001__itemBody">
               <div v-if="item.field" class="selectFieldUnit0001__fieldWrapper">
                 <SelectField0001
-                  :identifiers="[...identifiers, `Field${index}`]"
+                  :identifier="[...identifiers, `Field${index}`]"
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
@@ -78,7 +78,7 @@
         class="selectFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
-          :identifiers="[...identifiers, `FieldErrorMessages${index}`]"
+          :identifier="[...identifiers, `FieldErrorMessages${index}`]"
           :error-messages="item.field.realtimeErrors"
         />
       </div>
@@ -88,7 +88,7 @@
       class="selectFieldUnit0001__errorMessagesWrapper"
     >
       <FieldErrorMessages0001
-        :identifiers="[...identifiers, 'CombinationFieldErrorMessages']"
+        :identifier="[...identifiers, 'CombinationFieldErrorMessages']"
         :error-messages="combinationField.realtimeErrors"
       />
     </div>
