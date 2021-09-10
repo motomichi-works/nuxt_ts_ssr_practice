@@ -4,7 +4,7 @@
     org-heading-text="FieldErrorMessages0001"
   >
     <FieldErrorMessages0001
-      :identifier="`${identifier}/fieldErrorMessages`"
+      :identifier="`${identifier}/FieldErrorMessages`"
       :error-messages="[
         'エラーメッセージサンプル1',
         'エラーメッセージサンプル2',

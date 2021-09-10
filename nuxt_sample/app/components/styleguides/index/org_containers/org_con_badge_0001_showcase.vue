@@ -1,8 +1,8 @@
 <template>
   <OrgPreShared0001 :identifier="identifier" org-heading-text="Badge0001">
-    <Badge0001 :identifier="`${identifier}/badge`" text="必須" />
+    <Badge0001 :identifier="`${identifier}/Badge`" text="必須" />
     <Badge0001
-      :identifier="`${identifier}/badgeA`"
+      :identifier="`${identifier}/BadgeA`"
       text="任意"
       :modifier-classes="['badge0001--bgColorGray']"
     />

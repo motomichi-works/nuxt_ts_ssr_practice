@@ -4,21 +4,21 @@
     org-heading-text="FieldHeading0001"
   >
     <FieldHeading0001
-      :identifier="`${identifier}/fieldHeading`"
+      :identifier="`${identifier}/FieldHeading`"
       text="h2見出し"
     />
     <FieldHeading0001
-      :identifier="`${identifier}/fieldHeadingA`"
+      :identifier="`${identifier}/FieldHeadingA`"
       text="h3見出し"
       tag-name="h3"
     />
     <FieldHeading0001
-      :identifier="`${identifier}/fieldHeadingB`"
+      :identifier="`${identifier}/FieldHeadingB`"
       text="h2見出し"
       :badge-type="'notRequired'"
     />
     <FieldHeading0001
-      :identifier="`${identifier}/fieldHeadingC`"
+      :identifier="`${identifier}/FieldHeadingC`"
       text="h2見出し"
       :badge-type="'notRequired'"
       tag-name="h3"

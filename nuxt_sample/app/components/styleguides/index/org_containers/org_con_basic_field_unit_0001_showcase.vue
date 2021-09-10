@@ -4,7 +4,7 @@
     org-heading-text="BasicFieldUnit0001"
   >
     <BasicFieldUnit0001
-      :identifier="`${identifier}/basicFieldUnitEmail`"
+      :identifier="`${identifier}/BasicFieldUnitEmail`"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :is-tainted-obj="isTaintedObj"
@@ -35,7 +35,7 @@
       @input-field="$_emitInputField"
     />
     <BasicFieldUnit0001
-      :identifier="`${identifier}/basicFieldUnitFullNameKana`"
+      :identifier="`${identifier}/BasicFieldUnitFullNameKana`"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :is-tainted-obj="isTaintedObj"

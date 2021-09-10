@@ -1,7 +1,7 @@
 <template>
   <OrgPreShared0001 :identifier="identifier" org-heading-text="BasicField0001">
     <BasicField0001
-      :identifier="`${identifier}/basicFieldA`"
+      :identifier="`${identifier}/BasicFieldA`"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :has-realtime-errors="
