@@ -7,7 +7,7 @@ export const everyPagePre = Vue.extend({
     identifiers() {
       return ['PagePre']
     },
-    joinedIdentifiers() {
+    identifier() {
       return (this as any).identifiers.join('/')
     },
   },

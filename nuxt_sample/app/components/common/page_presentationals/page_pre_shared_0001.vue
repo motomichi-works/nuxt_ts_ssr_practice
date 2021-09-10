@@ -1,5 +1,5 @@
 <template>
-  <div :data-identifier="joinedIdentifiers" class="pagePreShared0001">
+  <div :data-identifier="identifier" class="pagePreShared0001">
     <div class="pagePreShared0001__headerWrapper">
       <OrgConHeader0001 :identifiers="['OrgHeader0001']" />
     </div>

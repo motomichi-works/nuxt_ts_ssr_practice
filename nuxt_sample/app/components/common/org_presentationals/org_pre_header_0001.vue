@@ -1,5 +1,5 @@
 <template>
-  <header :data-identifier="joinedIdentifiers" class="orgPreHeader0001">
+  <header :data-identifier="identifier" class="orgPreHeader0001">
     <div class="orgPreHeader0001__inner">
       <div class="orgPreHeader0001__logoArea">
         <NuxtLink to="/" class="orgPreHeader0001__logo">ロゴ</NuxtLink>

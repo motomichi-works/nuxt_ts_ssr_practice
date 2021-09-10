@@ -1,5 +1,5 @@
 <template>
-  <div :data-identifier="joinedIdentifiers" class="fieldHeading0001">
+  <div :data-identifier="identifier" class="fieldHeading0001">
     <div class="fieldHeading0001__badgeWrapper">
       <Badge0001
         :identifiers="[...identifiers, 'Badge']"

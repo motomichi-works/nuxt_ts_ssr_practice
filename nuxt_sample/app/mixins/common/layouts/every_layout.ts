@@ -7,7 +7,7 @@ export const everyLayout = Vue.extend({
     identifiers() {
       return ['Layout']
     },
-    joinedIdentifiers() {
+    identifier() {
       return (this as any).identifiers.join('/')
     },
   },

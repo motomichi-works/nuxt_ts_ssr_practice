@@ -21,7 +21,7 @@ export const everyChild = Vue.extend({
     },
   },
   computed: {
-    joinedIdentifiers() {
+    identifier() {
       return this.identifiers.join('/')
     },
   },

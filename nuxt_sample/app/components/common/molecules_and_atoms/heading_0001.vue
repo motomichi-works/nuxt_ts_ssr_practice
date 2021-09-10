@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tagName"
-    :data-identifier="joinedIdentifiers"
+    :data-identifier="identifier"
     class="heading0001"
     :class="modifierClasses"
     >{{ text }}</component

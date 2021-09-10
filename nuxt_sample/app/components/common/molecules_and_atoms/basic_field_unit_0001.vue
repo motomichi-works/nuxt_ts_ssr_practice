@@ -1,8 +1,5 @@
 <template>
-  <section
-    :data-identifier="joinedIdentifiers"
-    class="basicFieldUnit0001"
-  >
+  <section :data-identifier="identifier" class="basicFieldUnit0001">
     <div
       v-if="headingText.length > 0"
       class="basicFieldUnit0001__headingWrapper"

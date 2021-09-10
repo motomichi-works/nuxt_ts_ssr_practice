@@ -1,8 +1,5 @@
 <template>
-  <section
-    :data-identifier="joinedIdentifiers"
-    class="orgPreShared0001"
-  >
+  <section :data-identifier="identifier" class="orgPreShared0001">
     <div class="orgPreShared0001__headingWrapper">
       <Heading0001
         :identifiers="[...identifiers, 'OrgPreHeading']"
