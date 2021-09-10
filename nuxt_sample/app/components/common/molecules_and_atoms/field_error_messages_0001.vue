@@ -1,6 +1,6 @@
 <template>
   <div
-    :data-joined-identifiers="joinedIdentifiers"
+    :data-identifier="joinedIdentifiers"
     class="fieldErrorMessages0001"
   >
     <ul class="fieldErrorMessages0001__listGroup">

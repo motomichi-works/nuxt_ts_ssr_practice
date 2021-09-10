@@ -1,5 +1,5 @@
 <template>
-  <div :data-joined-identifiers="joinedIdentifiers" class="layoutTypeDefault">
+  <div :data-identifier="joinedIdentifiers" class="layoutTypeDefault">
     <Nuxt />
   </div>
 </template>

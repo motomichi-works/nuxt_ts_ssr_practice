@@ -1,6 +1,6 @@
 <template>
   <i
-    :data-joined-identifiers="joinedIdentifiers"
+    :data-identifier="joinedIdentifiers"
     class="fontAwesomeIconWrapper"
   >
     <FontAwesomeIcon :icon="icon" />

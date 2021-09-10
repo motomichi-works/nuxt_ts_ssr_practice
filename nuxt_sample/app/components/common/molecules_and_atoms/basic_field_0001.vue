@@ -1,5 +1,5 @@
 <template>
-  <div :data-joined-identifiers="joinedIdentifiers" :class="classes">
+  <div :data-identifier="joinedIdentifiers" :class="classes">
     <div v-if="isVisibleLeftIcon" class="basicField0001__iconWrapper">
       <FontAwesomeIconWrapper
         :identifiers="[...identifiers, 'FontAwesomeIconWrapperLeft']"

@@ -1,6 +1,6 @@
 <template>
   <section
-    :data-joined-identifiers="joinedIdentifiers"
+    :data-identifier="joinedIdentifiers"
     class="orgPreShared0001"
   >
     <div class="orgPreShared0001__headingWrapper">

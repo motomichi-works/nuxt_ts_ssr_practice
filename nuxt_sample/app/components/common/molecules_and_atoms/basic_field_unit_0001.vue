@@ -1,6 +1,6 @@
 <template>
   <section
-    :data-joined-identifiers="joinedIdentifiers"
+    :data-identifier="joinedIdentifiers"
     class="basicFieldUnit0001"
   >
     <div

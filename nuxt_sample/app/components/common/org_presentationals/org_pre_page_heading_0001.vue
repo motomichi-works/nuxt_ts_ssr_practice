@@ -1,6 +1,6 @@
 <template>
   <h1
-    :data-joined-identifiers="joinedIdentifiers"
+    :data-identifier="joinedIdentifiers"
     class="orgPrePageHeading"
     v-text="pageHeadingText"
   />

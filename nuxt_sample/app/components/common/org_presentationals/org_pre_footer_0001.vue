@@ -1,5 +1,5 @@
 <template>
-  <footer :data-joined-identifiers="joinedIdentifiers" class="orgPreFooter0001">
+  <footer :data-identifier="joinedIdentifiers" class="orgPreFooter0001">
     <div class="orgPreFooter0001__copyArea">
       <NuxtLink to="/" class="orgPreFooter0001__copy">
         &copy;MotomichiWorks
