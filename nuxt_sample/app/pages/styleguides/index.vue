@@ -47,9 +47,9 @@ import OrgConSelectField0001Showcase from '~/components/styleguides/index/org_co
 import OrgConSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_con_select_field_unit_0001_showcase.vue'
 
 // mixins
-import { mappedChangeFieldValue } from '~/mixins/common/page_containers/methods/mapped_change_field_value'
-import { mappedChangeRealtimeErrors } from '~/mixins/common/page_containers/methods/mapped_change_realtime_errors'
-import { mappedChangeIsTainted } from '~/mixins/common/page_containers/methods/mapped_change_is_tainted'
+import { mutateFieldValue } from '~/mixins/common/page_containers/methods/mutate_field_value'
+import { mutateRealtimeErrors } from '~/mixins/common/page_containers/methods/mutate_realtime_errors'
+import { mutateIsTainted } from '~/mixins/common/page_containers/methods/mutate_is_tainted'
 import { handleInputField } from '~/mixins/common/page_containers/methods/handle_input_field'
 import { handleChangeFieldOrBlurField } from '~/mixins/common/page_containers/methods/handle_change_field_or_blur_field'
 
@@ -70,9 +70,9 @@ export default Vue.extend({
     OrgConSelectFieldUnit0001Showcase,
   },
   mixins: [
-    mappedChangeFieldValue,
-    mappedChangeRealtimeErrors,
-    mappedChangeIsTainted,
+    mutateFieldValue,
+    mutateRealtimeErrors,
+    mutateIsTainted,
     handleInputField,
     handleChangeFieldOrBlurField,
   ],

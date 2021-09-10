@@ -13,7 +13,7 @@ import { ArgsForHandleInputField } from '~/types/args_for_handle_input_field'
 export const handleInputField = Vue.extend({
   methods: {
     $_handleInputField(payload: ArgsForHandleInputField) {
-      ;(this as any).$_mappedChangeFieldValue({
+      ;(this as any).$_mutateFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: payload.value,
@@ -38,7 +38,7 @@ export const handleInputField = Vue.extend({
           })
         : []
 
-      ;(this as any).$_mappedChangeRealtimeErrors({
+      ;(this as any).$_mutateRealtimeErrors({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: validationResult,
@@ -63,12 +63,12 @@ export const handleInputField = Vue.extend({
         })
         .every((element) => element)
 
-      ;(this as any).$_mappedChangeFieldValue({
+      ;(this as any).$_mutateFieldValue({
         namespace: combinationField.namespace,
         sharedKey,
         value,
       })
-      ;(this as any).$_mappedChangeIsTainted({
+      ;(this as any).$_mutateIsTainted({
         namespace: combinationField.namespace,
         sharedKey,
         value: isTainted,
@@ -90,7 +90,7 @@ export const handleInputField = Vue.extend({
           })
         : []
 
-      ;(this as any).$_mappedChangeRealtimeErrors({
+      ;(this as any).$_mutateRealtimeErrors({
         namespace: combinationField.namespace,
         sharedKey,
         value: validationResult,

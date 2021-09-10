@@ -2,16 +2,16 @@
 import Vue from 'vue'
 
 // types
-type ArgsForMappedChangeRealtimeErrors = {
+type ArgsForMutateRealtimeErrors = {
   namespace: string
   sharedKey: string
   value: string[]
 }
 
 // Vue.extend
-export const mappedChangeRealtimeErrors = Vue.extend({
+export const mutateRealtimeErrors = Vue.extend({
   methods: {
-    $_mappedChangeRealtimeErrors(args: ArgsForMappedChangeRealtimeErrors) {
+    $_mutateRealtimeErrors(args: ArgsForMutateRealtimeErrors) {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,

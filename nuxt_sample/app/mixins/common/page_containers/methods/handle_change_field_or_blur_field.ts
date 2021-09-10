@@ -17,14 +17,14 @@ export const handleChangeFieldOrBlurField = Vue.extend({
     ) {
       // NOTE: changeイベント、またはblurイベントが発火したとき、trimしてからstateに入れる
       payload.value = payload.value.trim()
-      ;(this as any).$_mappedChangeFieldValue({
+      ;(this as any).$_mutateFieldValue({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: payload.value,
       })
 
       // NOTE: changeイベント、またはblurイベントが発火したとき、isTaintedをtrueにします。
-      ;(this as any).$_mappedChangeIsTainted({
+      ;(this as any).$_mutateIsTainted({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: true,
@@ -41,7 +41,7 @@ export const handleChangeFieldOrBlurField = Vue.extend({
         constraintsBaseOfAll,
       })
 
-      ;(this as any).$_mappedChangeRealtimeErrors({
+      ;(this as any).$_mutateRealtimeErrors({
         namespace: payload.namespace,
         sharedKey: payload.sharedKey,
         value: validationResult,
@@ -68,12 +68,12 @@ export const handleChangeFieldOrBlurField = Vue.extend({
         })
         .every((element) => element)
 
-      ;(this as any).$_mappedChangeFieldValue({
+      ;(this as any).$_mutateFieldValue({
         namespace: combinationField.namespace,
         sharedKey,
         value,
       })
-      ;(this as any).$_mappedChangeIsTainted({
+      ;(this as any).$_mutateIsTainted({
         namespace: combinationField.namespace,
         sharedKey,
         value: isTainted,
@@ -89,7 +89,7 @@ export const handleChangeFieldOrBlurField = Vue.extend({
           combinationField.validatorNamesThatDependsOnDynamicOptions,
         constraintsBaseOfAll,
       })
-      ;(this as any).$_mappedChangeRealtimeErrors({
+      ;(this as any).$_mutateRealtimeErrors({
         namespace: combinationField.namespace,
         sharedKey,
         value: validationResult,

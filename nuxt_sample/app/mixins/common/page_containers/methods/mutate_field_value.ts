@@ -2,16 +2,16 @@
 import Vue from 'vue'
 
 // types
-type ArgsForMappedChangeFieldValue = {
+type ArgsForMutateFieldValue = {
   namespace: string
   sharedKey: string
   value: string
 }
 
 // Vue.extend
-export const mappedChangeFieldValue = Vue.extend({
+export const mutateFieldValue = Vue.extend({
   methods: {
-    $_mappedChangeFieldValue(args: ArgsForMappedChangeFieldValue) {
+    $_mutateFieldValue(args: ArgsForMutateFieldValue) {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,

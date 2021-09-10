@@ -2,16 +2,16 @@
 import Vue from 'vue'
 
 // types
-type ArgsForMappedChangeIsTainted = {
+type ArgsForMutateIsTainted = {
   namespace: string
   sharedKey: string
   value: boolean
 }
 
 // Vue.extend
-export const mappedChangeIsTainted = Vue.extend({
+export const mutateIsTainted = Vue.extend({
   methods: {
-    $_mappedChangeIsTainted(args: ArgsForMappedChangeIsTainted) {
+    $_mutateIsTainted(args: ArgsForMutateIsTainted) {
       const payload = {
         sharedKey: args.sharedKey,
         value: args.value,
