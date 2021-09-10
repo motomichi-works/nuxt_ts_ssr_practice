@@ -1,8 +1,5 @@
 <template>
-  <OrgPreShared0001
-    :identifier="`${identifier}]"
-    org-heading-text="BasicField0001"
-  >
+  <OrgPreShared0001 :identifier="identifier" org-heading-text="BasicField0001">
     <BasicField0001
       :identifier="`${identifier}/basicFieldA`"
       :namespace="namespace"

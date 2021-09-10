@@ -1,5 +1,5 @@
 <template>
-  <OrgPreShared0001 :identifier="`${identifier}]" org-heading-text="List0001">
+  <OrgPreShared0001 :identifier="identifier" org-heading-text="List0001">
     <List0001
       :identifier="`${identifier}/List0001`"
       :items="['リストアイテム01', 'リストアイテム02']"

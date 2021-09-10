@@ -1,8 +1,5 @@
 <template>
-  <OrgPreShared0001
-    :identifier="`${identifier}]"
-    org-heading-text="Heading0001"
-  >
+  <OrgPreShared0001 :identifier="identifier" org-heading-text="Heading0001">
     <Heading0001
       :identifier="`${identifier}/headingLv1`"
       text="Lv1の見出し"

@@ -1,8 +1,5 @@
 <template>
-  <OrgPreShared0001
-    :identifier="`${identifier}]"
-    org-heading-text="SelectField0001"
-  >
+  <OrgPreShared0001 :identifier="identifier" org-heading-text="SelectField0001">
     <SelectField0001
       :identifier="`${identifier}/SelectField0001A`"
       :namespace="namespace"

@@ -1,8 +1,5 @@
 <template>
-  <OrgPreShared0001
-    :identifier="`${identifier}]"
-    org-heading-text="FontAwesome5"
-  >
+  <OrgPreShared0001 :identifier="identifier" org-heading-text="FontAwesome5">
     <FontAwesomeIconWrapper
       :identifier="`${identifier}/FontAwesomeIconWrapper01`"
       :icon="fa.search"
