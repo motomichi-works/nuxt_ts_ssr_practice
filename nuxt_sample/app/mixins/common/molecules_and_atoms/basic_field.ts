@@ -17,6 +17,11 @@ export const basicField = Vue.extend({
   },
   mixins: [fieldBase],
   props: {
+    type: {
+      type: String as PropType<string>,
+      required: false,
+      default: 'text',
+    },
     placeholder: {
       type: String as PropType<string>,
       required: false,

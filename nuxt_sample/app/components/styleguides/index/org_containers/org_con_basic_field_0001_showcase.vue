@@ -11,6 +11,7 @@
       :modifiers="[]"
       :name="'styleguides[basic_field_0001_a]'"
       :shared-key="'styleguides[basic_field_0001_a]'"
+      :type="'text'"
       :is-disabled="false"
       :is-readonly="false"
       :placeholder="'プレースホルダー'"

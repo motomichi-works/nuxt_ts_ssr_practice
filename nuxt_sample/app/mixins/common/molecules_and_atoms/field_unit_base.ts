@@ -15,6 +15,11 @@ export const fieldUnitBase = Vue.extend({
     FieldHeading0001,
   },
   props: {
+    type: {
+      type: String as PropType<string>,
+      required: false,
+      default: 'text',
+    },
     combinationField: {
       type: Object as PropType<CombinationFieldForFieldUnitProp>,
       required: false,

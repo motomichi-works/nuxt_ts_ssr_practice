@@ -14,6 +14,7 @@
           field: {
             name: 'styleguides[basic_field_unit_0001_email]',
             sharedKey: 'styleguides[basic_field_unit_0001_email]',
+            type: 'text',
             realtimeErrors:
               realtimeErrorsObj['styleguides[basic_field_unit_0001_email]'],
             placeholder: 'placeholder@example.com',
@@ -55,6 +56,7 @@
           field: {
             name: 'styleguides[basic_field_unit_0001_family_name_kana]',
             sharedKey: 'styleguides[basic_field_unit_0001_family_name_kana]',
+            type: 'text',
             realtimeErrors:
               realtimeErrorsObj[
                 'styleguides[basic_field_unit_0001_family_name_kana]'
@@ -73,6 +75,7 @@
           field: {
             name: 'styleguides[basic_field_unit_0001_given_name_kana]',
             sharedKey: 'styleguides[basic_field_unit_0001_given_name_kana]',
+            type: 'text',
             realtimeErrors:
               realtimeErrorsObj[
                 'styleguides[basic_field_unit_0001_given_name_kana]'

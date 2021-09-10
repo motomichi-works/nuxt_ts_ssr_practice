@@ -8,7 +8,7 @@
     </div>
     <input
       v-model="bindValue"
-      type="text"
+      :type="type"
       :disabled="isDisabled"
       :readonly="isReadonly"
       :name="name"

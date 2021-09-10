@@ -41,6 +41,7 @@
                   "
                   :modifiers="item.field.fieldModifiers"
                   :name="item.field.name"
+                  :type="item.field.type"
                   :shared-key="item.field.sharedKey"
                   :is-disabled="item.field.isDisabled"
                   :is-readonly="item.field.isReadonly"
