@@ -31,7 +31,7 @@
             <div class="selectFieldUnit0001__itemBody">
               <div v-if="item.field" class="selectFieldUnit0001__fieldWrapper">
                 <SelectField0001
-                  :identifier="`${identifier}, `Field${index}`]"
+                  :identifier="`${identifier}/Field${index}`"
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
@@ -78,7 +78,7 @@
         class="selectFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
-          :identifier="`${identifier}, `FieldErrorMessages${index}`]"
+          :identifier="`${identifier}/FieldErrorMessages${index}`"
           :error-messages="item.field.realtimeErrors"
         />
       </div>

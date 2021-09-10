@@ -31,7 +31,7 @@
             <div class="basicFieldUnit0001__itemBody">
               <div v-if="item.field" class="basicFieldUnit0001__fieldWrapper">
                 <BasicField0001
-                  :identifier="`${identifier}, `Field${index}`]"
+                  :identifier="`${identifier}/Field${index}`"
                   :namespace="namespace"
                   :field-value-obj="fieldValueObj"
                   :is-tainted-obj="isTaintedObj"
@@ -81,7 +81,7 @@
         class="basicFieldUnit0001__errorMessagesWrapper"
       >
         <FieldErrorMessages0001
-          :identifier="`${identifier}, `FieldErrorMessages${index}`]"
+          :identifier="`${identifier}/FieldErrorMessages${index}`"
           :error-messages="item.field.realtimeErrors"
         />
       </div>
