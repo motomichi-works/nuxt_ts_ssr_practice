@@ -10,7 +10,7 @@ import { emitters } from '~/mixins/common/unclassifiable/methods/emitters'
 export const everyChild = Vue.extend({
   mixins: [emitters],
   props: {
-    identifiers: {
+    identifier: {
       type: Array as PropType<string[]>,
       required: true,
     },
@@ -18,11 +18,6 @@ export const everyChild = Vue.extend({
       type: String as PropType<string>,
       required: false,
       default: '',
-    },
-  },
-  computed: {
-    identifier() {
-      return this.identifiers.join('/')
     },
   },
 })

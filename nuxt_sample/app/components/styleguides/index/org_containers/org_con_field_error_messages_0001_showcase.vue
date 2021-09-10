@@ -1,10 +1,10 @@
 <template>
   <OrgPreShared0001
-    :identifier="[...identifiers]"
+    :identifier="[identifier]"
     org-heading-text="FieldErrorMessages0001"
   >
     <FieldErrorMessages0001
-      :identifier="[...identifiers, 'fieldErrorMessages']"
+      :identifier="[identifier, 'fieldErrorMessages']"
       :error-messages="[
         'エラーメッセージサンプル1',
         'エラーメッセージサンプル2',

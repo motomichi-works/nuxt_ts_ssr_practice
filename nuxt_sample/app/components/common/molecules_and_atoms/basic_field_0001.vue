@@ -2,7 +2,7 @@
   <div :data-identifier="identifier" :class="classes">
     <div v-if="isVisibleLeftIcon" class="basicField0001__iconWrapper">
       <FontAwesomeIconWrapper
-        :identifier="[...identifiers, 'FontAwesomeIconWrapperLeft']"
+        :identifier="[identifier, 'FontAwesomeIconWrapperLeft']"
         :icon="leftIcon"
       />
     </div>
@@ -19,7 +19,7 @@
     />
     <div v-if="isVisibleRightIcon" class="basicField0001__iconWrapper">
       <FontAwesomeIconWrapper
-        :identifier="[...identifiers, 'FontAwesomeIconWrapperRight']"
+        :identifier="[identifier, 'FontAwesomeIconWrapperRight']"
         :icon="rightIcon"
       />
     </div>

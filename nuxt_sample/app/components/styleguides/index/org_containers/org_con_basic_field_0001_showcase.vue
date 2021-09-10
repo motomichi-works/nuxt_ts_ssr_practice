@@ -1,10 +1,10 @@
 <template>
   <OrgPreShared0001
-    :identifier="[...identifiers]"
+    :identifier="[identifier]"
     org-heading-text="BasicField0001"
   >
     <BasicField0001
-      :identifier="[...identifiers, 'basicFieldA']"
+      :identifier="[identifier, 'basicFieldA']"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :has-realtime-errors="

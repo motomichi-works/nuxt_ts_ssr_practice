@@ -1,10 +1,10 @@
 <template>
   <OrgPreShared0001
-    :identifier="[...identifiers]"
+    :identifier="[identifier]"
     org-heading-text="SelectField0001"
   >
     <SelectField0001
-      :identifier="[...identifiers, 'SelectField0001A']"
+      :identifier="[identifier, 'SelectField0001A']"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :has-realtime-errors="

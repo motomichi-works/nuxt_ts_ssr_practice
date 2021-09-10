@@ -1,10 +1,10 @@
 <template>
   <OrgPreShared0001
-    :identifier="[...identifiers]"
+    :identifier="[identifier]"
     org-heading-text="BasicFieldUnit0001"
   >
     <BasicFieldUnit0001
-      :identifier="[...identifiers, 'basicFieldUnitEmail']"
+      :identifier="[identifier, 'basicFieldUnitEmail']"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :is-tainted-obj="isTaintedObj"
@@ -35,7 +35,7 @@
       @input-field="$_emitInputField"
     />
     <BasicFieldUnit0001
-      :identifier="[...identifiers, 'basicFieldUnitFullNameKana']"
+      :identifier="[identifier, 'basicFieldUnitFullNameKana']"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :is-tainted-obj="isTaintedObj"
