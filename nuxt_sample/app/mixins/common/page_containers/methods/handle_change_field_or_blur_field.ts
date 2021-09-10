@@ -36,8 +36,6 @@ export const handleChangeFieldOrBlurField = Vue.extend({
         fieldValueObj: payload.fieldValueObj,
         value: payload.value,
         eventType: payload.eventType,
-        validatorNamesThatDependsOnDynamicOptions:
-          payload.validatorNamesThatDependsOnDynamicOptions,
         constraintsBaseOfAll,
       })
 
@@ -85,8 +83,6 @@ export const handleChangeFieldOrBlurField = Vue.extend({
         fieldValueObj: combinationField.fieldValueObj,
         value,
         eventType: combinationField.eventType,
-        validatorNamesThatDependsOnDynamicOptions:
-          combinationField.validatorNamesThatDependsOnDynamicOptions,
         constraintsBaseOfAll,
       })
       ;(this as any).$_mutateRealtimeErrors({

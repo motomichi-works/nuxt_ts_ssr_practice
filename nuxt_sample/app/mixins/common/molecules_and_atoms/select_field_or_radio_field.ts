@@ -52,8 +52,6 @@ export const selectFieldOrRadioField = Vue.extend({
               fieldValueObj: (this as any).fieldValueObj,
               isTaintedObj: (this as any).isTaintedObj,
               eventType: 'blur',
-              validatorNamesThatDependsOnDynamicOptions: (this as any)
-                .combinationField.validatorNamesThatDependsOnDynamicOptions,
             }
           : null
 
@@ -64,8 +62,6 @@ export const selectFieldOrRadioField = Vue.extend({
           sharedKey: (this as any).sharedKey,
           value,
           eventType: 'change',
-          validatorNamesThatDependsOnDynamicOptions: (this as any)
-            .validatorNamesThatDependsOnDynamicOptions,
           combinationField,
         }
 

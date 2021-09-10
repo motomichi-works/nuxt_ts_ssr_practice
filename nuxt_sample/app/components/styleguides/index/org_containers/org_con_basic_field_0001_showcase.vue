@@ -9,7 +9,6 @@
       "
       :is-tainted-obj="isTaintedObj"
       :modifiers="[]"
-      :validator-names-that-depends-on-dynamic-options="[]"
       :name="'styleguides[basic_field_0001_a]'"
       :shared-key="'styleguides[basic_field_0001_a]'"
       :is-disabled="false"

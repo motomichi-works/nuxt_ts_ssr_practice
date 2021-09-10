@@ -5,5 +5,4 @@ export type ArgsForHandleChangeCombinationFieldOrBlurCombinationField = {
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }
   eventType: 'change' | 'blur'
-  validatorNamesThatDependsOnDynamicOptions: string[]
 }

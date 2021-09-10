@@ -32,8 +32,6 @@ export const handleInputField = Vue.extend({
             fieldValueObj: payload.fieldValueObj,
             value: payload.value,
             eventType: payload.eventType,
-            validatorNamesThatDependsOnDynamicOptions:
-              payload.validatorNamesThatDependsOnDynamicOptions,
             constraintsBaseOfAll,
           })
         : []
@@ -84,8 +82,6 @@ export const handleInputField = Vue.extend({
             fieldValueObj: combinationField.fieldValueObj,
             value,
             eventType: combinationField.eventType,
-            validatorNamesThatDependsOnDynamicOptions:
-              combinationField.validatorNamesThatDependsOnDynamicOptions,
             constraintsBaseOfAll,
           })
         : []

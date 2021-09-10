@@ -22,7 +22,6 @@
               { label: 'SelectFieldUnitAの選択肢2', value: 'value2' },
             ],
             fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: [],
             isDisabled: false,
             isReadonly: false,
           },
@@ -51,9 +50,6 @@
           realtimeErrorsObj[
             'styleguides[select_field_unit_0001_b_combination_sample]'
           ],
-        validatorNamesThatDependsOnDynamicOptions: [
-          'selectFieldUnit0001BCombinationSample',
-        ],
       }"
       :items="[
         {
@@ -68,7 +64,6 @@
               { label: 'SelectFieldUnitB01の選択肢2', value: 'value2' },
             ],
             fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: [],
             isDisabled: false,
             isReadonly: false,
           },
@@ -86,7 +81,6 @@
               { label: 'SelectFieldUnitB02の選択肢2', value: 'value2' },
             ],
             fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: [],
             isDisabled: false,
             isReadonly: false,
           },

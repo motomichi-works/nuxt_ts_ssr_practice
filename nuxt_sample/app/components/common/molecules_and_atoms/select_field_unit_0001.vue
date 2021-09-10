@@ -40,9 +40,6 @@
                     hasCombinationFieldRealtimeErrors
                   "
                   :modifiers="item.field.fieldModifiers"
-                  :validator-names-that-depends-on-dynamic-options="
-                    item.field.validatorNamesThatDependsOnDynamicOptions
-                  "
                   :name="item.field.name"
                   :shared-key="item.field.sharedKey"
                   :is-disabled="item.field.isDisabled"

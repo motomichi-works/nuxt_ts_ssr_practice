@@ -7,7 +7,6 @@ type ArgsForValidateSingle<C> = {
   fieldValueObj: { [key: string]: string }
   value: string
   eventType: 'input' | 'blur' | 'change'
-  validatorNamesThatDependsOnDynamicOptions: string[]
   constraintsBaseOfAll: C
 }
 
@@ -16,9 +15,10 @@ export const validateSingle = function <C extends { [key: string]: any }>(
 ): string[] {
   const sharedKey = args.sharedKey
   const constraint = args.constraintsBaseOfAll[args.namespace][sharedKey]
+  const validatorNames = Object.keys(constraint)
 
-  // 動的なオプションに依存しているvalidatorにはオプションを追加する
-  args.validatorNamesThatDependsOnDynamicOptions.forEach((validatorName) => {
+  // 動的なオプションを追加する
+  validatorNames.forEach((validatorName) => {
     constraint[validatorName].eventType = args.eventType
     constraint[validatorName].fieldValueObj = args.fieldValueObj
   })

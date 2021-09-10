@@ -20,7 +20,6 @@ export const selectFieldUnitOrRadioFieldUnit = Vue.extend({
             realtimeErrors: string[]
             options: Option[]
             fieldModifiers: string[]
-            validatorNamesThatDependsOnDynamicOptions: string[]
             isDisabled: boolean
             isReadonly: boolean
           } | null

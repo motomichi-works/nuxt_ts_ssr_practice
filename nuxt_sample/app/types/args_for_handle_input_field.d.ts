@@ -7,6 +7,5 @@ export type ArgsForHandleInputField = {
   sharedKey: string
   value: string
   eventType: 'input'
-  validatorNamesThatDependsOnDynamicOptions: string[]
   combinationField: ArgsForHandleInputCombinationField | null
 }

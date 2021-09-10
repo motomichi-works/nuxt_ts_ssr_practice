@@ -21,7 +21,6 @@
             leftIcon: fa.search,
             rightIcon: fa.search,
             fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: ['customEmail'],
             isDisabled: false,
             isReadonly: false,
           },
@@ -50,7 +49,6 @@
           realtimeErrorsObj[
             'styleguides[basic_field_unit_0001_full_name_kana]'
           ],
-        validatorNamesThatDependsOnDynamicOptions: [],
       }"
       :items="[
         {
@@ -66,7 +64,6 @@
             leftIcon: null,
             rightIcon: null,
             fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: ['katakana'],
             isDisabled: false,
             isReadonly: false,
           },
@@ -85,7 +82,6 @@
             leftIcon: null,
             rightIcon: null,
             fieldModifiers: [],
-            validatorNamesThatDependsOnDynamicOptions: ['katakana'],
             isDisabled: false,
             isReadonly: false,
           },

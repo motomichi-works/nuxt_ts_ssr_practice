@@ -14,11 +14,6 @@ export const fieldBase = Vue.extend({
       required: false,
       default: () => [],
     },
-    validatorNamesThatDependsOnDynamicOptions: {
-      type: Array as PropType<string[]>,
-      required: false,
-      default: () => [],
-    },
     name: {
       type: String as PropType<string>,
       required: false,
@@ -75,8 +70,6 @@ export const fieldBase = Vue.extend({
             fieldValueObj: this.fieldValueObj,
             isTaintedObj: this.isTaintedObj,
             eventType: 'blur',
-            validatorNamesThatDependsOnDynamicOptions: this.combinationField
-              .validatorNamesThatDependsOnDynamicOptions,
           }
         : null
 
@@ -87,8 +80,6 @@ export const fieldBase = Vue.extend({
         sharedKey: this.name,
         value: target.value,
         eventType: 'blur',
-        validatorNamesThatDependsOnDynamicOptions: this
-          .validatorNamesThatDependsOnDynamicOptions,
         combinationField,
       }
 

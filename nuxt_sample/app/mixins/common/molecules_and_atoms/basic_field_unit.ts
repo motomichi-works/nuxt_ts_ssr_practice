@@ -27,7 +27,6 @@ export const basicFieldUnit = Vue.extend({
             leftIcon: IconDefinition | null
             rightIcon: IconDefinition | null
             fieldModifiers: string[]
-            validatorNamesThatDependsOnDynamicOptions: string[]
             isDisabled: boolean
             isReadonly: boolean
           } | null

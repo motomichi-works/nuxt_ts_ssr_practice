@@ -75,8 +75,6 @@ export const basicField = Vue.extend({
               fieldValueObj: (this as any).fieldValueObj,
               isTaintedObj: (this as any).isTaintedObj,
               eventType: 'input',
-              validatorNamesThatDependsOnDynamicOptions: (this as any)
-                .combinationField.validatorNamesThatDependsOnDynamicOptions,
             }
           : null
 
@@ -87,8 +85,6 @@ export const basicField = Vue.extend({
           sharedKey: (this as any).sharedKey,
           value,
           eventType: 'input',
-          validatorNamesThatDependsOnDynamicOptions: (this as any)
-            .validatorNamesThatDependsOnDynamicOptions,
           combinationField,
         }
 

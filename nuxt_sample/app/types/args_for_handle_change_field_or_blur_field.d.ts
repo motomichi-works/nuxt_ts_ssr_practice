@@ -7,6 +7,5 @@ export type ArgsForHandleChangeFieldOrBlurField = {
   sharedKey: string
   value: string
   eventType: 'change' | 'blur'
-  validatorNamesThatDependsOnDynamicOptions: string[]
   combinationField: ArgsForHandleChangeCombinationFieldOrBlurCombinationField | null
 }

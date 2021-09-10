@@ -5,5 +5,4 @@ export type ArgsForHandleInputCombinationField = {
   fieldValueObj: { [key: string]: string }
   isTaintedObj: { [key: string]: boolean }
   eventType: 'input'
-  validatorNamesThatDependsOnDynamicOptions: string[]
 }
