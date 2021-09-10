@@ -16,6 +16,11 @@ export type Option = {
 export const selectFieldOrRadioField = Vue.extend({
   mixins: [fieldBase],
   props: {
+    blockClassName: {
+      type: String as PropType<string>,
+      required: false,
+      default: '',
+    },
     options: {
       type: Array as PropType<Option[]>,
       required: false,
@@ -29,10 +34,10 @@ export const selectFieldOrRadioField = Vue.extend({
   },
   computed: {
     classes() {
-      const classes = ['selectField0001', ...(this as any).modifiers]
+      const classes = [this.blockClassName, ...(this as any).modifiers]
 
       if ((this as any).hasRealtimeErrors) {
-        classes.push('selectField0001--invalid')
+        classes.push(`${this.blockClassName}--invalid`)
       }
 
       return classes

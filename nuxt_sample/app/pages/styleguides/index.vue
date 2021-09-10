@@ -43,6 +43,7 @@ import OrgConFontAwesome5Showcase from '~/components/styleguides/index/org_conta
 import OrgConHeading0001Showcase from '~/components/styleguides/index/org_containers/org_con_heading_0001_showcase.vue'
 import OrgConList0001Showcase from '~/components/styleguides/index/org_containers/org_con_list_0001_showcase.vue'
 import OrgConList0002Showcase from '~/components/styleguides/index/org_containers/org_con_list_0002_showcase.vue'
+import OrgConRadioField0001Showcase from '~/components/styleguides/index/org_containers/org_con_radio_field_0001_showcase.vue'
 import OrgConSelectField0001Showcase from '~/components/styleguides/index/org_containers/org_con_select_field_0001_showcase.vue'
 import OrgConSelectFieldUnit0001Showcase from '~/components/styleguides/index/org_containers/org_con_select_field_unit_0001_showcase.vue'
 
@@ -66,6 +67,7 @@ export default Vue.extend({
     OrgConHeading0001Showcase,
     OrgConList0001Showcase,
     OrgConList0002Showcase,
+    OrgConRadioField0001Showcase,
     OrgConSelectField0001Showcase,
     OrgConSelectFieldUnit0001Showcase,
   },
@@ -100,6 +102,7 @@ export default Vue.extend({
         'OrgConHeading0001Showcase',
         'OrgConList0001Showcase',
         'OrgConList0002Showcase',
+        'OrgConRadioField0001Showcase',
         'OrgConSelectField0001Showcase',
         'OrgConSelectFieldUnit0001Showcase',
       ] as const

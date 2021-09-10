@@ -1,21 +1,20 @@
 <template>
-  <OrgPreShared0001 :identifier="identifier" org-heading-text="SelectField0001">
-    <SelectField0001
-      :identifier="`${identifier}/SelectField0001A`"
+  <OrgPreShared0001 :identifier="identifier" org-heading-text="RadioField0001">
+    <RadioField0001
+      :identifier="`${identifier}/RadioField0001A`"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :has-realtime-errors="
-        realtimeErrorsObj['styleguides[select_field_0001_a]'].length > 0
+        realtimeErrorsObj['styleguides[radio_field_0001_a]'].length > 0
       "
       :is-tainted-obj="isTaintedObj"
-      :block-class-name="'selectField0001'"
+      :block-class-name="'radioField0001'"
       :modifiers="[]"
-      :name="'styleguides[select_field_0001_a]'"
-      :shared-key="'styleguides[select_field_0001_a]'"
+      :name="'styleguides[radio_field_0001_a]'"
+      :shared-key="'styleguides[radio_field_0001_a]'"
       :is-disabled="false"
       :is-readonly="false"
       :options="[
-        { label: '選択してください', value: '' },
         { label: '選択肢1', value: 'value1' },
         { label: '選択肢2', value: 'value2' },
       ]"
@@ -33,7 +32,7 @@ import Vue from 'vue'
 import OrgPreShared0001 from '~/components/common/org_presentationals/org_pre_shared_0001.vue'
 
 // import components/molecules_and_atoms
-import SelectField0001 from '~/components/common/molecules_and_atoms/select_field_0001.vue'
+import RadioField0001 from '~/components/common/molecules_and_atoms/radio_field_0001.vue'
 
 // mixins
 import { everyChild } from '~/mixins/common/unclassifiable/every_child'
@@ -41,10 +40,10 @@ import { containingTheField } from '~/mixins/common/org_containers/containing_th
 
 // Vue.extend
 export default Vue.extend({
-  name: 'OrgConSelectField0001Showcase',
+  name: 'OrgConRadioField0001Showcase',
   components: {
     OrgPreShared0001,
-    SelectField0001,
+    RadioField0001,
   },
   mixins: [everyChild, containingTheField],
 })

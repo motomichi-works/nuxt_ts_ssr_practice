@@ -26,6 +26,7 @@ export const constraintsBase: ConstraintsBase = {
   'styleguides[basic_field_unit_0001_full_name_kana]': constraintFunctions.fullNameKana(
     'お名前（カナ）'
   ),
+  'styleguides[radio_field_0001_a]': {},
   'styleguides[select_field_0001_a]': constraintFunctions.requiredSelectField(
     'セレクトフィールドユニット0001A'
   ),

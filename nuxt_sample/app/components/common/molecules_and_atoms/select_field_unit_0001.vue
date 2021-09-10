@@ -39,6 +39,7 @@
                     item.field.realtimeErrors.length > 0 ||
                     hasCombinationFieldRealtimeErrors
                   "
+                  :block-class-name="'selectField0001'"
                   :modifiers="item.field.fieldModifiers"
                   :name="item.field.name"
                   :shared-key="item.field.sharedKey"
