@@ -1,7 +1,7 @@
 <template>
   <PagePreShared0001 page-heading-text="index">
     <List0002
-      :identifier="['Nav']"
+      :identifier="'Nav'"
       :items="[
         [
           {

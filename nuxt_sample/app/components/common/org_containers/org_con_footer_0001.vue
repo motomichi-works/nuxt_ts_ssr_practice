@@ -1,5 +1,5 @@
 <template>
-  <OrgPreFooter0001 :identifier="identifiers" />
+  <OrgPreFooter0001 :identifier="identifier" />
 </template>
 
 <script lang="ts">

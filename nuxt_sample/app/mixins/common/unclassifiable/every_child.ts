@@ -11,7 +11,7 @@ export const everyChild = Vue.extend({
   mixins: [emitters],
   props: {
     identifier: {
-      type: Array as PropType<string[]>,
+      type: String as PropType<string>,
       required: true,
     },
     namespace: {

@@ -1,7 +1,7 @@
 <template>
   <PagePreShared0001 page-heading-text="qiita_items/index">
     <OrgConQiitaItems
-      :identifier="['OrgPreQiitaItems']"
+      :identifier="'OrgPreQiitaItems'"
       :qiita-items="qiitaItems"
     />
   </PagePreShared0001>

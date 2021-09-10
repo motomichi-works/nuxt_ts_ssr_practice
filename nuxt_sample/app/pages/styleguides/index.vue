@@ -3,8 +3,8 @@
     <component
       :is="component.name"
       v-for="component in components"
-      :key="component.identifiers.join('/')"
-      :identifier="component.identifiers"
+      :key="component.identifier"
+      :identifier="component.identifier"
       :namespace="namespace"
       :field-value-obj="fieldValueObj"
       :realtime-errors-obj="realtimeErrorsObj"
@@ -105,8 +105,8 @@ export default Vue.extend({
       ] as const
 
       const components = componentNames.map((name) => {
-        const identifiers = [name.replace('Con', 'Pre')]
-        return { name, identifiers }
+        const identifier = name.replace('Con', 'Pre')
+        return { name, identifier }
       })
 
       return components
