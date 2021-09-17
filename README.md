@@ -33,6 +33,8 @@ npx create-nuxt-app
 yarn dev
 ```
 
+## 使い方や設計意図
 
+- https://github.com/motomichi-works/nuxt_ts_ssr_practice/wiki
 
 
